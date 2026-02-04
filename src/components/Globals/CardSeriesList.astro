@@ -120,6 +120,7 @@ const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
                 src={seasonPoster}
                 alt={`Poster de ${title}`}
                 loading="lazy"
+                transition:name={`poster-series-${localData.idTrakt}-s${seasonNumber}`}
             />
         </figure>
 

@@ -122,6 +122,7 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
                 src={moviePoster}
                 alt={`Poster de ${title}`}
                 loading="lazy"
+                transition:name={movieSlug ? `poster-movie-${movieSlug}` : undefined}
             />
         </figure>
 

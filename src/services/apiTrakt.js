@@ -26,22 +26,54 @@ const getHeaders = () => ({
 });
 
 /**
+ * Limitador de concurrencia para evitar 429 Too Many Requests
+ */
+const MAX_CONCURRENT = 3;
+let activeRequests = 0;
+const requestQueue = [];
+
+const waitForSlot = () => {
+    if (activeRequests < MAX_CONCURRENT) {
+        activeRequests++;
+        return Promise.resolve();
+    }
+    return new Promise((resolve) => requestQueue.push(resolve));
+};
+
+const releaseSlot = () => {
+    activeRequests--;
+    if (requestQueue.length > 0) {
+        activeRequests++;
+        requestQueue.shift()();
+    }
+};
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
  * Función base para hacer peticiones a la API
+ * Incluye limitador de concurrencia y retry automático para 429
  * @param {string} endpoint - Endpoint de la API (sin la base URL)
+ * @param {number} retries - Intentos restantes (default: 3)
  * @returns {Promise<any>} - Respuesta de la API en JSON
  */
-const fetchTrakt = async (endpoint) => {
+const fetchTrakt = async (endpoint, retries = 3) => {
     const url = `${BASE_URL}${endpoint}`;
 
+    await waitForSlot();
     try {
-        console.log(`📡 Fetching: ${url}`);
-
         const response = await fetch(url, {
             method: "GET",
             headers: getHeaders(),
         });
 
-        console.log(`📥 Response: ${response.status} ${response.statusText} for ${endpoint}`);
+        if (response.status === 429 && retries > 0) {
+            const retryAfter = parseInt(response.headers.get("Retry-After") || "2", 10);
+            console.warn(`⏳ Rate limited on ${endpoint}, retrying in ${retryAfter}s...`);
+            releaseSlot();
+            await delay(retryAfter * 1000);
+            return fetchTrakt(endpoint, retries - 1);
+        }
 
         if (!response.ok) {
             const errorText = await response.text();
@@ -54,6 +86,8 @@ const fetchTrakt = async (endpoint) => {
     } catch (error) {
         console.error(`❌ Error fetching ${endpoint}:`, error.message);
         throw error;
+    } finally {
+        releaseSlot();
     }
 };
 

@@ -5,7 +5,7 @@
  * Ejemplo: /Movies/the-dark-knight-2008
  */
 import { ListMovies } from '../../data/MoviesDB';
-import { getMovie, getMoviePeople, getMoviesFromLists, getImageUrl } from '../../services/apiTrakt';
+import { getMoviePeople, getMoviesFromLists, getImageUrl } from '../../services/apiTrakt';
 import { enrichMoviesWithRatings } from '../../services/apiOMDB';
 import Layout from '../../layouts/Layout.astro';
 import IconIMDB from '../../components/Icons/IconIMDB.astro';
@@ -34,44 +34,29 @@ export async function getStaticPaths() {
         }
     }
 
-    // Generar paths
+    // Generar paths (movie data ya viene de getMoviesFromLists, solo falta people)
     const paths = await Promise.all(
         Array.from(moviesBySlug.entries()).map(async ([slug, movieData]) => {
+            let people = null;
             try {
-                const [movie, people] = await Promise.all([
-                    getMovie(slug),
-                    getMoviePeople(slug),
-                ]);
-
-                return {
-                    params: { slug },
-                    props: {
-                        movie,
-                        people,
-                        localData: {
-                            yearViewed: movieData.yearViewed,
-                            rank: movieData.rank,
-                            listedAt: movieData.listedAt,
-                            externalRatings: movieData.externalRatings,
-                        },
-                    },
-                };
+                people = await getMoviePeople(slug);
             } catch (error) {
-                console.error(`Error fetching data for movie ${slug}:`, error);
-                return {
-                    params: { slug },
-                    props: {
-                        movie: null,
-                        people: null,
-                        localData: {
-                            yearViewed: movieData.yearViewed,
-                            rank: movieData.rank,
-                            listedAt: movieData.listedAt,
-                            externalRatings: movieData.externalRatings,
-                        },
-                    },
-                };
+                console.error(`Error fetching people for movie ${slug}:`, error);
             }
+
+            return {
+                params: { slug },
+                props: {
+                    movie: movieData.movie,
+                    people,
+                    localData: {
+                        yearViewed: movieData.yearViewed,
+                        rank: movieData.rank,
+                        listedAt: movieData.listedAt,
+                        externalRatings: movieData.externalRatings,
+                    },
+                },
+            };
         })
     );
 
@@ -157,6 +142,7 @@ const cast = people?.cast || [];
                             src={moviePoster}
                             alt={`Poster de ${title}`}
                             class="w-48 rounded-xl shadow-2xl border border-zinc-700"
+                            transition:name={movie?.ids?.slug ? `poster-movie-${movie.ids.slug}` : undefined}
                         />
                     </figure>
 
