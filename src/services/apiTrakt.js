@@ -8,13 +8,15 @@
  * - Content-Type: application/json
  * - trakt-api-version: 2
  * - trakt-api-key: [Trakt_CLIENT_ID]
+ *
+ * Rate Limit: 1000 GET calls cada 5 minutos
+ * Headers de rate limit: X-Ratelimit (JSON con remaining, limit, period)
  */
+
+import { createRateLimiter } from './rateLimiter';
 
 const BASE_URL = "https://api.trakt.tv";
 const Trakt_CLIENT_ID = import.meta.env.Trakt_CLIENT_ID;
-
-// DEBUG: Verificar que el Trakt_CLIENT_ID esté configurado
-// console.log('🔑 Trakt_CLIENT_ID configurado:', Trakt_CLIENT_ID ? `${Trakt_CLIENT_ID.substring(0, 8)}...` : '❌ NO CONFIGURADO');
 
 /**
  * Headers comunes para todas las peticiones a Trakt API
@@ -26,69 +28,51 @@ const getHeaders = () => ({
 });
 
 /**
- * Limitador de concurrencia para evitar 429 Too Many Requests
+ * Rate limiter configurado para Trakt API
+ * - Max 3 requests simultáneas
+ * - 100ms entre requests (preventivo)
+ * - Pausa cuando quedan menos de 50 calls
+ * - Retry automático en 429
  */
-const MAX_CONCURRENT = 3;
-let activeRequests = 0;
-const requestQueue = [];
-
-const waitForSlot = () => {
-    if (activeRequests < MAX_CONCURRENT) {
-        activeRequests++;
-        return Promise.resolve();
-    }
-    return new Promise((resolve) => requestQueue.push(resolve));
-};
-
-const releaseSlot = () => {
-    activeRequests--;
-    if (requestQueue.length > 0) {
-        activeRequests++;
-        requestQueue.shift()();
-    }
-};
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const traktLimiter = createRateLimiter({
+    maxConcurrent: 3,
+    maxRetries: 3,
+    delayBetweenRequests: 100,
+    name: "Trakt",
+    rateLimitThreshold: 50,
+    rateLimitPauseMs: 10000,
+    parseRateLimit: (response) => {
+        const header = response.headers.get("X-Ratelimit");
+        if (!header) return null;
+        try {
+            const info = JSON.parse(header);
+            return { remaining: parseInt(info.remaining, 10) };
+        } catch {
+            return null;
+        }
+    },
+});
 
 /**
  * Función base para hacer peticiones a la API
- * Incluye limitador de concurrencia y retry automático para 429
+ * Usa el rate limiter compartido para concurrencia, retry y tracking
  * @param {string} endpoint - Endpoint de la API (sin la base URL)
- * @param {number} retries - Intentos restantes (default: 3)
  * @returns {Promise<any>} - Respuesta de la API en JSON
  */
-const fetchTrakt = async (endpoint, retries = 3) => {
+const fetchTrakt = async (endpoint) => {
     const url = `${BASE_URL}${endpoint}`;
 
-    await waitForSlot();
-    try {
-        const response = await fetch(url, {
-            method: "GET",
-            headers: getHeaders(),
-        });
+    const response = await traktLimiter.execute(() =>
+        fetch(url, { method: "GET", headers: getHeaders() })
+    );
 
-        if (response.status === 429 && retries > 0) {
-            const retryAfter = parseInt(response.headers.get("Retry-After") || "2", 10);
-            console.warn(`⏳ Rate limited on ${endpoint}, retrying in ${retryAfter}s...`);
-            releaseSlot();
-            await delay(retryAfter * 1000);
-            return fetchTrakt(endpoint, retries - 1);
-        }
-
-        if (!response.ok) {
-            const errorText = await response.text();
-            console.error(`❌ API Error Response:`, errorText);
-            throw new Error(`Trakt API Error: ${response.status} ${response.statusText}`);
-        }
-
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error(`❌ Error fetching ${endpoint}:`, error.message);
-        throw error;
-    } finally {
-        releaseSlot();
+    if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`❌ API Error Response:`, errorText);
+        throw new Error(`Trakt API Error: ${response.status} ${response.statusText}`);
     }
+
+    return response.json();
 };
 
 // ============================================
@@ -314,37 +298,46 @@ export const getUserListMovies = async (username, listSlug, sort = "rank", sortO
  * const allMovies = await getMoviesFromLists("auferoz", ListMovies);
  */
 export const getMoviesFromLists = async (username, movieLists) => {
-    const results = await Promise.all(
-        movieLists.map(async (listData) => {
-            const { idTraktList, description } = listData;
-            // Extraer el año del slug (movies-2024 -> 2024)
-            const yearMatch = idTraktList.match(/movies-(\d{4})/);
-            const yearViewed = yearMatch ? parseInt(yearMatch[1]) : null;
+    const BATCH_SIZE = 3;
+    const results = [];
 
-            try {
-                const movies = await getUserListMovies(username, idTraktList);
-                return {
-                    listSlug: idTraktList,
-                    description,
-                    yearViewed,
-                    movies: movies.map((item, index) => ({
-                        movie: item.movie,
-                        rank: item.rank || index + 1,
-                        listedAt: item.listed_at,
+    for (let i = 0; i < movieLists.length; i += BATCH_SIZE) {
+        const batch = movieLists.slice(i, i + BATCH_SIZE);
+        console.log(`📋 [Trakt] Listas de películas: batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(movieLists.length / BATCH_SIZE)}...`);
+
+        const batchResults = await Promise.all(
+            batch.map(async (listData) => {
+                const { idTraktList, description } = listData;
+                const yearMatch = idTraktList.match(/movies-(\d{4})/);
+                const yearViewed = yearMatch ? parseInt(yearMatch[1]) : null;
+
+                try {
+                    const movies = await getUserListMovies(username, idTraktList);
+                    return {
+                        listSlug: idTraktList,
+                        description,
                         yearViewed,
-                    })),
-                };
-            } catch (error) {
-                console.error(`Error fetching list ${idTraktList}:`, error);
-                return {
-                    listSlug: idTraktList,
-                    description,
-                    yearViewed,
-                    movies: [],
-                };
-            }
-        })
-    );
+                        movies: movies.map((item, index) => ({
+                            movie: item.movie,
+                            rank: item.rank || index + 1,
+                            listedAt: item.listed_at,
+                            yearViewed,
+                        })),
+                    };
+                } catch (error) {
+                    console.error(`Error fetching list ${idTraktList}:`, error);
+                    return {
+                        listSlug: idTraktList,
+                        description,
+                        yearViewed,
+                        movies: [],
+                    };
+                }
+            })
+        );
+
+        results.push(...batchResults);
+    }
 
     return results;
 };
@@ -460,42 +453,39 @@ export const getMultipleShows = async (showIds) => {
  * const seriesWithData = await getSeriesWithSeasonData(ListSeriesSeasons);
  */
 export const getSeriesWithSeasonData = async (seriesList) => {
-    // Crear un mapa para cachear shows ya obtenidos (evitar llamadas duplicadas)
     const showsCache = new Map();
+    const BATCH_SIZE = 5;
+    const results = [];
 
-    // Procesar cada entrada de la lista
-    const results = await Promise.all(
-        seriesList.map(async (localData) => {
-            const { idTrakt, numberSeason } = localData;
+    for (let i = 0; i < seriesList.length; i += BATCH_SIZE) {
+        const batch = seriesList.slice(i, i + BATCH_SIZE);
+        console.log(`📺 [Trakt] Series: batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(seriesList.length / BATCH_SIZE)}...`);
 
-            try {
-                // Obtener show (usar cache si ya existe)
-                let show;
-                if (showsCache.has(idTrakt)) {
-                    show = showsCache.get(idTrakt);
-                } else {
-                    show = await getShow(idTrakt);
-                    showsCache.set(idTrakt, show);
+        const batchResults = await Promise.all(
+            batch.map(async (localData) => {
+                const { idTrakt, numberSeason } = localData;
+
+                try {
+                    let show;
+                    if (showsCache.has(idTrakt)) {
+                        show = showsCache.get(idTrakt);
+                    } else {
+                        show = await getShow(idTrakt);
+                        showsCache.set(idTrakt, show);
+                    }
+
+                    const season = await getSeasonInfo(idTrakt, numberSeason);
+
+                    return { show, season, localData };
+                } catch (error) {
+                    console.error(`Error fetching ${idTrakt} season ${numberSeason}:`, error);
+                    return { show: null, season: null, localData };
                 }
+            })
+        );
 
-                // Obtener info de la temporada específica con imágenes
-                const season = await getSeasonInfo(idTrakt, numberSeason);
-
-                return {
-                    show,
-                    season,
-                    localData,
-                };
-            } catch (error) {
-                console.error(`Error fetching ${idTrakt} season ${numberSeason}:`, error);
-                return {
-                    show: null,
-                    season: null,
-                    localData,
-                };
-            }
-        })
-    );
+        results.push(...batchResults);
+    }
 
     return results;
 };

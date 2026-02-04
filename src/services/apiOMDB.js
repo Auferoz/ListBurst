@@ -8,13 +8,30 @@
  * - IMDB (imdbRating, imdbVotes)
  * - Rotten Tomatoes (Tomatometer)
  * - Metacritic (Metascore)
+ *
+ * Rate Limit: 1000 calls diarias (free tier)
  */
+
+import { createRateLimiter } from './rateLimiter';
 
 const BASE_URL = "https://www.omdbapi.com/";
 const API_KEY = import.meta.env.OMDB_API_KEY;
 
 // Cache para evitar llamadas duplicadas
 const ratingsCache = new Map();
+
+/**
+ * Rate limiter configurado para OMDB API
+ * - Max 5 requests simultáneas
+ * - 50ms entre requests (preventivo)
+ * - Retry automático en 429
+ */
+const omdbLimiter = createRateLimiter({
+    maxConcurrent: 5,
+    maxRetries: 2,
+    delayBetweenRequests: 50,
+    name: "OMDB",
+});
 
 /**
  * Obtiene ratings de una película por IMDB ID
@@ -35,7 +52,7 @@ export const getMovieRatings = async (imdbId) => {
 
     try {
         const url = `${BASE_URL}?i=${imdbId}&apikey=${API_KEY}`;
-        const response = await fetch(url);
+        const response = await omdbLimiter.execute(() => fetch(url));
 
         if (!response.ok) {
             console.error(`OMDB API Error: ${response.status}`);
@@ -45,7 +62,11 @@ export const getMovieRatings = async (imdbId) => {
         const data = await response.json();
 
         if (data.Response === "False") {
-            console.error(`OMDB Error: ${data.Error}`);
+            if (data.Error === "Request limit reached!") {
+                console.warn(`⏳ [OMDB] Límite diario alcanzado para ${imdbId}`);
+            } else {
+                console.error(`OMDB Error: ${data.Error}`);
+            }
             return null;
         }
 
