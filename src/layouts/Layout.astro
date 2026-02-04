@@ -1,0 +1,39 @@
+---
+import { ClientRouter } from 'astro:transitions';
+
+import '../styles/global.css' 
+import '@fontsource-variable/nunito-sans';
+
+import MenuHeader from '../components/Globals/MenuHeader.astro'
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<title>ListBurst</title>
+		<ClientRouter />
+	</head>
+	<body>
+		<MenuHeader />
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+		color-scheme: dark;
+		font-family: 'Nunito Sans Variable', sans-serif;
+	}
+</style>

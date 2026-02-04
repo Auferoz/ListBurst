@@ -1,0 +1,70 @@
+---
+/**
+ * Componente reutilizable para filtros tipo select
+ *
+ * @example
+ * <FilterSelect
+ *     id="filter-year"
+ *     label="Año"
+ *     options={[
+ *         { value: "2026", label: "2026" },
+ *         { value: "2025", label: "2025" },
+ *     ]}
+ *     defaultValue="2026"
+ *     includeAll={true}
+ *     allLabel="Todos"
+ * />
+ */
+
+interface Option {
+    value: string;
+    label: string;
+}
+
+interface Props {
+    id: string;
+    label: string;
+    options: Option[];
+    defaultValue?: string;
+    includeAll?: boolean;
+    allLabel?: string;
+    capitalize?: boolean;
+}
+
+const {
+    id,
+    label,
+    options,
+    defaultValue,
+    includeAll = true,
+    allLabel = "Todos",
+    capitalize = false,
+} = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center gap-1">
+    <label for={id} class="text-xs text-zinc-400">{label}</label>
+    <select
+        id={id}
+        class:list={[
+            "bg-zinc-800 border border-zinc-700 rounded-lg px-1 py-2 text-xs text-white",
+            "focus:outline-none focus:border-sky-600 cursor-pointer",
+            { "capitalize": capitalize }
+        ]}
+    >
+        {includeAll && (
+            <option value="all" selected={!defaultValue || defaultValue === "all"}>
+                {allLabel}
+            </option>
+        )}
+        {options.map((option) => (
+            <option
+                value={option.value}
+                selected={option.value === defaultValue}
+                class:list={{ "capitalize": capitalize }}
+            >
+                {option.label}
+            </option>
+        ))}
+    </select>
+</div>

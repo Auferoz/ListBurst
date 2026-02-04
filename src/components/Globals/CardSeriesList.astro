@@ -1,0 +1,174 @@
+---
+import { getImageUrl } from '../../services/apiTrakt';
+
+/**
+ * Props: recibe el objeto completo con show, season y localData
+ *
+ * data.show: Info de la serie (title, year, genres, network, runtime, overview, images, ids, etc.)
+ * data.season: Info de la temporada (number, episode_count, title, overview, images, etc.)
+ * data.localData: Info local (idTrakt, numberSeason, yearViewed, platformViewed, statusViewed)
+ */
+interface Props {
+    data: {
+        show: any;
+        season: any;
+        localData: {
+            idTrakt: string;
+            numberSeason: number;
+            yearViewed: number;
+            platformViewed: string;
+            statusViewed: string;
+        };
+    };
+    index?: number;
+}
+
+const { data, index = 0 } = Astro.props;
+const { show, season, localData } = data;
+
+// Imágenes del Show (logo, thumb, banner, fanart, poster, clearart)
+const showLogo = getImageUrl(show?.images?.logo?.[0]);
+const showThumb = getImageUrl(show?.images?.thumb?.[0]);
+const showBanner = getImageUrl(show?.images?.banner?.[0]);
+const showFanart = getImageUrl(show?.images?.fanart?.[0]);
+const showPoster = getImageUrl(show?.images?.poster?.[0]);
+const showClearart = getImageUrl(show?.images?.clearart?.[0]);
+
+// Imágenes de la Season (thumb, poster)
+const seasonThumb = getImageUrl(season?.images?.thumb?.[0]);
+const seasonPoster = getImageUrl(season?.images?.poster?.[0]);
+
+// DEBUG: Imprimir en consola del servidor
+// console.log(`\n=== DEBUG: ${show?.title} - Season ${localData.numberSeason} ===`);
+// console.log('Season images:', JSON.stringify(season?.images, null, 2));
+// console.log('seasonPoster URL:', seasonPoster);
+// console.log('showPoster URL:', showPoster);
+
+// Datos derivados
+const title = show?.title || 'Sin título';
+const year = show?.year;
+const genres = show?.genres || [];
+const network = show?.network;
+const episodeCount = season?.episode_count;
+const seasonNumber = localData.numberSeason;
+const platform = localData.platformViewed;
+const isWatched = localData.statusViewed === 'completed';
+const isOngoing = localData.statusViewed === 'ongoing';
+const yearViewed = localData.yearViewed;
+
+// Formatear fecha de estreno de la temporada (Mes Año)
+const formatSeasonPremiere = (dateString: string | undefined) => {
+    if (!dateString) return null;
+    const date = new Date(dateString);
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    return `${months[date.getMonth()]} ${date.getFullYear()}`;
+};
+const seasonPremiere = formatSeasonPremiere(season?.first_aired);
+
+// Clases de color según el estado
+const statusColorClasses = isOngoing
+    ? 'border-green-700/50 shadow-green-700/20 hover:shadow-green-700/40'
+    : 'border-sky-700/50 shadow-sky-700/20 hover:shadow-sky-700/40';
+
+// URL de la página de detalle
+const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
+---
+
+
+<a
+    href={detailUrl}
+    class:list={[
+        "card-series group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow",
+        statusColorClasses
+    ]}
+    data-year={yearViewed}
+    data-genres={genres.join(',')}
+    data-platform={platform.toLowerCase()}
+    data-status={localData.statusViewed}
+    data-index={index}
+    data-title={title.toLowerCase()}
+>
+    <!-- DEBUG: Mostrar info de imágenes en la card -->
+    <!-- <details class="absolute top-0 left-0 z-50 bg-black/90 text-xs max-w-full overflow-hidden rounded-br-lg">
+        <summary class="px-2 py-1 cursor-pointer text-yellow-400 hover:text-yellow-300">
+            🔍 {title} S{seasonNumber}
+        </summary>
+        <div class="p-2 max-h-48 overflow-y-auto">
+            <p class="text-green-400">seasonPoster: {seasonPoster || '❌ NULL'}</p>
+            <p class="text-blue-400">showPoster: {showPoster || '❌ NULL'}</p>
+            <p class="text-zinc-400 mt-1">season.images:</p>
+            <pre class="text-zinc-300 text-[10px] whitespace-pre-wrap">{JSON.stringify(season?.images, null, 2)}</pre>
+        </div>
+    </details> -->
+
+    <!-- Background Image with Mask (usando showBanner) -->
+    <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+        style={`background-image: url('${showBanner}'); mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);`}
+    ></div>
+
+    <!-- Dark Overlay for better text readability -->
+    <div class="absolute inset-0 bg-linear-to-r from-zinc-900/95 via-zinc-900/80 to-transparent"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-10 flex w-full gap-3 p-2">
+        <!-- Poster Image (usando seasonPoster) -->
+        <figure class="shrink-0">
+            <img
+                class="h-28 w-auto rounded-lg object-cover shadow-md"
+                src={seasonPoster}
+                alt={`Poster de ${title}`}
+                loading="lazy"
+            />
+        </figure>
+
+        <!-- Info Section -->
+        <div class="flex flex-1 flex-col justify-between py-1">
+            <header>
+                <h3 class="text-base font-semibold text-white leading-tight">
+                    {title}
+                    {seasonPremiere && <span class="text-xs text-zinc-400">· {seasonPremiere}</span>}
+                </h3>
+                <p class="text-xs text-zinc-400 mt-0.5">
+                    Season {seasonNumber} {episodeCount && `· ${episodeCount} Episodes`}
+                </p>
+                {genres.length > 0 && (
+                    <p class="text-xs text-zinc-400 mt-0.5 capitalize">
+                        {genres.slice(0, 2).join(', ')}
+                    </p>
+                )}
+            </header>
+
+            <!-- Footer -->
+            <footer class="flex items-center gap-2 text-xs">
+                <span class="rounded-full bg-zinc-800/80 px-2.5 py-1 text-zinc-300 font-medium capitalize">
+                    {platform}
+                </span>
+                <span class="text-zinc-500">
+                    {yearViewed}
+                </span>
+                {isWatched && (
+                    <span class="ml-auto text-violet-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </span>
+                )}
+            </footer>
+        </div>
+
+        <!-- Options Modal Button -->
+        <button
+            type="button"
+            class="absolute top-2 right-2 p-1 text-zinc-200 hover:text-white transition-colors"
+            aria-label="Opciones"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="5" r="2"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+                <circle cx="12" cy="19" r="2"></circle>
+            </svg>
+        </button>
+    </div>
+</a>

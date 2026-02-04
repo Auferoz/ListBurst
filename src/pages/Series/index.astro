@@ -1,0 +1,293 @@
+---
+// src/pages/Series/List.astro
+import { ListSeriesSeasons, getAvailableYears } from '../../data/SeriesDB';
+import { getSeriesWithSeasonData } from '../../services/apiTrakt';
+import Layout from '../../layouts/Layout.astro';
+import CardSeriesList from '../../components/Globals/CardSeriesList.astro';
+import FilterSelect from '../../components/Globals/FilterSelect.astro';
+import IconTrash from '../../components/Icons/IconTrash.astro';
+import IconFilter from '../../components/Icons/IconFilter.astro';
+import IconFilterFilled from '../../components/Icons/IconFilterFilled.astro';
+
+const seriesData = await getSeriesWithSeasonData(ListSeriesSeasons);
+
+// Obtener años disponibles y géneros únicos
+const availableYears = getAvailableYears().reverse(); // Más reciente primero
+const currentYear = new Date().getFullYear();
+const defaultYear = availableYears.includes(currentYear) ? currentYear : availableYears[0];
+
+// Extraer géneros únicos de todas las series
+const allGenres = [...new Set(seriesData.flatMap(d => d.show?.genres || []))].sort();
+
+// Extraer plataformas únicas de las series
+const allPlatforms = [...new Set(ListSeriesSeasons.map(s => s.platformViewed.toLowerCase()))].sort();
+
+// Convertir a formato de opciones para FilterSelect
+const yearOptions = availableYears.map(year => ({ value: String(year), label: String(year) }));
+const genreOptions = allGenres.map(genre => ({ value: genre, label: genre }));
+const platformOptions = allPlatforms.map(platform => ({ value: platform, label: platform }));
+const statusOptions = [
+    { value: "completed", label: "Completadas" },
+    { value: "ongoing", label: "En progreso" },
+];
+const orderOptions = [
+    { value: "newest", label: "Más reciente" },
+    { value: "oldest", label: "Más antiguo" },
+    { value: "title-asc", label: "Título A-Z" },
+    { value: "title-desc", label: "Título Z-A" },
+];
+
+// Agregar índice para ordenamiento
+const seriesDataWithIndex = seriesData.map((data, index) => ({
+    ...data,
+    originalIndex: index,
+}));
+---
+
+<Layout>
+    <main class="max-w-7xl w-full mx-auto p-4">
+        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <h1 class="text-xl font-bold">Series List <span id="series-count" class="text-sm text-zinc-400"></span></h1>
+			<p class="text-xs text-start">
+				Lista de mis series vistas organizadas por temporadas. Usa los filtros para encontrar series según tus preferencias.
+			</p>
+        </header>
+
+        <!-- Filtros -->
+        <section class="flex flex-wrap items-center justify-start gap-3 mt-4" id="filters">
+            <!-- Botón Toggle Filter -->
+            <div class="flex flex-col items-center justify-center gap-1">
+                <label class="text-xs text-transparent">Filter</label>
+                <button
+                    id="filter-toggle"
+                    type="button"
+                    class="text-white transition-colors"
+                    aria-expanded="false"
+                    aria-controls="filter-options"
+                >
+                    <span id="icon-filter" class="block">
+                        <IconFilter width="24" height="24" class="text-zinc-400 shrink-0" />
+                    </span>
+                    <span id="icon-filter-filled" class="hidden">
+                        <IconFilterFilled width="24" height="24" class="text-sky-500 shrink-0" />
+                    </span>
+                </button>
+            </div>
+
+            <!-- Contenedor de filtros (oculto por defecto) -->
+            <div id="filter-options" class="hidden flex flex-wrap items-center gap-3">
+                <FilterSelect
+                    id="filter-year"
+                    label="Año"
+                    options={yearOptions}
+                    defaultValue={String(defaultYear)}
+                />
+
+                <FilterSelect
+                    id="filter-genre"
+                    label="Género"
+                    options={genreOptions}
+                    capitalize={true}
+                />
+
+                <FilterSelect
+                    id="filter-status"
+                    label="Estado"
+                    options={statusOptions}
+                />
+
+                <FilterSelect
+                    id="filter-platform"
+                    label="Plataforma"
+                    options={platformOptions}
+                    capitalize={true}
+                />
+
+                <FilterSelect
+                    id="filter-order"
+                    label="Orden"
+                    options={orderOptions}
+                    defaultValue="newest"
+                    includeAll={false}
+                />
+
+                <!-- Botón Reset -->
+                <div class="flex flex-col items-center justify-center gap-1">
+                    <label class="text-xs text-transparent">Reset</label>
+                    <button
+                        id="filter-reset"
+                        type="button"
+                        class="text-white transition-colors hover:text-red-400"
+                    >
+                        <IconTrash width="24" height="24" />
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Series -->
+        <div id="series-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 pb-20">
+            {seriesDataWithIndex.map((data, index) => (
+                <CardSeriesList data={data} index={index} />
+            ))}
+        </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <div id="no-results" class="hidden text-center py-12 text-zinc-400">
+            <p class="text-lg">No se encontraron series con los filtros seleccionados</p>
+        </div>
+    </main>
+</Layout>
+
+<script define:vars={{ defaultYear }}>
+    // Esperar a que el DOM esté listo
+    document.addEventListener('DOMContentLoaded', () => {
+        initFilters();
+    });
+
+    // También ejecutar en navegación con View Transitions
+    document.addEventListener('astro:page-load', () => {
+        initFilters();
+    });
+
+    function initFilters() {
+        const filterToggle = document.getElementById('filter-toggle');
+        const filterOptions = document.getElementById('filter-options');
+        const iconFilter = document.getElementById('icon-filter');
+        const iconFilterFilled = document.getElementById('icon-filter-filled');
+        const filterYear = document.getElementById('filter-year');
+        const filterGenre = document.getElementById('filter-genre');
+        const filterStatus = document.getElementById('filter-status');
+        const filterPlatform = document.getElementById('filter-platform');
+        const filterOrder = document.getElementById('filter-order');
+        const filterReset = document.getElementById('filter-reset');
+        const seriesGrid = document.getElementById('series-grid');
+        const noResults = document.getElementById('no-results');
+        const seriesCount = document.getElementById('series-count');
+
+        if (!filterYear || !seriesGrid) return;
+
+        let cards = Array.from(seriesGrid.querySelectorAll('.card-series'));
+        let filtersVisible = false;
+
+        // Toggle de filtros
+        filterToggle.addEventListener('click', () => {
+            filtersVisible = !filtersVisible;
+            filterOptions.classList.toggle('hidden', !filtersVisible);
+            filterToggle.setAttribute('aria-expanded', filtersVisible);
+            updateFilterIcon();
+        });
+
+        // Actualizar icono según si hay filtros activos (no depende de si están visibles)
+        function updateFilterIcon() {
+            const hasActiveFilters =
+                filterYear.value !== 'all' ||
+                filterGenre.value !== 'all' ||
+                filterStatus.value !== 'all' ||
+                filterPlatform.value !== 'all' ||
+                filterOrder.value !== 'newest';
+
+            if (hasActiveFilters) {
+                iconFilter.classList.add('hidden');
+                iconFilterFilled.classList.remove('hidden');
+            } else {
+                iconFilter.classList.remove('hidden');
+                iconFilterFilled.classList.add('hidden');
+            }
+        }
+
+        // Aplicar filtro y orden inicial
+        applyFiltersAndSort();
+
+        // Event listeners para los filtros
+        filterYear.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterGenre.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterStatus.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterPlatform.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterOrder.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+
+        // Reset de filtros
+        filterReset.addEventListener('click', () => {
+            filterYear.value = 'all';
+            filterGenre.value = 'all';
+            filterStatus.value = 'all';
+            filterPlatform.value = 'all';
+            filterOrder.value = 'newest';
+            applyFiltersAndSort();
+            updateFilterIcon();
+        });
+
+        function applyFiltersAndSort() {
+            const yearValue = filterYear.value;
+            const genreValue = filterGenre.value;
+            const statusValue = filterStatus.value;
+            const platformValue = filterPlatform.value;
+            const orderValue = filterOrder.value;
+
+            // Filtrar cards
+            let visibleCards = [];
+            cards.forEach((card) => {
+                const cardYear = card.dataset.year;
+                const cardGenres = card.dataset.genres?.toLowerCase() || '';
+                const cardStatus = card.dataset.status;
+                const cardPlatform = card.dataset.platform?.toLowerCase() || '';
+
+                const matchYear = yearValue === 'all' || cardYear === yearValue;
+                const matchGenre = genreValue === 'all' || cardGenres.includes(genreValue.toLowerCase());
+                const matchStatus = statusValue === 'all' || cardStatus === statusValue;
+                const matchPlatform = platformValue === 'all' || cardPlatform === platformValue.toLowerCase();
+
+                if (matchYear && matchGenre && matchStatus && matchPlatform) {
+                    card.style.display = '';
+                    visibleCards.push(card);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Ordenar cards visibles
+            visibleCards.sort((a, b) => {
+                switch (orderValue) {
+                    case 'newest':
+                        // Más reciente primero (índice mayor = más reciente)
+                        return parseInt(b.dataset.index) - parseInt(a.dataset.index);
+                    case 'oldest':
+                        // Más antiguo primero (índice menor = más antiguo)
+                        return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+                    case 'title-asc':
+                        // Título A-Z
+                        return (a.dataset.title || '').localeCompare(b.dataset.title || '');
+                    case 'title-desc':
+                        // Título Z-A
+                        return (b.dataset.title || '').localeCompare(a.dataset.title || '');
+                    default:
+                        return 0;
+                }
+            });
+
+            // Reordenar en el DOM
+            visibleCards.forEach(card => {
+                seriesGrid.appendChild(card);
+            });
+
+            // También mover las cards ocultas al final para mantener el orden
+            cards.forEach(card => {
+                if (card.style.display === 'none') {
+                    seriesGrid.appendChild(card);
+                }
+            });
+
+            // Mostrar/ocultar mensaje de no resultados
+            if (visibleCards.length === 0) {
+                noResults.classList.remove('hidden');
+                seriesGrid.classList.add('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                seriesGrid.classList.remove('hidden');
+            }
+
+            // Actualizar contador
+            seriesCount.textContent = `· ${visibleCards.length} serie${visibleCards.length !== 1 ? 's' : ''}`;
+        }
+    }
+</script>

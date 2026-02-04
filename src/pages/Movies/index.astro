@@ -1,0 +1,281 @@
+---
+// src/pages/Movies/List.astro
+import { ListMovies } from '../../data/MoviesDB';
+import { getMoviesFromLists } from '../../services/apiTrakt';
+import { enrichMoviesWithRatings } from '../../services/apiOMDB';
+import Layout from '../../layouts/Layout.astro';
+import CardMoviesList from '../../components/Globals/CardMoviesList.astro';
+import FilterSelect from '../../components/Globals/FilterSelect.astro';
+import IconTrash from '../../components/Icons/IconTrash.astro';
+import IconFilter from '../../components/Icons/IconFilter.astro';
+import IconFilterFilled from '../../components/Icons/IconFilterFilled.astro';
+import IconTrakt from '../../components/Icons/IconTrakt.astro';
+
+// Usuario de Trakt
+const TRAKT_USERNAME = "auferoz";
+
+// Obtener todas las películas de todas las listas
+const allListsData = await getMoviesFromLists(TRAKT_USERNAME, ListMovies);
+
+// Aplanar todas las películas en un solo array
+const allMovies = allListsData.flatMap(list => list.movies);
+
+// Enriquecer películas con ratings de OMDB (IMDB, Rotten Tomatoes, Metacritic)
+const moviesWithRatings = await enrichMoviesWithRatings(allMovies);
+
+// Obtener años disponibles
+const availableYears = [...new Set(allListsData.map(list => list.yearViewed).filter(Boolean))].sort((a, b) => b - a);
+const currentYear = new Date().getFullYear();
+const defaultYear = availableYears.includes(currentYear) ? currentYear : availableYears[0];
+
+// Extraer géneros únicos de todas las películas
+const allGenres = [...new Set(moviesWithRatings.flatMap(m => m.movie?.genres || []))].sort();
+
+// Convertir a formato de opciones para FilterSelect
+const yearOptions = availableYears.map(year => ({ value: String(year), label: String(year) }));
+const genreOptions = allGenres.map(genre => ({ value: genre, label: genre }));
+const orderOptions = [
+    { value: "newest", label: "Más reciente" },
+    { value: "oldest", label: "Más antiguo" },
+    { value: "title-asc", label: "Título A-Z" },
+    { value: "title-desc", label: "Título Z-A" },
+    { value: "rating-desc", label: "Mejor valorada" },
+    { value: "rating-asc", label: "Peor valorada" },
+];
+
+// Agregar índice para ordenamiento
+const moviesWithIndex = moviesWithRatings.map((data, index) => ({
+    ...data,
+    originalIndex: index,
+}));
+---
+
+<Layout>
+    <main class="max-w-7xl w-full mx-auto p-4">
+        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <h1 class="text-xl font-bold">Movies List <span id="movies-count" class="text-sm text-zinc-400"></span></h1>
+            <p class="text-xs text-start">
+                Lista de mis películas vistas organizadas por año. Usa los filtros para encontrar películas según tus preferencias.
+            </p>
+        </header>
+
+        <!-- DEBUG: Mostrar JSON completo de la primera película -->
+        <!-- {allMovies.length > 0 && (
+            <details class="mt-4 p-4 bg-zinc-800 rounded-lg border border-zinc-700">
+                <summary class="cursor-pointer text-amber-400 font-semibold">🔍 DEBUG: Ver JSON completo de película</summary>
+                <pre class="mt-2 text-xs text-zinc-300 overflow-auto max-h-96 p-2 bg-zinc-900 rounded">
+                    {JSON.stringify(allMovies[0], null, 2)}
+                </pre>
+            </details>
+        )} -->
+        
+        <!-- Filtros -->
+        <section class="flex flex-wrap items-center justify-start gap-3 mt-4" id="filters">
+            <!-- Botón Toggle Filter -->
+            <div class="flex flex-col items-center justify-center gap-1">
+                <label class="text-xs text-transparent">Filter</label>
+                <button
+                    id="filter-toggle"
+                    type="button"
+                    class="text-white transition-colors"
+                    aria-expanded="false"
+                    aria-controls="filter-options"
+                >
+                    <span id="icon-filter" class="block">
+                        <IconFilter width="24" height="24" class="text-zinc-400 shrink-0" />
+                    </span>
+                    <span id="icon-filter-filled" class="hidden">
+                        <IconFilterFilled width="24" height="24" class="text-amber-500 shrink-0" />
+                    </span>
+                </button>
+            </div>
+
+            <!-- Contenedor de filtros (oculto por defecto) -->
+            <div id="filter-options" class="hidden flex flex-wrap items-center gap-3">
+                <FilterSelect
+                    id="filter-year"
+                    label="Año"
+                    options={yearOptions}
+                    defaultValue={String(defaultYear)}
+                />
+
+                <FilterSelect
+                    id="filter-genre"
+                    label="Género"
+                    options={genreOptions}
+                    capitalize={true}
+                />
+
+                <FilterSelect
+                    id="filter-order"
+                    label="Orden"
+                    options={orderOptions}
+                    defaultValue="newest"
+                    includeAll={false}
+                />
+
+                <!-- Botón Reset -->
+                <div class="flex flex-col items-center justify-center gap-1">
+                    <label class="text-xs text-transparent">Reset</label>
+                    <button
+                        id="filter-reset"
+                        type="button"
+                        class="text-white transition-colors hover:text-red-400"
+                    >
+                        <IconTrash width="24" height="24" />
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Películas -->
+        <div id="movies-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 pb-20">
+            {moviesWithIndex.map((data, index) => (
+                <CardMoviesList data={data} index={index} />
+            ))}
+        </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <div id="no-results" class="hidden text-center py-12 text-zinc-400">
+            <p class="text-lg">No se encontraron películas con los filtros seleccionados</p>
+        </div>
+    </main>
+</Layout>
+
+<script define:vars={{ defaultYear }}>
+    // Esperar a que el DOM esté listo
+    document.addEventListener('DOMContentLoaded', () => {
+        initFilters();
+    });
+
+    // También ejecutar en navegación con View Transitions
+    document.addEventListener('astro:page-load', () => {
+        initFilters();
+    });
+
+    function initFilters() {
+        const filterToggle = document.getElementById('filter-toggle');
+        const filterOptions = document.getElementById('filter-options');
+        const iconFilter = document.getElementById('icon-filter');
+        const iconFilterFilled = document.getElementById('icon-filter-filled');
+        const filterYear = document.getElementById('filter-year');
+        const filterGenre = document.getElementById('filter-genre');
+        const filterOrder = document.getElementById('filter-order');
+        const filterReset = document.getElementById('filter-reset');
+        const moviesGrid = document.getElementById('movies-grid');
+        const noResults = document.getElementById('no-results');
+        const moviesCount = document.getElementById('movies-count');
+
+        if (!filterYear || !moviesGrid) return;
+
+        let cards = Array.from(moviesGrid.querySelectorAll('.card-movie'));
+        let filtersVisible = false;
+
+        // Toggle de filtros
+        filterToggle.addEventListener('click', () => {
+            filtersVisible = !filtersVisible;
+            filterOptions.classList.toggle('hidden', !filtersVisible);
+            filterToggle.setAttribute('aria-expanded', filtersVisible);
+        });
+
+        // Actualizar icono según si hay filtros activos
+        function updateFilterIcon() {
+            const hasActiveFilters =
+                filterYear.value !== 'all' ||
+                filterGenre.value !== 'all' ||
+                filterOrder.value !== 'newest';
+
+            if (hasActiveFilters) {
+                iconFilter.classList.add('hidden');
+                iconFilterFilled.classList.remove('hidden');
+            } else {
+                iconFilter.classList.remove('hidden');
+                iconFilterFilled.classList.add('hidden');
+            }
+        }
+
+        // Aplicar filtro y orden inicial
+        applyFiltersAndSort();
+
+        // Event listeners para los filtros
+        filterYear.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterGenre.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterOrder.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+
+        // Reset de filtros
+        filterReset.addEventListener('click', () => {
+            filterYear.value = 'all';
+            filterGenre.value = 'all';
+            filterOrder.value = 'newest';
+            applyFiltersAndSort();
+            updateFilterIcon();
+        });
+
+        function applyFiltersAndSort() {
+            const yearValue = filterYear.value;
+            const genreValue = filterGenre.value;
+            const orderValue = filterOrder.value;
+
+            // Filtrar cards
+            let visibleCards = [];
+            cards.forEach((card) => {
+                const cardYear = card.dataset.year;
+                const cardGenres = card.dataset.genres?.toLowerCase() || '';
+
+                const matchYear = yearValue === 'all' || cardYear === yearValue;
+                const matchGenre = genreValue === 'all' || cardGenres.includes(genreValue.toLowerCase());
+
+                if (matchYear && matchGenre) {
+                    card.style.display = '';
+                    visibleCards.push(card);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Ordenar cards visibles
+            visibleCards.sort((a, b) => {
+                switch (orderValue) {
+                    case 'newest':
+                        return parseInt(b.dataset.index) - parseInt(a.dataset.index);
+                    case 'oldest':
+                        return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+                    case 'title-asc':
+                        return (a.dataset.title || '').localeCompare(b.dataset.title || '');
+                    case 'title-desc':
+                        return (b.dataset.title || '').localeCompare(a.dataset.title || '');
+                    case 'rating-desc':
+                        return parseFloat(b.dataset.rating || 0) - parseFloat(a.dataset.rating || 0);
+                    case 'rating-asc':
+                        return parseFloat(a.dataset.rating || 0) - parseFloat(b.dataset.rating || 0);
+                    default:
+                        return 0;
+                }
+            });
+
+            // Reordenar en el DOM
+            visibleCards.forEach(card => {
+                moviesGrid.appendChild(card);
+            });
+
+            // También mover las cards ocultas al final
+            cards.forEach(card => {
+                if (card.style.display === 'none') {
+                    moviesGrid.appendChild(card);
+                }
+            });
+
+            // Mostrar/ocultar mensaje de no resultados
+            if (visibleCards.length === 0) {
+                noResults.classList.remove('hidden');
+                moviesGrid.classList.add('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                moviesGrid.classList.remove('hidden');
+            }
+
+            // Actualizar contador
+            moviesCount.textContent = `· ${visibleCards.length} película${visibleCards.length !== 1 ? 's' : ''}`;
+        }
+    }
+</script>

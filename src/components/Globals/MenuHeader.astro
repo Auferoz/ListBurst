@@ -1,0 +1,41 @@
+---
+import IconDeviceTv from "../Icons/IconDeviceTv.astro";
+import IconGamepad from "../Icons/IconGamepad.astro";
+import IconHome from "../Icons/IconHome.astro";
+import IconMovie from "../Icons/IconMovie.astro";
+
+const pathname = Astro.url.pathname;
+
+const menuItems = [
+    { href: "/", icon: IconHome, label: "Home" },
+    { href: "/Games", icon: IconGamepad, label: "Games" },
+    { href: "/Series", icon: IconDeviceTv, label: "Series" },
+    { href: "/Movies", icon: IconMovie, label: "Movies" },
+];
+
+const isActive = (href: string) => {
+    if (href === "/") {
+        return pathname === "/" || pathname === "";
+    }
+    return pathname.startsWith(href);
+};
+
+const activeClass = "text-sky-700 fill-cyan-700 drop-shadow-lg drop-shadow-cyan-700/70";
+const inactiveClass = "text-white";
+---
+
+<nav class="flex items-center justify-center text-white fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-106.25 bg-[#222428]/90 p-4 shadow-lg rounded-t-2xl z-100">
+    <ul class="flex flex-row gap-2 items-center justify-around w-full max-w-md">
+        {menuItems.map((item) => (
+            <li>
+                <a
+                    href={item.href}
+                    class={isActive(item.href) ? activeClass : inactiveClass}
+                    aria-current={isActive(item.href) ? "page" : undefined}
+                >
+                    <item.icon width={26} height={26} />
+                </a>
+            </li>
+        ))}
+    </ul>
+</nav>

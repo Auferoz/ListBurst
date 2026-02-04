@@ -1,0 +1,238 @@
+---
+/**
+ * Página dinámica para cada serie/temporada
+ * URL: /Series/[idTrakt]-season-[numberSeason]
+ * Ejemplo: /Series/loki-2021-season-2
+ */
+import { ListSeriesSeasons } from '../../data/SeriesDB';
+import { getShow, getSeasonInfo, getSeasonPeople, getImageUrl } from '../../services/apiTrakt';
+import Layout from '../../layouts/Layout.astro';
+
+// Generar todas las rutas estáticas
+export async function getStaticPaths() {
+    const paths = await Promise.all(
+        ListSeriesSeasons.map(async (seriesData) => {
+            const { idTrakt, numberSeason, yearViewed, platformViewed, statusViewed } = seriesData;
+
+            // Generar el slug para la URL
+            const slug = `${idTrakt}-season-${numberSeason}`;
+
+            try {
+                // Obtener datos de la serie, temporada y people en paralelo
+                const [show, season, people] = await Promise.all([
+                    getShow(idTrakt),
+                    getSeasonInfo(idTrakt, numberSeason),
+                    getSeasonPeople(idTrakt, numberSeason),
+                ]);
+
+                return {
+                    params: { slug },
+                    props: {
+                        show,
+                        season,
+                        people,
+                        localData: seriesData,
+                    },
+                };
+            } catch (error) {
+                console.error(`Error fetching data for ${idTrakt} season ${numberSeason}:`, error);
+                return {
+                    params: { slug },
+                    props: {
+                        show: null,
+                        season: null,
+                        people: null,
+                        localData: seriesData,
+                    },
+                };
+            }
+        })
+    );
+
+    return paths;
+}
+
+// Props de la página
+interface Props {
+    show: any;
+    season: any;
+    people: any;
+    localData: {
+        idTrakt: string;
+        numberSeason: number;
+        yearViewed: number;
+        platformViewed: string;
+        statusViewed: string;
+    };
+}
+
+const { show, season, people, localData } = Astro.props;
+const { idTrakt, numberSeason, yearViewed, platformViewed, statusViewed } = localData;
+
+// Imágenes
+const showPoster = getImageUrl(show?.images?.poster?.[0]);
+const showFanart = getImageUrl(show?.images?.fanart?.[0]);
+const showLogo = getImageUrl(show?.images?.logo?.[0]);
+const showBanner = getImageUrl(show?.images?.banner?.[0]);
+const seasonPoster = getImageUrl(season?.images?.poster?.[0]);
+const seasonThumb = getImageUrl(season?.images?.thumb?.[0]);
+
+// Datos de la serie
+const title = show?.title || 'Sin título';
+const year = show?.year;
+const seasonTitle = season?.title || `Temporada ${numberSeason}`;
+const overview = season?.overview || show?.overview || '';
+const genres = show?.genres || [];
+const network = show?.network;
+const rating = show?.rating?.toFixed(1);
+const seasonRating = season?.rating?.toFixed(1);
+
+// Datos del cast
+const cast = people?.cast || [];
+---
+
+<Layout title={`${title} - ${seasonTitle}`}>
+    <main class="min-h-screen mb-12">
+        <!-- Hero con fanart de fondo -->
+        <section
+            class="relative h-[50vh] bg-cover bg-center bg-no-repeat"
+            style={`background-image: url('${showFanart || showBanner}');`}
+        >
+            <!-- Overlay oscuro -->
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-900 via-zinc-900/70 to-transparent"></div>
+
+            <!-- Contenido del hero -->
+            <div class="absolute bottom-0 left-0 right-0 p-8">
+                <div class="max-w-7xl mx-auto flex items-end gap-6">
+                    <!-- Poster de la temporada -->
+                    <figure class="shrink-0 hidden md:block">
+                        <img
+                            src={seasonPoster || showPoster}
+                            alt={`Poster de ${title} ${seasonTitle}`}
+                            class="w-48 rounded-xl shadow-2xl border border-zinc-700"
+                        />
+                    </figure>
+
+                    <!-- Info -->
+                    <div class="flex-1">
+                        {showLogo ? (
+                            <img
+                                src={showLogo}
+                                alt={title}
+                                class="h-16 md:h-24 mb-4 object-contain"
+                            />
+                        ) : (
+                            <h1 class="text-3xl md:text-5xl font-bold text-white mb-2">{title}</h1>
+                        )}
+                        <p class="text-xl md:text-2xl text-zinc-300 mb-2">{seasonTitle}</p>
+                        <div class="flex flex-wrap items-center gap-3 text-sm text-zinc-400">
+                            {year && <span>{year}</span>}
+                            {network && <span>• {network}</span>}
+                            {season?.episode_count && <span>• {season.episode_count} episodios</span>}
+                            {seasonRating && (
+                                <span class="flex items-center gap-1 text-amber-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    {seasonRating}
+                                </span>
+                            )}
+                        </div>
+                        {genres.length > 0 && (
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                {genres.slice(0, 5).map((genre: string) => (
+                                    <span class="px-2 py-1 bg-zinc-800/80 rounded text-xs text-zinc-300 capitalize">
+                                        {genre}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido principal -->
+        <section class="max-w-7xl mx-auto p-4 md:p-8">
+            <!-- Poster en móvil -->
+            <div class="md:hidden mb-6 flex justify-center">
+                <img
+                    src={seasonPoster || showPoster}
+                    alt={`Poster de ${title} ${seasonTitle}`}
+                    class="w-48 rounded-xl shadow-2xl border border-zinc-700"
+                />
+            </div>
+
+            <!-- Datos locales (año visto, plataforma, estado) -->
+            <div class="flex flex-wrap gap-4 mb-8 p-4 bg-zinc-800/50 rounded-xl">
+                <div>
+                    <span class="text-xs text-zinc-500 block">Año visto</span>
+                    <span class="text-white font-medium">{yearViewed}</span>
+                </div>
+                <div>
+                    <span class="text-xs text-zinc-500 block">Plataforma</span>
+                    <span class="text-white font-medium capitalize">{platformViewed}</span>
+                </div>
+                <div>
+                    <span class="text-xs text-zinc-500 block">Estado</span>
+                    <span class:list={[
+                        "font-medium capitalize",
+                        statusViewed === 'completed' ? 'text-green-400' : 'text-amber-400'
+                    ]}>
+                        {statusViewed === 'completed' ? 'Completada' : 'En progreso'}
+                    </span>
+                </div>
+            </div>
+
+            <!-- Overview -->
+            {overview && (
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold text-white mb-3">Sinopsis</h2>
+                    <p class="text-zinc-400 leading-relaxed">{overview}</p>
+                </div>
+            )}
+
+            <!-- DEBUG: JSON completo -->
+            <details class="mb-8 p-4 bg-zinc-800 rounded-lg border border-zinc-700">
+                <summary class="cursor-pointer text-amber-400 font-semibold">🔍 DEBUG: Ver JSON completo</summary>
+                <div class="mt-4 grid gap-4">
+                    <div>
+                        <h3 class="text-sm font-bold text-zinc-300 mb-2">Show:</h3>
+                        <pre class="text-xs text-zinc-400 overflow-auto max-h-64 p-2 bg-zinc-900 rounded">
+                            {JSON.stringify(show, null, 2)}
+                        </pre>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-zinc-300 mb-2">Season:</h3>
+                        <pre class="text-xs text-zinc-400 overflow-auto max-h-64 p-2 bg-zinc-900 rounded">
+                            {JSON.stringify(season, null, 2)}
+                        </pre>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-zinc-300 mb-2">People:</h3>
+                        <pre class="text-xs text-zinc-400 overflow-auto max-h-64 p-2 bg-zinc-900 rounded">
+                            {JSON.stringify(people, null, 2)}
+                        </pre>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-zinc-300 mb-2">Local Data:</h3>
+                        <pre class="text-xs text-zinc-400 overflow-auto max-h-64 p-2 bg-zinc-900 rounded">
+                            {JSON.stringify(localData, null, 2)}
+                        </pre>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Volver -->
+            <a
+                href="/Series"
+                class="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Volver a la lista
+            </a>
+        </section>
+    </main>
+</Layout>

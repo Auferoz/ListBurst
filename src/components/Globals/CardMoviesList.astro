@@ -1,0 +1,214 @@
+---
+import { getImageUrl } from '../../services/apiTrakt';
+import IconIMDB from '../Icons/IconIMDB.astro';
+import IconRottenTomatoes from '../Icons/IconRottenTomatoes.astro';
+import IconMetacritic from '../Icons/IconMetacritic.astro';
+import IconPopcorn from '../Icons/IconPopcorn.astro';
+import IconTrakt from '../Icons/IconTrakt.astro';
+
+/**
+ * Props: recibe el objeto completo con movie y datos adicionales
+ *
+ * data.movie: Info de la película (title, year, genres, runtime, overview, images, ids, etc.)
+ * data.rank: Posición en la lista
+ * data.listedAt: Fecha en que se agregó a la lista
+ * data.yearViewed: Año en que se vio
+ * data.externalRatings: Ratings externos de OMDB (imdb, rottenTomatoes, metascore)
+ */
+interface Props {
+    data: {
+        movie: any;
+        rank?: number;
+        listedAt?: string;
+        yearViewed: number;
+        externalRatings?: {
+            imdb?: string | null;
+            imdbVotes?: string | null;
+            rottenTomatoes?: string | null;
+            metascore?: string | null;
+            popcornmeter?: string | null;
+        } | null;
+    };
+    index?: number;
+}
+
+const { data, index = 0 } = Astro.props;
+const { movie, rank, listedAt, yearViewed, externalRatings } = data;
+
+// Imágenes de la película (logo, thumb, banner, fanart, poster, clearart)
+const movieLogo = getImageUrl(movie?.images?.logo?.[0]);
+const movieThumb = getImageUrl(movie?.images?.thumb?.[0]);
+const movieBanner = getImageUrl(movie?.images?.banner?.[0]);
+const movieFanart = getImageUrl(movie?.images?.fanart?.[0]);
+const moviePoster = getImageUrl(movie?.images?.poster?.[0]);
+const movieClearart = getImageUrl(movie?.images?.clearart?.[0]);
+
+// Datos derivados
+const title = movie?.title || 'Sin título';
+const year = movie?.year;
+const genres = movie?.genres || [];
+const runtime = movie?.runtime; // en minutos
+const rating = movie?.rating?.toFixed(1);
+const certification = movie?.certification;
+
+// Formatear duración
+const formatRuntime = (minutes: number | undefined) => {
+    if (!minutes) return null;
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+};
+const duration = formatRuntime(runtime);
+
+// Formatear fecha de estreno (Mes Año)
+const formatReleaseDate = (dateString: string | undefined) => {
+    if (!dateString) return null;
+    const date = new Date(dateString);
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    return `${months[date.getMonth()]} ${date.getFullYear()}`;
+};
+const releaseDate = formatReleaseDate(movie?.released);
+
+// Formatear listedAt (Día Mes Año - 01 Octubre 2026)
+const formatListedAt = (dateString: string | undefined) => {
+    if (!dateString) return null;
+    const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, '0');
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    return `${day} ${months[date.getMonth()]} ${date.getFullYear()}`;
+};
+const formattedListedAt = formatListedAt(listedAt);
+
+// Color de borde fijo para películas (sky)
+const borderClasses = 'border-sky-700/50 shadow-sky-700/20 hover:shadow-sky-700/40';
+
+// URL de detalle
+const movieSlug = movie?.ids?.slug;
+const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
+---
+
+<a
+    href={detailUrl}
+    class="card-movie block"
+    data-year={yearViewed}
+    data-genres={genres.join(',')}
+    data-index={index}
+    data-title={title.toLowerCase()}
+    data-rating={rating}
+>
+<article
+    class:list={[
+        "group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow",
+        borderClasses
+    ]}
+>
+    <!-- Background Image with Mask (usando movieFanart o movieBanner) -->
+    <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+        style={`background-image: url('${movieFanart || movieBanner}'); mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);`}
+    ></div>
+
+    <!-- Dark Overlay for better text readability -->
+    <div class="absolute inset-0 bg-linear-to-r from-zinc-900/95 via-zinc-900/80 to-transparent"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-10 flex w-full gap-3 p-2">
+        <!-- Poster Image -->
+        <figure class="shrink-0">
+            <img
+                class="h-28 w-auto rounded-lg object-cover shadow-md"
+                src={moviePoster}
+                alt={`Poster de ${title}`}
+                loading="lazy"
+            />
+        </figure>
+
+        <!-- Info Section -->
+        <div class="flex flex-1 flex-col justify-between py-1">
+            <header>
+                <h3 class="text-base font-semibold text-white leading-tight">
+                    {title}
+                    {year && <span class="text-xs text-zinc-400">({year})</span>}
+                </h3>
+                <p class="text-xs text-zinc-400 mt-0.5">
+                    {duration && <span>{duration}</span>}
+                    {certification && <span class="ml-1 px-1 py-0.5 bg-zinc-700 rounded text-[10px]">{certification}</span>}
+                </p>
+                {genres.length > 0 && (
+                    <p class="text-xs text-zinc-400 mt-0.5 capitalize">
+                        {genres.slice(0, 3).join(', ')}
+                    </p>
+                )}
+            </header>
+
+            <!-- Footer con ratings -->
+            <footer class="flex flex-col gap-1.5">
+                <!-- Ratings Row - 5 ratings con iconos -->
+                <div class="flex items-center gap-1 text-[10px] flex-wrap">
+                    {/* Rating IMDB */}
+                    {externalRatings?.imdb && (
+                        <span class="flex items-center gap-0.5 rounded bg-yellow-500/10 px-1 py-0.5 text-yellow-400 font-medium" title={`IMDB: ${externalRatings.imdbVotes} votos`}>
+                            <IconIMDB width="12" height="12" />
+                            {externalRatings.imdb}
+                        </span>
+                    )}
+                    {/* Rating Rotten Tomatoes */}
+                    {externalRatings?.rottenTomatoes && (
+                        <span class="flex items-center gap-0.5 rounded bg-red-500/10 px-1 py-0.5 text-red-400 font-medium" title="Rotten Tomatoes">
+                            <IconRottenTomatoes width="12" height="12" />
+                            {externalRatings.rottenTomatoes}
+                        </span>
+                    )}
+                    {/* Popcornmeter - Audience Score */}
+                    {externalRatings?.popcornmeter && (
+                        <span class="flex items-center gap-0.5 rounded bg-orange-500/10 px-1 py-0.5 text-orange-400 font-medium" title="Popcornmeter (Audiencia)">
+                            <IconPopcorn width="12" height="12" />
+                            {externalRatings.popcornmeter}
+                        </span>
+                    )}
+                    {/* Metascore */}
+                    {externalRatings?.metascore && (
+                        <span class="flex items-center gap-0.5 rounded bg-amber-500/10 px-1 py-0.5 text-amber-300 font-medium" title="Metacritic">
+                            <IconMetacritic width="12" height="12" />
+                            {externalRatings.metascore}
+                        </span>
+                    )}
+                    {/* Rating Trakt */}
+                    {rating && (
+                        <span class="flex items-center gap-0.5 rounded bg-purple-500/10 px-1 py-0.5 text-purple-400 font-medium" title="Trakt Rating">
+                            <IconTrakt width="12" height="12" />
+                            {rating}
+                        </span>
+                    )}
+                </div>
+                <!-- Info Row -->
+                <div class="flex items-center gap-2 text-xs">
+                    <span class="text-zinc-500">
+                        {formattedListedAt || yearViewed}
+                    </span>
+                    {rank && (
+                        <span class="ml-auto text-zinc-500 text-[10px]">
+                            #{rank}
+                        </span>
+                    )}
+                </div>
+            </footer>
+        </div>
+
+        <!-- Options Modal Button -->
+        <button
+            type="button"
+            class="absolute top-2 right-2 p-1 text-zinc-200 hover:text-white transition-colors"
+            aria-label="Opciones"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="5" r="2"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+                <circle cx="12" cy="19" r="2"></circle>
+            </svg>
+        </button>
+    </div>
+</article>
+</a>

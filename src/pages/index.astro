@@ -1,0 +1,89 @@
+---
+import IconDeviceTv from "../components/Icons/IconDeviceTv.astro";
+import IconGamepad from "../components/Icons/IconGamepad.astro";
+import IconMovie from "../components/Icons/IconMovie.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<main class="max-w-7xl mx-auto p-4 space-y-6">
+		<!-- Header -->
+		<header class="flex items-center justify-between">
+			<h1 class="text-3xl font-bold tracking-tight">Dashboard</h1>
+			<span class="text-xs text-gray-400"> Resumen general </span>
+		</header>
+
+		<!-- Cards -->
+		<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+
+			<article
+				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
+			>
+				<aside class="flex items-center justify-between">
+				<IconDeviceTv width={36} height={36} />
+				<span class="text-4xl font-bold">222</span>
+				</aside>
+				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">Series</p>
+			</article>
+
+			<article
+				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
+			>
+				<aside class="flex items-center justify-between">
+				<IconMovie width={36} height={36} />
+				<span class="text-4xl font-bold">998</span>
+				</aside>
+				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">Movies</p>
+			</article>
+
+			<article
+				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
+			>
+				<aside class="flex items-center justify-between">
+				<IconGamepad width={36} height={36} />
+				<span class="text-4xl font-bold">53</span>
+				</aside>
+				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">Games</p>
+			</article>
+
+			<article
+				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
+			>
+				<aside class="flex items-center justify-between">
+				<IconGamepad width={36} height={36} />
+				<span class="text-4xl font-bold">2893</span>
+				</aside>
+				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">Hours</p>
+			</article>
+
+			<article
+				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
+			>
+				<aside class="flex items-center justify-between">
+				<IconGamepad width={36} height={36} />
+				<span class="text-4xl font-bold">818</span>
+				</aside>
+				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">
+				Achievements
+				</p>
+			</article>
+
+			<article
+				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
+			>
+				<aside class="flex items-center justify-between">
+				<IconGamepad width={36} height={36} />
+				<span class="text-4xl font-bold">30</span>
+				</aside>
+				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">
+				Genres
+				</p>
+			</article>
+
+		</section>
+
+
+		
+		<!-- <pre class="text-xs text-gray-400"> Completado, Jugando, Pausado Abandonado </pre> -->
+	</main>
+</Layout>
