@@ -3,54 +3,27 @@
  * Página dinámica para cada serie/temporada
  * URL: /Series/[idTrakt]-season-[numberSeason]
  * Ejemplo: /Series/loki-2021-season-2
+ * Lee datos del caché local (sin llamadas API)
  */
-import { ListSeriesSeasons } from '../../data/SeriesDB';
-import { getShow, getSeasonInfo, getSeasonPeople, getImageUrl } from '../../services/apiTrakt';
+import seriesCache from '../../data/cache/series.json';
+import { getImageUrl } from '../../utils/images';
 import Layout from '../../layouts/Layout.astro';
-import IconArrowBackUp from '../../components/Icons/IconArrowBackUp.astro';
+import IconArrowBack from '../../components/Icons/IconArrowBack.astro';
 
-// Generar todas las rutas estáticas
-export async function getStaticPaths() {
-    const paths = await Promise.all(
-        ListSeriesSeasons.map(async (seriesData) => {
-            const { idTrakt, numberSeason, yearViewed, platformViewed, statusViewed } = seriesData;
-
-            // Generar el slug para la URL
-            const slug = `${idTrakt}-season-${numberSeason}`;
-
-            try {
-                // Obtener datos de la serie, temporada y people en paralelo
-                const [show, season, people] = await Promise.all([
-                    getShow(idTrakt),
-                    getSeasonInfo(idTrakt, numberSeason),
-                    getSeasonPeople(idTrakt, numberSeason),
-                ]);
-
-                return {
-                    params: { slug },
-                    props: {
-                        show,
-                        season,
-                        people,
-                        localData: seriesData,
-                    },
-                };
-            } catch (error) {
-                console.error(`Error fetching data for ${idTrakt} season ${numberSeason}:`, error);
-                return {
-                    params: { slug },
-                    props: {
-                        show: null,
-                        season: null,
-                        people: null,
-                        localData: seriesData,
-                    },
-                };
-            }
-        })
-    );
-
-    return paths;
+// Generar todas las rutas estáticas desde el caché (sin llamadas API)
+export function getStaticPaths() {
+    return seriesCache.series.map((entry) => {
+        const slug = `${entry.localData.idTrakt}-season-${entry.localData.numberSeason}`;
+        return {
+            params: { slug },
+            props: {
+                show: entry.show,
+                season: entry.season,
+                people: entry.people,
+                localData: entry.localData,
+            },
+        };
+    });
 }
 
 // Props de la página
@@ -96,7 +69,7 @@ const cast = people?.cast || [];
     <main class="min-h-screen mb-12">
         <!-- Hero con fanart de fondo -->
         <section
-            class="relative h-[50vh] bg-cover bg-center bg-no-repeat"
+            class="relative h-[67vh] bg-cover bg-center bg-no-repeat"
             style={`background-image: url('${showFanart || showBanner}');`}
         >
             <!-- Overlay oscuro -->
@@ -106,7 +79,7 @@ const cast = people?.cast || [];
             <div class="absolute bottom-0 left-0 right-0 p-8">
                 <div class="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:items-end gap-6">
                     <!-- Poster de la temporada -->
-                    <figure class="shrink-0">
+                    <figure class="shrink-0 hidden md:block">
                         <img
                             src={seasonPoster || showPoster}
                             alt={`Poster de ${title} ${seasonTitle}`}
@@ -227,8 +200,8 @@ const cast = people?.cast || [];
 
 
             <!-- Volver -->
-            <a href="/Games" class="fixed bottom-18 right-4 bg-zinc-800 px-3 py-2 rounded-lg border border-zinc-700">
-                <IconArrowBackUp width={24} height={24} />
+            <a href="/Series" class="fixed bottom-18 right-4 bg-zinc-800 px-3 py-2 rounded-lg border border-zinc-700">
+                <IconArrowBack width={24} height={24} />
             </a>
         </section>
     </main>

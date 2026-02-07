@@ -4,9 +4,9 @@
  * URL: /Games/[slug]
  * Ejemplo: /Games/enshrouded
  */
-import IconArrowBackUp from '../../components/Icons/IconArrowBackUp.astro';
 import { ListGames, getGameSlug } from '../../data/gamesDB';
 import Layout from '../../layouts/Layout.astro';
+import IconArrowBack from '../../components/Icons/IconArrowBack.astro';
 
 // Generar todas las rutas estáticas (sin llamadas API, todo local)
 export function getStaticPaths() {
@@ -113,7 +113,7 @@ const slug = getGameSlug(title);
 <Layout>
     <main class="min-h-screen mb-12">
         <!-- Hero con poster blurred de fondo -->
-        <section class="relative h-[50vh] overflow-hidden">
+        <section class="relative h-[67vh] overflow-hidden">
             <!-- Poster como fondo blurred -->
             <div
                 class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 blur-2xl opacity-30"
@@ -265,7 +265,7 @@ const slug = getGameSlug(title);
 
             <!-- Volver -->
             <a href="/Games" class="fixed bottom-18 right-4 bg-zinc-800 px-3 py-2 rounded-lg border border-zinc-700">
-                <IconArrowBackUp width={24} height={24} />
+                <IconArrowBack width={24} height={24} />
             </a>
         </section>
     </main>

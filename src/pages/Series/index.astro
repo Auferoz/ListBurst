@@ -1,7 +1,7 @@
 ---
-// src/pages/Series/List.astro
+// src/pages/Series/List.astro — Lee datos del caché local (sin llamadas API)
+import seriesCache from '../../data/cache/series.json';
 import { ListSeriesSeasons, getAvailableYears } from '../../data/SeriesDB';
-import { getSeriesWithSeasonData } from '../../services/apiTrakt';
 import Layout from '../../layouts/Layout.astro';
 import CardSeriesList from '../../components/Globals/CardSeriesList.astro';
 import FilterSelect from '../../components/Globals/FilterSelect.astro';
@@ -9,7 +9,8 @@ import IconTrash from '../../components/Icons/IconTrash.astro';
 import IconFilter from '../../components/Icons/IconFilter.astro';
 import IconFilterFilled from '../../components/Icons/IconFilterFilled.astro';
 
-const seriesData = await getSeriesWithSeasonData(ListSeriesSeasons);
+// Leer series directamente del caché (sin llamadas API)
+const seriesData = seriesCache.series;
 
 // Obtener años disponibles y géneros únicos
 const availableYears = getAvailableYears().reverse(); // Más reciente primero

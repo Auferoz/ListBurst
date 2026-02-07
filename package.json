@@ -6,7 +6,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fetch:movies": "node scripts/fetch-movies.js",
+    "fetch:series": "node scripts/fetch-series.js",
+    "fetch:all": "node scripts/fetch-movies.js && node scripts/fetch-series.js"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
@@ -14,5 +17,8 @@
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.4"
   }
 }

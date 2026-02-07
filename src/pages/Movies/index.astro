@@ -1,8 +1,6 @@
 ---
-// src/pages/Movies/List.astro
-import { ListMovies } from '../../data/MoviesDB';
-import { getMoviesFromLists } from '../../services/apiTrakt';
-import { enrichMoviesWithRatings } from '../../services/apiOMDB';
+// src/pages/Movies/List.astro — Lee datos del caché local (sin llamadas API)
+import moviesCache from '../../data/cache/movies.json';
 import Layout from '../../layouts/Layout.astro';
 import CardMoviesList from '../../components/Globals/CardMoviesList.astro';
 import FilterSelect from '../../components/Globals/FilterSelect.astro';
@@ -11,20 +9,11 @@ import IconFilter from '../../components/Icons/IconFilter.astro';
 import IconFilterFilled from '../../components/Icons/IconFilterFilled.astro';
 import IconTrakt from '../../components/Icons/IconTrakt.astro';
 
-// Usuario de Trakt
-const TRAKT_USERNAME = "auferoz";
-
-// Obtener todas las películas de todas las listas
-const allListsData = await getMoviesFromLists(TRAKT_USERNAME, ListMovies);
-
-// Aplanar todas las películas en un solo array
-const allMovies = allListsData.flatMap(list => list.movies);
-
-// Enriquecer películas con ratings de OMDB (IMDB, Rotten Tomatoes, Metacritic)
-const moviesWithRatings = await enrichMoviesWithRatings(allMovies);
+// Leer películas directamente del caché (sin llamadas API)
+const moviesWithRatings = moviesCache.movies;
 
 // Obtener años disponibles
-const availableYears = [...new Set(allListsData.map(list => list.yearViewed).filter(Boolean))].sort((a, b) => b - a);
+const availableYears = [...new Set(moviesWithRatings.map(m => m.yearViewed).filter(Boolean))].sort((a, b) => b - a);
 const currentYear = new Date().getFullYear();
 const defaultYear = availableYears.includes(currentYear) ? currentYear : availableYears[0];
 
