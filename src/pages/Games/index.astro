@@ -5,6 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 import CardGamesList from '../../components/Globals/CardGamesList.astro';
 import FilterBar from '../../components/Globals/FilterBar.astro';
 import CardDashboard from '../../components/Globals/CardDashboard.astro';
+import IconGamepad from '../../components/Icons/IconGamepad.astro';
 
 // Obtener años disponibles (más reciente primero)
 const availableYears = getAvailableYears().reverse();
@@ -56,10 +57,18 @@ const gamesWithIndex = ListGames.map((game, index) => ({
 
         <!-- Dashboard Datos -->
         <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <CardDashboard text="Jugando" number={gamesWithIndex.filter(g => g.estado === "Jugando").length} />
-            <CardDashboard text="Pausados" number={gamesWithIndex.filter(g => g.estado === "Pausado").length} />
-            <CardDashboard text="Completados" number={gamesWithIndex.filter(g => g.estado === "Completado").length} />
-            <CardDashboard text="Abandonados" number={gamesWithIndex.filter(g => g.estado === "Abandonado").length} />
+            <CardDashboard text="Jugando" number={gamesWithIndex.filter(g => g.estado === "Jugando").length} color="green">
+                <IconGamepad width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="Pausados" number={gamesWithIndex.filter(g => g.estado === "Pausado").length} color="amber">
+                <IconGamepad width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="Completados" number={gamesWithIndex.filter(g => g.estado === "Completado").length} color="violet">
+                <IconGamepad width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="Abandonados" number={gamesWithIndex.filter(g => g.estado === "Abandonado").length} color="red">
+                <IconGamepad width={24} height={24} />
+            </CardDashboard>
         </section>
 
         <!-- Filtros -->
@@ -88,30 +97,35 @@ const gamesWithIndex = ListGames.map((game, index) => ({
 </Layout>
 
 <script>
+    let gamesController: AbortController | null = null;
+
     function initGamesFilters() {
-        const gamesGrid = document.getElementById('games-grid');
+        if (gamesController) gamesController.abort();
+        gamesController = new AbortController();
+        const { signal } = gamesController;
+
+        const gamesGrid = document.getElementById('games-grid') as HTMLElement | null;
         const noResults = document.getElementById('no-results');
         const gamesCount = document.getElementById('games-count');
 
         if (!gamesGrid) return;
 
-        const cards = Array.from(gamesGrid.querySelectorAll('.card-game'));
+        const cards = Array.from(gamesGrid.querySelectorAll('.card-game')) as HTMLElement[];
 
-        function applyFiltersAndSort(values) {
+        function applyFiltersAndSort(values: Record<string, string>) {
             const yearValue = values['filter-year'] || 'all';
             const genreValue = values['filter-genre'] || 'all';
             const statusValue = values['filter-status'] || 'all';
             const platformValue = values['filter-platform'] || 'all';
             const orderValue = values['filter-order'] || 'newest';
 
-            let visibleCards = [];
+            const visibleCards: HTMLElement[] = [];
             cards.forEach((card) => {
                 const cardYears = card.dataset.year || '';
                 const cardGenres = card.dataset.genres?.toLowerCase() || '';
                 const cardStatus = card.dataset.estado?.toLowerCase() || '';
                 const cardPlatform = card.dataset.platform?.toLowerCase() || '';
 
-                // Para años: un juego puede tener múltiples años (ej: "2024,2025")
                 const matchYear = yearValue === 'all' || cardYears.split(',').includes(yearValue);
                 const matchGenre = genreValue === 'all' || cardGenres.includes(genreValue.toLowerCase());
                 const matchStatus = statusValue === 'all' || cardStatus === statusValue.toLowerCase();
@@ -128,9 +142,9 @@ const gamesWithIndex = ListGames.map((game, index) => ({
             visibleCards.sort((a, b) => {
                 switch (orderValue) {
                     case 'newest':
-                        return parseInt(b.dataset.index) - parseInt(a.dataset.index);
+                        return parseInt(b.dataset.index || '0') - parseInt(a.dataset.index || '0');
                     case 'oldest':
-                        return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+                        return parseInt(a.dataset.index || '0') - parseInt(b.dataset.index || '0');
                     case 'title-asc':
                         return (a.dataset.title || '').localeCompare(b.dataset.title || '');
                     case 'title-desc':
@@ -153,21 +167,27 @@ const gamesWithIndex = ListGames.map((game, index) => ({
                 gamesGrid.classList.remove('hidden');
             }
 
-            gamesCount.textContent = `· ${visibleCards.length} juego${visibleCards.length !== 1 ? 's' : ''}`;
+            if (gamesCount) {
+                gamesCount.textContent = `· ${visibleCards.length} juego${visibleCards.length !== 1 ? 's' : ''}`;
+            }
         }
 
-        document.addEventListener('filter-change', (e) => {
-            applyFiltersAndSort(e.detail);
-        });
+        document.addEventListener('filter-change', (e: Event) => {
+            applyFiltersAndSort((e as CustomEvent).detail);
+        }, { signal });
 
-        // Aplicar filtros iniciales leyendo valores actuales de los hidden inputs
-        const initialValues = {};
-        document.querySelectorAll('.custom-select-wrapper input[type="hidden"]').forEach(input => {
-            initialValues[input.id] = input.value;
-        });
+        // Aplicar filtros iniciales leyendo valores actuales de los selects
+        const initialValues: Record<string, string> = {};
+        const filtersSection = document.getElementById('filters');
+        if (filtersSection) {
+            const filterIds: string[] = JSON.parse(filtersSection.dataset.filterIds || '[]');
+            filterIds.forEach(id => {
+                const select = document.getElementById(id) as HTMLSelectElement | null;
+                if (select) initialValues[id] = select.value;
+            });
+        }
         applyFiltersAndSort(initialValues);
     }
 
-    document.addEventListener('DOMContentLoaded', initGamesFilters);
     document.addEventListener('astro:page-load', initGamesFilters);
 </script>

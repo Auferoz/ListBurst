@@ -1,11 +1,22 @@
 ---
-import IconDeviceTv from "../components/Icons/IconDeviceTv.astro";
-import IconGamepad from "../components/Icons/IconGamepad.astro";
-import IconMovie from "../components/Icons/IconMovie.astro";
 import Layout from "../layouts/Layout.astro";
+import CardDashboard from "../components/Globals/CardDashboard.astro";
+import IconDeviceTv from "../components/Icons/IconDeviceTv.astro";
+import IconMovie from "../components/Icons/IconMovie.astro";
+import IconGamepad from "../components/Icons/IconGamepad.astro";
+
+import moviesCache from '../data/cache/movies.json';
+import seriesCache from '../data/cache/series.json';
+import { ListGames } from '../data/gamesDB';
+
+// Stats reales desde los datos
+const totalSeries = seriesCache.series.length;
+const totalMovies = moviesCache.movies.length;
+const totalGames = ListGames.length;
+const totalHours = ListGames.reduce((sum, g) => sum + (g.horasTotal || 0), 0);
+const totalAchievements = ListGames.reduce((sum, g) => sum + (g.logros_obt || 0), 0);
 
 const date = new Date();
-
 const formatted =
 	String(date.getDate()).padStart(2, '0') +
 	String(date.getMonth() + 1).padStart(2, '0') +
@@ -13,7 +24,6 @@ const formatted =
 	'.' +
 	String(date.getHours()).padStart(2, '0') +
 	String(date.getMinutes()).padStart(2, '0');
-
 ---
 
 <Layout>
@@ -26,78 +36,23 @@ const formatted =
 
 		<!-- Cards -->
 		<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-
-			<article
-				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
-			>
-				<aside class="flex items-center justify-between">
-				<IconDeviceTv width={36} height={36} />
-				<span class="text-4xl font-bold">222</span>
-				</aside>
-				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">Series</p>
-			</article>
-
-			<article
-				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
-			>
-				<aside class="flex items-center justify-between">
-				<IconMovie width={36} height={36} />
-				<span class="text-4xl font-bold">998</span>
-				</aside>
-				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">Movies</p>
-			</article>
-
-			<article
-				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
-			>
-				<aside class="flex items-center justify-between">
-				<IconGamepad width={36} height={36} />
-				<span class="text-4xl font-bold">53</span>
-				</aside>
-				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">Games</p>
-			</article>
-
-			<article
-				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
-			>
-				<aside class="flex items-center justify-between">
-				<IconGamepad width={36} height={36} />
-				<span class="text-4xl font-bold">2893</span>
-				</aside>
-				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">Hours</p>
-			</article>
-
-			<article
-				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
-			>
-				<aside class="flex items-center justify-between">
-				<IconGamepad width={36} height={36} />
-				<span class="text-4xl font-bold">818</span>
-				</aside>
-				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">
-				Achievements
-				</p>
-			</article>
-
-			<article
-				class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition"
-			>
-				<aside class="flex items-center justify-between">
-				<IconGamepad width={36} height={36} />
-				<span class="text-4xl font-bold">30</span>
-				</aside>
-				<p class="mt-2 text-sm uppercase tracking-wide text-gray-400">
-				Genres
-				</p>
-			</article>
-
+			<CardDashboard text="Series" number={totalSeries} color="sky">
+				<IconDeviceTv width={24} height={24} />
+			</CardDashboard>
+			<CardDashboard text="Movies" number={totalMovies} color="sky">
+				<IconMovie width={24} height={24} />
+			</CardDashboard>
+			<CardDashboard text="Games" number={totalGames} color="green">
+				<IconGamepad width={24} height={24} />
+			</CardDashboard>
+			<CardDashboard text="Hours" number={totalHours} color="zinc">
+				<IconGamepad width={24} height={24} />
+			</CardDashboard>
+			<CardDashboard text="Achievements" number={totalAchievements} color="amber">
+				<IconGamepad width={24} height={24} />
+			</CardDashboard>
 		</section>
 
-		
-		<span class="text-xs text-gray-400"> {date} </span>
-
-
-		
-		<!-- <pre class="text-xs text-gray-400"> Completado, Jugando, Pausado Abandonado </pre> -->
+		<span class="text-xs text-gray-400">{date}</span>
 	</main>
 </Layout>

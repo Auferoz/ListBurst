@@ -5,6 +5,8 @@ import { ListSeriesSeasons, getAvailableYears } from '../../data/SeriesDB';
 import Layout from '../../layouts/Layout.astro';
 import CardSeriesList from '../../components/Globals/CardSeriesList.astro';
 import FilterBar from '../../components/Globals/FilterBar.astro';
+import CardDashboard from '../../components/Globals/CardDashboard.astro';
+import IconDeviceTv from '../../components/Icons/IconDeviceTv.astro';
 
 // Leer series directamente del caché (sin llamadas API)
 const seriesData = seriesCache.series;
@@ -35,6 +37,12 @@ const orderOptions = [
     { value: "title-desc", label: "Título Z-A" },
 ];
 
+// Dashboard stats
+const totalSeasons = seriesData.length;
+const completedSeasons = seriesData.filter(d => d.localData?.statusViewed === 'completed').length;
+const ongoingSeasons = seriesData.filter(d => d.localData?.statusViewed === 'ongoing').length;
+const totalPlatforms = allPlatforms.length;
+
 // Agregar índice para ordenamiento
 const seriesDataWithIndex = seriesData.map((data, index) => ({
     ...data,
@@ -50,6 +58,22 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
 				Lista de mis series vistas organizadas por temporadas. Usa los filtros para encontrar series según tus preferencias.
 			</p>
         </header>
+
+        <!-- Dashboard Datos -->
+        <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            <CardDashboard text="Total temporadas" number={totalSeasons} color="sky">
+                <IconDeviceTv width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="Completadas" number={completedSeasons} color="green">
+                <IconDeviceTv width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="En progreso" number={ongoingSeasons} color="amber">
+                <IconDeviceTv width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="Plataformas" number={totalPlatforms} color="violet">
+                <IconDeviceTv width={24} height={24} />
+            </CardDashboard>
+        </section>
 
         <!-- Filtros -->
         <FilterBar
@@ -77,23 +101,29 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
 </Layout>
 
 <script>
+    let seriesController: AbortController | null = null;
+
     function initSeriesFilters() {
-        const seriesGrid = document.getElementById('series-grid');
+        if (seriesController) seriesController.abort();
+        seriesController = new AbortController();
+        const { signal } = seriesController;
+
+        const seriesGrid = document.getElementById('series-grid') as HTMLElement | null;
         const noResults = document.getElementById('no-results');
         const seriesCount = document.getElementById('series-count');
 
         if (!seriesGrid) return;
 
-        const cards = Array.from(seriesGrid.querySelectorAll('.card-series'));
+        const cards = Array.from(seriesGrid.querySelectorAll('.card-series')) as HTMLElement[];
 
-        function applyFiltersAndSort(values) {
+        function applyFiltersAndSort(values: Record<string, string>) {
             const yearValue = values['filter-year'] || 'all';
             const genreValue = values['filter-genre'] || 'all';
             const statusValue = values['filter-status'] || 'all';
             const platformValue = values['filter-platform'] || 'all';
             const orderValue = values['filter-order'] || 'newest';
 
-            let visibleCards = [];
+            const visibleCards: HTMLElement[] = [];
             cards.forEach((card) => {
                 const cardYear = card.dataset.year;
                 const cardGenres = card.dataset.genres?.toLowerCase() || '';
@@ -116,9 +146,9 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
             visibleCards.sort((a, b) => {
                 switch (orderValue) {
                     case 'newest':
-                        return parseInt(b.dataset.index) - parseInt(a.dataset.index);
+                        return parseInt(b.dataset.index || '0') - parseInt(a.dataset.index || '0');
                     case 'oldest':
-                        return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+                        return parseInt(a.dataset.index || '0') - parseInt(b.dataset.index || '0');
                     case 'title-asc':
                         return (a.dataset.title || '').localeCompare(b.dataset.title || '');
                     case 'title-desc':
@@ -141,21 +171,27 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
                 seriesGrid.classList.remove('hidden');
             }
 
-            seriesCount.textContent = `· ${visibleCards.length} serie${visibleCards.length !== 1 ? 's' : ''}`;
+            if (seriesCount) {
+                seriesCount.textContent = `· ${visibleCards.length} serie${visibleCards.length !== 1 ? 's' : ''}`;
+            }
         }
 
-        document.addEventListener('filter-change', (e) => {
-            applyFiltersAndSort(e.detail);
-        });
+        document.addEventListener('filter-change', (e: Event) => {
+            applyFiltersAndSort((e as CustomEvent).detail);
+        }, { signal });
 
-        // Aplicar filtros iniciales leyendo valores actuales de los hidden inputs
-        const initialValues = {};
-        document.querySelectorAll('.custom-select-wrapper input[type="hidden"]').forEach(input => {
-            initialValues[input.id] = input.value;
-        });
+        // Aplicar filtros iniciales leyendo valores actuales de los selects
+        const initialValues: Record<string, string> = {};
+        const filtersSection = document.getElementById('filters');
+        if (filtersSection) {
+            const filterIds: string[] = JSON.parse(filtersSection.dataset.filterIds || '[]');
+            filterIds.forEach(id => {
+                const select = document.getElementById(id) as HTMLSelectElement | null;
+                if (select) initialValues[id] = select.value;
+            });
+        }
         applyFiltersAndSort(initialValues);
     }
 
-    document.addEventListener('DOMContentLoaded', initSeriesFilters);
     document.addEventListener('astro:page-load', initSeriesFilters);
 </script>

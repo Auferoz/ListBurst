@@ -4,6 +4,8 @@ import moviesCache from '../../data/cache/movies.json';
 import Layout from '../../layouts/Layout.astro';
 import CardMoviesList from '../../components/Globals/CardMoviesList.astro';
 import FilterBar from '../../components/Globals/FilterBar.astro';
+import CardDashboard from '../../components/Globals/CardDashboard.astro';
+import IconMovie from '../../components/Icons/IconMovie.astro';
 
 // Leer películas directamente del caché (sin llamadas API)
 const moviesWithRatings = moviesCache.movies;
@@ -28,6 +30,12 @@ const orderOptions = [
     { value: "rating-asc", label: "Peor valorada" },
 ];
 
+// Dashboard stats
+const totalMovies = moviesWithRatings.length;
+const totalGenres = allGenres.length;
+const totalHours = Math.round(moviesWithRatings.reduce((sum, m) => sum + (m.movie?.runtime || 0), 0) / 60);
+const avgRating = totalMovies > 0 ? (moviesWithRatings.reduce((sum, m) => sum + (m.movie?.rating || 0), 0) / totalMovies).toFixed(1) : '0';
+
 // Agregar índice para ordenamiento
 const moviesWithIndex = moviesWithRatings.map((data, index) => ({
     ...data,
@@ -44,16 +52,22 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
             </p>
         </header>
 
-        <!-- DEBUG: Mostrar JSON completo de la primera película -->
-        <!-- {allMovies.length > 0 && (
-            <details class="mt-4 p-4 bg-zinc-800 rounded-lg border border-zinc-700">
-                <summary class="cursor-pointer text-amber-400 font-semibold">🔍 DEBUG: Ver JSON completo de película</summary>
-                <pre class="mt-2 text-xs text-zinc-300 overflow-auto max-h-96 p-2 bg-zinc-900 rounded">
-                    {JSON.stringify(allMovies[0], null, 2)}
-                </pre>
-            </details>
-        )} -->
-        
+        <!-- Dashboard Datos -->
+        <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            <CardDashboard text="Total películas" number={totalMovies} color="sky">
+                <IconMovie width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="Géneros" number={totalGenres} color="violet">
+                <IconMovie width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="Horas vistas" number={totalHours} color="green">
+                <IconMovie width={24} height={24} />
+            </CardDashboard>
+            <CardDashboard text="Rating Trakt" number={avgRating} color="amber">
+                <IconMovie width={24} height={24} />
+            </CardDashboard>
+        </section>
+
         <!-- Filtros -->
         <FilterBar
             filters={[
@@ -78,21 +92,27 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
 </Layout>
 
 <script>
+    let moviesController: AbortController | null = null;
+
     function initMoviesFilters() {
-        const moviesGrid = document.getElementById('movies-grid');
+        if (moviesController) moviesController.abort();
+        moviesController = new AbortController();
+        const { signal } = moviesController;
+
+        const moviesGrid = document.getElementById('movies-grid') as HTMLElement | null;
         const noResults = document.getElementById('no-results');
         const moviesCount = document.getElementById('movies-count');
 
         if (!moviesGrid) return;
 
-        const cards = Array.from(moviesGrid.querySelectorAll('.card-movie'));
+        const cards = Array.from(moviesGrid.querySelectorAll('.card-movie')) as HTMLElement[];
 
-        function applyFiltersAndSort(values) {
+        function applyFiltersAndSort(values: Record<string, string>) {
             const yearValue = values['filter-year'] || 'all';
             const genreValue = values['filter-genre'] || 'all';
             const orderValue = values['filter-order'] || 'newest';
 
-            let visibleCards = [];
+            const visibleCards: HTMLElement[] = [];
             cards.forEach((card) => {
                 const cardYear = card.dataset.year;
                 const cardGenres = card.dataset.genres?.toLowerCase() || '';
@@ -111,17 +131,17 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
             visibleCards.sort((a, b) => {
                 switch (orderValue) {
                     case 'newest':
-                        return parseInt(b.dataset.index) - parseInt(a.dataset.index);
+                        return parseInt(b.dataset.index || '0') - parseInt(a.dataset.index || '0');
                     case 'oldest':
-                        return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+                        return parseInt(a.dataset.index || '0') - parseInt(b.dataset.index || '0');
                     case 'title-asc':
                         return (a.dataset.title || '').localeCompare(b.dataset.title || '');
                     case 'title-desc':
                         return (b.dataset.title || '').localeCompare(a.dataset.title || '');
                     case 'rating-desc':
-                        return parseFloat(b.dataset.rating || 0) - parseFloat(a.dataset.rating || 0);
+                        return parseFloat(b.dataset.rating || '0') - parseFloat(a.dataset.rating || '0');
                     case 'rating-asc':
-                        return parseFloat(a.dataset.rating || 0) - parseFloat(b.dataset.rating || 0);
+                        return parseFloat(a.dataset.rating || '0') - parseFloat(b.dataset.rating || '0');
                     default:
                         return 0;
                 }
@@ -140,21 +160,27 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
                 moviesGrid.classList.remove('hidden');
             }
 
-            moviesCount.textContent = `· ${visibleCards.length} película${visibleCards.length !== 1 ? 's' : ''}`;
+            if (moviesCount) {
+                moviesCount.textContent = `· ${visibleCards.length} película${visibleCards.length !== 1 ? 's' : ''}`;
+            }
         }
 
-        document.addEventListener('filter-change', (e) => {
-            applyFiltersAndSort(e.detail);
-        });
+        document.addEventListener('filter-change', (e: Event) => {
+            applyFiltersAndSort((e as CustomEvent).detail);
+        }, { signal });
 
-        // Aplicar filtros iniciales leyendo valores actuales de los hidden inputs
-        const initialValues = {};
-        document.querySelectorAll('.custom-select-wrapper input[type="hidden"]').forEach(input => {
-            initialValues[input.id] = input.value;
-        });
+        // Aplicar filtros iniciales leyendo valores actuales de los selects
+        const initialValues: Record<string, string> = {};
+        const filtersSection = document.getElementById('filters');
+        if (filtersSection) {
+            const filterIds: string[] = JSON.parse(filtersSection.dataset.filterIds || '[]');
+            filterIds.forEach(id => {
+                const select = document.getElementById(id) as HTMLSelectElement | null;
+                if (select) initialValues[id] = select.value;
+            });
+        }
         applyFiltersAndSort(initialValues);
     }
 
-    document.addEventListener('DOMContentLoaded', initMoviesFilters);
     document.addEventListener('astro:page-load', initMoviesFilters);
 </script>
