@@ -3,6 +3,17 @@ import IconDeviceTv from "../components/Icons/IconDeviceTv.astro";
 import IconGamepad from "../components/Icons/IconGamepad.astro";
 import IconMovie from "../components/Icons/IconMovie.astro";
 import Layout from "../layouts/Layout.astro";
+
+const date = new Date();
+
+const formatted =
+	String(date.getDate()).padStart(2, '0') +
+	String(date.getMonth() + 1).padStart(2, '0') +
+	date.getFullYear() +
+	'.' +
+	String(date.getHours()).padStart(2, '0') +
+	String(date.getMinutes()).padStart(2, '0');
+
 ---
 
 <Layout>
@@ -10,7 +21,7 @@ import Layout from "../layouts/Layout.astro";
 		<!-- Header -->
 		<header class="flex items-center justify-between">
 			<h1 class="text-3xl font-bold tracking-tight">Dashboard</h1>
-			<span class="text-xs text-gray-400"> Resumen general v0.0035 </span>
+			<span class="text-xs text-gray-400">v0.0.{formatted}</span>
 		</header>
 
 		<!-- Cards -->
@@ -81,6 +92,9 @@ import Layout from "../layouts/Layout.astro";
 			</article>
 
 		</section>
+
+		
+		<span class="text-xs text-gray-400"> {date} </span>
 
 
 		

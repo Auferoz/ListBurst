@@ -25,6 +25,7 @@ interface Props {
         released: string;
         companie: string;
         poster: string;
+        artworks?: string;
         genre: string;
         estado: string;
         horasTotal: number;
@@ -43,6 +44,9 @@ const { data, index = 0 } = Astro.props;
 
 // Imagen del juego desde IGDB CDN
 const posterUrl = `https://images.igdb.com/igdb/image/upload/t_cover_big/${data.poster}`;
+
+// imagen de fondo (artworks) desde IGDB CDN
+const artworks = data.artworks ? `https://images.igdb.com/igdb/image/upload/t_cover_big/${data.artworks}` : null;
 
 // Datos derivados
 const title = data.title || 'Sin título';
@@ -94,6 +98,11 @@ const statusColorClasses = (() => {
     data-title={title.toLowerCase()}
     data-hours={hours}
 >
+    <!-- Background Image with Mask (usando movieFanart o movieBanner) -->
+    <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+        style={`background-image: url('${artworks ? artworks : ''}'); mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);`}
+    ></div>
     <!-- Dark Overlay background -->
     <div class="absolute inset-0 bg-linear-to-r from-zinc-900/95 via-zinc-900/80 to-zinc-900/60"></div>
 
