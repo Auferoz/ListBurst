@@ -1,0 +1,272 @@
+---
+/**
+ * Página dinámica para cada juego
+ * URL: /Games/[slug]
+ * Ejemplo: /Games/enshrouded
+ */
+import IconArrowBackUp from '../../components/Icons/IconArrowBackUp.astro';
+import { ListGames, getGameSlug } from '../../data/gamesDB';
+import Layout from '../../layouts/Layout.astro';
+
+// Generar todas las rutas estáticas (sin llamadas API, todo local)
+export function getStaticPaths() {
+    return ListGames.map((game) => {
+        const slug = getGameSlug(game.title);
+        return {
+            params: { slug },
+            props: { game },
+        };
+    });
+}
+
+// Props de la página
+interface Props {
+    game: {
+        title: string;
+        released: string;
+        companie: string;
+        poster: string;
+        trailer: string;
+        genre: string;
+        estado: string;
+        horasTotal: number;
+        logros_obt: number;
+        logros_total: number;
+        console_pc: string;
+        igdbId: number;
+        first_year_played: number;
+        dates_played: Record<string, { fecha_inicio: string; fecha_final: string; horas: string }>;
+        years_played: Record<string, boolean>;
+        description: string;
+    };
+}
+
+const { game } = Astro.props;
+
+// Imagen del juego desde IGDB CDN
+const posterUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.poster}`;
+// Versión más grande para el hero background
+const posterHeroUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.poster}`;
+
+// Datos derivados
+const title = game.title || 'Sin título';
+const releaseYear = game.released ? game.released.split('/')[2] : null;
+const genres = game.genre ? game.genre.split(',').map(g => g.trim()) : [];
+const description = game.description || '';
+const companie = game.companie;
+const platform = game.console_pc;
+const estado = game.estado;
+const hours = game.horasTotal;
+const logrosObt = game.logros_obt;
+const logrosTotal = game.logros_total;
+const trailer = game.trailer;
+const firstYearPlayed = game.first_year_played;
+
+// Porcentaje de logros
+const logrosPercent = logrosTotal > 0 ? Math.round((logrosObt / logrosTotal) * 100) : 0;
+
+// Años en que se jugó
+const yearsPlayed = Object.entries(game.years_played)
+    .filter(([_, played]) => played)
+    .map(([key]) => parseInt(key.replace('y', '')))
+    .sort((a, b) => b - a);
+
+// Historial de fechas jugadas (solo años con datos)
+const playHistory = Object.entries(game.dates_played)
+    .filter(([key, data]) => {
+        const yearNum = parseInt(key.replace('y', ''));
+        return game.years_played[key] && (data.fecha_inicio || data.fecha_final);
+    })
+    .map(([key, data]) => ({
+        year: parseInt(key.replace('y', '')),
+        start: data.fecha_inicio,
+        end: data.fecha_final,
+        hours: data.horas,
+    }))
+    .sort((a, b) => b.year - a.year);
+
+// Formatear fecha DD/MM/YYYY a formato corto (DD/Mes)
+const formatDateShort = (dateStr: string) => {
+    if (!dateStr) return null;
+    const parts = dateStr.split('/');
+    if (parts.length !== 3) return dateStr;
+    const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+    const day = parts[0];
+    const monthIndex = parseInt(parts[1]) - 1;
+    return `${day} ${months[monthIndex]}`;
+};
+
+// Color del estado
+const estadoColor = (() => {
+    switch (estado) {
+        case 'Jugando': return 'text-green-400';
+        case 'Completado': return 'text-sky-400';
+        case 'Abandonado': return 'text-zinc-400';
+        default: return 'text-zinc-400';
+    }
+})();
+
+// Slug para view transitions
+const slug = getGameSlug(title);
+---
+
+<Layout>
+    <main class="min-h-screen mb-12">
+        <!-- Hero con poster blurred de fondo -->
+        <section class="relative h-[50vh] overflow-hidden">
+            <!-- Poster como fondo blurred -->
+            <div
+                class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 blur-2xl opacity-30"
+                style={`background-image: url('${posterHeroUrl}');`}
+            ></div>
+
+            <!-- Overlay oscuro -->
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-900 via-zinc-900/70 to-transparent"></div>
+
+            <!-- Contenido del hero -->
+            <div class="absolute bottom-0 left-0 right-0 p-8">
+                <div class="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:items-end gap-6">
+                    <!-- Poster del juego (visible en mobile y desktop) -->
+                    <figure class="shrink-0">
+                        <img
+                            src={posterUrl}
+                            alt={`Poster de ${title}`}
+                            class="w-64 md:w-48 rounded-xl shadow-2xl border border-zinc-700"
+                            transition:name={`poster-game-${slug}`}
+                        />
+                    </figure>
+
+                    <!-- Info -->
+                    <div class="flex-1">
+                        <h1 class="text-3xl md:text-5xl font-bold text-white mb-2">{title}</h1>
+                        <div class="flex flex-wrap items-center gap-3 text-sm text-zinc-400">
+                            {releaseYear && <span>{releaseYear}</span>}
+                            {companie && <span>• {companie}</span>}
+                            {platform && <span>• {platform}</span>}
+                        </div>
+                        {genres.length > 0 && (
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                {genres.slice(0, 5).map((genre) => (
+                                    <span class="px-2 py-1 bg-zinc-800/80 rounded text-xs text-zinc-300">
+                                        {genre}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido principal -->
+        <section class="max-w-7xl mx-auto p-4 md:p-8">
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+                <!-- Estado -->
+                <div class="p-4 bg-zinc-800/50 rounded-xl text-center">
+                    <span class="text-xs text-zinc-500 block mb-1">Estado</span>
+                    <span class:list={["font-medium", estadoColor]}>
+                        {estado}
+                    </span>
+                </div>
+
+                <!-- Horas -->
+                <div class="p-4 bg-zinc-800/50 rounded-xl text-center">
+                    <span class="text-xs text-zinc-500 block mb-1">Horas jugadas</span>
+                    <span class="text-white font-medium">
+                        {hours > 0 ? `${hours}h` : '—'}
+                    </span>
+                </div>
+
+                <!-- Logros -->
+                <div class="p-4 bg-zinc-800/50 rounded-xl text-center">
+                    <span class="text-xs text-zinc-500 block mb-1">Logros</span>
+                    <span class="text-white font-medium">
+                        {logrosTotal > 0 ? `${logrosObt}/${logrosTotal}` : 'Sin logros'}
+                    </span>
+                    {logrosTotal > 0 && (
+                        <div class="mt-2 w-full bg-zinc-700 rounded-full h-1.5">
+                            <div
+                                class="bg-sky-600 h-1.5 rounded-full transition-all"
+                                style={`width: ${logrosPercent}%`}
+                            ></div>
+                        </div>
+                    )}
+                </div>
+
+                <!-- Plataforma -->
+                <div class="p-4 bg-zinc-800/50 rounded-xl text-center">
+                    <span class="text-xs text-zinc-500 block mb-1">Plataforma</span>
+                    <span class="text-white font-medium">{platform}</span>
+                </div>
+            </div>
+
+            <!-- Historial de juego -->
+            {playHistory.length > 0 && (
+                <div class="mb-8 p-4 bg-zinc-800/50 rounded-xl">
+                    <h2 class="text-sm font-semibold text-zinc-300 mb-3">Historial de juego</h2>
+                    <div class="space-y-2">
+                        {playHistory.map((entry) => (
+                            <div class="flex items-center gap-3 text-sm">
+                                <span class="text-zinc-400 font-medium w-12 shrink-0">{entry.year}</span>
+                                <span class="text-zinc-500">
+                                    {entry.start && formatDateShort(entry.start)}
+                                    {entry.start && entry.end && ' → '}
+                                    {entry.end && formatDateShort(entry.end)}
+                                </span>
+                                {entry.hours && (
+                                    <span class="text-zinc-600 ml-auto">{entry.hours}h</span>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                    {firstYearPlayed && (
+                        <p class="text-xs text-zinc-600 mt-3">
+                            Primera vez jugado en {firstYearPlayed}
+                        </p>
+                    )}
+                </div>
+            )}
+
+            <!-- Descripción -->
+            {description && (
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold text-white mb-3">Descripción</h2>
+                    <p class="text-zinc-400 leading-relaxed">{description}</p>
+                </div>
+            )}
+
+            <!-- Trailer de YouTube -->
+            {trailer && (
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold text-white mb-3">Trailer</h2>
+                    <div class="aspect-video rounded-xl overflow-hidden border border-zinc-700">
+                        <iframe
+                            src={`https://www.youtube.com/embed/${trailer}`}
+                            title={`Trailer de ${title}`}
+                            class="w-full h-full"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            )}
+
+            <!-- DEBUG: JSON completo -->
+            <details class="mb-8 p-4 bg-zinc-800 rounded-lg border border-zinc-700">
+                <summary class="cursor-pointer text-amber-400 font-semibold">🔍 DEBUG: Ver JSON completo</summary>
+                <div class="mt-4">
+                    <pre class="text-xs text-zinc-400 overflow-auto max-h-64 p-2 bg-zinc-900 rounded">
+                        {JSON.stringify(game, null, 2)}
+                    </pre>
+                </div>
+            </details>
+
+            <!-- Volver -->
+            <a href="/Games" class="fixed bottom-18 right-4 bg-zinc-800 px-3 py-2 rounded-lg border border-zinc-700">
+                <IconArrowBackUp width={24} height={24} />
+            </a>
+        </section>
+    </main>
+</Layout>

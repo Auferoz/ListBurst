@@ -38,7 +38,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "08/06/2024", fecha_final: "08/06/2024", horas: "" },
+            y2024: { fecha_inicio: "08/06/2024", fecha_final: "08/06/2024", horas: "2" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -62,7 +62,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "03/03/2024", fecha_final: "19/03/2024", horas: "" },
+            y2024: { fecha_inicio: "03/03/2024", fecha_final: "19/03/2024", horas: "12" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -85,7 +85,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "04/03/2025", fecha_final: "04/03/2025", horas: "" },
+            y2025: { fecha_inicio: "04/03/2025", fecha_final: "04/03/2025", horas: "1" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -109,7 +109,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "29/09/2025", fecha_final: "29/09/2025", horas: "" },
+            y2025: { fecha_inicio: "29/09/2025", fecha_final: "29/09/2025", horas: "1" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -134,7 +134,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "10/02/2024", fecha_final: "11/02/2024", horas: "" },
+            y2024: { fecha_inicio: "10/02/2024", fecha_final: "11/02/2024", horas: "6" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -158,7 +158,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "11/02/2024", fecha_final: "12/02/2024", horas: "" },
+            y2024: { fecha_inicio: "11/02/2024", fecha_final: "12/02/2024", horas: "9" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -182,7 +182,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "13/02/2024", fecha_final: "28/02/2024", horas: "" },
+            y2024: { fecha_inicio: "13/02/2024", fecha_final: "28/02/2024", horas: "6" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -206,8 +206,8 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "07/01/2024", fecha_final: "08/02/2024", horas: "" },
-            y2023: { fecha_inicio: "07/01/2023", fecha_final: "08/02/2023", horas: "" },
+            y2024: { fecha_inicio: "07/01/2024", fecha_final: "08/02/2024", horas: "10" },
+            y2023: { fecha_inicio: "07/01/2023", fecha_final: "08/02/2023", horas: "13" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
         years_played: { y2026: false, y2025: false, y2024: true, y2023: true, y2022: false },
@@ -230,7 +230,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "15/06/2024", fecha_final: "16/06/2024", horas: "" },
+            y2024: { fecha_inicio: "15/06/2024", fecha_final: "16/06/2024", horas: "8" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -253,7 +253,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "23/04/2025", fecha_final: "26/06/2025", horas: "" },
+            y2025: { fecha_inicio: "23/04/2025", fecha_final: "26/06/2025", horas: "60" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -278,7 +278,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "28/06/2024", fecha_final: "08/07/2024", horas: "" },
+            y2024: { fecha_inicio: "28/06/2024", fecha_final: "08/07/2024", horas: "6" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -301,7 +301,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "09/11/2025", fecha_final: "12/12/2025", horas: "" },
+            y2025: { fecha_inicio: "09/11/2025", fecha_final: "12/12/2025", horas: "14" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -325,7 +325,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "11/10/2025", fecha_final: "18/10/2025", horas: "" },
+            y2025: { fecha_inicio: "11/10/2025", fecha_final: "18/10/2025", horas: "4" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -350,7 +350,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "24/08/2024", fecha_final: "02/09/2024", horas: "" },
+            y2024: { fecha_inicio: "24/08/2024", fecha_final: "02/09/2024", horas: "15" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -374,7 +374,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "02/01/2024", fecha_final: "24/03/2024", horas: "" },
+            y2024: { fecha_inicio: "02/01/2024", fecha_final: "24/03/2024", horas: "10" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -398,7 +398,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "30/01/2024", fecha_final: "23/03/2024", horas: "" },
+            y2024: { fecha_inicio: "30/01/2024", fecha_final: "23/03/2024", horas: "120" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -422,7 +422,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "05/01/2024", fecha_final: "14/02/2024", horas: "" },
+            y2024: { fecha_inicio: "05/01/2024", fecha_final: "14/02/2024", horas: "34" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -445,7 +445,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "06/10/2025", fecha_final: "18/10/2025", horas: "" },
+            y2025: { fecha_inicio: "06/10/2025", fecha_final: "18/10/2025", horas: "4" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -470,8 +470,8 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "01/03/2024", fecha_final: "05/03/2024", horas: "" },
-            y2023: { fecha_inicio: "12/08/2023", fecha_final: "14/08/2023", horas: "" },
+            y2024: { fecha_inicio: "01/03/2024", fecha_final: "05/03/2024", horas: "114" },
+            y2023: { fecha_inicio: "12/08/2023", fecha_final: "14/08/2023", horas: "10" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
         years_played: { y2026: false, y2025: false, y2024: true, y2023: true, y2022: false },
@@ -492,9 +492,9 @@ export const ListGames = [
         igdbId: 203538,
         first_year_played: 2024,
         dates_played: {
-            y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2026: { fecha_inicio: "", fecha_final: "", horas: "1" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "28/03/2024", fecha_final: "30/03/2024", horas: "" },
+            y2024: { fecha_inicio: "28/03/2024", fecha_final: "30/03/2024", horas: "15" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -509,20 +509,20 @@ export const ListGames = [
         trailer: "wpx2Z2CCjPs",
         genre: "Role-playing (RPG), Adventure",
         estado: "Jugando",
-        horasTotal: 10,
+        horasTotal: 11,
         logros_obt: 13,
         logros_total: 34,
         console_pc: "Xbox Series X",
         igdbId: 119374,
         first_year_played: 2025,
         dates_played: {
-            y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2026: { fecha_inicio: "01/01/2026", fecha_final: "", horas: "1" },
             y2025: { fecha_inicio: "24/12/2025", fecha_final: "31/12/2025", horas: "10" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
-        years_played: { y2026: false, y2025: true, y2024: false, y2023: false, y2022: false },
+        years_played: { y2026: true, y2025: true, y2024: false, y2023: false, y2022: false },
         description: "Final Fantasy VIII Remastered presenta modelos de personajes mejorados, fuerzas guardianas optimizadas y efectos visuales mejorados, al tiempo que conserva la historia y los fondos prerenderizados del juego original. Incluye características modernas como logros, compatibilidad con mandos y mejoras opcionales para el combate, como velocidad x3, sin encuentros y estadísticas máximas."
     },
     {
@@ -542,7 +542,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "07/04/2024", fecha_final: "31/12/2024", horas: "" },
+            y2024: { fecha_inicio: "07/04/2024", fecha_final: "31/12/2024", horas: "23" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -565,8 +565,8 @@ export const ListGames = [
         first_year_played: 2024,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "28/06/2025", fecha_final: "03/07/2025", horas: "" },
-            y2024: { fecha_inicio: "07/09/2024", fecha_final: "19/10/2024", horas: "" },
+            y2025: { fecha_inicio: "28/06/2025", fecha_final: "03/07/2025", horas: "12" },
+            y2024: { fecha_inicio: "07/09/2024", fecha_final: "19/10/2024", horas: "88" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -590,7 +590,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "19/08/2024", fecha_final: "25/08/2024", horas: "" },
+            y2024: { fecha_inicio: "19/08/2024", fecha_final: "25/08/2024", horas: "4" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -614,7 +614,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "01/07/2024", fecha_final: "14/08/2024", horas: "" },
+            y2024: { fecha_inicio: "01/07/2024", fecha_final: "14/08/2024", horas: "20" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -638,7 +638,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "01/03/2024", fecha_final: "01/07/2024", horas: "" },
+            y2024: { fecha_inicio: "01/03/2024", fecha_final: "01/07/2024", horas: "5" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -662,7 +662,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "26/12/2024", fecha_final: "26/12/2024", horas: "" },
+            y2024: { fecha_inicio: "26/12/2024", fecha_final: "26/12/2024", horas: "2" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -687,7 +687,7 @@ export const ListGames = [
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2023: { fecha_inicio: "06/02/2023", fecha_final: "14/06/2023", horas: "" },
+            y2023: { fecha_inicio: "06/02/2023", fecha_final: "14/06/2023", horas: "70" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
         years_played: { y2026: false, y2025: false, y2024: false, y2023: true, y2022: false },
@@ -709,7 +709,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "23/08/2025", fecha_final: "24/08/2025", horas: "" },
+            y2025: { fecha_inicio: "23/08/2025", fecha_final: "24/08/2025", horas: "3" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -733,7 +733,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "28/03/2025", fecha_final: "21/08/2025", horas: "" },
+            y2025: { fecha_inicio: "28/03/2025", fecha_final: "21/08/2025", horas: "5" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -757,7 +757,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "20/03/2025", fecha_final: "28/03/2025", horas: "" },
+            y2025: { fecha_inicio: "20/03/2025", fecha_final: "28/03/2025", horas: "2" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -781,7 +781,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "13/09/2025", fecha_final: "13/09/2025", horas: "" },
+            y2025: { fecha_inicio: "13/09/2025", fecha_final: "13/09/2025", horas: "5" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -821,7 +821,7 @@ export const ListGames = [
         trailer: "BGtROJeMPeE",
         genre: "Role-playing (RPG), Strategy, MOBA",
         estado: "Completado",
-        horasTotal: 700,
+        horasTotal: 600,
         logros_obt: 0,
         logros_total: 0,
         console_pc: "PC",
@@ -829,10 +829,10 @@ export const ListGames = [
         first_year_played: 2022,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "01/01/2025", fecha_final: "30/04/2025", horas: "" },
-            y2024: { fecha_inicio: "03/01/2024", fecha_final: "07/12/2024", horas: "" },
-            y2023: { fecha_inicio: "01/01/2023", fecha_final: "30/04/2023", horas: "" },
-            y2022: { fecha_inicio: "01/01/2022", fecha_final: "30/04/2022", horas: "" },
+            y2025: { fecha_inicio: "01/01/2025", fecha_final: "30/04/2025", horas: "100" },
+            y2024: { fecha_inicio: "03/01/2024", fecha_final: "07/12/2024", horas: "100" },
+            y2023: { fecha_inicio: "01/01/2023", fecha_final: "30/04/2023", horas: "200" },
+            y2022: { fecha_inicio: "01/01/2022", fecha_final: "30/04/2022", horas: "200" },
         },
         years_played: { y2026: false, y2025: true, y2024: true, y2023: true, y2022: true },
         description: "League of Legends es un trepidante juego competitivo en línea que combina la velocidad y la intensidad de un RTS con elementos de RPG. Dos equipos de poderosos campeones, cada uno con un diseño y un estilo de juego únicos, se enfrentan en múltiples campos de batalla y modos de juego."
@@ -853,7 +853,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "24/08/2025", fecha_final: "24/08/2025", horas: "" },
+            y2025: { fecha_inicio: "24/08/2025", fecha_final: "24/08/2025", horas: "4" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -869,7 +869,7 @@ export const ListGames = [
         trailer: "YDyiYrIGF00",
         genre: "Role-playing (RPG), Hack and slash, Adventure",
         estado: "Completado",
-        horasTotal: 663,
+        horasTotal: 695,
         logros_obt: 90,
         logros_total: 156,
         console_pc: "Steam",
@@ -877,10 +877,10 @@ export const ListGames = [
         first_year_played: 2022,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "07/01/2025", fecha_final: "27/04/2025", horas: "" },
-            y2024: { fecha_inicio: "20/01/2024", fecha_final: "10/05/2024", horas: "" },
-            y2023: { fecha_inicio: "04/08/2023", fecha_final: "31/12/2023", horas: "" },
-            y2022: { fecha_inicio: "02/01/2022", fecha_final: "25/12/2022", horas: "" },
+            y2025: { fecha_inicio: "07/01/2025", fecha_final: "27/04/2025", horas: "195" },
+            y2024: { fecha_inicio: "20/01/2024", fecha_final: "10/05/2024", horas: "130" },
+            y2023: { fecha_inicio: "04/08/2023", fecha_final: "31/12/2023", horas: "150" },
+            y2022: { fecha_inicio: "02/01/2022", fecha_final: "25/12/2022", horas: "120" },
         },
         years_played: { y2026: false, y2025: true, y2024: true, y2023: true, y2022: true },
         description: "Embárcate en una odisea en busca del Arca Perdida en un vasto y vibrante mundo: explora nuevas tierras, busca tesoros perdidos y ponte a prueba en emocionantes combates de acción."
@@ -901,7 +901,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "20/07/2025", fecha_final: "09/08/2025", horas: "" },
+            y2025: { fecha_inicio: "20/07/2025", fecha_final: "09/08/2025", horas: "20" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -949,7 +949,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "06/04/2025", fecha_final: "27/05/2025", horas: "" },
+            y2025: { fecha_inicio: "06/04/2025", fecha_final: "27/05/2025", horas: "210" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -974,36 +974,12 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "27/10/2024", fecha_final: "01/12/2024", horas: "" },
+            y2024: { fecha_inicio: "27/10/2024", fecha_final: "01/12/2024", horas: "50" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
         years_played: { y2026: false, y2025: false, y2024: true, y2023: false, y2022: false },
         description: "Once Human es un juego multijugador de supervivencia en mundo abierto ambientado en un extraño futuro postapocalíptico. Únete a tus amigos para luchar contra monstruosos enemigos, descubrir complots secretos, competir por los recursos y construir tu propio territorio. Una vez fuiste un simple humano. Ahora, tienes el poder de rehacer el mundo."
-    },
-    {
-        title: "Otros",
-        released: "01/01/2022",
-        companie: "Placeholder",
-        poster: "",
-        trailer: "Placeholder",
-        genre: "Placeholder",
-        estado: "Completado",
-        horasTotal: 0,
-        logros_obt: 0,
-        logros_total: 0,
-        console_pc: "Steam",
-        igdbId: 0,
-        first_year_played: 2022,
-        dates_played: {
-            y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2022: { fecha_inicio: "01/01/2022", fecha_final: "31/12/2022", horas: "" },
-        },
-        years_played: { y2026: false, y2025: false, y2024: false, y2023: false, y2022: true },
-        description: "Otros juegos que actualmente no me acuerdo... para 2022"
     },
     {
         title: "Palworld",
@@ -1022,7 +998,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "27/01/2024", fecha_final: "02/03/2024", horas: "" },
+            y2024: { fecha_inicio: "27/01/2024", fecha_final: "02/03/2024", horas: "80" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -1045,7 +1021,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "28/09/2025", fecha_final: "04/10/2025", horas: "" },
+            y2025: { fecha_inicio: "28/09/2025", fecha_final: "04/10/2025", horas: "4" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -1070,7 +1046,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "07/06/2024", fecha_final: "23/06/2024", horas: "" },
+            y2024: { fecha_inicio: "07/06/2024", fecha_final: "23/06/2024", horas: "2" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -1093,7 +1069,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "13/12/2025", fecha_final: "13/12/2025", horas: "" },
+            y2025: { fecha_inicio: "13/12/2025", fecha_final: "13/12/2025", horas: "1" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -1117,7 +1093,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "20/06/2025", fecha_final: "21/06/2025", horas: "" },
+            y2025: { fecha_inicio: "20/06/2025", fecha_final: "21/06/2025", horas: "1" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -1141,9 +1117,9 @@ export const ListGames = [
         first_year_played: 2023,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "09/03/2025", fecha_final: "13/07/2025", horas: "" },
+            y2025: { fecha_inicio: "09/03/2025", fecha_final: "13/07/2025", horas: "14" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2023: { fecha_inicio: "14/06/2023", fecha_final: "21/06/2023", horas: "" },
+            y2023: { fecha_inicio: "14/06/2023", fecha_final: "21/06/2023", horas: "16" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
         years_played: { y2026: false, y2025: true, y2024: false, y2023: true, y2022: false },
@@ -1166,7 +1142,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "01/01/2024", fecha_final: "01/01/2024", horas: "" },
+            y2024: { fecha_inicio: "01/01/2024", fecha_final: "01/01/2024", horas: "1" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -1190,7 +1166,7 @@ export const ListGames = [
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2024: { fecha_inicio: "15/07/2024", fecha_final: "16/07/2024", horas: "" },
+            y2024: { fecha_inicio: "15/07/2024", fecha_final: "16/07/2024", horas: "8" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
@@ -1213,7 +1189,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "25/10/2025", fecha_final: "17/11/2025", horas: "" },
+            y2025: { fecha_inicio: "25/10/2025", fecha_final: "17/11/2025", horas: "8" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -1237,7 +1213,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "21/09/2025", fecha_final: "22/09/2025", horas: "" },
+            y2025: { fecha_inicio: "21/09/2025", fecha_final: "22/09/2025", horas: "5" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -1261,7 +1237,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "01/09/2025", fecha_final: "28/09/2025", horas: "" },
+            y2025: { fecha_inicio: "01/09/2025", fecha_final: "28/09/2025", horas: "11" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -1285,7 +1261,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "25/07/2025", fecha_final: "27/07/2025", horas: "" },
+            y2025: { fecha_inicio: "25/07/2025", fecha_final: "27/07/2025", horas: "11" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -1309,7 +1285,7 @@ export const ListGames = [
         first_year_played: 2025,
         dates_played: {
             y2026: { fecha_inicio: "", fecha_final: "", horas: "" },
-            y2025: { fecha_inicio: "29/09/2025", fecha_final: "26/10/2025", horas: "" },
+            y2025: { fecha_inicio: "29/09/2025", fecha_final: "26/10/2025", horas: "7" },
             y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
@@ -1328,4 +1304,17 @@ export const getAvailableYears = () => {
         });
     });
     return [...years].sort((a, b) => a - b);
+};
+
+/**
+ * Genera un slug URL-friendly a partir del título del juego
+ * Ejemplo: "Batman: Return to Arkham - Arkham Asylum" → "batman-return-to-arkham---arkham-asylum"
+ */
+export const getGameSlug = (title) => {
+    return title
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
 };

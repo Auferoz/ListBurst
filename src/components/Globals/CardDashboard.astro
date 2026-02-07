@@ -1,0 +1,13 @@
+---
+import IconGamepad from "../Icons/IconGamepad.astro";
+
+const { text, number } = Astro.props;
+---
+
+<article class="group bg-[#222428]/90 rounded-2xl border border-sky-700/40 p-4 shadow-md shadow-sky-700/20 hover:shadow-sky-700/40 transition" >
+    <aside class="flex items-center justify-between">
+    <IconGamepad width={36} height={36} />
+    <span class="text-4xl font-bold">{number}</span>
+    </aside>
+    <p class="mt-2 text-sm uppercase tracking-wide text-gray-400">{text}</p>
+</article>

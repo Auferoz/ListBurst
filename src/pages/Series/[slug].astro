@@ -7,6 +7,7 @@
 import { ListSeriesSeasons } from '../../data/SeriesDB';
 import { getShow, getSeasonInfo, getSeasonPeople, getImageUrl } from '../../services/apiTrakt';
 import Layout from '../../layouts/Layout.astro';
+import IconArrowBackUp from '../../components/Icons/IconArrowBackUp.astro';
 
 // Generar todas las rutas estáticas
 export async function getStaticPaths() {
@@ -103,9 +104,9 @@ const cast = people?.cast || [];
 
             <!-- Contenido del hero -->
             <div class="absolute bottom-0 left-0 right-0 p-8">
-                <div class="max-w-7xl mx-auto flex items-end gap-6">
+                <div class="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:items-end gap-6">
                     <!-- Poster de la temporada -->
-                    <figure class="shrink-0 hidden md:block">
+                    <figure class="shrink-0">
                         <img
                             src={seasonPoster || showPoster}
                             alt={`Poster de ${title} ${seasonTitle}`}
@@ -224,15 +225,10 @@ const cast = people?.cast || [];
                 </div>
             </details>
 
+
             <!-- Volver -->
-            <a
-                href="/Series"
-                class="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-                Volver a la lista
+            <a href="/Games" class="fixed bottom-18 right-4 bg-zinc-800 px-3 py-2 rounded-lg border border-zinc-700">
+                <IconArrowBackUp width={24} height={24} />
             </a>
         </section>
     </main>

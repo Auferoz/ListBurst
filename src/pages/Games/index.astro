@@ -1,8 +1,303 @@
 ---
+// src/pages/Games/index.astro
+import { ListGames, getAvailableYears } from '../../data/gamesDB';
 import Layout from '../../layouts/Layout.astro';
+import CardGamesList from '../../components/Globals/CardGamesList.astro';
+import FilterSelect from '../../components/Globals/FilterSelect.astro';
+import IconTrash from '../../components/Icons/IconTrash.astro';
+import IconFilter from '../../components/Icons/IconFilter.astro';
+import IconFilterFilled from '../../components/Icons/IconFilterFilled.astro';
+import CardDashboard from '../../components/Globals/CardDashboard.astro';
 
+// Obtener años disponibles (más reciente primero)
+const availableYears = getAvailableYears().reverse();
+const currentYear = new Date().getFullYear();
+const defaultYear = availableYears.includes(currentYear) ? currentYear : availableYears[0];
+
+// Extraer géneros únicos de todos los juegos (split por coma)
+const allGenres = [...new Set(
+    ListGames.flatMap(g => g.genre.split(',').map(genre => genre.trim().toLowerCase()))
+)].sort();
+
+// Extraer plataformas únicas
+const allPlatforms = [...new Set(
+    ListGames.map(g => g.console_pc.toLowerCase())
+)].sort();
+
+// Convertir a formato de opciones para FilterSelect
+const yearOptions = availableYears.map(year => ({ value: String(year), label: String(year) }));
+const genreOptions = allGenres.map(genre => ({ value: genre, label: genre }));
+const platformOptions = allPlatforms.map(platform => ({ value: platform, label: platform }));
+const statusOptions = [
+    { value: "completado", label: "Completado" },
+    { value: "abandonado", label: "Abandonado" },
+    { value: "jugando", label: "Jugando" },
+    { value: "pausado", label: "Pausado" },
+];
+const orderOptions = [
+    { value: "newest", label: "Más reciente" },
+    { value: "oldest", label: "Más antiguo" },
+    { value: "title-asc", label: "Título A-Z" },
+    { value: "title-desc", label: "Título Z-A" },
+];
+
+// Agregar índice para ordenamiento
+const gamesWithIndex = ListGames.map((game, index) => ({
+    ...game,
+    originalIndex: index,
+}));
 ---
 
 <Layout>
-	awdawd games page
+    <main class="max-w-7xl w-full mx-auto p-4">
+        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <h1 class="text-xl font-bold">Games List <span id="games-count" class="text-sm text-zinc-400"></span></h1>
+            <p class="text-xs text-start">
+                Lista de mis juegos organizados por plataforma y estado. Usa los filtros para encontrar juegos según tus preferencias.
+            </p>
+        </header>
+
+        <!-- Dashboard Datos -->
+        <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            <CardDashboard text="Jugando" number={gamesWithIndex.filter(g => g.estado === "Jugando").length} />
+            <CardDashboard text="Pausados" number={gamesWithIndex.filter(g => g.estado === "Pausado").length} />
+            <CardDashboard text="Completados" number={gamesWithIndex.filter(g => g.estado === "Completado").length} />
+            <CardDashboard text="Abandonados" number={gamesWithIndex.filter(g => g.estado === "Abandonado").length} />
+        </section>
+
+        <!-- Filtros -->
+        <section class="flex flex-wrap items-center justify-start gap-3 mt-4" id="filters">
+            <!-- Botón Toggle Filter -->
+            <div class="flex flex-col items-center justify-center gap-1">
+                <label class="text-xs text-transparent">Filter</label>
+                <button
+                    id="filter-toggle"
+                    type="button"
+                    class="text-white transition-colors"
+                    aria-expanded="false"
+                    aria-controls="filter-options"
+                >
+                    <span id="icon-filter" class="block">
+                        <IconFilter width="24" height="24" class="text-zinc-400 shrink-0" />
+                    </span>
+                    <span id="icon-filter-filled" class="hidden">
+                        <IconFilterFilled width="24" height="24" class="text-sky-500 shrink-0" />
+                    </span>
+                </button>
+            </div>
+
+            <!-- Contenedor de filtros (oculto por defecto) -->
+            <div id="filter-options" class="hidden flex flex-wrap items-center gap-3">
+                <FilterSelect
+                    id="filter-year"
+                    label="Año"
+                    options={yearOptions}
+                    defaultValue={String(defaultYear)}
+                />
+
+                <FilterSelect
+                    id="filter-genre"
+                    label="Género"
+                    options={genreOptions}
+                    capitalize={true}
+                />
+
+                <FilterSelect
+                    id="filter-status"
+                    label="Estado"
+                    options={statusOptions}
+                    capitalize={true}
+                />
+
+                <FilterSelect
+                    id="filter-platform"
+                    label="Plataforma"
+                    options={platformOptions}
+                    capitalize={true}
+                />
+
+                <FilterSelect
+                    id="filter-order"
+                    label="Orden"
+                    options={orderOptions}
+                    defaultValue="newest"
+                    includeAll={false}
+                />
+
+                <!-- Botón Reset -->
+                <div class="flex flex-col items-center justify-center gap-1">
+                    <label class="text-xs text-transparent">Reset</label>
+                    <button
+                        id="filter-reset"
+                        type="button"
+                        class="text-white transition-colors hover:text-red-400"
+                    >
+                        <IconTrash width="24" height="24" />
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Games -->
+        <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 pb-20">
+            {gamesWithIndex.map((game, index) => (
+                <CardGamesList data={game} index={index} />
+            ))}
+        </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <div id="no-results" class="hidden text-center py-12 text-zinc-400">
+            <p class="text-lg">No se encontraron juegos con los filtros seleccionados</p>
+        </div>
+    </main>
 </Layout>
+
+<script define:vars={{ defaultYear }}>
+    // Esperar a que el DOM esté listo
+    document.addEventListener('DOMContentLoaded', () => {
+        initFilters();
+    });
+
+    // También ejecutar en navegación con View Transitions
+    document.addEventListener('astro:page-load', () => {
+        initFilters();
+    });
+
+    function initFilters() {
+        const filterToggle = document.getElementById('filter-toggle');
+        const filterOptions = document.getElementById('filter-options');
+        const iconFilter = document.getElementById('icon-filter');
+        const iconFilterFilled = document.getElementById('icon-filter-filled');
+        const filterYear = document.getElementById('filter-year');
+        const filterGenre = document.getElementById('filter-genre');
+        const filterStatus = document.getElementById('filter-status');
+        const filterPlatform = document.getElementById('filter-platform');
+        const filterOrder = document.getElementById('filter-order');
+        const filterReset = document.getElementById('filter-reset');
+        const gamesGrid = document.getElementById('games-grid');
+        const noResults = document.getElementById('no-results');
+        const gamesCount = document.getElementById('games-count');
+
+        if (!filterYear || !gamesGrid) return;
+
+        let cards = Array.from(gamesGrid.querySelectorAll('.card-game'));
+        let filtersVisible = false;
+
+        // Toggle de filtros
+        filterToggle.addEventListener('click', () => {
+            filtersVisible = !filtersVisible;
+            filterOptions.classList.toggle('hidden', !filtersVisible);
+            filterToggle.setAttribute('aria-expanded', filtersVisible);
+            updateFilterIcon();
+        });
+
+        // Actualizar icono según si hay filtros activos
+        function updateFilterIcon() {
+            const hasActiveFilters =
+                filterYear.value !== 'all' ||
+                filterGenre.value !== 'all' ||
+                filterStatus.value !== 'all' ||
+                filterPlatform.value !== 'all' ||
+                filterOrder.value !== 'newest';
+
+            if (hasActiveFilters) {
+                iconFilter.classList.add('hidden');
+                iconFilterFilled.classList.remove('hidden');
+            } else {
+                iconFilter.classList.remove('hidden');
+                iconFilterFilled.classList.add('hidden');
+            }
+        }
+
+        // Aplicar filtro y orden inicial
+        applyFiltersAndSort();
+
+        // Event listeners para los filtros
+        filterYear.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterGenre.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterStatus.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterPlatform.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+        filterOrder.addEventListener('change', () => { applyFiltersAndSort(); updateFilterIcon(); });
+
+        // Reset de filtros
+        filterReset.addEventListener('click', () => {
+            filterYear.value = 'all';
+            filterGenre.value = 'all';
+            filterStatus.value = 'all';
+            filterPlatform.value = 'all';
+            filterOrder.value = 'newest';
+            applyFiltersAndSort();
+            updateFilterIcon();
+        });
+
+        function applyFiltersAndSort() {
+            const yearValue = filterYear.value;
+            const genreValue = filterGenre.value;
+            const statusValue = filterStatus.value;
+            const platformValue = filterPlatform.value;
+            const orderValue = filterOrder.value;
+
+            // Filtrar cards
+            let visibleCards = [];
+            cards.forEach((card) => {
+                const cardYears = card.dataset.year || '';
+                const cardGenres = card.dataset.genres?.toLowerCase() || '';
+                const cardStatus = card.dataset.estado?.toLowerCase() || '';
+                const cardPlatform = card.dataset.platform?.toLowerCase() || '';
+
+                // Para años: un juego puede tener múltiples años (ej: "2024,2025")
+                const matchYear = yearValue === 'all' || cardYears.split(',').includes(yearValue);
+                const matchGenre = genreValue === 'all' || cardGenres.includes(genreValue.toLowerCase());
+                const matchStatus = statusValue === 'all' || cardStatus === statusValue.toLowerCase();
+                const matchPlatform = platformValue === 'all' || cardPlatform === platformValue.toLowerCase();
+
+                if (matchYear && matchGenre && matchStatus && matchPlatform) {
+                    card.style.display = '';
+                    visibleCards.push(card);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Ordenar cards visibles
+            visibleCards.sort((a, b) => {
+                switch (orderValue) {
+                    case 'newest':
+                        return parseInt(b.dataset.index) - parseInt(a.dataset.index);
+                    case 'oldest':
+                        return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+                    case 'title-asc':
+                        return (a.dataset.title || '').localeCompare(b.dataset.title || '');
+                    case 'title-desc':
+                        return (b.dataset.title || '').localeCompare(a.dataset.title || '');
+                    default:
+                        return 0;
+                }
+            });
+
+            // Reordenar en el DOM
+            visibleCards.forEach(card => {
+                gamesGrid.appendChild(card);
+            });
+
+            // También mover las cards ocultas al final para mantener el orden
+            cards.forEach(card => {
+                if (card.style.display === 'none') {
+                    gamesGrid.appendChild(card);
+                }
+            });
+
+            // Mostrar/ocultar mensaje de no resultados
+            if (visibleCards.length === 0) {
+                noResults.classList.remove('hidden');
+                gamesGrid.classList.add('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                gamesGrid.classList.remove('hidden');
+            }
+
+            // Actualizar contador
+            gamesCount.textContent = `· ${visibleCards.length} juego${visibleCards.length !== 1 ? 's' : ''}`;
+        }
+    }
+</script>
