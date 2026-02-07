@@ -318,6 +318,13 @@ export const ListSeriesSeasons = [
         platformViewed: "Disney+",
         statusViewed: "completed"
     },
+    {
+        idTrakt: "what-if-2021",
+        numberSeason: 2,
+        yearViewed: 2026,
+        platformViewed: "Disney+",
+        statusViewed: "completed"
+    },
 ];
 
 // Helper para obtener todos los años únicos

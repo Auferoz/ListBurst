@@ -1,0 +1,310 @@
+---
+/**
+ * FilterBar - Componente global reutilizable para filtros
+ *
+ * Genera una barra de filtros con CustomSelect estilizados.
+ * Dispara eventos `filter-change` y `filter-reset` en el document
+ * para que cada página gestione su lógica de filtrado.
+ *
+ * @example
+ * <FilterBar
+ *     filters={[
+ *         { id: "filter-year", label: "Año", options: yearOptions, defaultValue: "2026" },
+ *         { id: "filter-genre", label: "Género", options: genreOptions, capitalize: true },
+ *         { id: "filter-order", label: "Orden", options: orderOptions, defaultValue: "newest", includeAll: false },
+ *     ]}
+ * />
+ */
+import CustomSelect from './CustomSelect.astro';
+
+interface FilterOption {
+    value: string;
+    label: string;
+}
+
+interface FilterConfig {
+    id: string;
+    label: string;
+    options: FilterOption[];
+    defaultValue?: string;
+    includeAll?: boolean;
+    allLabel?: string;
+    capitalize?: boolean;
+}
+
+interface Props {
+    filters: FilterConfig[];
+}
+
+const { filters } = Astro.props;
+
+// Extraer IDs y defaults para el script
+const filterIds = filters.map(f => f.id);
+const filterDefaults: Record<string, string> = {};
+filters.forEach(f => {
+    filterDefaults[f.id] = f.defaultValue || (f.includeAll !== false ? "all" : f.options[0]?.value || "");
+});
+---
+
+<section class="filter-bar" id="filters">
+    <div class="filter-bar__controls">
+        {filters.map((filter) => (
+            <CustomSelect
+                id={filter.id}
+                label={filter.label}
+                options={filter.options}
+                defaultValue={filter.defaultValue}
+                includeAll={filter.includeAll}
+                allLabel={filter.allLabel}
+                capitalize={filter.capitalize}
+            />
+        ))}
+
+        <!-- Botón Reset -->
+        <div class="filter-bar__reset-wrapper">
+            <span class="filter-bar__reset-label">Reset</span>
+            <button
+                id="filter-reset"
+                type="button"
+                class="filter-bar__reset"
+                aria-label="Resetear filtros"
+            >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="1 4 1 10 7 10"></polyline>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Indicador de filtros activos -->
+    <div id="filter-active-indicator" class="filter-bar__indicator"></div>
+</section>
+
+<style>
+    .filter-bar {
+        position: relative;
+        margin-top: 16px;
+    }
+
+    .filter-bar__controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .filter-bar__reset-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .filter-bar__reset-label {
+        font-size: 10px;
+        font-weight: 500;
+        color: var(--color-zinc-500);
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        user-select: none;
+    }
+
+    .filter-bar__reset {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 30px;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        color: var(--color-zinc-500);
+        cursor: pointer;
+        transition: color 150ms ease-out, border-color 150ms ease-out, background-color 150ms ease-out;
+    }
+
+    .filter-bar__reset:hover {
+        color: var(--color-red-400);
+        border-color: rgba(248, 113, 113, 0.2);
+        background: rgba(248, 113, 113, 0.06);
+    }
+
+    .filter-bar__reset:focus-visible {
+        outline: none;
+        border-color: rgba(248, 113, 113, 0.4);
+        box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.2);
+    }
+
+    /* Indicador de filtros activos - línea sutil debajo */
+    .filter-bar__indicator {
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 1px;
+        transition: background 300ms ease-out, box-shadow 300ms ease-out;
+    }
+
+    .filter-bar__indicator.active {
+        background: rgba(136, 58, 234, 0.4);
+        box-shadow: 0 0 8px rgba(136, 58, 234, 0.15);
+    }
+</style>
+
+<script define:vars={{ filterIds, filterDefaults }}>
+    function initFilterBar() {
+        const resetBtn = document.getElementById('filter-reset');
+        const indicator = document.getElementById('filter-active-indicator');
+
+        if (!resetBtn) return;
+
+        // --- CustomSelect: inicializar interacciones ---
+        const wrappers = document.querySelectorAll('.custom-select-wrapper');
+
+        wrappers.forEach((wrapper) => {
+            const trigger = wrapper.querySelector('.select-trigger');
+            const dropdown = wrapper.querySelector('.select-dropdown');
+            const hiddenInput = wrapper.querySelector('input[type="hidden"]');
+            const options = wrapper.querySelectorAll('.select-option');
+            const triggerLabel = wrapper.querySelector('.select-trigger__label');
+
+            if (!trigger || !dropdown || !hiddenInput) return;
+
+            // Toggle dropdown
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+                // Cerrar todos los otros dropdowns primero
+                closeAllDropdowns();
+
+                if (!isOpen) {
+                    trigger.setAttribute('aria-expanded', 'true');
+                    dropdown.classList.add('open');
+                }
+            });
+
+            // Seleccionar opción
+            options.forEach((option) => {
+                option.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const value = option.dataset.value;
+                    const label = option.querySelector('.select-option__label')?.textContent || '';
+
+                    // Actualizar estado visual
+                    options.forEach(o => {
+                        o.classList.remove('select-option--selected');
+                        o.setAttribute('aria-selected', 'false');
+                    });
+                    option.classList.add('select-option--selected');
+                    option.setAttribute('aria-selected', 'true');
+
+                    // Actualizar trigger y hidden input
+                    triggerLabel.textContent = label;
+                    trigger.dataset.value = value;
+                    hiddenInput.value = value;
+
+                    // Cerrar dropdown
+                    trigger.setAttribute('aria-expanded', 'false');
+                    dropdown.classList.remove('open');
+
+                    // Disparar evento de cambio
+                    emitFilterChange();
+                });
+            });
+        });
+
+        // Cerrar dropdowns al hacer click fuera
+        document.addEventListener('click', () => {
+            closeAllDropdowns();
+        });
+
+        // Cerrar dropdowns con Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeAllDropdowns();
+            }
+        });
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.custom-select-wrapper').forEach(w => {
+                const t = w.querySelector('.select-trigger');
+                const d = w.querySelector('.select-dropdown');
+                if (t) t.setAttribute('aria-expanded', 'false');
+                if (d) d.classList.remove('open');
+            });
+        }
+
+        // --- Reset ---
+        resetBtn.addEventListener('click', () => {
+            // Restaurar cada filtro a su valor por defecto
+            filterIds.forEach(id => {
+                const wrapper = document.querySelector(`[data-select-id="${id}"]`);
+                if (!wrapper) return;
+
+                const defaultVal = filterDefaults[id];
+                const hiddenInput = wrapper.querySelector('input[type="hidden"]');
+                const trigger = wrapper.querySelector('.select-trigger');
+                const triggerLabel = wrapper.querySelector('.select-trigger__label');
+                const options = wrapper.querySelectorAll('.select-option');
+
+                if (hiddenInput) hiddenInput.value = defaultVal;
+                if (trigger) trigger.dataset.value = defaultVal;
+
+                // Actualizar visual de opciones
+                options.forEach(o => {
+                    const isDefault = o.dataset.value === defaultVal;
+                    o.classList.toggle('select-option--selected', isDefault);
+                    o.setAttribute('aria-selected', isDefault ? 'true' : 'false');
+                    if (isDefault && triggerLabel) {
+                        triggerLabel.textContent = o.querySelector('.select-option__label')?.textContent || '';
+                    }
+                });
+            });
+
+            // Disparar evento
+            emitFilterChange();
+            document.dispatchEvent(new CustomEvent('filter-reset'));
+        });
+
+        // --- Emitir evento filter-change ---
+        function emitFilterChange() {
+            const values = {};
+            filterIds.forEach(id => {
+                const input = document.getElementById(id);
+                if (input) values[id] = input.value;
+            });
+
+            document.dispatchEvent(new CustomEvent('filter-change', {
+                detail: values
+            }));
+
+            updateIndicator(values);
+        }
+
+        // --- Actualizar indicador de filtros activos ---
+        function updateIndicator(values) {
+            const hasActive = filterIds.some(id => {
+                return values[id] !== filterDefaults[id];
+            });
+            if (indicator) {
+                indicator.classList.toggle('active', hasActive);
+            }
+        }
+
+        // Actualizar indicador visual inicial (sin emitir evento)
+        const initialValues = {};
+        filterIds.forEach(id => {
+            const input = document.getElementById(id);
+            if (input) initialValues[id] = input.value;
+        });
+        updateIndicator(initialValues);
+    }
+
+    // Inicializar en DOM ready y en navegación con View Transitions
+    document.addEventListener('DOMContentLoaded', initFilterBar);
+    document.addEventListener('astro:page-load', initFilterBar);
+</script>

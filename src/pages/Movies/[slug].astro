@@ -19,6 +19,7 @@ import IconArrowBack from '../../components/Icons/IconArrowBack.astro';
 export function getStaticPaths() {
     // Deduplicar por slug (una película puede estar en varias listas)
     const moviesBySlug = new Map();
+    
     for (const movieData of moviesCache.movies) {
         const slug = movieData.movie?.ids?.slug;
         if (slug) {
