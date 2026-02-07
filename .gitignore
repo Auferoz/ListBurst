@@ -18,7 +18,7 @@ pnpm-debug.log*
 .env.production
 
 # cache de datos (generado por scripts/fetch-*.js)
-src/data/cache/
+# src/data/cache/
 
 # macOS-specific files
 .DS_Store
