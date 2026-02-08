@@ -97,6 +97,7 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
     data-index={index}
     data-title={title.toLowerCase()}
     data-rating={rating}
+    data-runtime={runtime || 0}
 >
 <article
     class:list={[

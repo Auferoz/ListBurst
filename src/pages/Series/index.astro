@@ -61,16 +61,16 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
 
         <!-- Dashboard Datos -->
         <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <CardDashboard text="Total temporadas" number={totalSeasons} color="sky">
+            <CardDashboard text="Total temporadas" number={totalSeasons} color="sky" id="dash-total">
                 <IconDeviceTv width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="Completadas" number={completedSeasons} color="green">
+            <CardDashboard text="Completadas" number={completedSeasons} color="green" id="dash-completed">
                 <IconDeviceTv width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="En progreso" number={ongoingSeasons} color="amber">
+            <CardDashboard text="En progreso" number={ongoingSeasons} color="amber" id="dash-ongoing">
                 <IconDeviceTv width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="Plataformas" number={totalPlatforms} color="violet">
+            <CardDashboard text="Plataformas" number={totalPlatforms} color="violet" id="dash-platforms">
                 <IconDeviceTv width={24} height={24} />
             </CardDashboard>
         </section>
@@ -102,6 +102,41 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
 
 <script>
     let seriesController: AbortController | null = null;
+
+    function animateValue(el: HTMLElement, newValue: string) {
+        const oldValue = el.textContent || '';
+        if (oldValue === newValue) return;
+        el.style.opacity = '0';
+        setTimeout(() => {
+            el.textContent = newValue;
+            el.style.opacity = '1';
+        }, 150);
+    }
+
+    function updateSeriesDashboard(visibleCards: HTMLElement[]) {
+        const dashTotal = document.getElementById('dash-total');
+        const dashCompleted = document.getElementById('dash-completed');
+        const dashOngoing = document.getElementById('dash-ongoing');
+        const dashPlatforms = document.getElementById('dash-platforms');
+
+        const total = visibleCards.length;
+        let completed = 0;
+        let ongoing = 0;
+        const platforms = new Set<string>();
+
+        visibleCards.forEach(card => {
+            const status = card.dataset.status || '';
+            if (status === 'completed') completed++;
+            if (status === 'ongoing') ongoing++;
+            const platform = card.dataset.platform || '';
+            if (platform) platforms.add(platform);
+        });
+
+        if (dashTotal) animateValue(dashTotal, String(total));
+        if (dashCompleted) animateValue(dashCompleted, String(completed));
+        if (dashOngoing) animateValue(dashOngoing, String(ongoing));
+        if (dashPlatforms) animateValue(dashPlatforms, String(platforms.size));
+    }
 
     function initSeriesFilters() {
         if (seriesController) seriesController.abort();
@@ -177,6 +212,9 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
             if (seriesCount) {
                 seriesCount.textContent = `· ${visibleCards.length} serie${visibleCards.length !== 1 ? 's' : ''}`;
             }
+
+            // Actualizar dashboard con datos filtrados
+            updateSeriesDashboard(visibleCards);
         }
 
         document.addEventListener('filter-change', (e: Event) => {

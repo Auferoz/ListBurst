@@ -57,16 +57,16 @@ const gamesWithIndex = ListGames.map((game, index) => ({
 
         <!-- Dashboard Datos -->
         <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <CardDashboard text="Jugando" number={gamesWithIndex.filter(g => g.estado === "Jugando").length} color="green">
+            <CardDashboard text="Jugando" number={gamesWithIndex.filter(g => g.estado === "Jugando").length} color="green" id="dash-playing">
                 <IconGamepad width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="Pausados" number={gamesWithIndex.filter(g => g.estado === "Pausado").length} color="amber">
+            <CardDashboard text="Pausados" number={gamesWithIndex.filter(g => g.estado === "Pausado").length} color="amber" id="dash-paused">
                 <IconGamepad width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="Completados" number={gamesWithIndex.filter(g => g.estado === "Completado").length} color="violet">
+            <CardDashboard text="Completados" number={gamesWithIndex.filter(g => g.estado === "Completado").length} color="violet" id="dash-completed">
                 <IconGamepad width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="Abandonados" number={gamesWithIndex.filter(g => g.estado === "Abandonado").length} color="red">
+            <CardDashboard text="Abandonados" number={gamesWithIndex.filter(g => g.estado === "Abandonado").length} color="red" id="dash-abandoned">
                 <IconGamepad width={24} height={24} />
             </CardDashboard>
         </section>
@@ -98,6 +98,41 @@ const gamesWithIndex = ListGames.map((game, index) => ({
 
 <script>
     let gamesController: AbortController | null = null;
+
+    function animateValue(el: HTMLElement, newValue: string) {
+        const oldValue = el.textContent || '';
+        if (oldValue === newValue) return;
+        el.style.opacity = '0';
+        setTimeout(() => {
+            el.textContent = newValue;
+            el.style.opacity = '1';
+        }, 150);
+    }
+
+    function updateGamesDashboard(visibleCards: HTMLElement[]) {
+        const dashPlaying = document.getElementById('dash-playing');
+        const dashPaused = document.getElementById('dash-paused');
+        const dashCompleted = document.getElementById('dash-completed');
+        const dashAbandoned = document.getElementById('dash-abandoned');
+
+        let playing = 0;
+        let paused = 0;
+        let completed = 0;
+        let abandoned = 0;
+
+        visibleCards.forEach(card => {
+            const estado = card.dataset.estado?.toLowerCase() || '';
+            if (estado === 'jugando') playing++;
+            else if (estado === 'pausado') paused++;
+            else if (estado === 'completado') completed++;
+            else if (estado === 'abandonado') abandoned++;
+        });
+
+        if (dashPlaying) animateValue(dashPlaying, String(playing));
+        if (dashPaused) animateValue(dashPaused, String(paused));
+        if (dashCompleted) animateValue(dashCompleted, String(completed));
+        if (dashAbandoned) animateValue(dashAbandoned, String(abandoned));
+    }
 
     function initGamesFilters() {
         if (gamesController) gamesController.abort();
@@ -173,6 +208,9 @@ const gamesWithIndex = ListGames.map((game, index) => ({
             if (gamesCount) {
                 gamesCount.textContent = `· ${visibleCards.length} juego${visibleCards.length !== 1 ? 's' : ''}`;
             }
+
+            // Actualizar dashboard con datos filtrados
+            updateGamesDashboard(visibleCards);
         }
 
         document.addEventListener('filter-change', (e: Event) => {

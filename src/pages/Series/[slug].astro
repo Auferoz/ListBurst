@@ -61,12 +61,40 @@ const network = show?.network;
 const rating = show?.rating?.toFixed(1);
 const seasonRating = season?.rating?.toFixed(1);
 
+// Runtime por episodio y total de la temporada
+const runtimePerEpisode = show?.runtime; // minutos por episodio
+const episodeCount = season?.episode_count;
+const totalSeasonMinutes = runtimePerEpisode && episodeCount ? runtimePerEpisode * episodeCount : null;
+
+const formatRuntime = (minutes: number | undefined | null) => {
+    if (!minutes) return null;
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+};
+const episodeDuration = formatRuntime(runtimePerEpisode);
+const seasonTotalDuration = formatRuntime(totalSeasonMinutes);
+
 // Trailer
 const trailerUrl: string | null = show?.trailer || null;
 const trailerYoutubeId = trailerUrl?.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] || null;
 
 // Datos del cast
 const cast = people?.cast || [];
+
+// Director(es) / Creador(es) de la serie
+const directors = (people?.crew?.directing || [])
+    .filter((d: any) => d.job === 'Director' || d.job === 'Series Director' || d.jobs?.includes('Director') || d.jobs?.includes('Series Director'))
+    .map((d: any) => d.person?.name)
+    .filter(Boolean);
+const directorText = directors.length > 0 ? directors.join(', ') : null;
+
+// Escritor(es) principal(es) de la serie
+const writers = (people?.crew?.writing || [])
+    .filter((d: any) => d.job === 'Series Composition' || d.job === 'Writer' || d.job === 'Creator' || d.jobs?.includes('Series Composition') || d.jobs?.includes('Writer') || d.jobs?.includes('Creator'))
+    .map((d: any) => d.person?.name)
+    .filter(Boolean);
+const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
 ---
 
 <Layout title={`${title} - ${seasonTitle}`}>
@@ -108,6 +136,8 @@ const cast = people?.cast || [];
                             {year && <span>{year}</span>}
                             {network && <span>• {network}</span>}
                             {season?.episode_count && <span>• {season.episode_count} episodios</span>}
+                            {episodeDuration && <span>• {episodeDuration}/ep</span>}
+                            {seasonTotalDuration && <span>• {seasonTotalDuration} total</span>}
                             {seasonRating && (
                                 <span class="flex items-center gap-1 text-amber-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
@@ -124,6 +154,20 @@ const cast = people?.cast || [];
                                         {genre}
                                     </span>
                                 ))}
+                            </div>
+                        )}
+                        {(directorText || writerText) && (
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm">
+                                {directorText && (
+                                    <p class="text-zinc-400">
+                                        <span class="text-zinc-500">Dir.</span> <span class="text-zinc-300 font-medium">{directorText}</span>
+                                    </p>
+                                )}
+                                {writerText && (
+                                    <p class="text-zinc-400">
+                                        <span class="text-zinc-500">Guion</span> <span class="text-zinc-300 font-medium">{writerText}</span>
+                                    </p>
+                                )}
                             </div>
                         )}
                     </div>

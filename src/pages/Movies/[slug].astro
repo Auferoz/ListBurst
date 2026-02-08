@@ -106,6 +106,13 @@ const trailerYoutubeId = trailerUrl?.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z
 
 // Datos del cast
 const cast = people?.cast || [];
+
+// Director(es) de la película
+const directors = (people?.crew?.directing || [])
+    .filter((d: any) => d.job === 'Director' || d.jobs?.includes('Director'))
+    .map((d: any) => d.person?.name)
+    .filter(Boolean);
+const directorText = directors.length > 0 ? directors.join(', ') : null;
 ---
 
 <Layout title={`${title} (${year})`}>
@@ -163,6 +170,11 @@ const cast = people?.cast || [];
                                     </span>
                                 ))}
                             </div>
+                        )}
+                        {directorText && (
+                            <p class="text-sm text-zinc-400 mt-2">
+                                <span class="text-zinc-500">Dir.</span> <span class="text-zinc-300 font-medium">{directorText}</span>
+                            </p>
                         )}
                     </div>
                 </div>

@@ -15,9 +15,10 @@ interface Props {
     text: string;
     number: number | string;
     color?: 'violet' | 'sky' | 'green' | 'red' | 'amber' | 'zinc';
+    id?: string;
 }
 
-const { text, number, color = 'violet' } = Astro.props;
+const { text, number, color = 'violet', id } = Astro.props;
 
 // Mapeo de colores a clases Tailwind
 const colorMap: Record<string, { iconBg: string; accent: string; hover: string; iconText: string }> = {
@@ -74,7 +75,7 @@ const c = colorMap[color] || colorMap.violet;
         <div class:list={["rounded-lg p-1.5", c.iconBg, c.iconText]}>
             <slot />
         </div>
-        <span class="text-3xl font-bold tabular-nums tracking-tight">{number}</span>
+        <span id={id} class="text-3xl font-bold tabular-nums tracking-tight transition-opacity duration-300">{number}</span>
     </div>
     <p class="mt-3 text-xs font-medium uppercase tracking-wide text-zinc-400">{text}</p>
     <div class:list={["h-0.5 w-8 rounded-full mt-2", c.accent]}></div>

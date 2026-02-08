@@ -54,16 +54,16 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
 
         <!-- Dashboard Datos -->
         <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <CardDashboard text="Total películas" number={totalMovies} color="sky">
+            <CardDashboard text="Total películas" number={totalMovies} color="sky" id="dash-total">
                 <IconMovie width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="Géneros" number={totalGenres} color="violet">
+            <CardDashboard text="Géneros" number={totalGenres} color="violet" id="dash-genres">
                 <IconMovie width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="Horas vistas" number={totalHours} color="green">
+            <CardDashboard text="Horas vistas" number={totalHours} color="green" id="dash-hours">
                 <IconMovie width={24} height={24} />
             </CardDashboard>
-            <CardDashboard text="Rating Trakt" number={avgRating} color="amber">
+            <CardDashboard text="Rating Trakt" number={avgRating} color="amber" id="dash-rating">
                 <IconMovie width={24} height={24} />
             </CardDashboard>
         </section>
@@ -93,6 +93,45 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
 
 <script>
     let moviesController: AbortController | null = null;
+
+    function animateValue(el: HTMLElement, newValue: string) {
+        const oldValue = el.textContent || '';
+        if (oldValue === newValue) return;
+        el.style.opacity = '0';
+        setTimeout(() => {
+            el.textContent = newValue;
+            el.style.opacity = '1';
+        }, 150);
+    }
+
+    function updateMoviesDashboard(visibleCards: HTMLElement[]) {
+        const dashTotal = document.getElementById('dash-total');
+        const dashGenres = document.getElementById('dash-genres');
+        const dashHours = document.getElementById('dash-hours');
+        const dashRating = document.getElementById('dash-rating');
+
+        const total = visibleCards.length;
+        const genres = new Set<string>();
+        let totalMinutes = 0;
+        let totalRating = 0;
+        let ratedCount = 0;
+
+        visibleCards.forEach(card => {
+            const cardGenres = card.dataset.genres || '';
+            if (cardGenres) cardGenres.split(',').forEach(g => { if (g.trim()) genres.add(g.trim()); });
+            totalMinutes += parseInt(card.dataset.runtime || '0', 10);
+            const r = parseFloat(card.dataset.rating || '0');
+            if (r > 0) { totalRating += r; ratedCount++; }
+        });
+
+        const hours = Math.round(totalMinutes / 60);
+        const avgRating = ratedCount > 0 ? (totalRating / ratedCount).toFixed(1) : '0';
+
+        if (dashTotal) animateValue(dashTotal, String(total));
+        if (dashGenres) animateValue(dashGenres, String(genres.size));
+        if (dashHours) animateValue(dashHours, String(hours));
+        if (dashRating) animateValue(dashRating, avgRating);
+    }
 
     function initMoviesFilters() {
         if (moviesController) moviesController.abort();
@@ -166,6 +205,9 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
             if (moviesCount) {
                 moviesCount.textContent = `· ${visibleCards.length} película${visibleCards.length !== 1 ? 's' : ''}`;
             }
+
+            // Actualizar dashboard con datos filtrados
+            updateMoviesDashboard(visibleCards);
         }
 
         document.addEventListener('filter-change', (e: Event) => {
