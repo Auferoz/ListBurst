@@ -46,10 +46,10 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
 <Layout>
     <main class="max-w-7xl w-full mx-auto p-4">
         <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <h1 class="text-xl font-bold">Movies List <span id="movies-count" class="text-sm text-zinc-400"></span></h1>
-            <p class="text-xs text-start">
+            <h1 class="text-xl font-bold justify-between flex items-center">Movies List <span id="movies-count" class="text-sm text-zinc-400"></span></h1>
+            <!-- <p class="text-xs text-start">
                 Lista de mis películas vistas organizadas por año. Usa los filtros para encontrar películas según tus preferencias.
-            </p>
+            </p> -->
         </header>
 
         <!-- Dashboard Datos -->
@@ -108,6 +108,9 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
         const cards = Array.from(moviesGrid.querySelectorAll('.card-movie')) as HTMLElement[];
 
         function applyFiltersAndSort(values: Record<string, string>) {
+            if (!moviesGrid) return;
+            const grid = moviesGrid;
+
             const yearValue = values['filter-year'] || 'all';
             const genreValue = values['filter-genre'] || 'all';
             const orderValue = values['filter-order'] || 'newest';
@@ -147,17 +150,17 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
                 }
             });
 
-            visibleCards.forEach(card => moviesGrid.appendChild(card));
+            visibleCards.forEach(card => grid.appendChild(card));
             cards.forEach(card => {
-                if (card.style.display === 'none') moviesGrid.appendChild(card);
+                if (card.style.display === 'none') grid.appendChild(card);
             });
 
             if (visibleCards.length === 0) {
                 noResults?.classList.remove('hidden');
-                moviesGrid.classList.add('hidden');
+                grid.classList.add('hidden');
             } else {
                 noResults?.classList.add('hidden');
-                moviesGrid.classList.remove('hidden');
+                grid.classList.remove('hidden');
             }
 
             if (moviesCount) {

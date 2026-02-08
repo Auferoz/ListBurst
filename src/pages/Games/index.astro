@@ -49,10 +49,10 @@ const gamesWithIndex = ListGames.map((game, index) => ({
 <Layout>
     <main class="max-w-7xl w-full mx-auto p-4">
         <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <h1 class="text-xl font-bold">Games List <span id="games-count" class="text-sm text-zinc-400"></span></h1>
-            <p class="text-xs text-start">
+            <h1 class="text-xl font-bold justify-between flex items-center">Games List <span id="games-count" class="text-sm text-zinc-400"></span></h1>
+            <!-- <p class="text-xs text-start">
                 Lista de mis juegos organizados por plataforma y estado. Usa los filtros para encontrar juegos según tus preferencias.
-            </p>
+            </p> -->
         </header>
 
         <!-- Dashboard Datos -->
@@ -75,10 +75,10 @@ const gamesWithIndex = ListGames.map((game, index) => ({
         <FilterBar
             filters={[
                 { id: "filter-year", label: "Año", options: yearOptions, defaultValue: String(defaultYear) },
-                { id: "filter-genre", label: "Género", options: genreOptions, capitalize: true },
+                // { id: "filter-genre", label: "Género", options: genreOptions, capitalize: true },
                 { id: "filter-status", label: "Estado", options: statusOptions, capitalize: true },
                 { id: "filter-platform", label: "Plataforma", options: platformOptions, capitalize: true },
-                { id: "filter-order", label: "Orden", options: orderOptions, defaultValue: "newest", includeAll: false },
+                // { id: "filter-order", label: "Orden", options: orderOptions, defaultValue: "newest", includeAll: false },
             ]}
         />
 
@@ -113,6 +113,9 @@ const gamesWithIndex = ListGames.map((game, index) => ({
         const cards = Array.from(gamesGrid.querySelectorAll('.card-game')) as HTMLElement[];
 
         function applyFiltersAndSort(values: Record<string, string>) {
+            if (!gamesGrid) return;
+            const grid = gamesGrid;
+
             const yearValue = values['filter-year'] || 'all';
             const genreValue = values['filter-genre'] || 'all';
             const statusValue = values['filter-status'] || 'all';
@@ -154,17 +157,17 @@ const gamesWithIndex = ListGames.map((game, index) => ({
                 }
             });
 
-            visibleCards.forEach(card => gamesGrid.appendChild(card));
+            visibleCards.forEach(card => grid.appendChild(card));
             cards.forEach(card => {
-                if (card.style.display === 'none') gamesGrid.appendChild(card);
+                if (card.style.display === 'none') grid.appendChild(card);
             });
 
             if (visibleCards.length === 0) {
                 noResults?.classList.remove('hidden');
-                gamesGrid.classList.add('hidden');
+                grid.classList.add('hidden');
             } else {
                 noResults?.classList.add('hidden');
-                gamesGrid.classList.remove('hidden');
+                grid.classList.remove('hidden');
             }
 
             if (gamesCount) {

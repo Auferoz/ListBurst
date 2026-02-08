@@ -17,8 +17,10 @@ import IconArrowBack from '../../components/Icons/IconArrowBack.astro';
 
 // Generar todas las rutas estáticas desde el caché (sin llamadas API)
 export function getStaticPaths() {
+    const peopleLookup = moviesCache.people as Record<string, (typeof moviesCache.people)[keyof typeof moviesCache.people]>;
+
     // Deduplicar por slug (una película puede estar en varias listas)
-    const moviesBySlug = new Map();
+    const moviesBySlug = new Map<string, (typeof moviesCache.movies)[number]>();
     
     for (const movieData of moviesCache.movies) {
         const slug = movieData.movie?.ids?.slug;
@@ -31,7 +33,7 @@ export function getStaticPaths() {
         params: { slug },
         props: {
             movie: movieData.movie,
-            people: moviesCache.people?.[slug] || null,
+            people: peopleLookup[slug] ?? null,
             localData: {
                 yearViewed: movieData.yearViewed,
                 rank: movieData.rank,
@@ -97,6 +99,10 @@ const formatListedAt = (dateString: string | undefined) => {
     return `${day} ${months[date.getMonth()]} ${date.getFullYear()}`;
 };
 const formattedListedAt = formatListedAt(listedAt);
+
+// Trailer
+const trailerUrl: string | null = movie?.trailer || null;
+const trailerYoutubeId = trailerUrl?.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] || null;
 
 // Datos del cast
 const cast = people?.cast || [];
@@ -235,6 +241,64 @@ const cast = people?.cast || [];
                 <div class="mb-8">
                     <h2 class="text-xl font-bold text-white mb-3">Sinopsis</h2>
                     <p class="text-zinc-400 leading-relaxed">{overview}</p>
+                </div>
+            )}
+
+            <!-- Reparto -->
+            {cast.length > 0 && (
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold text-white mb-4">Reparto</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        {cast.slice(0, 12).map((member: any) => {
+                            const headshot = getImageUrl(member.images?.headshot?.[0]);
+                            const actorName = member.person?.name || 'Desconocido';
+                            const characterName = member.character || '';
+                            return (
+                                <div class="group relative">
+                                    <div class="aspect-[3/4] rounded-xl overflow-hidden bg-zinc-800/80 border border-zinc-700/40 shadow-lg shadow-black/20">
+                                        {headshot ? (
+                                            <img
+                                                src={headshot}
+                                                alt={actorName}
+                                                class="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                                                loading="lazy"
+                                            />
+                                        ) : (
+                                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-b from-zinc-700/30 to-zinc-800">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 text-zinc-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="12" cy="7" r="4"/>
+                                                </svg>
+                                            </div>
+                                        )}
+                                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 pt-8">
+                                            <p class="text-sm font-semibold text-white leading-tight truncate" title={actorName}>{actorName}</p>
+                                            <p class="text-xs text-zinc-400 truncate mt-0.5" title={characterName}>{characterName}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
+            <!-- Trailer -->
+            {trailerYoutubeId && (
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold text-white mb-4">Trailer</h2>
+                    <div class="relative rounded-xl overflow-hidden border border-zinc-700/40 shadow-lg shadow-black/20 bg-black">
+                        <div class="aspect-video">
+                            <iframe
+                                src={`https://www.youtube-nocookie.com/embed/${trailerYoutubeId}?rel=0&modestbranding=1`}
+                                title={`Trailer de ${title}`}
+                                class="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
                 </div>
             )}
 

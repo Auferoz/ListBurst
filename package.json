@@ -19,6 +19,8 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "dotenv": "^17.2.4"
+    "@astrojs/check": "^0.9.6",
+    "dotenv": "^17.2.4",
+    "typescript": "^5.9.3"
   }
 }
