@@ -194,33 +194,33 @@ const directorText = directors.length > 0 ? directors.join(', ') : null;
 
             <!-- Ratings externos -->
             {externalRatings && (
-                <div class="flex flex-wrap gap-3 mb-8">
+                <div class="flex flex-wrap gap-1 mb-8">
                     {externalRatings.imdb && (
-                        <span class="flex items-center gap-1.5 rounded-lg bg-yellow-500/10 px-3 py-2 text-yellow-400 font-medium" title={`IMDB: ${externalRatings.imdbVotes} votos`}>
+                        <span class="flex items-center gap-1 rounded-lg bg-yellow-500/10 px-2 py-1 text-yellow-400 font-medium" title={`IMDB: ${externalRatings.imdbVotes} votos`}>
                             <IconIMDB width="20" height="20" />
                             {externalRatings.imdb}
                         </span>
                     )}
                     {externalRatings.rottenTomatoes && (
-                        <span class="flex items-center gap-1.5 rounded-lg bg-red-500/10 px-3 py-2 text-red-400 font-medium" title="Rotten Tomatoes">
+                        <span class="flex items-center gap-1 rounded-lg bg-red-500/10 px-2 py-1 text-red-400 font-medium" title="Rotten Tomatoes">
                             <IconRottenTomatoes width="20" height="20" />
                             {externalRatings.rottenTomatoes}
                         </span>
                     )}
                     {externalRatings.popcornmeter && (
-                        <span class="flex items-center gap-1.5 rounded-lg bg-orange-500/10 px-3 py-2 text-orange-400 font-medium" title="Popcornmeter (Audiencia)">
+                        <span class="flex items-center gap-1 rounded-lg bg-orange-500/10 px-2 py-1 text-orange-400 font-medium" title="Popcornmeter (Audiencia)">
                             <IconPopcorn width="20" height="20" />
                             {externalRatings.popcornmeter}
                         </span>
                     )}
                     {externalRatings.metascore && (
-                        <span class="flex items-center gap-1.5 rounded-lg bg-amber-500/10 px-3 py-2 text-amber-300 font-medium" title="Metacritic">
+                        <span class="flex items-center gap-1 rounded-lg bg-amber-500/10 px-2 py-1 text-amber-300 font-medium" title="Metacritic">
                             <IconMetacritic width="20" height="20" />
                             {externalRatings.metascore}
                         </span>
                     )}
                     {rating && (
-                        <span class="flex items-center gap-1.5 rounded-lg bg-purple-500/10 px-3 py-2 text-purple-400 font-medium" title="Trakt Rating">
+                        <span class="flex items-center gap-1 rounded-lg bg-purple-500/10 px-2 py-1 text-purple-400 font-medium" title="Trakt Rating">
                             <IconTrakt width="20" height="20" />
                             {rating}
                         </span>
