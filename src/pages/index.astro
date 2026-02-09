@@ -4,6 +4,8 @@ import CardDashboard from "../components/Globals/CardDashboard.astro";
 import IconDeviceTv from "../components/Icons/IconDeviceTv.astro";
 import IconMovie from "../components/Icons/IconMovie.astro";
 import IconGamepad from "../components/Icons/IconGamepad.astro";
+import IconClapperboard from "../components/Icons/IconClapperboard.astro";
+import IconClock from "../components/Icons/IconClock.astro";
 
 import moviesCache from '../data/cache/movies.json';
 import seriesCache from '../data/cache/series.json';
@@ -15,6 +17,32 @@ const totalMovies = moviesCache.movies.length;
 const totalGames = ListGames.length;
 const totalHours = ListGames.reduce((sum, g) => sum + (g.horasTotal || 0), 0);
 const totalAchievements = ListGames.reduce((sum, g) => sum + (g.logros_obt || 0), 0);
+
+// Total de capitulos vistos (suma episodios de todas las temporadas)
+const totalEpisodes = (seriesCache.series as any[]).reduce((sum, entry) => {
+	const eps = entry.episodes?.length || entry.season?.episode_count || 0;
+	return sum + eps;
+}, 0);
+
+// Total horas vistas en series (episodios x runtime por episodio)
+const totalSeriesMinutes = (seriesCache.series as any[]).reduce((sum, entry) => {
+	const eps = entry.episodes?.length || entry.season?.episode_count || 0;
+	const runtime = entry.show?.runtime || 0;
+	return sum + (eps * runtime);
+}, 0);
+const totalSeriesHours = Math.round(totalSeriesMinutes / 60);
+
+// Total horas vistas en peliculas (deduplicadas por slug)
+const movieSlugs = new Set<string>();
+let totalMoviesMinutes = 0;
+for (const entry of moviesCache.movies) {
+	const slug = (entry as any).movie?.ids?.slug;
+	if (slug && !movieSlugs.has(slug)) {
+		movieSlugs.add(slug);
+		totalMoviesMinutes += (entry as any).movie?.runtime || 0;
+	}
+}
+const totalMoviesHours = Math.round(totalMoviesMinutes / 60);
 
 const date = new Date();
 const formatted =
@@ -35,20 +63,32 @@ const formatted =
 		</header>
 
 		<!-- Cards -->
-		<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+		<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+			<!-- Series (sky) -->
 			<CardDashboard text="Series" number={totalSeries} color="sky">
 				<IconDeviceTv width={24} height={24} />
 			</CardDashboard>
-			<CardDashboard text="Movies" number={totalMovies} color="sky">
+			<CardDashboard text="Episodes" number={totalEpisodes} color="sky">
+				<IconClapperboard width={24} height={24} />
+			</CardDashboard>
+			<CardDashboard text="Horas Series" number={`${totalSeriesHours}h`} color="sky">
+				<IconClock width={24} height={24} />
+			</CardDashboard>
+			<!-- Movies (violet) -->
+			<CardDashboard text="Movies" number={totalMovies} color="violet">
 				<IconMovie width={24} height={24} />
 			</CardDashboard>
+			<CardDashboard text="Horas Movies" number={`${totalMoviesHours}h`} color="violet">
+				<IconClock width={24} height={24} />
+			</CardDashboard>
+			<!-- Games (green) -->
 			<CardDashboard text="Games" number={totalGames} color="green">
 				<IconGamepad width={24} height={24} />
 			</CardDashboard>
-			<CardDashboard text="Hours" number={totalHours} color="zinc">
-				<IconGamepad width={24} height={24} />
+			<CardDashboard text="Hours Gaming" number={totalHours} color="green">
+				<IconClock width={24} height={24} />
 			</CardDashboard>
-			<CardDashboard text="Achievements" number={totalAchievements} color="amber">
+			<CardDashboard text="Achievements" number={totalAchievements} color="green">
 				<IconGamepad width={24} height={24} />
 			</CardDashboard>
 		</section>

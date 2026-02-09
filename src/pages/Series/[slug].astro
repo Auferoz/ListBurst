@@ -9,10 +9,13 @@ import seriesCache from '../../data/cache/series.json';
 import { getImageUrl } from '../../utils/images';
 import Layout from '../../layouts/Layout.astro';
 import IconArrowBack from '../../components/Icons/IconArrowBack.astro';
+import IconStar from '../../components/Icons/IconStar.astro';
+import IconUser from '../../components/Icons/IconUser.astro';
+import IconPlayerPlay from '../../components/Icons/IconPlayerPlay.astro';
 
 // Generar todas las rutas estáticas desde el caché (sin llamadas API)
 export function getStaticPaths() {
-    return seriesCache.series.map((entry) => {
+    return (seriesCache.series as any[]).map((entry) => {
         const slug = `${entry.localData.idTrakt}-season-${entry.localData.numberSeason}`;
         return {
             params: { slug },
@@ -20,6 +23,7 @@ export function getStaticPaths() {
                 show: entry.show,
                 season: entry.season,
                 people: entry.people,
+                episodes: entry.episodes || [],
                 localData: entry.localData,
             },
         };
@@ -31,6 +35,7 @@ interface Props {
     show: any;
     season: any;
     people: any;
+    episodes: any[];
     localData: {
         idTrakt: string;
         numberSeason: number;
@@ -40,7 +45,7 @@ interface Props {
     };
 }
 
-const { show, season, people, localData } = Astro.props;
+const { show, season, people, episodes: rawEpisodes, localData } = Astro.props;
 const { idTrakt, numberSeason, yearViewed, platformViewed, statusViewed } = localData;
 
 // Imágenes
@@ -78,6 +83,66 @@ const seasonTotalDuration = formatRuntime(totalSeasonMinutes);
 // Trailer
 const trailerUrl: string | null = show?.trailer || null;
 const trailerYoutubeId = trailerUrl?.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] || null;
+
+// Datos adicionales de la serie
+const showStatus = show?.status;
+const showLanguage = show?.language;
+const showCountry = show?.country;
+const showCertification = show?.certification;
+const showFirstAired = show?.first_aired;
+const showTagline = show?.tagline;
+const showHomepage = show?.homepage;
+const airedEpisodes = show?.aired_episodes;
+
+// Formatear fecha
+const formatDate = (dateString: string | null | undefined) => {
+    if (!dateString) return null;
+    const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, '0');
+    const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+                    'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+    return `${day} ${months[date.getMonth()]} ${date.getFullYear()}`;
+};
+
+// Formatear status
+const formatStatus = (status: string | null | undefined) => {
+    if (!status) return null;
+    const map: Record<string, string> = {
+        'returning series': 'En emisión',
+        'continuing': 'En emisión',
+        'in production': 'En producción',
+        'planned': 'Planeada',
+        'upcoming': 'Próximamente',
+        'pilot': 'Piloto',
+        'canceled': 'Cancelada',
+        'ended': 'Finalizada',
+    };
+    return map[status] || status;
+};
+
+// Mapeo de códigos de idioma a nombres
+const languageNames: Record<string, string> = {
+    en: 'English', es: 'Español', ja: 'Japanese', ko: 'Korean',
+    fr: 'Français', de: 'Deutsch', it: 'Italiano', pt: 'Português',
+    zh: 'Chinese', ru: 'Russian', ar: 'Arabic', hi: 'Hindi',
+    nl: 'Dutch', sv: 'Swedish', da: 'Danish', no: 'Norwegian',
+    fi: 'Finnish', pl: 'Polish', tr: 'Turkish', th: 'Thai',
+};
+
+// Mapeo de códigos de país a nombres
+const countryNames: Record<string, string> = {
+    us: 'Estados Unidos', gb: 'Reino Unido', jp: 'Japón', kr: 'Corea del Sur',
+    ca: 'Canadá', au: 'Australia', de: 'Alemania', fr: 'Francia',
+    es: 'España', it: 'Italia', br: 'Brasil', mx: 'México',
+    cn: 'China', in: 'India', ru: 'Rusia', nl: 'Países Bajos',
+    se: 'Suecia', dk: 'Dinamarca', no: 'Noruega', fi: 'Finlandia',
+    nz: 'Nueva Zelanda', ie: 'Irlanda', be: 'Bélgica', at: 'Austria',
+    ch: 'Suiza', pl: 'Polonia', tr: 'Turquía', th: 'Tailandia',
+    co: 'Colombia', ar: 'Argentina', cl: 'Chile', pe: 'Perú',
+};
+
+// Episodios de la temporada
+const episodes = rawEpisodes || [];
 
 // Datos del cast
 const cast = people?.cast || [];
@@ -137,9 +202,7 @@ const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
                             {network && <span>• {network}</span>}
                             {seasonRating && (
                                 <span class="flex items-center gap-1 text-amber-400">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                    </svg>
+                                    <IconStar width={16} height={16} />
                                     {seasonRating}
                                 </span>
                             )}
@@ -192,27 +255,82 @@ const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
 
             <div class="mb-8">
                 <h2 class="text-xl font-bold text-white mb-3">Details</h2>
-                {(directorText || writerText) && (
-                    <div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm">
-                        {directorText && (
-                            <p class="text-zinc-400">
-                                <span class="text-zinc-500">Director:</span> <span class="text-zinc-300 font-medium">{directorText}</span>
-                            </p>
-                        )}
-                        {writerText && (
-                            <p class="text-zinc-400">
-                                <span class="text-zinc-500">Guion:</span> <span class="text-zinc-300 font-medium">{writerText}</span>
-                            </p>
-                        )}
-                    </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-3 text-sm">
+                    {showStatus && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Estado</span>
+                            <span class:list={[
+                                "font-medium",
+                                showStatus === 'ended' || showStatus === 'canceled' ? 'text-zinc-300' : 'text-emerald-400'
+                            ]}>{formatStatus(showStatus)}</span>
+                        </div>
+                    )}
+                    {directorText && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Director</span>
+                            <span class="text-zinc-300 font-medium">{directorText}</span>
+                        </div>
+                    )}
+                    {writerText && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Guion</span>
+                            <span class="text-zinc-300 font-medium">{writerText}</span>
+                        </div>
+                    )}
+                    {season?.episode_count && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Episodios</span>
+                            <span class="text-zinc-300 font-medium">
+                                {season.episode_count}
+                                {episodeDuration && <span class="text-zinc-500"> ({episodeDuration}/ep)</span>}
+                            </span>
+                        </div>
+                    )}
+                    {seasonTotalDuration && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Duracion total</span>
+                            <span class="text-zinc-300 font-medium">{seasonTotalDuration}</span>
+                        </div>
+                    )}
+                    {showCountry && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Pais</span>
+                            <span class="text-zinc-300 font-medium">{countryNames[showCountry] || showCountry.toUpperCase()}</span>
+                        </div>
+                    )}
+                    {showLanguage && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Idioma</span>
+                            <span class="text-zinc-300 font-medium">{languageNames[showLanguage] || showLanguage.toUpperCase()}</span>
+                        </div>
+                    )}
+                    {showCertification && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Clasificacion</span>
+                            <span class="text-zinc-300 font-medium">{showCertification}</span>
+                        </div>
+                    )}
+                    {showFirstAired && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Primera emision</span>
+                            <span class="text-zinc-300 font-medium">{formatDate(showFirstAired)}</span>
+                        </div>
+                    )}
+                    {network && (
+                        <div>
+                            <span class="text-zinc-500 block text-xs">Cadena</span>
+                            <span class="text-zinc-300 font-medium">{network}</span>
+                        </div>
+                    )}
+                </div>
+                {showTagline && (
+                    <p class="text-zinc-400 italic mt-3 text-sm">"{showTagline}"</p>
                 )}
-                <p class="text-zinc-400 text-sm">
-                    <span class="text-zinc-500">Runtime:</span> <span class="text-zinc-300 font-medium">
-                        {season?.episode_count && <span>{season.episode_count} episodios</span>}
-                        {episodeDuration && <span>• {episodeDuration}/ep</span>}
-                        {seasonTotalDuration && <span>• {seasonTotalDuration} total</span>}
-                    </span>
-                </p>
+                {showHomepage && (
+                    <a href={showHomepage} target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-xs text-blue-400 hover:text-blue-300 transition-colors">
+                        Sitio oficial &rarr;
+                    </a>
+                )}
             </div>
 
             <!-- Overview -->
@@ -243,17 +361,62 @@ const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
                                                 loading="lazy"
                                             />
                                         ) : (
-                                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-b from-zinc-700/30 to-zinc-800">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 text-zinc-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                                    <circle cx="12" cy="7" r="4"/>
-                                                </svg>
+                                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-b from-zinc-700/30 to-zinc-800 text-zinc-600">
+                                                <IconUser width={56} height={56} />
                                             </div>
                                         )}
                                         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 pt-8">
                                             <p class="text-sm font-semibold text-white leading-tight truncate" title={actorName}>{actorName}</p>
                                             <p class="text-xs text-zinc-400 truncate mt-0.5" title={characterName}>{characterName}</p>
                                         </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
+            <!-- Capitulos de la temporada -->
+            {episodes.length > 0 && (
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold text-white mb-4">Capitulos <span class="text-zinc-500 text-base font-normal">({episodes.length})</span></h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {episodes.map((ep: any) => {
+                            const screenshot = getImageUrl(ep.images?.screenshot?.[0]);
+                            const epTitle = ep.title || `Episodio ${ep.number}`;
+                            const epDate = formatDate(ep.first_aired);
+                            const epRating = ep.rating ? ep.rating.toFixed(1) : null;
+                            return (
+                                <div class="group bg-zinc-800/50 rounded-xl overflow-hidden border border-zinc-700/40 hover:border-zinc-600/60 transition-all duration-300">
+                                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                                        {screenshot ? (
+                                            <img
+                                                src={screenshot}
+                                                alt={epTitle}
+                                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                loading="lazy"
+                                            />
+                                        ) : (
+                                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-700/30 to-zinc-800 text-zinc-600">
+                                                <IconPlayerPlay width={40} height={40} />
+                                            </div>
+                                        )}
+                                        <div class="absolute top-2 left-2 bg-black/70 backdrop-blur-sm px-2 py-0.5 rounded text-xs font-bold text-white">
+                                            E{String(ep.number).padStart(2, '0')}
+                                        </div>
+                                        {epRating && (
+                                            <div class="absolute top-2 right-2 bg-black/70 backdrop-blur-sm px-1.5 py-0.5 rounded text-xs text-amber-400 flex items-center gap-0.5">
+                                                <IconStar width={12} height={12} />
+                                                {epRating}
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div class="p-3">
+                                        <p class="text-sm font-semibold text-white leading-tight truncate" title={epTitle}>{epTitle}</p>
+                                        {epDate && (
+                                            <p class="text-xs text-zinc-500 mt-1">{epDate}</p>
+                                        )}
                                     </div>
                                 </div>
                             );

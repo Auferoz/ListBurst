@@ -101,7 +101,7 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
 >
 <article
     class:list={[
-        "group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow",
+        "group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow max-h-36.5",
         borderClasses
     ]}
 >
@@ -148,7 +148,7 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
             <!-- Footer con ratings -->
             <footer class="flex flex-col gap-1.5">
                 <!-- Ratings Row - 5 ratings con iconos -->
-                <div class="flex items-center gap-1 text-[10px] flex-wrap">
+                <div class="flex- items-center gap-1 text-[10px] flex-wrap hidden">
                     {/* Rating IMDB */}
                     {externalRatings?.imdb && (
                         <span class="flex items-center gap-0.5 rounded bg-yellow-500/10 px-1 py-0.5 text-yellow-400 font-medium" title={`IMDB: ${externalRatings.imdbVotes} votos`}>

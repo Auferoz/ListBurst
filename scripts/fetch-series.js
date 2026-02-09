@@ -125,10 +125,22 @@ async function main() {
                         console.warn(`     ⚠️ Sin people para ${idTrakt} S${numberSeason}`);
                     }
 
+                    // Obtener episodios de la temporada
+                    let episodes = [];
+                    try {
+                        console.log(`     📥 Episodes: ${idTrakt} S${numberSeason}`);
+                        episodes = await fetchTrakt(
+                            `/shows/${idTrakt}/seasons/${numberSeason}?extended=full,images`
+                        );
+                    } catch (error) {
+                        console.warn(`     ⚠️ Sin episodes para ${idTrakt} S${numberSeason}`);
+                    }
+
                     return {
                         show,
                         season,
                         people,
+                        episodes,
                         localData,
                     };
                 } catch (error) {

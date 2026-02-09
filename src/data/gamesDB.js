@@ -978,7 +978,7 @@ export const ListGames = [
         companie: "Webzen",
         poster: "co2mrn.webp",
         trailer: "MrDcpRtYhGY",
-        artworks: "",
+        artworks: "ar58ef.webp",
         genre: "Fighting, Role-playing (RPG), Strategy, Turn-based strategy (TBS)",
         estado: "Completado",
         horasTotal: 210,
