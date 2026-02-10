@@ -1,4 +1,4 @@
-const proximamenteGames = [
+export const proximamenteGames = [
 	{
 		title: "MIO: Memories in Orbit",
 		poster: "https://i.3djuegos.com/juegos/19814/mio_memories_in_orbit/fotos/ficha/mio_memories_in_orbit-5901335.webp",

@@ -1,0 +1,215 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardNextGame from "../components/Globals/CardNextGame.astro";
+import nextGamesCache from "../data/cache/nextGames.json";
+
+// Leer juegos desde el caché IGDB
+const cachedGames = (nextGamesCache as any).games as any[];
+
+// Parsear y ordenar juegos por fecha de lanzamiento
+const parsedGames = cachedGames.map((game) => {
+	const [day, month, year] = game.localData.dateRelease.split('-').map(Number);
+	const date = new Date(year, month - 1, day);
+	const isTBA = day === 31 && month === 12;
+	return { ...game, _date: date, _isTBA: isTBA };
+});
+
+// Separar TBA de los que tienen fecha concreta, ordenar por fecha
+const datedGames = parsedGames
+	.filter(g => !g._isTBA)
+	.sort((a, b) => a._date.getTime() - b._date.getTime());
+
+const tbaGames = parsedGames
+	.filter(g => g._isTBA)
+	.sort((a, b) => a.localData.title.localeCompare(b.localData.title));
+
+// Agrupar juegos con fecha por mes
+const monthNames = [
+	'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+	'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
+];
+
+interface MonthGroup {
+	key: string;
+	label: string;
+	games: typeof datedGames;
+}
+
+const monthGroups: MonthGroup[] = [];
+const groupMap = new Map<string, typeof datedGames>();
+
+for (const game of datedGames) {
+	const key = `${game._date.getFullYear()}-${String(game._date.getMonth()).padStart(2, '0')}`;
+	if (!groupMap.has(key)) groupMap.set(key, []);
+	groupMap.get(key)!.push(game);
+}
+
+for (const [key, games] of groupMap) {
+	const [yr, mo] = key.split('-').map(Number);
+	monthGroups.push({
+		key,
+		label: `${monthNames[mo]} ${yr}`,
+		games,
+	});
+}
+
+// Stats
+const totalGames = cachedGames.length;
+const myListCount = cachedGames.filter((g: any) => g.inMyList).length;
+const now = new Date();
+const nextRelease = datedGames.find(g => g._date >= now);
+const nextDays = nextRelease
+	? Math.ceil((nextRelease._date.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+	: null;
+---
+
+<Layout>
+	<main class="max-w-7xl mx-auto p-4 pb-24 space-y-8">
+		<!-- Header -->
+		<header class="relative">
+			<div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+				<div>
+					<p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400/80 mb-1">Watchlist</p>
+					<h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+						Proximos Lanzamientos
+					</h1>
+					<p class="text-sm text-zinc-500 mt-1">
+						{totalGames} juegos en radar
+						<span class="text-zinc-600">&middot;</span>
+						<span class="text-emerald-400/70">{myListCount} en mi lista</span>
+						{nextRelease && nextDays !== null && nextDays > 0 && (
+							<span class="text-zinc-400">
+								&middot; proximo en <span class="text-emerald-400 font-semibold">{nextDays}d</span>
+							</span>
+						)}
+					</p>
+				</div>
+
+				<!-- Leyenda compacta -->
+				<div class="flex items-center gap-3 text-[11px] text-zinc-500 flex-wrap">
+					<span class="flex items-center gap-1.5">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-emerald-400" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1z"/>
+						</svg> Mi lista
+					</span>
+					<span class="flex items-center gap-1.5">
+						<span class="w-2 h-2 rounded-full bg-emerald-400"></span> Disponible
+					</span>
+					<span class="flex items-center gap-1.5">
+						<span class="w-2 h-2 rounded-full bg-amber-400"></span> &lt;30d
+					</span>
+					<span class="flex items-center gap-1.5">
+						<span class="w-2 h-2 rounded-full bg-sky-400"></span> &lt;90d
+					</span>
+					<span class="flex items-center gap-1.5">
+						<span class="w-2 h-2 rounded-full bg-zinc-600"></span> TBA
+					</span>
+				</div>
+			</div>
+
+			<!-- Linea decorativa -->
+			<div class="mt-4 h-px bg-gradient-to-r from-emerald-500/40 via-zinc-700/40 to-transparent"></div>
+		</header>
+
+		<!-- Grupos por mes -->
+		{monthGroups.map((group, groupIndex) => (
+			<section class="space-y-4">
+				<!-- Header del mes -->
+				<div class="flex items-center gap-3">
+					<h2 class="text-lg font-bold text-white tracking-tight whitespace-nowrap">{group.label}</h2>
+					<div class="flex-1 h-px bg-zinc-800"></div>
+					<span class="text-xs text-zinc-600 tabular-nums whitespace-nowrap">{group.games.length} {group.games.length === 1 ? 'juego' : 'juegos'}</span>
+				</div>
+
+				<!-- Grid de cards -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+					{group.games.map((game) => (
+						<CardNextGame data={game as any} />
+					))}
+				</div>
+			</section>
+		))}
+
+		<!-- Seccion TBA -->
+		{tbaGames.length > 0 && (
+			<section class="space-y-4">
+				<div class="flex items-center gap-3">
+					<h2 class="text-lg font-bold text-zinc-400 tracking-tight whitespace-nowrap">Por confirmar</h2>
+					<div class="flex-1 h-px bg-zinc-800/60"></div>
+					<span class="text-xs text-zinc-600 tabular-nums whitespace-nowrap">{tbaGames.length} juegos</span>
+				</div>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+					{tbaGames.map((game) => (
+						<CardNextGame data={game as any} />
+					))}
+				</div>
+			</section>
+		)}
+	</main>
+</Layout>
+
+<script>
+	function initCountdowns() {
+		function updateCountdowns() {
+			const cards = document.querySelectorAll<HTMLElement>('.card-next-game');
+			const now = new Date();
+
+			cards.forEach((card) => {
+				const isTBA = card.dataset.isTba === 'true';
+				if (isTBA) return;
+
+				const releaseDate = new Date(card.dataset.releaseDate || '');
+				const badge = card.querySelector<HTMLElement>('.countdown-badge');
+				if (!badge) return;
+
+				const diffMs = releaseDate.getTime() - now.getTime();
+				const daysLeft = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+				if (daysLeft <= 0) {
+					badge.textContent = 'Disponible';
+				} else if (daysLeft === 1) {
+					badge.textContent = '1 día';
+				} else {
+					badge.textContent = `${daysLeft} días`;
+				}
+			});
+		}
+
+		updateCountdowns();
+		// Actualizar cada minuto
+		setInterval(updateCountdowns, 60_000);
+	}
+
+	document.addEventListener('astro:page-load', initCountdowns);
+</script>
+
+<style>
+	/* Animacion sutil de entrada escalonada para las cards */
+	.card-next-game {
+		animation: card-fade-in 0.4s ease-out both;
+	}
+
+	@keyframes card-fade-in {
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* Delay escalonado via CSS para las primeras 20 cards */
+	.grid > .card-next-game:nth-child(1) { animation-delay: 0.02s; }
+	.grid > .card-next-game:nth-child(2) { animation-delay: 0.05s; }
+	.grid > .card-next-game:nth-child(3) { animation-delay: 0.08s; }
+	.grid > .card-next-game:nth-child(4) { animation-delay: 0.11s; }
+	.grid > .card-next-game:nth-child(5) { animation-delay: 0.14s; }
+	.grid > .card-next-game:nth-child(6) { animation-delay: 0.17s; }
+	.grid > .card-next-game:nth-child(7) { animation-delay: 0.20s; }
+	.grid > .card-next-game:nth-child(8) { animation-delay: 0.23s; }
+	.grid > .card-next-game:nth-child(9) { animation-delay: 0.26s; }
+	.grid > .card-next-game:nth-child(10) { animation-delay: 0.29s; }
+</style>

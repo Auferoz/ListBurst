@@ -1,13 +1,15 @@
 ---
-import IconDeviceTv from "../Icons/IconDeviceTv.astro";
-import IconGamepad from "../Icons/IconGamepad.astro";
 import IconHome from "../Icons/IconHome.astro";
+import IconCalendarTime from "../Icons/IconCalendarTime.astro";
+import IconGamepad from "../Icons/IconGamepad.astro";
+import IconDeviceTv from "../Icons/IconDeviceTv.astro";
 import IconMovie from "../Icons/IconMovie.astro";
 
 const pathname = Astro.url.pathname;
 
 const menuItems = [
     { href: "/", icon: IconHome, label: "Home" },
+    { href: "/nextGames", icon: IconCalendarTime, label: "Next Games" },
     { href: "/Games", icon: IconGamepad, label: "Games" },
     { href: "/Series", icon: IconDeviceTv, label: "Series" },
     { href: "/Movies", icon: IconMovie, label: "Movies" },
