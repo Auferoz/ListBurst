@@ -6,6 +6,7 @@ import IconMovie from "../components/Icons/IconMovie.astro";
 import IconGamepad from "../components/Icons/IconGamepad.astro";
 import IconClapperboard from "../components/Icons/IconClapperboard.astro";
 import IconClock from "../components/Icons/IconClock.astro";
+import IconTrophy from "../components/Icons/IconTrophy.astro";
 
 import moviesCache from '../data/cache/movies.json';
 import seriesCache from '../data/cache/series.json';
@@ -46,9 +47,9 @@ const totalMoviesHours = Math.round(totalMoviesMinutes / 60);
 
 const date = new Date();
 const formatted =
-	String(date.getDate()).padStart(2, '0') +
-	String(date.getMonth() + 1).padStart(2, '0') +
 	date.getFullYear() +
+	String(date.getMonth() + 1).padStart(2, '0') +
+	String(date.getDate()).padStart(2, '0') +
 	'.' +
 	String(date.getHours()).padStart(2, '0') +
 	String(date.getMinutes()).padStart(2, '0');
@@ -57,13 +58,13 @@ const formatted =
 <Layout>
 	<main class="max-w-7xl mx-auto p-4 space-y-6">
 		<!-- Header -->
-		<header class="flex items-center justify-between">
+		<header class="flex items-center justify-between mb-4">
 			<h1 class="text-3xl font-bold tracking-tight">Dashboard</h1>
-			<span class="text-xs text-gray-400">v0.0.{formatted}</span>
+			<span class="text-xs text-gray-400">v0.0{formatted}</span>
 		</header>
 
 		<!-- Cards -->
-		<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+		<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-3">
 			<!-- Series (sky) -->
 			<CardDashboard text="Series" number={totalSeries} color="sky">
 				<IconDeviceTv width={24} height={24} />
@@ -89,10 +90,17 @@ const formatted =
 				<IconClock width={24} height={24} />
 			</CardDashboard>
 			<CardDashboard text="Achievements" number={totalAchievements} color="green">
-				<IconGamepad width={24} height={24} />
+				<IconTrophy width={24} height={24} />
 			</CardDashboard>
 		</section>
 
-		<span class="text-xs text-gray-400">{date}</span>
+		<section class="mb-14">
+			<div class="p-2 bg-gray-800 rounded-lg text-center">
+				<a class="text-sm text-gray-300" href="/proximamente">
+					Proximamente
+				</a>
+			</div>
+		</section>
+
 	</main>
 </Layout>
