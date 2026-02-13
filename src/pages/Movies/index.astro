@@ -6,6 +6,7 @@ import CardMoviesList from '../../components/Globals/CardMoviesList.astro';
 import FilterBar from '../../components/Globals/FilterBar.astro';
 import CardDashboard from '../../components/Globals/CardDashboard.astro';
 import IconMovie from '../../components/Icons/IconMovie.astro';
+import IconSearchOff from '../../components/Icons/IconSearchOff.astro';
 
 // Leer películas directamente del caché (sin llamadas API)
 const moviesWithRatings = moviesCache.movies;
@@ -44,49 +45,69 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
 ---
 
 <Layout>
-    <main class="max-w-7xl w-full mx-auto p-4">
-        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <h1 class="text-xl font-bold justify-between flex items-center">Movies List <span id="movies-count" class="text-sm text-zinc-400"></span></h1>
-            <!-- <p class="text-xs text-start">
-                Lista de mis películas vistas organizadas por año. Usa los filtros para encontrar películas según tus preferencias.
-            </p> -->
-        </header>
+    <main class="max-w-7xl w-full mx-auto p-4 pb-24 space-y-6">
+        <!-- Header -->
+        <header class="relative">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400/80 mb-1">Collection</p>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                        Movies
+                    </h1>
+                    <p class="text-sm text-zinc-500 mt-1">
+                        {totalMovies} peliculas vistas
+                        <span class="text-zinc-600">&middot;</span>
+                        <span class="text-green-400/70">{totalHours}h de contenido</span>
+                        <span class="text-zinc-600">&middot;</span>
+                        <span class="text-amber-400/70">{avgRating} rating promedio</span>
+                        <span id="movies-count" class="text-zinc-400"></span>
+                    </p>
+                </div>
 
-        <!-- Dashboard Datos -->
-        <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <CardDashboard text="Total películas" number={totalMovies} color="sky" id="dash-total">
-                <IconMovie width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="Géneros" number={totalGenres} color="violet" id="dash-genres">
-                <IconMovie width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="Horas vistas" number={totalHours} color="green" id="dash-hours">
-                <IconMovie width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="Rating Trakt" number={avgRating} color="amber" id="dash-rating">
-                <IconMovie width={24} height={24} />
-            </CardDashboard>
-        </section>
+                <!-- Dashboard compacto -->
+                <section class="grid grid-cols-2 gap-2 sm:gap-3 w-full lg:w-auto lg:max-w-sm">
+                    <CardDashboard text="Total peliculas" number={totalMovies} color="sky" id="dash-total">
+                        <IconMovie width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Generos" number={totalGenres} color="violet" id="dash-genres">
+                        <IconMovie width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Horas vistas" number={totalHours} color="green" id="dash-hours">
+                        <IconMovie width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Rating Trakt" number={avgRating} color="amber" id="dash-rating">
+                        <IconMovie width={20} height={20} />
+                    </CardDashboard>
+                </section>
+            </div>
+
+            <!-- Linea decorativa -->
+            <div class="mt-4 h-px bg-gradient-to-r from-sky-500/40 via-zinc-700/40 to-transparent"></div>
+        </header>
 
         <!-- Filtros -->
         <FilterBar
             filters={[
-                { id: "filter-year", label: "Año", options: yearOptions, defaultValue: String(defaultYear) },
-                { id: "filter-genre", label: "Género", options: genreOptions, capitalize: true },
+                { id: "filter-year", label: "Ano", options: yearOptions, defaultValue: String(defaultYear) },
+                { id: "filter-genre", label: "Genero", options: genreOptions, capitalize: true },
                 { id: "filter-order", label: "Orden", options: orderOptions, defaultValue: "newest", includeAll: false },
             ]}
         />
 
-        <!-- Grid de Películas -->
-        <div id="movies-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 pb-20">
+        <!-- Grid de Peliculas -->
+        <div id="movies-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {moviesWithIndex.map((data, index) => (
                 <CardMoviesList data={data} index={index} />
             ))}
         </div>
 
         <!-- Mensaje cuando no hay resultados -->
-        <div id="no-results" class="hidden text-center py-12 text-zinc-400">
-            <p class="text-lg">No se encontraron películas con los filtros seleccionados</p>
+        <div id="no-results" class="hidden flex flex-col items-center justify-center py-16 text-zinc-500">
+            <div class="mb-3 text-zinc-600">
+                <IconSearchOff width={48} height={48} />
+            </div>
+            <p class="text-lg font-medium text-zinc-400">Sin resultados</p>
+            <p class="text-sm mt-1">Prueba ajustando los filtros para encontrar peliculas</p>
         </div>
     </main>
 </Layout>

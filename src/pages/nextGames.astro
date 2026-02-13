@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CardNextGame from "../components/Globals/CardNextGame.astro";
+import FilterBar from "../components/Globals/FilterBar.astro";
 import nextGamesCache from "../data/cache/nextGames.json";
 
 // Leer juegos desde el caché IGDB
@@ -53,10 +54,19 @@ for (const [key, games] of groupMap) {
 	});
 }
 
+// Fecha actual (usada para filtro y stats)
+const now = new Date();
+
+// Opciones para el filtro de mes (basadas en monthGroups existentes)
+const currentMonthKey = `${now.getFullYear()}-${String(now.getMonth()).padStart(2, '0')}`;
+const monthFilterOptions = monthGroups.map((group) => ({
+	value: group.key,
+	label: group.label,
+}));
+
 // Stats
 const totalGames = cachedGames.length;
 const myListCount = cachedGames.filter((g: any) => g.inMyList).length;
-const now = new Date();
 const nextRelease = datedGames.find(g => g._date >= now);
 const nextDays = nextRelease
 	? Math.ceil((nextRelease._date.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
@@ -111,9 +121,23 @@ const nextDays = nextRelease
 			<div class="mt-4 h-px bg-gradient-to-r from-emerald-500/40 via-zinc-700/40 to-transparent"></div>
 		</header>
 
+		<!-- Filtro por mes -->
+		<FilterBar
+			filters={[
+				{
+					id: "filter-month",
+					label: "Mes",
+					options: monthFilterOptions,
+					defaultValue: currentMonthKey,
+					includeAll: true,
+					allLabel: "Todos los meses",
+				},
+			]}
+		/>
+
 		<!-- Grupos por mes -->
 		{monthGroups.map((group, groupIndex) => (
-			<section class="space-y-4">
+			<section class="month-section space-y-4" data-month-key={group.key}>
 				<!-- Header del mes -->
 				<div class="flex items-center gap-3">
 					<h2 class="text-lg font-bold text-white tracking-tight whitespace-nowrap">{group.label}</h2>
@@ -132,7 +156,7 @@ const nextDays = nextRelease
 
 		<!-- Seccion TBA -->
 		{tbaGames.length > 0 && (
-			<section class="space-y-4">
+			<section class="tba-section space-y-4" data-month-key="tba">
 				<div class="flex items-center gap-3">
 					<h2 class="text-lg font-bold text-zinc-400 tracking-tight whitespace-nowrap">Por confirmar</h2>
 					<div class="flex-1 h-px bg-zinc-800/60"></div>
@@ -182,6 +206,57 @@ const nextDays = nextRelease
 	}
 
 	document.addEventListener('astro:page-load', initCountdowns);
+</script>
+
+<script>
+	function initMonthFilter() {
+		const monthSections = document.querySelectorAll<HTMLElement>('.month-section');
+		const tbaSection = document.querySelector<HTMLElement>('.tba-section');
+
+		function applyFilter(values: Record<string, string>) {
+			const selectedMonth = values['filter-month'] || 'all';
+
+			monthSections.forEach((section) => {
+				const key = section.dataset.monthKey;
+				if (selectedMonth === 'all' || key === selectedMonth) {
+					section.style.display = '';
+				} else {
+					section.style.display = 'none';
+				}
+			});
+
+			// TBA: mostrar solo cuando se selecciona "Todos"
+			if (tbaSection) {
+				tbaSection.style.display = selectedMonth === 'all' ? '' : 'none';
+			}
+		}
+
+		// Escuchar cambios de filtro del FilterBar
+		document.addEventListener('filter-change', ((e: CustomEvent) => {
+			applyFilter(e.detail);
+		}) as EventListener);
+
+		// Escuchar reset
+		document.addEventListener('filter-reset', () => {
+			// El FilterBar ya resetea los selects a sus defaults,
+			// pero filter-change se dispara justo antes, asi que
+			// usamos un pequeño delay para leer el valor post-reset
+			setTimeout(() => {
+				const select = document.getElementById('filter-month') as HTMLSelectElement | null;
+				if (select) {
+					applyFilter({ 'filter-month': select.value });
+				}
+			}, 10);
+		});
+
+		// Aplicar filtro inicial (el default es el mes actual)
+		const select = document.getElementById('filter-month') as HTMLSelectElement | null;
+		if (select) {
+			applyFilter({ 'filter-month': select.value });
+		}
+	}
+
+	document.addEventListener('astro:page-load', initMonthFilter);
 </script>
 
 <style>

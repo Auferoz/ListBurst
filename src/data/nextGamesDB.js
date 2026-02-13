@@ -56,12 +56,12 @@ export const proximamenteGames = [
 	},
 	{
 		title: "LEGO Batman: Legacy of The Dark Knight",
-		poster: "https://i.3djuegos.com/juegos/20550/lego_batman_legacy_of_the_dark_knight/fotos/ficha/lego_batman_legacy_of_the_dark_knight-5979251.webp",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/coab09.webp",
 		dateRelease: "29-05-2026",
 	},
 	{
 		title: "Phantom Blade Zero",
-		poster: "https://i.3djuegos.com/juegos/19100/phantom_blade_0/fotos/ficha/phantom_blade_0-6003845.webp",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob64v.webp",
 		dateRelease: "09-09-2026",
 	},
 	{
@@ -102,7 +102,7 @@ export const proximamenteGames = [
 	{
 		title: "007 First Light",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.webp",
-		dateRelease: "31-12-2026",
+		dateRelease: "27-05-2026",
 	},
 	{
 		title: "Yoshi and the Mysterious Book",
@@ -168,5 +168,80 @@ export const proximamenteGames = [
 		title: "Star Wars: Galactic Racer",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0lg.webp",
 		dateRelease: "31-12-2026",
+	},
+	{
+		title: "Kena: Scars of Kosmora",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobih5.webp",
+		dateRelease: "31-12-2026",
+	},
+	{
+		title: "Death Stranding 2: On The Beach",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.webp",
+		dateRelease: "19-03-2026",
+	},
+	{
+		title: "Control Resonant",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0fw.webp",
+		dateRelease: "31-12-2026",
+	},
+	{
+		title: "Crimson Moon",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigu.webp",
+		dateRelease: "31-12-2026",
+	},
+	{
+		title: "Beast of Reincarnation",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobc5q.webp",
+		dateRelease: "01-08-2026",
+	},
+	{
+		title: "Star Wars: Galactic Racer",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0lg.webp",
+		dateRelease: "31-12-2026",
+	},
+	{
+		title: "Metal Gear Solid Master Collection: Volume 1",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jaw.webp",
+		dateRelease: "23-10-2023",
+	},
+	{
+		title: "Metal Gear Solid Master Collection: Volume 2",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobiha.webp",
+		dateRelease: "31-12-2026",
+	},
+	{
+		title: "Darwin's Paradox",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e1h.webp",
+		dateRelease: "31-12-2026",
+	},
+	{
+		title: "God of War: Sons of Sparta",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigb.webp",
+		dateRelease: "12-02-2026",
+	},
+	{
+		title: "Castlevania Belmont's Curse",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigk.webp",
+		dateRelease: "31-12-2026",
+	},
+	{
+		title: "Rev. Noir",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigm.webp",
+		dateRelease: "31-12-2028",
+	},
+	{
+		title: "John Wick",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigh.webp",
+		dateRelease: "31-12-2028",
+	},
+	{
+		title: "God of War: Trilogy Remake",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobih2.webp",
+		dateRelease: "31-12-2028",
+	},
+	{
+		title: "Project Windless",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigr.webp",
+		dateRelease: "31-12-2028",
 	},
 ];

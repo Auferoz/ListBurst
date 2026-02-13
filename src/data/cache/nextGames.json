@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-02-10T20:01:28.056Z",
-  "totalGames": 432,
-  "myListCount": 34,
-  "apiOnlyCount": 398,
-  "bothCount": 20,
+  "fetchedAt": "2026-02-13T00:20:12.320Z",
+  "totalGames": 456,
+  "myListCount": 49,
+  "apiOnlyCount": 407,
+  "bothCount": 26,
   "games": [
     {
       "localData": {
@@ -81,7 +81,8 @@
         "publishers": [
           "Focus Entertainment"
         ],
-        "hypes": 50
+        "hypes": 50,
+        "steamUrl": "https://store.steampowered.com/app/1672810/MIO_Memories_in_Orbit/"
       },
       "inMyList": true,
       "source": "mylist"
@@ -132,7 +133,8 @@
           "Justin Kirkwood"
         ],
         "publishers": [],
-        "hypes": 0
+        "hypes": 0,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "mylist"
@@ -217,7 +219,8 @@
         "publishers": [
           "Bandai Namco Entertainment"
         ],
-        "hypes": 35
+        "hypes": 35,
+        "steamUrl": "https://store.steampowered.com/app/2362060"
       },
       "inMyList": true,
       "source": "mylist"
@@ -286,7 +289,8 @@
         "publishers": [
           "Kalypso Media"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2808560/Disciples_Domination/"
       },
       "inMyList": true,
       "source": "both"
@@ -364,7 +368,8 @@
         "publishers": [
           "THQ Nordic"
         ],
-        "hypes": 137
+        "hypes": 140,
+        "steamUrl": "https://store.steampowered.com/app/2129530"
       },
       "inMyList": true,
       "source": "both"
@@ -453,7 +458,8 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 272
+        "hypes": 280,
+        "steamUrl": "https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/"
       },
       "inMyList": true,
       "source": "both"
@@ -513,7 +519,8 @@
         "publishers": [
           "Mindscape"
         ],
-        "hypes": 15
+        "hypes": 15,
+        "steamUrl": "https://store.steampowered.com/app/2697000/The_Legend_of_Khiimori/"
       },
       "inMyList": true,
       "source": "mylist"
@@ -576,7 +583,8 @@
           "Coatsink Software",
           "Thunderful"
         ],
-        "hypes": 108
+        "hypes": 111,
+        "steamUrl": "https://store.steampowered.com/app/1663850"
       },
       "inMyList": true,
       "source": "both"
@@ -660,7 +668,8 @@
         "publishers": [
           "Pearl Abyss"
         ],
-        "hypes": 206
+        "hypes": 207,
+        "steamUrl": "https://store.steampowered.com/app/3321460"
       },
       "inMyList": true,
       "source": "both"
@@ -752,7 +761,8 @@
         "publishers": [
           "PlaySide"
         ],
-        "hypes": 62
+        "hypes": 62,
+        "steamUrl": "https://store.steampowered.com/app/2416450/"
       },
       "inMyList": true,
       "source": "both"
@@ -768,7 +778,7 @@
         "name": "Pragmata",
         "slug": "pragmata",
         "url": "https://www.igdb.com/games/pragmata",
-        "summary": "Pragmata is an action adventure title that depicts a near-future dystopian world on the moon through a deeply profound story and setting. The game will take full advantage of next-generation platform features, and as Capcom's first completely new IP made for dedicated video game consoles in four years†, the company aims to establish Pragmata as one of its core brands.",
+        "summary": "An all-new Science Fiction action adventure with its own unique hacking twist!\nIt is the near future, and protagonists Hugh and his android companion Diana, must work together as they make their way through the cold lunar research station.",
         "firstReleaseDate": 1776988800,
         "cover": "co9wwv",
         "genres": [
@@ -820,7 +830,8 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 169
+        "hypes": 177,
+        "steamUrl": "https://store.steampowered.com/app/3357650/PRAGMATA/"
       },
       "inMyList": true,
       "source": "both"
@@ -828,7 +839,7 @@
     {
       "localData": {
         "title": "LEGO Batman: Legacy of The Dark Knight",
-        "poster": "https://i.3djuegos.com/juegos/20550/lego_batman_legacy_of_the_dark_knight/fotos/ficha/lego_batman_legacy_of_the_dark_knight-5979251.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab09.webp",
         "dateRelease": "29-05-2026"
       },
       "igdb": {
@@ -909,7 +920,8 @@
         "publishers": [
           "WB Games"
         ],
-        "hypes": 59
+        "hypes": 59,
+        "steamUrl": "https://store.steampowered.com/app/2215200"
       },
       "inMyList": true,
       "source": "both"
@@ -917,7 +929,7 @@
     {
       "localData": {
         "title": "Phantom Blade Zero",
-        "poster": "https://i.3djuegos.com/juegos/19100/phantom_blade_0/fotos/ficha/phantom_blade_0-6003845.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob64v.webp",
         "dateRelease": "09-09-2026"
       },
       "igdb": {
@@ -966,7 +978,8 @@
         "publishers": [
           "S-Game"
         ],
-        "hypes": 132
+        "hypes": 132,
+        "steamUrl": "https://store.steampowered.com/app/4115450"
       },
       "inMyList": true,
       "source": "both"
@@ -982,7 +995,7 @@
         "name": "Forza Horizon 6",
         "slug": "forza-horizon-6",
         "url": "https://www.igdb.com/games/forza-horizon-6",
-        "summary": "Discover the breathtaking landscapes of Japan and become a racing Legend at the Horizon Festival. Add Forza Horizon 6 to your Wishlist today!",
+        "summary": "Discover the breathtaking landscapes of Japan in over 550 real-world cars and become a racing Legend at the Horizon Festival. Start your journey as a tourist and explore a world full of hit music and Japanese culture. Build a Valley Estate, acquire awe-inspiring homes, and display your prized car collection in fully Customizable Garages. Cruise the roads with your friends and join Car Meets around Japan, unleash your imagination with EventLab and build together in Horizon CoLab.",
         "firstReleaseDate": 1779148800,
         "cover": "cobc5n",
         "genres": [
@@ -1044,7 +1057,8 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 58
+        "hypes": 59,
+        "steamUrl": "https://store.steampowered.com/app/2483190"
       },
       "inMyList": true,
       "source": "both"
@@ -1124,7 +1138,8 @@
         "publishers": [
           "Aeternum Game Studios"
         ],
-        "hypes": 2
+        "hypes": 2,
+        "steamUrl": "https://store.steampowered.com/app/2710920"
       },
       "inMyList": true,
       "source": "mylist"
@@ -1181,7 +1196,8 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 61
+        "hypes": 62,
+        "steamUrl": "https://store.steampowered.com/app/3010850"
       },
       "inMyList": true,
       "source": "both"
@@ -1232,7 +1248,8 @@
         "publishers": [
           "Sony Interactive Entertainment"
         ],
-        "hypes": 135
+        "hypes": 135,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "both"
@@ -1305,7 +1322,8 @@
           "Rockstar Games",
           "Take-Two Interactive"
         ],
-        "hypes": 775
+        "hypes": 775,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "both"
@@ -1321,13 +1339,14 @@
         "name": "Silent Hill: Townfall",
         "slug": "silent-hill-townfall",
         "url": "https://www.igdb.com/games/silent-hill-townfall",
-        "summary": "Silent Hill: Townfall is an upcoming horror game developed by No Code, and published by Annapurna Interactive and Konami Digital Entertainment. It is a spin-off of the Silent Hill franchise, intended to launch an anthology series from various creatives, co-produced by Annapurna.",
-        "firstReleaseDate": null,
+        "summary": "Returning to an island town to ‘put things right’, Simon Ordell descends into a world of tense evasion, explosive confrontations, and mind-bending puzzles that slowly surface the truth of St. Amelia.",
+        "firstReleaseDate": 1798675200,
         "cover": "co5l17",
         "genres": [
           "Adventure"
         ],
         "platforms": [
+          "PC (Microsoft Windows)",
           "PlayStation 5"
         ],
         "screenshots": [
@@ -1338,7 +1357,13 @@
         ],
         "releaseDates": [
           {
-            "human": "TBD",
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
             "platform": "PlayStation 5"
           }
         ],
@@ -1346,12 +1371,14 @@
           "No Code"
         ],
         "publishers": [
-          "Annapurna Interactive"
+          "Annapurna Interactive",
+          "Konami"
         ],
-        "hypes": 27
+        "hypes": 31,
+        "steamUrl": "https://store.steampowered.com/app/1636440/SILENT_HILL_Townfall"
       },
       "inMyList": true,
-      "source": "mylist"
+      "source": "both"
     },
     {
       "localData": {
@@ -1364,7 +1391,7 @@
         "name": "Fable",
         "slug": "fable--1",
         "url": "https://www.igdb.com/games/fable--1",
-        "summary": "A new beginning for the legendary franchise. Explore a land of fantastical creatures and wondrous places.",
+        "summary": "Become the Hero you want to be in an immersive open-world action-RPG where each choice shapes your journey, reputation is everything, and fairytale endings are never guaranteed.",
         "firstReleaseDate": 1798675200,
         "cover": "cobc6d",
         "genres": [
@@ -1413,7 +1440,8 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 276
+        "hypes": 277,
+        "steamUrl": "https://store.steampowered.com/app/2769570"
       },
       "inMyList": true,
       "source": "both"
@@ -1422,7 +1450,7 @@
       "localData": {
         "title": "007 First Light",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.webp",
-        "dateRelease": "31-12-2026"
+        "dateRelease": "27-05-2026"
       },
       "igdb": {
         "id": 141114,
@@ -1487,7 +1515,8 @@
         "publishers": [
           "IO Interactive"
         ],
-        "hypes": 194
+        "hypes": 194,
+        "steamUrl": "https://store.steampowered.com/app/3768760/007_First_Light/"
       },
       "inMyList": true,
       "source": "both"
@@ -1536,7 +1565,8 @@
         "publishers": [
           "Nintendo"
         ],
-        "hypes": 15
+        "hypes": 15,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "mylist"
@@ -1577,7 +1607,8 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 38
+        "hypes": 38,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "mylist"
@@ -1632,7 +1663,8 @@
         "publishers": [
           "Ti Games"
         ],
-        "hypes": 26
+        "hypes": 26,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "mylist"
@@ -1693,7 +1725,8 @@
         "publishers": [
           "Eclipse Glow Games"
         ],
-        "hypes": 83
+        "hypes": 83,
+        "steamUrl": "https://store.steampowered.com/app/3292470"
       },
       "inMyList": true,
       "source": "mylist"
@@ -1746,7 +1779,8 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 36
+        "hypes": 36,
+        "steamUrl": "https://store.steampowered.com/app/1340720/State_of_Decay_3/"
       },
       "inMyList": true,
       "source": "mylist"
@@ -1807,7 +1841,8 @@
         "publishers": [
           "Bandai Namco Entertainment"
         ],
-        "hypes": 146
+        "hypes": 147,
+        "steamUrl": "https://store.steampowered.com/app/3751260"
       },
       "inMyList": true,
       "source": "both"
@@ -1873,7 +1908,8 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 17
+        "hypes": 17,
+        "steamUrl": "https://store.steampowered.com/app/2569760"
       },
       "inMyList": true,
       "source": "both"
@@ -1936,7 +1972,8 @@
         "publishers": [
           "Focus Entertainment"
         ],
-        "hypes": 70
+        "hypes": 71,
+        "steamUrl": "https://store.steampowered.com/app/2713000"
       },
       "inMyList": true,
       "source": "both"
@@ -1996,7 +2033,8 @@
         "publishers": [
           "THQ Nordic"
         ],
-        "hypes": 27
+        "hypes": 27,
+        "steamUrl": "https://store.steampowered.com/app/1203170"
       },
       "inMyList": true,
       "source": "mylist"
@@ -2056,7 +2094,8 @@
         "publishers": [
           "Skydance New Media"
         ],
-        "hypes": 75
+        "hypes": 76,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "both"
@@ -2133,7 +2172,8 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 0
+        "hypes": 0,
+        "steamUrl": "https://store.steampowered.com/app/3659460"
       },
       "inMyList": true,
       "source": "mylist"
@@ -2190,7 +2230,8 @@
           "Genki",
           "Ubisoft Entertainment"
         ],
-        "hypes": 0
+        "hypes": 0,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "mylist"
@@ -2253,10 +2294,881 @@
         "publishers": [
           "Secret Mode"
         ],
-        "hypes": 36
+        "hypes": 37,
+        "steamUrl": "https://store.steampowered.com/app/4078430"
       },
       "inMyList": true,
       "source": "both"
+    },
+    {
+      "localData": {
+        "title": "Kena: Scars of Kosmora",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobih5.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 389419,
+        "name": "Kena: Scars of Kosmora",
+        "slug": "kena-scars-of-kosmora",
+        "url": "https://www.igdb.com/games/kena-scars-of-kosmora",
+        "summary": null,
+        "firstReleaseDate": 1798675200,
+        "cover": "cobih5",
+        "genres": [],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [],
+        "artworks": [],
+        "releaseDates": [
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PlayStation 5"
+          }
+        ],
+        "developers": [],
+        "publishers": [],
+        "hypes": 4,
+        "steamUrl": null
+      },
+      "inMyList": true,
+      "source": "both"
+    },
+    {
+      "localData": {
+        "title": "Death Stranding 2: On The Beach",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.webp",
+        "dateRelease": "19-03-2026"
+      },
+      "igdb": {
+        "id": 228530,
+        "name": "Death Stranding 2: On the Beach",
+        "slug": "death-stranding-2-on-the-beach",
+        "url": "https://www.igdb.com/games/death-stranding-2-on-the-beach",
+        "summary": "Embark on an inspiring mission of human connection beyond the UCA. Sam — with companions by his side — sets out on a new journey to save humanity from extinction. Join them as they traverse a world beset by otherworldly enemies, obstacles and a haunting question: should we have connected?",
+        "firstReleaseDate": 1750896000,
+        "cover": "co9ipx",
+        "genres": [
+          "Shooter",
+          "Adventure"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scka9g",
+          "scka9h",
+          "scka9e",
+          "scka9j",
+          "scka9k",
+          "scka9f",
+          "scka9i",
+          "scqbvr",
+          "scqbvi",
+          "scqbvj",
+          "scqbvk",
+          "scqbvl",
+          "scqbvt",
+          "scqbvq",
+          "scqbvm",
+          "scqbvn",
+          "scqbvo",
+          "scqbvp",
+          "scqbvs"
+        ],
+        "artworks": [
+          "ar3meb",
+          "ar3mea",
+          "ar3me9"
+        ],
+        "releaseDates": [
+          {
+            "human": "Jun 26, 2025",
+            "date": 1750896000,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Jun 24, 2025",
+            "date": 1750723200,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Mar 19, 2026",
+            "date": 1773878400,
+            "platform": "PC (Microsoft Windows)"
+          }
+        ],
+        "developers": [
+          "Kojima Productions"
+        ],
+        "publishers": [
+          "Sony Interactive Entertainment"
+        ],
+        "hypes": 188,
+        "steamUrl": "https://store.steampowered.com/app/3280350/"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Control Resonant",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0fw.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 225582,
+        "name": "Control Resonant",
+        "slug": "control-resonant--1",
+        "url": "https://www.igdb.com/games/control-resonant--1",
+        "summary": "Explore a warped Manhattan on the brink of paranatural annihilation in this thrilling action-adventure RPG. Unleash the extraordinary powers of Dylan Faden as he fights for his humanity and survival against a reality-bending cosmic threat.",
+        "firstReleaseDate": 1782777600,
+        "cover": "cob0fw",
+        "genres": [
+          "Role-playing (RPG)",
+          "Hack and slash/Beat 'em up",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Mac"
+        ],
+        "screenshots": [
+          "scuxut",
+          "sc10td0",
+          "sc10td1",
+          "sc10td2",
+          "sc10td3",
+          "sc10tcz"
+        ],
+        "artworks": [
+          "ar4v1b",
+          "ar4v1h"
+        ],
+        "releaseDates": [
+          {
+            "human": "Q2 2026",
+            "date": 1782777600,
+            "platform": "Mac"
+          },
+          {
+            "human": "Q2 2026",
+            "date": 1782777600,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "Q2 2026",
+            "date": 1782777600,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Q2 2026",
+            "date": 1782777600,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "Remedy Entertainment"
+        ],
+        "publishers": [
+          "Remedy Entertainment"
+        ],
+        "hypes": 91,
+        "steamUrl": "https://store.steampowered.com/app/3669870/"
+      },
+      "inMyList": true,
+      "source": "both"
+    },
+    {
+      "localData": {
+        "title": "Crimson Moon",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigu.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 389428,
+        "name": "Crimson Moon",
+        "slug": "crimson-moon--1",
+        "url": "https://www.igdb.com/games/crimson-moon--1",
+        "summary": "A gothic action-adventure RPG of violent angels and dead gods.",
+        "firstReleaseDate": 1798675200,
+        "cover": "cobigu",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sc11x6g",
+          "sc11x6h",
+          "sc11x6i",
+          "sc11x6j",
+          "sc11x6k",
+          "sc11x6l",
+          "sc11x6m",
+          "sc11x6n",
+          "sc11x6o"
+        ],
+        "artworks": [
+          "ar5b77",
+          "ar5b78"
+        ],
+        "releaseDates": [
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PC (Microsoft Windows)"
+          }
+        ],
+        "developers": [
+          "ProbablyMonsters"
+        ],
+        "publishers": [
+          "ProbablyMonsters"
+        ],
+        "hypes": 2,
+        "steamUrl": "https://store.steampowered.com/app/4317690/Crimson_Moon/"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Beast of Reincarnation",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobc5q.webp",
+        "dateRelease": "01-08-2026"
+      },
+      "igdb": {
+        "id": 348180,
+        "name": "Beast of Reincarnation",
+        "slug": "beast-of-reincarnation",
+        "url": "https://www.igdb.com/games/beast-of-reincarnation",
+        "summary": "In post-apocalyptic Japan, humanity’s last hope may rest with Emma and her loyal canine companion, Koo. Explore what it means to be human in Beast of Reincarnation, an expansive one-person, one-dog action RPG built around demanding, technical combat. What awaits at journey’s end?",
+        "firstReleaseDate": 1785801600,
+        "cover": "cobc5q",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scxbca",
+          "scxbcb",
+          "scxbcc",
+          "scxbcd",
+          "scxbce",
+          "scxbcf"
+        ],
+        "artworks": [
+          "ar3ouz",
+          "ar558h",
+          "ar558i",
+          "ar558j"
+        ],
+        "releaseDates": [
+          {
+            "human": "Aug 04, 2026",
+            "date": 1785801600,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "Aug 04, 2026",
+            "date": 1785801600,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Aug 04, 2026",
+            "date": 1785801600,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "Game Freak"
+        ],
+        "publishers": [
+          "Fictions"
+        ],
+        "hypes": 64,
+        "steamUrl": "https://store.steampowered.com/app/2001760"
+      },
+      "inMyList": true,
+      "source": "both"
+    },
+    {
+      "localData": {
+        "title": "Star Wars: Galactic Racer",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0lg.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 381248,
+        "name": "Star Wars: Galactic Racer",
+        "slug": "star-wars-galactic-racer",
+        "url": "https://www.igdb.com/games/star-wars-galactic-racer",
+        "summary": "STAR WARS: Galactic Racer is a runs-based, high-stakes reinvention of racing born in the lawless Outer Rim. With the Empire gone and the galaxy rebuilding, The Galactic League is created: an underground, unsanctioned circuit where syndicates bankroll chaos and champions are forged.",
+        "firstReleaseDate": 1798675200,
+        "cover": "cob0lg",
+        "genres": [
+          "Racing",
+          "Sport",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sc10tdy",
+          "sc10tdz",
+          "sc10te0",
+          "sc10te1",
+          "sc10te2"
+        ],
+        "artworks": [
+          "ar4v24",
+          "ar4v25"
+        ],
+        "releaseDates": [
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "Xbox Series X|S"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PC (Microsoft Windows)"
+          }
+        ],
+        "developers": [
+          "Fuse Games"
+        ],
+        "publishers": [
+          "Secret Mode"
+        ],
+        "hypes": 37,
+        "steamUrl": "https://store.steampowered.com/app/4078430"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Metal Gear Solid Master Collection: Volume 1",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jaw.webp",
+        "dateRelease": "23-10-2023"
+      },
+      "igdb": {
+        "id": 250635,
+        "name": "Metal Gear Solid Master Collection: Volume 1",
+        "slug": "metal-gear-solid-master-collection-volume-1",
+        "url": "https://www.igdb.com/games/metal-gear-solid-master-collection-volume-1",
+        "summary": "Metal Gear Solid Master Collection: Volume 1 compiles the early entries in the Metal Gear series into a single package, offering players the opportunity to experience the origins of stealth action gameplay. The collection includes the following titles: Metal Gear, Metal Gear 2: Solid Snake, Metal Gear Solid (with VR Missions/Special Missions), Metal Gear Solid 2: Sons of Liberty (HD Collection version), Metal Gear Solid 3: Snake Eater (HD Collection version), as well as the NES/Famicom version of Metal Gear and Snake’s Revenge. Regional versions of the titles are available as additional downloads.\n\nAdditional content includes the digital graphic novels Metal Gear Solid: Digital Graphic Novel and Metal Gear Solid 2: Digital Graphic Novel. A set of digital books is also provided, comprising screenplay and master books for Metal Gear, Metal Gear 2: Solid Snake, Metal Gear Solid, Metal Gear Solid 2: Sons of Liberty, and Metal Gear Solid 3: Snake Eater. These books can be accessed from the game’s main menu.\n\nThe collection also features the Metal Gear Solid: Digital Soundtrack.",
+        "firstReleaseDate": 1698105600,
+        "cover": "co6jaw",
+        "genres": [
+          "Shooter",
+          "Tactical",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PlayStation 4",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scn3ka",
+          "scn3kb",
+          "scn3kc",
+          "scn3ln",
+          "scn3lo",
+          "scn3lp",
+          "scn3lq",
+          "scn3lr",
+          "scn3ls"
+        ],
+        "artworks": [
+          "ar2ddh",
+          "ar2ddi",
+          "ar2ddo",
+          "ar2ddj"
+        ],
+        "releaseDates": [
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "PlayStation 4"
+          },
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "Nintendo Switch"
+          },
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "Konami"
+        ],
+        "publishers": [
+          "Konami"
+        ],
+        "hypes": 0,
+        "steamUrl": "https://store.steampowered.com/app/2131630/METAL_GEAR_SOLID_MASTER_COLLECTION_Vol1_METAL_GEAR_SOLID/"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Metal Gear Solid Master Collection: Volume 2",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobiha.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 389433,
+        "name": "Metal Gear Solid Master Collection: Volume 2",
+        "slug": "metal-gear-solid-master-collection-volume-2--1",
+        "url": "https://www.igdb.com/games/metal-gear-solid-master-collection-volume-2--1",
+        "summary": "This second installment to the collection features “Metal Gear Solid 4: Guns of the Patriots” and “Metal Gear Solid: Peace Walker (HD Collection version),” and also a digital soundtrack and \"Metal Gear: Ghost Babel\" as bonus content.",
+        "firstReleaseDate": 1787788800,
+        "cover": "cobiha",
+        "genres": [
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "Nintendo Switch 2",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sc11x8d",
+          "sc11x8e",
+          "sc11x8f",
+          "sc11x8g",
+          "sc11x8h",
+          "sc11x8i",
+          "sc11x8j",
+          "sc11x8k",
+          "sc11x89",
+          "sc11x8a",
+          "sc11x8b",
+          "sc11x8c"
+        ],
+        "artworks": [
+          "ar5b7l",
+          "ar5b7m",
+          "ar5b7n"
+        ],
+        "releaseDates": [
+          {
+            "human": "Aug 27, 2026",
+            "date": 1787788800,
+            "platform": "Nintendo Switch"
+          },
+          {
+            "human": "Aug 27, 2026",
+            "date": 1787788800,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Aug 27, 2026",
+            "date": 1787788800,
+            "platform": "Nintendo Switch 2"
+          },
+          {
+            "human": "Aug 27, 2026",
+            "date": 1787788800,
+            "platform": "Xbox Series X|S"
+          },
+          {
+            "human": "Aug 27, 2026",
+            "date": 1787788800,
+            "platform": "PC (Microsoft Windows)"
+          }
+        ],
+        "developers": [
+          "Konami"
+        ],
+        "publishers": [
+          "Konami"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3859630/METAL_GEAR_SOLID_MASTER_COLLECTION_Vol2"
+      },
+      "inMyList": true,
+      "source": "both"
+    },
+    {
+      "localData": {
+        "title": "Darwin's Paradox",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e1h.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 331202,
+        "name": "Darwin's Paradox!",
+        "slug": "darwins-paradox",
+        "url": "https://www.igdb.com/games/darwins-paradox",
+        "summary": "Dive into the adventure with Darwin, an octopus as endearing as he is ingenious, torn from the ocean and trapped in a vast and mysterious industrial complex. Harness his unique talents and abilities to help him overcome the many dangers and traps in this captivating platformer and adventure game.",
+        "firstReleaseDate": 1775088000,
+        "cover": "co9e1h",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "Nintendo Switch 2",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scvcf8",
+          "scvcfd",
+          "scvcf9",
+          "scvcfb",
+          "scvcfc",
+          "scvcfa",
+          "scvcfe"
+        ],
+        "artworks": [
+          "ar3b6a"
+        ],
+        "releaseDates": [
+          {
+            "human": "Apr 02, 2026",
+            "date": 1775088000,
+            "platform": "Nintendo Switch 2"
+          },
+          {
+            "human": "Apr 02, 2026",
+            "date": 1775088000,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "Apr 02, 2026",
+            "date": 1775088000,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Apr 02, 2026",
+            "date": 1775088000,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "ZDT Studio"
+        ],
+        "publishers": [
+          "Konami"
+        ],
+        "hypes": 29,
+        "steamUrl": "https://store.steampowered.com/app/2989180"
+      },
+      "inMyList": true,
+      "source": "both"
+    },
+    {
+      "localData": {
+        "title": "God of War: Sons of Sparta",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigb.webp",
+        "dateRelease": "12-02-2026"
+      },
+      "igdb": {
+        "id": 389443,
+        "name": "God of War: Sons of Sparta",
+        "slug": "god-of-war-sons-of-sparta",
+        "url": "https://www.igdb.com/games/god-of-war-sons-of-sparta",
+        "summary": null,
+        "firstReleaseDate": 1770854400,
+        "cover": "cobigb",
+        "genres": [],
+        "platforms": [
+          "PlayStation 5"
+        ],
+        "screenshots": [],
+        "artworks": [],
+        "releaseDates": [
+          {
+            "human": "Feb 12, 2026",
+            "date": 1770854400,
+            "platform": "PlayStation 5"
+          }
+        ],
+        "developers": [],
+        "publishers": [],
+        "hypes": 2,
+        "steamUrl": null
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Castlevania Belmont's Curse",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigk.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 389434,
+        "name": "Castlevania: Belmont's Curse",
+        "slug": "castlevania-belmonts-curse",
+        "url": "https://www.igdb.com/games/castlevania-belmonts-curse",
+        "summary": "Crimson Curse —Will Your Fate Bloom in Despair or Salvation Set 23 years after Castlevania Dracula's Curse - follow a young Belmont's journey in an all new 2D Action-Exploration title from KONAMI, Evil Empire and Motion Twin.",
+        "firstReleaseDate": 1798675200,
+        "cover": "cobigs",
+        "genres": [
+          "Role-playing (RPG)"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sc11x74",
+          "sc11x75",
+          "sc11x76",
+          "sc11x77",
+          "sc11x78",
+          "sc11x6z",
+          "sc11x70",
+          "sc11x71",
+          "sc11x72",
+          "sc11x73"
+        ],
+        "artworks": [
+          "ar5b7b",
+          "ar5b7c"
+        ],
+        "releaseDates": [
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PlayStation 5"
+          }
+        ],
+        "developers": [
+          "Konami"
+        ],
+        "publishers": [
+          "Konami"
+        ],
+        "hypes": 1,
+        "steamUrl": "https://store.steampowered.com/app/4231820"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Rev. Noir",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigm.webp",
+        "dateRelease": "31-12-2028"
+      },
+      "igdb": {
+        "id": 389436,
+        "name": "Rev. Noir",
+        "slug": "rev-noir",
+        "url": "https://www.igdb.com/games/rev-noir",
+        "summary": "When Hope Sparks Catastrophe\n\nIn a world shrouded in lightfall, a natural phenomenon that brings death to those it touches,\nA lonely boy who suffers from amnesia becomes acquainted with a special girl.\nTogether, they set out on a journey to stop this phenomenon,\nBelieving that the journey will save the world, and in turn, save her.\n\nFate, bestowed by the Gods?\nOr the power of will, borne from within humankind?\nTheir journey ends up shaking the world.\n\nUnravel the mandate of heaven, and weave together the threads of hope in this completely new RPG experience.",
+        "firstReleaseDate": null,
+        "cover": "cobigm",
+        "genres": [],
+        "platforms": [
+          "PlayStation 5"
+        ],
+        "screenshots": [],
+        "artworks": [],
+        "releaseDates": [
+          {
+            "human": "TBD",
+            "platform": "PlayStation 5"
+          }
+        ],
+        "developers": [],
+        "publishers": [],
+        "hypes": 2,
+        "steamUrl": null
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "John Wick",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigh.webp",
+        "dateRelease": "31-12-2028"
+      },
+      "igdb": {
+        "id": 389438,
+        "name": "John Wick",
+        "slug": "john-wick--1",
+        "url": "https://www.igdb.com/games/john-wick--1",
+        "summary": "This new John Wick video game will feature an original gameplay narrative set in the John Wick timeline years before the Impossible Task and will deliver on the signature style and unique elements fans expect from a John Wick mission, including a hard-hitting gun-fu combat system, jaw-dropping camerawork, intense driving experiences, cinematic storytelling, and a bold range of atmospherically immersive environments.",
+        "firstReleaseDate": null,
+        "cover": "cobigt",
+        "genres": [],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [],
+        "artworks": [],
+        "releaseDates": [
+          {
+            "human": "TBD",
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "TBD",
+            "platform": "Xbox Series X|S"
+          },
+          {
+            "human": "TBD",
+            "platform": "PlayStation 5"
+          }
+        ],
+        "developers": [
+          "Saber Interactive"
+        ],
+        "publishers": [],
+        "hypes": 5,
+        "steamUrl": null
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "God of War: Trilogy Remake",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobih2.webp",
+        "dateRelease": "31-12-2028"
+      },
+      "igdb": {
+        "id": 389441,
+        "name": "God of War Trilogy Remake",
+        "slug": "god-of-war-trilogy-remake",
+        "url": "https://www.igdb.com/games/god-of-war-trilogy-remake",
+        "summary": null,
+        "firstReleaseDate": null,
+        "cover": "cobih2",
+        "genres": [
+          "Hack and slash/Beat 'em up",
+          "Adventure"
+        ],
+        "platforms": [
+          "PlayStation 5"
+        ],
+        "screenshots": [],
+        "artworks": [],
+        "releaseDates": [
+          {
+            "human": "TBD",
+            "platform": "PlayStation 5"
+          }
+        ],
+        "developers": [
+          "Santa Monica Studio"
+        ],
+        "publishers": [
+          "Sony Interactive Entertainment"
+        ],
+        "hypes": 8,
+        "steamUrl": null
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Project Windless",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigr.webp",
+        "dateRelease": "31-12-2028"
+      },
+      "igdb": {
+        "id": 389432,
+        "name": "Project Windless",
+        "slug": "project-windless",
+        "url": "https://www.igdb.com/games/project-windless",
+        "summary": "Project Windless is a single-player open-world action RPG set in the universe of the acclaimed Korean fantasy novel series The Bird That Drinks Tears.\n\nStep into a mythic age as a mighty Rekon warrior and journey across a breathtaking, war-torn world. Stand against overwhelming odds, forge alliances, and wage war across massive battlefields to unite a fractured land and give birth to a new kingdom.",
+        "firstReleaseDate": null,
+        "cover": "cobigr",
+        "genres": [
+          "Role-playing (RPG)"
+        ],
+        "platforms": [
+          "PlayStation 5"
+        ],
+        "screenshots": [],
+        "artworks": [],
+        "releaseDates": [
+          {
+            "human": "TBD",
+            "platform": "PlayStation 5"
+          }
+        ],
+        "developers": [
+          "Krafton Montréal Studio"
+        ],
+        "publishers": [],
+        "hypes": 5,
+        "steamUrl": null
+      },
+      "inMyList": true,
+      "source": "mylist"
     },
     {
       "localData": {
@@ -2303,7 +3215,8 @@
         "publishers": [
           "NERDS TAKE OVER"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3216340/Tearscape/"
       },
       "inMyList": false,
       "source": "api"
@@ -2357,7 +3270,8 @@
         "publishers": [
           "Gaijin Entertainment"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2754090"
       },
       "inMyList": false,
       "source": "api"
@@ -2405,7 +3319,8 @@
         "publishers": [
           "turbolento publishing"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3252360"
       },
       "inMyList": false,
       "source": "api"
@@ -2456,7 +3371,8 @@
         "publishers": [
           "BAP HQ"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3834090/YAPYAP/"
       },
       "inMyList": false,
       "source": "api"
@@ -2504,7 +3420,8 @@
         "publishers": [
           "Shueisha Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2656490"
       },
       "inMyList": false,
       "source": "api"
@@ -2567,7 +3484,8 @@
         "publishers": [
           "Heavy Lunch Studio LLC"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2408350/Hermit_and_Pig/?curator_clanid=4777282"
       },
       "inMyList": false,
       "source": "api"
@@ -2611,7 +3529,8 @@
         "publishers": [
           "Hooded Horse"
         ],
-        "hypes": 13
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/2432860/MENACE/"
       },
       "inMyList": false,
       "source": "api"
@@ -2655,7 +3574,8 @@
         "publishers": [
           "Krafton"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3143710/Project_ARC/"
       },
       "inMyList": false,
       "source": "api"
@@ -2701,7 +3621,8 @@
         "publishers": [
           "Transhuman Design"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3124230/Jackal/"
       },
       "inMyList": false,
       "source": "api"
@@ -2748,7 +3669,8 @@
         "publishers": [
           "indie.io"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1766060/HumanitZ"
       },
       "inMyList": false,
       "source": "api"
@@ -2796,7 +3718,8 @@
         "publishers": [
           "Koei Tecmo Games"
         ],
-        "hypes": 54
+        "hypes": 54,
+        "steamUrl": "https://store.steampowered.com/app/3681010/Nioh_3"
       },
       "inMyList": false,
       "source": "api"
@@ -2846,7 +3769,8 @@
         "publishers": [
           "Rise Studio"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3817240/Heaven_Does_Not_Respond/"
       },
       "inMyList": false,
       "source": "api"
@@ -2894,7 +3818,8 @@
         "publishers": [
           "34BigThings"
         ],
-        "hypes": 14
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/1712100"
       },
       "inMyList": false,
       "source": "api"
@@ -2935,7 +3860,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3113030/The_Oily_Depths/"
       },
       "inMyList": false,
       "source": "api"
@@ -2974,11 +3900,22 @@
           "scjgqa",
           "scjgqh",
           "scjgqg",
-          "scjgqf"
+          "scjgqf",
+          "sc11ozv",
+          "sc11ozw",
+          "sc11ozx",
+          "sc11ozy",
+          "sc11ozz",
+          "sc11p00",
+          "sc11p01",
+          "sc11p02",
+          "sc11p03",
+          "sc11p04"
         ],
         "artworks": [
           "ar1ype",
-          "ar58ee"
+          "ar58ee",
+          "ar59bz"
         ],
         "releaseDates": [],
         "developers": [
@@ -2989,7 +3926,8 @@
           "Edmund McMillen",
           "Tyler Glaiel"
         ],
-        "hypes": 22
+        "hypes": 22,
+        "steamUrl": "https://store.steampowered.com/app/686060/Mewgenics"
       },
       "inMyList": false,
       "source": "api"
@@ -3039,7 +3977,8 @@
         "publishers": [
           "Blumhouse Games"
         ],
-        "hypes": 27
+        "hypes": 27,
+        "steamUrl": "https://store.steampowered.com/app/1790930"
       },
       "inMyList": false,
       "source": "api"
@@ -3082,7 +4021,8 @@
           "Aruma Studios"
         ],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2506100/Shadows_of_the_Afterland/"
       },
       "inMyList": false,
       "source": "api"
@@ -3132,7 +4072,57 @@
         "publishers": [
           "Nyamakop"
         ],
-        "hypes": 13
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/3255890"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Starsand Island",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co93z9.webp",
+        "dateRelease": "11-02-2026"
+      },
+      "igdb": {
+        "id": 310885,
+        "name": "Starsand Island",
+        "slug": "starsand-island",
+        "url": "https://www.igdb.com/games/starsand-island",
+        "summary": "Leave the hustle of the city behind and embrace life on Starsand Island. Fish, farm, raise animals, and befriend or fall in love with locals to learn their secrets. Customize your world with our DIY system, and invite friends to help build your dream paradise!",
+        "firstReleaseDate": 1770768000,
+        "cover": "co93z9",
+        "genres": [
+          "Role-playing (RPG)",
+          "Simulator",
+          "Indie"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "Nintendo Switch 2",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Mac"
+        ],
+        "screenshots": [
+          "sctbql",
+          "sctbqk",
+          "sctbqm",
+          "sctbqn",
+          "sctbqo"
+        ],
+        "artworks": [
+          "ar322l"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Seed Lab"
+        ],
+        "publishers": [
+          "Seed Lab"
+        ],
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2966320"
       },
       "inMyList": false,
       "source": "api"
@@ -3186,7 +4176,98 @@
         "publishers": [
           "Grasshopper Manufacture"
         ],
-        "hypes": 45
+        "hypes": 46,
+        "steamUrl": "https://store.steampowered.com/app/3050900"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Selini",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8nfw.webp",
+        "dateRelease": "12-02-2026"
+      },
+      "igdb": {
+        "id": 159885,
+        "name": "Selini",
+        "slug": "selini",
+        "url": "https://www.igdb.com/games/selini",
+        "summary": "Collect the lost memories of the protagonist in a vast and ruined world, filled with ancient mysteries, minimal Cycladic islands and a forgotten metropolis that holds a dark secret.",
+        "firstReleaseDate": 1770854400,
+        "cover": "co8nfw",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scbxpx",
+          "scbxpy",
+          "scbxq0",
+          "scbxq2",
+          "scbxq3",
+          "scbxq6",
+          "scbxq8",
+          "scbxq9",
+          "scbxqa",
+          "scbxqb"
+        ],
+        "artworks": [
+          "ar23jq"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Cymban"
+        ],
+        "publishers": [
+          "Cymban"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1434050"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Hordes of Hunger",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7deh.webp",
+        "dateRelease": "12-02-2026"
+      },
+      "igdb": {
+        "id": 244839,
+        "name": "Hordes of Hunger",
+        "slug": "hordes-of-hunger",
+        "url": "https://www.igdb.com/games/hordes-of-hunger",
+        "summary": "Hordes of Hunger is a fast-paced action arena slasher with rogue-lite elements set in the dark fantasy setting of Ismer. A land engulfed by the living hunger, the cosmic horror known only as the Beast. You are the unlucky one still living inside the nightmare and the only way out is through it.",
+        "firstReleaseDate": 1770854400,
+        "cover": "co7deh",
+        "genres": [],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scm2dn",
+          "scm2dw",
+          "scm2ds",
+          "scm2dp",
+          "scm2dt"
+        ],
+        "artworks": [
+          "ar29k7"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Hyperstrange"
+        ],
+        "publishers": [
+          "Hyperstrange"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2157710"
       },
       "inMyList": false,
       "source": "api"
@@ -3235,7 +4316,140 @@
         "publishers": [
           "offbrand games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2466130"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Rogue Point",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobf3b.webp",
+        "dateRelease": "12-02-2026"
+      },
+      "igdb": {
+        "id": 322111,
+        "name": "Rogue Point",
+        "slug": "rogue-point",
+        "url": "https://www.igdb.com/games/rogue-point",
+        "summary": "From the creators of Black Mesa: Welcome to Rogue Point! A 4-player co-op shooter where teamwork is everything. Join forces on intense missions with evolving objectives and powerful upgrades. Plan, Adapt, and Overcome. Your squad’s survival depends on it.",
+        "firstReleaseDate": 1770854400,
+        "cover": "cobf3b",
+        "genres": [
+          "Shooter"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scufup",
+          "scufuq",
+          "scufur"
+        ],
+        "artworks": [
+          "ar57nq"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Crowbar Collective"
+        ],
+        "publishers": [
+          "Team17"
+        ],
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/1843840/Rogue_Point/"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Roadside Research",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coavec.webp",
+        "dateRelease": "12-02-2026"
+      },
+      "igdb": {
+        "id": 346940,
+        "name": "Roadside Research",
+        "slug": "roadside-research",
+        "url": "https://www.igdb.com/games/roadside-research",
+        "summary": "Roadside Research is a 1 to 4 player co-op gas station simulator. Except you’re aliens. And undercover. Do very human things like restocking shelves while preparing for the invasion. Just don’t get caught.",
+        "firstReleaseDate": 1770854400,
+        "cover": "coavec",
+        "genres": [
+          "Simulator"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scx6l0",
+          "scx6l1",
+          "scx6l2",
+          "scx6l3",
+          "scx6l4"
+        ],
+        "artworks": [
+          "ar480v",
+          "ar480w",
+          "ar480x"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Cybernetic Walrus"
+        ],
+        "publishers": [
+          "Oro Interactive"
+        ],
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/3643170/Roadside_Research/"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Killer Inn",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xgr.webp",
+        "dateRelease": "12-02-2026"
+      },
+      "igdb": {
+        "id": 347643,
+        "name": "Killer Inn",
+        "slug": "killer-inn",
+        "url": "https://www.igdb.com/games/killer-inn",
+        "summary": "A corpse has been found... and everyone is a suspect. You have been chosen to participate in a one-night-only game of death, deceit, and deduction. Will you be a wolf? Or perhaps a lamb with the means to fight back... In deception we trust.",
+        "firstReleaseDate": 1770854400,
+        "cover": "co9xgr",
+        "genres": [],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scx9i9",
+          "scx9i3",
+          "scx9i4",
+          "scx9i5",
+          "scx9i6",
+          "scx9i7",
+          "scx9i8"
+        ],
+        "artworks": [
+          "ar3oe5",
+          "ar3oe6"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Tactic Studios",
+          "Square Enix"
+        ],
+        "publishers": [
+          "Square Enix"
+        ],
+        "hypes": 16,
+        "steamUrl": "https://store.steampowered.com/app/1598230"
       },
       "inMyList": false,
       "source": "api"
@@ -3276,7 +4490,8 @@
         "publishers": [
           "Sega"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -3329,7 +4544,8 @@
         "publishers": [
           "Sega"
         ],
-        "hypes": 15
+        "hypes": 15,
+        "steamUrl": "https://store.steampowered.com/app/3937550/Yakuza_Kiwami_3__Dark_Ties/"
       },
       "inMyList": false,
       "source": "api"
@@ -3373,7 +4589,8 @@
         "publishers": [
           "Milestone"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2815070/RIDE_6/"
       },
       "inMyList": false,
       "source": "api"
@@ -3419,7 +4636,70 @@
         "publishers": [
           "Squanch Games"
         ],
-        "hypes": 48
+        "hypes": 50,
+        "steamUrl": "https://store.steampowered.com/app/2069250"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Dobbel Dungeon",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8zw0.webp",
+        "dateRelease": "16-02-2026"
+      },
+      "igdb": {
+        "id": 290612,
+        "name": "Dobbel Dungeon",
+        "slug": "dobbel-dungeon",
+        "url": "https://www.igdb.com/games/dobbel-dungeon",
+        "summary": "Gather your party, roll your dice and embark on a quest to discover why the local wildlife has suddenly turned evil! No two adventures are the same in this dice-powered tactical RPG!",
+        "firstReleaseDate": 1771200000,
+        "cover": "co8zw0",
+        "genres": [
+          "Role-playing (RPG)",
+          "Strategy",
+          "Tactical",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scucf6",
+          "scucf4",
+          "scucf5",
+          "scucf7",
+          "scucf8",
+          "scucf9",
+          "scucfa",
+          "scucfb",
+          "scucfc",
+          "scucfd",
+          "scucfe",
+          "scucff",
+          "scucfg"
+        ],
+        "artworks": [
+          "ar36c8",
+          "ar36cl",
+          "ar36cg",
+          "ar36cm",
+          "ar36cc",
+          "ar36ch",
+          "ar36ci",
+          "ar36ce",
+          "ar36ck",
+          "ar36cf",
+          "ar36cj"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Gamepie"
+        ],
+        "publishers": [],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2622820"
       },
       "inMyList": false,
       "source": "api"
@@ -3475,7 +4755,8 @@
         "publishers": [
           "Top Hat Studios"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/1583520"
       },
       "inMyList": false,
       "source": "api"
@@ -3534,7 +4815,8 @@
         "publishers": [
           "Hitcents"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2059570"
       },
       "inMyList": false,
       "source": "api"
@@ -3592,7 +4874,8 @@
         "publishers": [
           "Tripwire Interactive"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3054690/Norse/"
       },
       "inMyList": false,
       "source": "api"
@@ -3643,7 +4926,8 @@
         "publishers": [
           "Daedalic Entertainment"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/2643390"
       },
       "inMyList": false,
       "source": "api"
@@ -3682,7 +4966,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2781470"
       },
       "inMyList": false,
       "source": "api"
@@ -3727,7 +5012,8 @@
         "publishers": [
           "Fabraz"
         ],
-        "hypes": 12
+        "hypes": 12,
+        "steamUrl": "https://store.steampowered.com/app/2585890"
       },
       "inMyList": false,
       "source": "api"
@@ -3776,7 +5062,8 @@
         "publishers": [
           "Ysbryd Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3010610/LOVE_ETERNAL/"
       },
       "inMyList": false,
       "source": "api"
@@ -3822,7 +5109,8 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 21
+        "hypes": 22,
+        "steamUrl": "https://store.steampowered.com/app/3290690"
       },
       "inMyList": false,
       "source": "api"
@@ -3866,7 +5154,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2085310"
       },
       "inMyList": false,
       "source": "api"
@@ -3923,7 +5212,8 @@
         "publishers": [
           "Devolver Digital"
         ],
-        "hypes": 3
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1651600"
       },
       "inMyList": false,
       "source": "api"
@@ -3931,7 +5221,7 @@
     {
       "localData": {
         "title": "The Seven Deadly Sins: Origin",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabby.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobi46.webp",
         "dateRelease": "01-03-2026"
       },
       "igdb": {
@@ -3939,9 +5229,9 @@
         "name": "The Seven Deadly Sins: Origin",
         "slug": "the-seven-deadly-sins-origin",
         "url": "https://www.igdb.com/games/the-seven-deadly-sins-origin",
-        "summary": "The Seven Deadly Sins: Origin is an open-world anime RPG set in the universe of The Seven Deadly Sins. Step into the role of Prince Tristan of Liones and explore an open-world Britannia, as you embark on a journey to restore order to a world thrown into chaos by the collision of time and space.",
+        "summary": "The Seven Deadly Sins: Origin is an open-world action RPG set in the universe of The Seven Deadly Sins. Step into the role of Prince Tristan of Liones and explore an open-world Britannia, as you embark on a journey to restore order to a world thrown into chaos by the collision of time and space.",
         "firstReleaseDate": 1772323200,
-        "cover": "coabby",
+        "cover": "cobi46",
         "genres": [
           "Role-playing (RPG)",
           "Adventure"
@@ -3971,7 +5261,8 @@
         "publishers": [
           "Netmarble"
         ],
-        "hypes": 13
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/3679080"
       },
       "inMyList": false,
       "source": "api"
@@ -4017,7 +5308,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1860560"
       },
       "inMyList": false,
       "source": "api"
@@ -4070,7 +5362,8 @@
           "Gone-Shootin",
           "Infini Fun"
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2300840/Subliminal"
       },
       "inMyList": false,
       "source": "api"
@@ -4115,7 +5408,8 @@
         "publishers": [
           "tinyBuild"
         ],
-        "hypes": 14
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/1431300"
       },
       "inMyList": false,
       "source": "api"
@@ -4162,7 +5456,8 @@
         "publishers": [
           "Mega Crit Games"
         ],
-        "hypes": 63
+        "hypes": 63,
+        "steamUrl": "https://store.steampowered.com/app/2868840"
       },
       "inMyList": false,
       "source": "api"
@@ -4209,7 +5504,8 @@
         "publishers": [
           "Double Dash Studios"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2713380"
       },
       "inMyList": false,
       "source": "api"
@@ -4258,102 +5554,8 @@
         "publishers": [
           "JayO"
         ],
-        "hypes": 5
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Mistfall Hunter",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ycx.webp",
-        "dateRelease": "01-03-2026"
-      },
-      "igdb": {
-        "id": 320141,
-        "name": "Mistfall Hunter",
-        "slug": "mistfall-hunter",
-        "url": "https://www.igdb.com/games/mistfall-hunter",
-        "summary": "Mistfall Hunter is a third-person action PvPvE extraction RPG. Gear up for different classes, master combos and strategic skills, and face intense battles against monsters or players, solo or with teammates. Only a successful escape will secure your treasures.",
-        "firstReleaseDate": 1772323200,
-        "cover": "co8ycx",
-        "genres": [
-          "Adventure"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scu85c",
-          "scu85d",
-          "scu85e",
-          "scu85f",
-          "scu85g",
-          "scu85h",
-          "scu85i",
-          "scu85j"
-        ],
-        "artworks": [
-          "ar35r2"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Bellring Games"
-        ],
-        "publishers": [
-          "Skystone Games"
-        ],
-        "hypes": 25
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Peregrino",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coafur.webp",
-        "dateRelease": "01-03-2026"
-      },
-      "igdb": {
-        "id": 359890,
-        "name": "Peregrino",
-        "slug": "peregrino",
-        "url": "https://www.igdb.com/games/peregrino",
-        "summary": "Peregrino is a dark isometric survival adventure where you explore a cursed forest by day and manage your caravan by night. Gather resources, hunt deadly creatures, upgrade your caravan, care for your companions, and lead them through the vast wilderness in search of New Eden.",
-        "firstReleaseDate": 1772323200,
-        "cover": "coafur",
-        "genres": [
-          "Role-playing (RPG)",
-          "Strategy",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scyf54",
-          "scyf55",
-          "scyf56",
-          "scyf5b",
-          "scyf5d",
-          "scyf5k",
-          "scyf5p",
-          "scyf5y",
-          "scyf62"
-        ],
-        "artworks": [
-          "ar3z0t",
-          "ar3z0x"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Inverge Studios"
-        ],
-        "publishers": [
-          "Inverge Studios"
-        ],
-        "hypes": 3
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2949120"
       },
       "inMyList": false,
       "source": "api"
@@ -4403,7 +5605,8 @@
         "publishers": [
           "indie.io"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3411970"
       },
       "inMyList": false,
       "source": "api"
@@ -4456,7 +5659,8 @@
         "publishers": [
           "Tribute Games"
         ],
-        "hypes": 19
+        "hypes": 19,
+        "steamUrl": "https://store.steampowered.com/app/2640950"
       },
       "inMyList": false,
       "source": "api"
@@ -4500,7 +5704,8 @@
         "publishers": [
           "PLAYISM"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1820000/Homura_Hime"
       },
       "inMyList": false,
       "source": "api"
@@ -4552,7 +5757,8 @@
         "publishers": [
           "PocketPair"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/2395770/Never_Grave_The_Witch_and_The_Curse/"
       },
       "inMyList": false,
       "source": "api"
@@ -4608,7 +5814,8 @@
         "publishers": [
           "Bungie"
         ],
-        "hypes": 74
+        "hypes": 75,
+        "steamUrl": "https://store.steampowered.com/app/3065800/"
       },
       "inMyList": false,
       "source": "api"
@@ -4658,7 +5865,53 @@
         "publishers": [
           "Perun Creative"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2406680"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Dysplaced",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co91l1.webp",
+        "dateRelease": "05-03-2026"
+      },
+      "igdb": {
+        "id": 258472,
+        "name": "Dysplaced",
+        "slug": "dysplaced",
+        "url": "https://www.igdb.com/games/dysplaced",
+        "summary": "After falling from the sky into a realm of myth and magic, you'll start a new life in a stunning, yet imperiled domain: Gather resources, build, cook, fish. Learn magic, smithing, hunting, alchemy, and more. Is there a way back? But know this: There's a dark force rising - and you must prepare ⚔️",
+        "firstReleaseDate": 1772668800,
+        "cover": "co91l1",
+        "genres": [
+          "Role-playing (RPG)",
+          "Simulator",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scnjun",
+          "scnjuo",
+          "scnjup",
+          "scnjuq",
+          "scnjur",
+          "scnjut",
+          "scnjuv"
+        ],
+        "artworks": [
+          "ar2f31"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2430390"
       },
       "inMyList": false,
       "source": "api"
@@ -4711,7 +5964,8 @@
         "publishers": [
           "Thunderful"
         ],
-        "hypes": 21
+        "hypes": 21,
+        "steamUrl": "https://store.steampowered.com/app/2997230"
       },
       "inMyList": false,
       "source": "api"
@@ -4758,7 +6012,8 @@
         "publishers": [
           "Saber Interactive"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2487300"
       },
       "inMyList": false,
       "source": "api"
@@ -4804,7 +6059,58 @@
         "publishers": [
           "Bit Egg Inc."
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/2101390"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Peregrino",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coafur.webp",
+        "dateRelease": "06-03-2026"
+      },
+      "igdb": {
+        "id": 359890,
+        "name": "Peregrino",
+        "slug": "peregrino",
+        "url": "https://www.igdb.com/games/peregrino",
+        "summary": "Peregrino is a dark isometric survival adventure where you explore a cursed forest by day and manage your caravan by night. Gather resources, hunt deadly creatures, upgrade your caravan, care for your companions, and lead them through the vast wilderness in search of New Eden.",
+        "firstReleaseDate": 1772755200,
+        "cover": "coafur",
+        "genres": [
+          "Role-playing (RPG)",
+          "Strategy",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scyf54",
+          "scyf55",
+          "scyf56",
+          "scyf5b",
+          "scyf5d",
+          "scyf5k",
+          "scyf5p",
+          "scyf5y",
+          "scyf62"
+        ],
+        "artworks": [
+          "ar3z0t",
+          "ar3z0x"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Inverge Studios"
+        ],
+        "publishers": [
+          "Inverge Studios"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3268150"
       },
       "inMyList": false,
       "source": "api"
@@ -4837,10 +6143,24 @@
           "scze7m",
           "scze7n",
           "scze7o",
-          "scze7p"
+          "scze7p",
+          "sc11x2g",
+          "sc11x2h",
+          "sc11x2i",
+          "sc11x2j",
+          "sc11x2k",
+          "sc11x2c",
+          "sc11x2d",
+          "sc11x2e",
+          "sc11x2f",
+          "sc11x2l",
+          "sc11x2m",
+          "sc11x2n"
         ],
         "artworks": [
-          "ar3ln3"
+          "ar3ln3",
+          "ar5b5y",
+          "ar5b5z"
         ],
         "releaseDates": [],
         "developers": [
@@ -4849,7 +6169,8 @@
         "publishers": [
           "indie.io"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3057670"
       },
       "inMyList": false,
       "source": "api"
@@ -4895,7 +6216,8 @@
         "publishers": [
           "Devin Santi"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1657740/Mr_Sleepy_Man"
       },
       "inMyList": false,
       "source": "api"
@@ -4942,7 +6264,8 @@
         "publishers": [
           "DANGEN Entertainment"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1829270"
       },
       "inMyList": false,
       "source": "api"
@@ -4987,7 +6310,8 @@
         "publishers": [
           "Focus Entertainment"
         ],
-        "hypes": 29
+        "hypes": 30,
+        "steamUrl": "https://store.steampowered.com/app/2157830"
       },
       "inMyList": false,
       "source": "api"
@@ -5034,7 +6358,8 @@
         "publishers": [
           "Cyber Temple"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/3132870/"
       },
       "inMyList": false,
       "source": "api"
@@ -5081,7 +6406,8 @@
         "publishers": [
           "Dear Villagers"
         ],
-        "hypes": 25
+        "hypes": 25,
+        "steamUrl": "https://store.steampowered.com/app/1895900/1348__Ex_Voto/"
       },
       "inMyList": false,
       "source": "api"
@@ -5129,7 +6455,8 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 12
+        "hypes": 12,
+        "steamUrl": "https://store.steampowered.com/app/2852190"
       },
       "inMyList": false,
       "source": "api"
@@ -5181,7 +6508,8 @@
         "publishers": [
           "Arc System Works"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3557460"
       },
       "inMyList": false,
       "source": "api"
@@ -5226,7 +6554,8 @@
         "publishers": [
           "Shueisha Games"
         ],
-        "hypes": 13
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/1947910/OPUS_Prism_Peak"
       },
       "inMyList": false,
       "source": "api"
@@ -5270,7 +6599,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/2210520"
       },
       "inMyList": false,
       "source": "api"
@@ -5317,7 +6647,8 @@
         "publishers": [
           "FYRE Games"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3180410"
       },
       "inMyList": false,
       "source": "api"
@@ -5363,7 +6694,8 @@
         "publishers": [
           "Milestone"
         ],
-        "hypes": 33
+        "hypes": 33,
+        "steamUrl": "https://store.steampowered.com/app/2814990"
       },
       "inMyList": false,
       "source": "api"
@@ -5408,7 +6740,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/3363680"
       },
       "inMyList": false,
       "source": "api"
@@ -5454,7 +6787,8 @@
         "publishers": [
           "Square Enix"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/2624870/Life_is_Strange_Reunion/"
       },
       "inMyList": false,
       "source": "api"
@@ -5498,7 +6832,59 @@
         "publishers": [
           "PlayWay S.A."
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1198970/I_Am_Jesus_Christ/"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Elementallis",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5bt1.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 140804,
+        "name": "Elementallis",
+        "slug": "elementallis",
+        "url": "https://www.igdb.com/games/elementallis",
+        "summary": "Top-down action adventure with elemental magic gameplay. Guilt pushes you on a journey to restore the elements in a pre-apocalyptic world. Use and combine your elemental powers to fight and solve puzzles across the temples.",
+        "firstReleaseDate": 1774915200,
+        "cover": "co5bt1",
+        "genres": [
+          "Puzzle",
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PlayStation 4",
+          "Linux",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Mac",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sc8qqy",
+          "sc8qqz",
+          "sc8qr0",
+          "sc8qr1",
+          "sc8qr2"
+        ],
+        "artworks": [
+          "ar149m"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Iván Ruiz Lozano"
+        ],
+        "publishers": [
+          "Top Hat Studios"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1304280/Elementallis"
       },
       "inMyList": false,
       "source": "api"
@@ -5547,7 +6933,8 @@
         "publishers": [
           "Super Rare Originals"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/1290760/The_Gecko_Gods"
       },
       "inMyList": false,
       "source": "api"
@@ -5598,7 +6985,8 @@
         "publishers": [
           "Pixelated Milk"
         ],
-        "hypes": 20
+        "hypes": 21,
+        "steamUrl": "https://store.steampowered.com/app/1661330"
       },
       "inMyList": false,
       "source": "api"
@@ -5644,7 +7032,8 @@
           "tanatb"
         ],
         "publishers": [],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2666920"
       },
       "inMyList": false,
       "source": "api"
@@ -5687,7 +7076,8 @@
         "publishers": [
           "Null Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1808160"
       },
       "inMyList": false,
       "source": "api"
@@ -5733,7 +7123,8 @@
         "publishers": [
           "Top Hat Studios"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/1871640"
       },
       "inMyList": false,
       "source": "api"
@@ -5782,7 +7173,8 @@
         "publishers": [
           "DIE SOFT"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2074630"
       },
       "inMyList": false,
       "source": "api"
@@ -5830,7 +7222,8 @@
         "publishers": [
           "PLAYISM"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/2052300"
       },
       "inMyList": false,
       "source": "api"
@@ -5876,7 +7269,8 @@
         "publishers": [
           "Raw Fury"
         ],
-        "hypes": 18
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/2057760"
       },
       "inMyList": false,
       "source": "api"
@@ -5931,7 +7325,8 @@
         "publishers": [
           "Apogee Entertainment"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1717730"
       },
       "inMyList": false,
       "source": "api"
@@ -5979,7 +7374,8 @@
         "publishers": [
           "Playstorm Studios"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3008700"
       },
       "inMyList": false,
       "source": "api"
@@ -6022,7 +7418,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2332120"
       },
       "inMyList": false,
       "source": "api"
@@ -6069,7 +7466,8 @@
         "publishers": [
           "HypeTrain Digital"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/2412960/Breathedge_2/"
       },
       "inMyList": false,
       "source": "api"
@@ -6119,7 +7517,8 @@
           "Zadbox Entertainment",
           "Blue Brain Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2458980"
       },
       "inMyList": false,
       "source": "api"
@@ -6160,7 +7559,8 @@
           "Haunting Humans Studio"
         ],
         "publishers": [],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2646450/Who_Are_You/"
       },
       "inMyList": false,
       "source": "api"
@@ -6206,7 +7606,55 @@
         "publishers": [
           "Starblade Games"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2378230"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Cooking Simulator 2: Better Together",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coan3n.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 259127,
+        "name": "Cooking Simulator 2: Better Together",
+        "slug": "cooking-simulator-2-better-together",
+        "url": "https://www.igdb.com/games/cooking-simulator-2-better-together",
+        "summary": "Cooking Simulator is back – bigger, better, and with optional multiplayer! Create your own recipes and take advantage of new and improved controls to become the best restaurant cook in the city! Or just have fun and enjoy cooking at your own pace. You’re the chef here!",
+        "firstReleaseDate": 1774915200,
+        "cover": "coan3n",
+        "genres": [
+          "Simulator",
+          "Strategy"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scnnf0",
+          "scnnf4",
+          "scnnf5",
+          "scnnf6",
+          "scnnf7",
+          "scnnf1",
+          "scnnf2",
+          "scnnf3"
+        ],
+        "artworks": [
+          "ar40e5"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Big Cheese Studio"
+        ],
+        "publishers": [
+          "Big Cheese Studio"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2455360"
       },
       "inMyList": false,
       "source": "api"
@@ -6252,7 +7700,8 @@
         "publishers": [
           "Firesquid"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2537470"
       },
       "inMyList": false,
       "source": "api"
@@ -6297,7 +7746,8 @@
         "publishers": [
           "Bryce Bucher"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2571410/500_CALIBER_CONTRACTZ/"
       },
       "inMyList": false,
       "source": "api"
@@ -6327,7 +7777,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1697870/Crown_of_greed/"
       },
       "inMyList": false,
       "source": "api"
@@ -6374,7 +7825,8 @@
         "publishers": [
           "Red Rover Interactive"
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2437390"
       },
       "inMyList": false,
       "source": "api"
@@ -6419,7 +7871,8 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2228250"
       },
       "inMyList": false,
       "source": "api"
@@ -6469,7 +7922,8 @@
           "Nobody Crown",
           "Devcats"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2945150/Feline_Forensics_and_the_Meowseum_Mystery/"
       },
       "inMyList": false,
       "source": "api"
@@ -6515,7 +7969,8 @@
         "publishers": [
           "SporkTank"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2984850"
       },
       "inMyList": false,
       "source": "api"
@@ -6565,7 +8020,8 @@
         "publishers": [
           "Glootschke Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2809660"
       },
       "inMyList": false,
       "source": "api"
@@ -6612,7 +8068,8 @@
         "publishers": [
           "From South Games"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2895680"
       },
       "inMyList": false,
       "source": "api"
@@ -6653,7 +8110,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3039920/Codex_Eternal_Eclipse/"
       },
       "inMyList": false,
       "source": "api"
@@ -6706,63 +8164,8 @@
         "publishers": [
           "Daedalic Entertainment"
         ],
-        "hypes": 17
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Lifted",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa4jd.webp",
-        "dateRelease": "31-03-2026"
-      },
-      "igdb": {
-        "id": 309518,
-        "name": "Lifted",
-        "slug": "lifted",
-        "url": "https://www.igdb.com/games/lifted",
-        "summary": "Step into the Anytime Elevator and get LIFTED — a cinematic single-player 2.5D puzzle-platform adventure from a former Disney ride designer.\n\nSlacker Ari Buktu only pokes his head into Professor Raventhorpe’s lab for extra credit; seconds later he’s hurtling through history on a reckless mission to steal a legendary tiara and fix the professor’s love-life. Each stop opens a new era, a bigger puzzle, and the shadow of a rival tomb-raider who’s always one jump behind…",
-        "firstReleaseDate": 1774915200,
-        "cover": "coa4jd",
-        "genres": [
-          "Platform",
-          "Puzzle",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "Linux",
-          "PC (Microsoft Windows)",
-          "PlayStation 5",
-          "Mac",
-          "Nintendo Switch"
-        ],
-        "screenshots": [
-          "sct4ut",
-          "sct4uu",
-          "sct4uv",
-          "sct4uo",
-          "sct4up",
-          "sct4uq",
-          "sct4ur",
-          "sct4us",
-          "sct4uw",
-          "sct4ux"
-        ],
-        "artworks": [
-          "ar319d",
-          "ar3uo7",
-          "ar3uo8"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Adventure Works"
-        ],
-        "publishers": [
-          "Adventure Works"
-        ],
-        "hypes": 3
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/2092840/The_Occultist/"
       },
       "inMyList": false,
       "source": "api"
@@ -6794,18 +8197,20 @@
           "scvvi5",
           "scvvi6",
           "scvvi7",
-          "scvvi8"
+          "sc11mdn"
         ],
         "artworks": [
-          "ar3m6f",
-          "ar31tc"
+          "ar31tc",
+          "ar588e",
+          "ar588d"
         ],
         "releaseDates": [],
         "developers": [
           "Sunnyside Games"
         ],
         "publishers": [],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2847780"
       },
       "inMyList": false,
       "source": "api"
@@ -6853,7 +8258,8 @@
         "publishers": [
           "Whitethorn Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2902170"
       },
       "inMyList": false,
       "source": "api"
@@ -6900,7 +8306,8 @@
           "Phew Phew Games",
           "GameDev.ist"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3156330/Anomaly_President"
       },
       "inMyList": false,
       "source": "api"
@@ -6948,7 +8355,8 @@
         "publishers": [
           "Elos Games & Arts"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3130220/Sagas_of_Lumin/"
       },
       "inMyList": false,
       "source": "api"
@@ -6997,7 +8405,8 @@
         "publishers": [
           "Astra Logical"
         ],
-        "hypes": 12
+        "hypes": 12,
+        "steamUrl": "https://store.steampowered.com/app/2779120"
       },
       "inMyList": false,
       "source": "api"
@@ -7042,7 +8451,8 @@
         "publishers": [
           "Midwest Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3308200"
       },
       "inMyList": false,
       "source": "api"
@@ -7089,7 +8499,8 @@
         "publishers": [
           "tiny Build"
         ],
-        "hypes": 12
+        "hypes": 12,
+        "steamUrl": "https://store.steampowered.com/app/2706020"
       },
       "inMyList": false,
       "source": "api"
@@ -7134,7 +8545,8 @@
           "Grey Alien Games",
           "Night Signal Entertainment"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3414580/Forbidden_Solitaire/"
       },
       "inMyList": false,
       "source": "api"
@@ -7178,7 +8590,8 @@
         "publishers": [
           "Firenut Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2922250/Baptiste/"
       },
       "inMyList": false,
       "source": "api"
@@ -7222,7 +8635,8 @@
         "publishers": [
           "NoShadow"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3373500"
       },
       "inMyList": false,
       "source": "api"
@@ -7267,7 +8681,8 @@
         "publishers": [
           "Polden Publishing"
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2413950"
       },
       "inMyList": false,
       "source": "api"
@@ -7318,7 +8733,8 @@
         "publishers": [
           "Hatchery Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2004680"
       },
       "inMyList": false,
       "source": "api"
@@ -7365,7 +8781,8 @@
         "publishers": [
           "UmiArt"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3522600"
       },
       "inMyList": false,
       "source": "api"
@@ -7412,7 +8829,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3394840"
       },
       "inMyList": false,
       "source": "api"
@@ -7456,7 +8874,8 @@
         "publishers": [
           "Catoptric Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2707950/Pakinpaks/"
       },
       "inMyList": false,
       "source": "api"
@@ -7501,7 +8920,8 @@
         "publishers": [
           "Headup Games"
         ],
-        "hypes": 37
+        "hypes": 37,
+        "steamUrl": "https://store.steampowered.com/app/3288210/Super_Meat_Boy_3D/"
       },
       "inMyList": false,
       "source": "api"
@@ -7550,7 +8970,8 @@
           "Vladislav Lukyantsev",
           "MonkeyFactory Media Lukyantsev"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3459030"
       },
       "inMyList": false,
       "source": "api"
@@ -7598,7 +9019,8 @@
         "publishers": [
           "Blackmill Games"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3065940"
       },
       "inMyList": false,
       "source": "api"
@@ -7647,7 +9069,8 @@
         "publishers": [
           "DotEmu"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/2535950"
       },
       "inMyList": false,
       "source": "api"
@@ -7695,7 +9118,8 @@
         "publishers": [
           "XLGAMES"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3810880"
       },
       "inMyList": false,
       "source": "api"
@@ -7739,7 +9163,8 @@
           "SwyTapp Games"
         ],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3951680/The_Floor_Above/"
       },
       "inMyList": false,
       "source": "api"
@@ -7788,7 +9213,8 @@
         "publishers": [
           "Emberflight Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/4119360"
       },
       "inMyList": false,
       "source": "api"
@@ -7838,7 +9264,8 @@
         "publishers": [
           "DotEmu"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2321780"
       },
       "inMyList": false,
       "source": "api"
@@ -7890,7 +9317,8 @@
         "publishers": [
           "imissmyfriends.studio"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1638070"
       },
       "inMyList": false,
       "source": "api"
@@ -7939,7 +9367,8 @@
           "Nagai Industries",
           "Beep Japan"
         ],
-        "hypes": 15
+        "hypes": 15,
+        "steamUrl": "https://store.steampowered.com/app/2723430/inKONBINI_One_Store_Many_Stories/"
       },
       "inMyList": false,
       "source": "api"
@@ -7988,7 +9417,8 @@
           "WSS playground",
           "Alliance Arts"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2914150"
       },
       "inMyList": false,
       "source": "api"
@@ -8042,7 +9472,8 @@
         "publishers": [
           "Mommy's Best Games"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2976260"
       },
       "inMyList": false,
       "source": "api"
@@ -8094,7 +9525,8 @@
           "Outerloop Games",
           "Outersloth"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/2950710"
       },
       "inMyList": false,
       "source": "api"
@@ -8142,7 +9574,8 @@
           "NerdyPunkDev"
         ],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2354580"
       },
       "inMyList": false,
       "source": "api"
@@ -8186,7 +9619,8 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 22
+        "hypes": 23,
+        "steamUrl": "https://store.steampowered.com/app/2760560"
       },
       "inMyList": false,
       "source": "api"
@@ -8232,7 +9666,8 @@
         "publishers": [
           "Nintendo"
         ],
-        "hypes": 23
+        "hypes": 23,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -8276,7 +9711,8 @@
         "publishers": [
           "THQ Nordic"
         ],
-        "hypes": 31
+        "hypes": 31,
+        "steamUrl": "https://store.steampowered.com/app/2678080"
       },
       "inMyList": false,
       "source": "api"
@@ -8322,7 +9758,8 @@
         "publishers": [
           "22Cans"
         ],
-        "hypes": 13
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/3165650/Masters_of_Albion/"
       },
       "inMyList": false,
       "source": "api"
@@ -8366,7 +9803,8 @@
         "publishers": [
           "Sony Interactive Entertainment"
         ],
-        "hypes": 84
+        "hypes": 86,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -8414,7 +9852,8 @@
         "publishers": [
           "Skybound Games"
         ],
-        "hypes": 19
+        "hypes": 19,
+        "steamUrl": "https://store.steampowered.com/app/2353060"
       },
       "inMyList": false,
       "source": "api"
@@ -8460,7 +9899,8 @@
         "publishers": [
           "Hooded Horse"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1727760"
       },
       "inMyList": false,
       "source": "api"
@@ -8505,7 +9945,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3949580"
       },
       "inMyList": false,
       "source": "api"
@@ -8555,7 +9996,8 @@
         "publishers": [
           "Bandai Namco Entertainment"
         ],
-        "hypes": 95
+        "hypes": 95,
+        "steamUrl": "https://store.steampowered.com/app/2255370"
       },
       "inMyList": false,
       "source": "api"
@@ -8604,7 +10046,8 @@
         "publishers": [
           "Chorus Worldwide"
         ],
-        "hypes": 13
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/3161220"
       },
       "inMyList": false,
       "source": "api"
@@ -8660,7 +10103,8 @@
         "publishers": [
           "Atari"
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/3237970"
       },
       "inMyList": false,
       "source": "api"
@@ -8707,7 +10151,8 @@
         "publishers": [
           "Perp Games"
         ],
-        "hypes": 25
+        "hypes": 25,
+        "steamUrl": "https://store.steampowered.com/app/2827820/The_Relic_First_Guardian/"
       },
       "inMyList": false,
       "source": "api"
@@ -8753,7 +10198,8 @@
         "publishers": [
           "Mac n Cheese Games"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/3470850"
       },
       "inMyList": false,
       "source": "api"
@@ -8804,7 +10250,8 @@
         "publishers": [
           "Square Enix"
         ],
-        "hypes": 19
+        "hypes": 20,
+        "steamUrl": "https://store.steampowered.com/app/3483510/The_Adventures_of_Elliot_The_Millennium_Tales/"
       },
       "inMyList": false,
       "source": "api"
@@ -8847,7 +10294,8 @@
         "publishers": [
           "Good Smile Company"
         ],
-        "hypes": 18
+        "hypes": 18,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -8892,7 +10340,8 @@
         "publishers": [
           "Ludic Studios"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1101370"
       },
       "inMyList": false,
       "source": "api"
@@ -8942,7 +10391,8 @@
         "publishers": [
           "RedPilzStudio"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/1501310"
       },
       "inMyList": false,
       "source": "api"
@@ -8993,7 +10443,8 @@
         "publishers": [
           "Top Hat Studios"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1848610"
       },
       "inMyList": false,
       "source": "api"
@@ -9040,7 +10491,72 @@
         "publishers": [
           "Pracy Studios"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1374860"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Mina the Hollower",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4g15.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 189781,
+        "name": "Mina the Hollower",
+        "slug": "mina-the-hollower",
+        "url": "https://www.igdb.com/games/mina-the-hollower",
+        "summary": "Mina the Hollower is a bone-chilling action-adventure game featuring classic gameplay and an 8-bit aesthetic in the style of Game Boy Color, refined for the modern era.\n\nQuick and deliberate 60fps action combat, captivating world design, and top-down adventuring combine in a nostalgic blend. Whip foes, burrow through the ground, and explore a pixel-perfect world in Mina the Hollower, a brand new game from the developers who brought you Shovel Knight!",
+        "firstReleaseDate": 1782777600,
+        "cover": "co4g15",
+        "genres": [
+          "Platform",
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PlayStation 4",
+          "Nintendo Switch 2",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Xbox One",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scfkjl",
+          "scfkjm",
+          "scgr2b",
+          "scgr2c",
+          "scgr2d",
+          "scgr2e",
+          "scgr2f"
+        ],
+        "artworks": [
+          "ar1unv",
+          "ar47xt",
+          "ar47xu",
+          "ar47xv",
+          "ar47xw",
+          "ar47xx",
+          "ar47xy",
+          "ar47xz",
+          "ar47y0",
+          "ar47y1",
+          "ar47y2",
+          "ar47y3"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Yacht Club Games"
+        ],
+        "publishers": [
+          "Yacht Club Games"
+        ],
+        "hypes": 33,
+        "steamUrl": "https://store.steampowered.com/app/1875580/Mina_the_Hollower"
       },
       "inMyList": false,
       "source": "api"
@@ -9084,7 +10600,8 @@
         "publishers": [
           "Neon Doctrine"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1761910/Athanasia"
       },
       "inMyList": false,
       "source": "api"
@@ -9127,7 +10644,8 @@
         "publishers": [
           "borispixel"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2159260"
       },
       "inMyList": false,
       "source": "api"
@@ -9178,7 +10696,8 @@
         "publishers": [
           "Gixer Entertainment"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2069330"
       },
       "inMyList": false,
       "source": "api"
@@ -9225,7 +10744,8 @@
         "publishers": [
           "Freedom Games"
         ],
-        "hypes": 17
+        "hypes": 17,
+        "steamUrl": "https://store.steampowered.com/app/2376260/Mariachi_Legends/"
       },
       "inMyList": false,
       "source": "api"
@@ -9271,7 +10791,8 @@
         "publishers": [
           "Freedom Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2512450"
       },
       "inMyList": false,
       "source": "api"
@@ -9321,7 +10842,8 @@
         "publishers": [
           "Cup Dog Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1845250"
       },
       "inMyList": false,
       "source": "api"
@@ -9387,7 +10909,8 @@
         "publishers": [
           "Goblinz Publishing"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2556470/Fantastic_Haven/"
       },
       "inMyList": false,
       "source": "api"
@@ -9434,7 +10957,8 @@
           "Recurring Dream",
           "Outersloth"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2527160/Desktop_Explorer/"
       },
       "inMyList": false,
       "source": "api"
@@ -9480,7 +11004,8 @@
         "publishers": [
           "Pipapo Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2702260"
       },
       "inMyList": false,
       "source": "api"
@@ -9532,7 +11057,107 @@
         "publishers": [
           "Square Glade Games"
         ],
-        "hypes": 29
+        "hypes": 29,
+        "steamUrl": "https://store.steampowered.com/app/2681030/Outbound/"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Lost in the Roots",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaabm.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 298235,
+        "name": "Lost in the Roots",
+        "slug": "lost-in-the-roots",
+        "url": "https://www.igdb.com/games/lost-in-the-roots",
+        "summary": "A 2D adventure with a twisted story about guilt, where a girl is kidnapped and held in an attic somewhere in the countryside. Why and who took the girl to this godforsaken place? What to do when there is nowhere to run?",
+        "firstReleaseDate": 1782777600,
+        "cover": "coaabm",
+        "genres": [
+          "Point-and-click",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scrzxv",
+          "scrzxx",
+          "scrzxy",
+          "scrzy1",
+          "scrzy0",
+          "scrzy3"
+        ],
+        "artworks": [
+          "ar40t8"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2872240"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Lifted",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa4jd.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 309518,
+        "name": "Lifted",
+        "slug": "lifted",
+        "url": "https://www.igdb.com/games/lifted",
+        "summary": "Step into the Anytime Elevator and get LIFTED — a cinematic single-player 2.5D puzzle-platform adventure from a former Disney ride designer.\n\nSlacker Ari Buktu only pokes his head into Professor Raventhorpe’s lab for extra credit; seconds later he’s hurtling through history on a reckless mission to steal a legendary tiara and fix the professor’s love-life. Each stop opens a new era, a bigger puzzle, and the shadow of a rival tomb-raider who’s always one jump behind…",
+        "firstReleaseDate": 1782777600,
+        "cover": "coa4jd",
+        "genres": [
+          "Platform",
+          "Puzzle",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Linux",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Mac",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sct4ut",
+          "sct4uu",
+          "sct4uv",
+          "sct4uo",
+          "sct4up",
+          "sct4uq",
+          "sct4ur",
+          "sct4us",
+          "sct4uw",
+          "sct4ux"
+        ],
+        "artworks": [
+          "ar319d",
+          "ar3uo7",
+          "ar3uo8"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Adventure Works"
+        ],
+        "publishers": [
+          "Adventure Works"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2184020"
       },
       "inMyList": false,
       "source": "api"
@@ -9580,7 +11205,8 @@
         "publishers": [
           "505 Games"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/3077640/MIGHTREYA/"
       },
       "inMyList": false,
       "source": "api"
@@ -9623,7 +11249,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3509400/A_Heavy_Morning/"
       },
       "inMyList": false,
       "source": "api"
@@ -9669,7 +11296,8 @@
           "Rusty Lake"
         ],
         "publishers": [],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3636770/Servant_of_the_Lake/"
       },
       "inMyList": false,
       "source": "api"
@@ -9719,7 +11347,8 @@
         "publishers": [
           "Refugium Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3562580"
       },
       "inMyList": false,
       "source": "api"
@@ -9769,7 +11398,8 @@
         "publishers": [
           "Frostwood Interactive"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/3798860/Shutter_Story/"
       },
       "inMyList": false,
       "source": "api"
@@ -9817,7 +11447,8 @@
         "publishers": [
           "Fireshine Games"
         ],
-        "hypes": 22
+        "hypes": 22,
+        "steamUrl": "https://store.steampowered.com/app/2524850"
       },
       "inMyList": false,
       "source": "api"
@@ -9873,7 +11504,8 @@
         "publishers": [
           "Team17"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3086670"
       },
       "inMyList": false,
       "source": "api"
@@ -9923,7 +11555,8 @@
         "publishers": [
           "Lyrical Games"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/3211720"
       },
       "inMyList": false,
       "source": "api"
@@ -9970,7 +11603,8 @@
         "publishers": [
           "Kepler Interactive"
         ],
-        "hypes": 20
+        "hypes": 20,
+        "steamUrl": "https://store.steampowered.com/app/1637460"
       },
       "inMyList": false,
       "source": "api"
@@ -10017,7 +11651,110 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1165990/Kiln/"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Mistfall Hunter",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ycx.webp",
+        "dateRelease": "01-07-2026"
+      },
+      "igdb": {
+        "id": 320141,
+        "name": "Mistfall Hunter",
+        "slug": "mistfall-hunter",
+        "url": "https://www.igdb.com/games/mistfall-hunter",
+        "summary": "Mistfall Hunter is a third-person action PvPvE extraction RPG. Gear up for different classes, master combos and strategic skills, and face intense battles against monsters or players, solo or with teammates. Only a successful escape will secure your treasures.",
+        "firstReleaseDate": 1782864000,
+        "cover": "co8ycx",
+        "genres": [
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scu85c",
+          "scu85d",
+          "scu85e",
+          "scu85f",
+          "scu85g",
+          "scu85h",
+          "scu85i",
+          "scu85j"
+        ],
+        "artworks": [
+          "ar35r2"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Bellring Games"
+        ],
+        "publishers": [
+          "Skystone Games"
+        ],
+        "hypes": 25,
+        "steamUrl": "https://store.steampowered.com/app/3282300"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Marvel Tokon: Fighting Souls",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wwj.webp",
+        "dateRelease": "06-08-2026"
+      },
+      "igdb": {
+        "id": 347132,
+        "name": "Marvel Tokon: Fighting Souls",
+        "slug": "marvel-tokon-fighting-souls",
+        "url": "https://www.igdb.com/games/marvel-tokon-fighting-souls",
+        "summary": "Assemble your team of legendary Marvel characters in the ultimate 4v4 tag team fighter from PlayStation Studios, Arc System Works and Marvel Games.\nImmerse yourself in the Marvel universe like never before with an iconic roster of heroes and villains, authentic stages, and intuitive gameplay mechanics. Experience the thrill of fast-paced over the top action with stunning anime-inspired visuals, where every battle is a unique and exciting team VS battle experience.",
+        "firstReleaseDate": 1785974400,
+        "cover": "co9wwj",
+        "genres": [
+          "Fighting"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scx7bu",
+          "scx7bv",
+          "scx7bw",
+          "scx7bx",
+          "scx7by",
+          "scx7bz",
+          "scx7c0",
+          "scx7c1",
+          "scyrtc",
+          "scyrtd",
+          "scyrte"
+        ],
+        "artworks": [
+          "ar3nw1",
+          "ar3nw7",
+          "ar3nw6"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Arc System Works"
+        ],
+        "publishers": [
+          "PlayStation Studios",
+          "Sony Interactive Entertainment",
+          "Marvel Games"
+        ],
+        "hypes": 34,
+        "steamUrl": "https://store.steampowered.com/app/3787240"
       },
       "inMyList": false,
       "source": "api"
@@ -10061,7 +11798,8 @@
           "Illfonic",
           "Gun Interactive"
         ],
-        "hypes": 16
+        "hypes": 16,
+        "steamUrl": "https://store.steampowered.com/app/3219630"
       },
       "inMyList": false,
       "source": "api"
@@ -10110,7 +11848,8 @@
         "publishers": [
           "Daedalic Entertainment"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2572040"
       },
       "inMyList": false,
       "source": "api"
@@ -10183,7 +11922,8 @@
         "publishers": [
           "CCP"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/1872800"
       },
       "inMyList": false,
       "source": "api"
@@ -10233,7 +11973,8 @@
         "publishers": [
           "Nine Dots Publishing"
         ],
-        "hypes": 17
+        "hypes": 17,
+        "steamUrl": "https://store.steampowered.com/app/2849490"
       },
       "inMyList": false,
       "source": "api"
@@ -10289,7 +12030,8 @@
         "publishers": [
           "Eksil Team"
         ],
-        "hypes": 42
+        "hypes": 42,
+        "steamUrl": "https://store.steampowered.com/app/3031890/Acts_of_Blood/"
       },
       "inMyList": false,
       "source": "api"
@@ -10343,55 +12085,8 @@
           "Bippinbits",
           "Kepler Interactive"
         ],
-        "hypes": 26
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Starsand Island",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co93z9.webp",
-        "dateRelease": "30-09-2026"
-      },
-      "igdb": {
-        "id": 310885,
-        "name": "Starsand Island",
-        "slug": "starsand-island",
-        "url": "https://www.igdb.com/games/starsand-island",
-        "summary": "Leave the hustle of the city behind and embrace life on Starsand Island. Fish, farm, raise animals, and befriend or fall in love with locals to learn their secrets. Customize your world with our DIY system, and invite friends to help build your dream paradise!",
-        "firstReleaseDate": 1790726400,
-        "cover": "co93z9",
-        "genres": [
-          "Role-playing (RPG)",
-          "Simulator",
-          "Indie"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "Nintendo Switch 2",
-          "PC (Microsoft Windows)",
-          "PlayStation 5",
-          "Mac"
-        ],
-        "screenshots": [
-          "sctbql",
-          "sctbqk",
-          "sctbqm",
-          "sctbqn",
-          "sctbqo"
-        ],
-        "artworks": [
-          "ar322l"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Seed Lab"
-        ],
-        "publishers": [
-          "Seed Lab"
-        ],
-        "hypes": 11
+        "hypes": 26,
+        "steamUrl": "https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/"
       },
       "inMyList": false,
       "source": "api"
@@ -10452,56 +12147,8 @@
         "publishers": [
           "Line Games"
         ],
-        "hypes": 3
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Beast of Reincarnation",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobc5q.webp",
-        "dateRelease": "30-09-2026"
-      },
-      "igdb": {
-        "id": 348180,
-        "name": "Beast of Reincarnation",
-        "slug": "beast-of-reincarnation",
-        "url": "https://www.igdb.com/games/beast-of-reincarnation",
-        "summary": "In post-apocalyptic Japan, humanity’s last hope may rest with Emma and her loyal canine companion, Koo. Explore what it means to be human in Beast of Reincarnation, an expansive one-person, one-dog action RPG built around demanding, technical combat. What awaits at journey’s end?",
-        "firstReleaseDate": 1790726400,
-        "cover": "cobc5q",
-        "genres": [
-          "Role-playing (RPG)",
-          "Adventure"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "scxbca",
-          "scxbcb",
-          "scxbcc",
-          "scxbcd",
-          "scxbce",
-          "scxbcf"
-        ],
-        "artworks": [
-          "ar3ouz",
-          "ar558h",
-          "ar558i",
-          "ar558j"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Game Freak"
-        ],
-        "publishers": [
-          "Fictions"
-        ],
-        "hypes": 59
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3470500"
       },
       "inMyList": false,
       "source": "api"
@@ -10551,7 +12198,8 @@
         "publishers": [
           "Attrito M7 Productions"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/3639070"
       },
       "inMyList": false,
       "source": "api"
@@ -10601,7 +12249,8 @@
         "publishers": [
           "Experimental Gameplay Group"
         ],
-        "hypes": 13
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/2424420/Avatar_Legends_The_Fighting_Game/"
       },
       "inMyList": false,
       "source": "api"
@@ -10652,7 +12301,8 @@
         "publishers": [
           "Nihon Falcom"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -10704,7 +12354,8 @@
         "publishers": [
           "Electric Saint"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/2202650"
       },
       "inMyList": false,
       "source": "api"
@@ -10753,7 +12404,8 @@
         "publishers": [
           "Deep Worlds"
         ],
-        "hypes": 16
+        "hypes": 16,
+        "steamUrl": "https://store.steampowered.com/app/1313230"
       },
       "inMyList": false,
       "source": "api"
@@ -10817,7 +12469,8 @@
         "publishers": [
           "Cloud Imperium Games Corporation"
         ],
-        "hypes": 50
+        "hypes": 50,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -10863,7 +12516,8 @@
         "publishers": [
           "Epic Games Publishing"
         ],
-        "hypes": 35
+        "hypes": 35,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -10921,7 +12575,8 @@
         "publishers": [
           "Chucklefish Games"
         ],
-        "hypes": 54
+        "hypes": 54,
+        "steamUrl": "https://store.steampowered.com/app/1846700"
       },
       "inMyList": false,
       "source": "api"
@@ -10977,7 +12632,8 @@
         "publishers": [
           "Titan Roc"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/951770"
       },
       "inMyList": false,
       "source": "api"
@@ -11026,7 +12682,8 @@
         "publishers": [
           "Sköll Studio"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/1108600"
       },
       "inMyList": false,
       "source": "api"
@@ -11077,7 +12734,8 @@
         "publishers": [
           "Nootbox Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1104600"
       },
       "inMyList": false,
       "source": "api"
@@ -11126,7 +12784,8 @@
         "publishers": [
           "Owlcat Games"
         ],
-        "hypes": 18
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/1173980"
       },
       "inMyList": false,
       "source": "api"
@@ -11171,7 +12830,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1181550"
       },
       "inMyList": false,
       "source": "api"
@@ -11216,7 +12876,8 @@
         "publishers": [
           "Wild Mage Games"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1171980"
       },
       "inMyList": false,
       "source": "api"
@@ -11264,7 +12925,8 @@
         "publishers": [
           "Dream Operator"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2933200/Tukoni_Forest_Keepers/"
       },
       "inMyList": false,
       "source": "api"
@@ -11316,7 +12978,8 @@
         "publishers": [
           "Deck13 Interactive"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1129360/Pocket_Wheels"
       },
       "inMyList": false,
       "source": "api"
@@ -11362,7 +13025,8 @@
           "WSS playground",
           "PLAYISM"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1630450/EDENschemata"
       },
       "inMyList": false,
       "source": "api"
@@ -11410,7 +13074,8 @@
         "publishers": [
           "DEKLAZON"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/1547540/"
       },
       "inMyList": false,
       "source": "api"
@@ -11449,7 +13114,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/1670650"
       },
       "inMyList": false,
       "source": "api"
@@ -11500,7 +13166,8 @@
         "publishers": [
           "Parity Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1689340/Island_of_Winds"
       },
       "inMyList": false,
       "source": "api"
@@ -11549,7 +13216,8 @@
         "publishers": [
           "Hooded Horse"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1672320"
       },
       "inMyList": false,
       "source": "api"
@@ -11596,7 +13264,8 @@
         "publishers": [
           "Joystick Ventures"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1969810"
       },
       "inMyList": false,
       "source": "api"
@@ -11643,7 +13312,8 @@
         "publishers": [
           "2P Games"
         ],
-        "hypes": 21
+        "hypes": 21,
+        "steamUrl": "https://store.steampowered.com/app/1687540/Showa_American_Story"
       },
       "inMyList": false,
       "source": "api"
@@ -11693,7 +13363,8 @@
         "publishers": [
           "GB Patch Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1622130"
       },
       "inMyList": false,
       "source": "api"
@@ -11737,7 +13408,8 @@
         "publishers": [
           "Spellcast Studios"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1154960"
       },
       "inMyList": false,
       "source": "api"
@@ -11783,7 +13455,8 @@
         "publishers": [
           "Cathedral Studios"
         ],
-        "hypes": 17
+        "hypes": 17,
+        "steamUrl": "https://store.steampowered.com/app/2411280/The_Bornless/"
       },
       "inMyList": false,
       "source": "api"
@@ -11830,7 +13503,8 @@
         "publishers": [
           "rokaplay"
         ],
-        "hypes": 16
+        "hypes": 16,
+        "steamUrl": "https://store.steampowered.com/app/1805110"
       },
       "inMyList": false,
       "source": "api"
@@ -11876,7 +13550,8 @@
         "publishers": [
           "Assemble Entertainment"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1927360"
       },
       "inMyList": false,
       "source": "api"
@@ -11924,7 +13599,8 @@
         "publishers": [
           "Lifeline Entertainment"
         ],
-        "hypes": 23
+        "hypes": 23,
+        "steamUrl": "https://store.steampowered.com/app/1803140/Deer__Boy"
       },
       "inMyList": false,
       "source": "api"
@@ -11970,7 +13646,8 @@
         "publishers": [
           "505 Games"
         ],
-        "hypes": 32
+        "hypes": 32,
+        "steamUrl": "https://store.steampowered.com/app/1488490/Nivalis"
       },
       "inMyList": false,
       "source": "api"
@@ -12014,7 +13691,55 @@
         "publishers": [
           "Nowhere Studios"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1617120/Good_Heavens"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Phonopolis",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4uyw.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 204549,
+        "name": "Phonopolis",
+        "slug": "phonopolis",
+        "url": "https://www.igdb.com/games/phonopolis",
+        "summary": "The story of Phonopolis tackles relatable, real-world themes and topics, focusing on manipulation and individualism, but still keeping the overall experience playful and light-hearted. Players will take on the role of Felix, a thoughtful young man who, along with his fellow citizens, faces the imminent threat of falling under the control of the city’s authoritarian Leader once and for all, effectively losing their humanity. Accidentally becoming the only person who consciously recognizes the threat, young Felix must try to stop the Leader from playing the Absolute tone...",
+        "firstReleaseDate": 1798675200,
+        "cover": "co4uyw",
+        "genres": [
+          "Point-and-click",
+          "Puzzle",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "schde7",
+          "schde8",
+          "schde9",
+          "schdea",
+          "schdeb"
+        ],
+        "artworks": [
+          "ar1qrm"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Amanita Design"
+        ],
+        "publishers": [
+          "Amanita Design"
+        ],
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/1206070/Phonopolis"
       },
       "inMyList": false,
       "source": "api"
@@ -12056,7 +13781,8 @@
         "publishers": [
           "Gamera Game"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1985940"
       },
       "inMyList": false,
       "source": "api"
@@ -12101,7 +13827,8 @@
         "publishers": [
           "Potata Company"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2068190"
       },
       "inMyList": false,
       "source": "api"
@@ -12144,7 +13871,8 @@
         "publishers": [
           "grownarts"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1418750"
       },
       "inMyList": false,
       "source": "api"
@@ -12192,7 +13920,8 @@
         "publishers": [
           "Unfold Games"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/2055770/Bloody_Hell_Hotel"
       },
       "inMyList": false,
       "source": "api"
@@ -12240,7 +13969,8 @@
           "Bonsai Collective",
           "SUPERGG.COM"
         ],
-        "hypes": 17
+        "hypes": 17,
+        "steamUrl": "https://store.steampowered.com/app/1933000/Luna_Abyss"
       },
       "inMyList": false,
       "source": "api"
@@ -12293,7 +14023,8 @@
           "Saibot Studios",
           "New Blood Interactive"
         ],
-        "hypes": 17
+        "hypes": 17,
+        "steamUrl": "https://store.steampowered.com/app/2121510"
       },
       "inMyList": false,
       "source": "api"
@@ -12341,7 +14072,8 @@
           "Room6",
           "Yokaze"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2065580"
       },
       "inMyList": false,
       "source": "api"
@@ -12384,7 +14116,8 @@
         "publishers": [
           "Apogee Entertainment"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2083660"
       },
       "inMyList": false,
       "source": "api"
@@ -12432,56 +14165,8 @@
         "publishers": [
           "Megabit Publishing"
         ],
-        "hypes": 24
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Control Resonant",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0fw.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 225582,
-        "name": "Control Resonant",
-        "slug": "control-resonant--1",
-        "url": "https://www.igdb.com/games/control-resonant--1",
-        "summary": "Explore a warped Manhattan on the brink of paranatural annihilation in this thrilling action-adventure RPG. Unleash the extraordinary powers of Dylan Faden as he fights for his humanity and survival against a reality-bending cosmic threat.",
-        "firstReleaseDate": 1798675200,
-        "cover": "cob0fw",
-        "genres": [
-          "Role-playing (RPG)",
-          "Hack and slash/Beat 'em up",
-          "Adventure"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)",
-          "PlayStation 5",
-          "Mac"
-        ],
-        "screenshots": [
-          "scuxut",
-          "sc10td0",
-          "sc10td1",
-          "sc10td2",
-          "sc10td3",
-          "sc10tcz"
-        ],
-        "artworks": [
-          "ar4v1b",
-          "ar4v1h"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Remedy Entertainment"
-        ],
-        "publishers": [
-          "Remedy Entertainment"
-        ],
-        "hypes": 88
+        "hypes": 24,
+        "steamUrl": "https://store.steampowered.com/app/3341000/Thick_As_Thieves/"
       },
       "inMyList": false,
       "source": "api"
@@ -12525,7 +14210,8 @@
         "publishers": [
           "Top Hat Studios"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/2251170"
       },
       "inMyList": false,
       "source": "api"
@@ -12571,7 +14257,8 @@
         "publishers": [
           "LEVEL-5"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -12609,7 +14296,8 @@
         "publishers": [
           "LEVEL-5"
         ],
-        "hypes": 32
+        "hypes": 32,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -12660,7 +14348,8 @@
           "XSEED Games",
           "Marvelous Europe Ltd."
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2209900"
       },
       "inMyList": false,
       "source": "api"
@@ -12710,7 +14399,8 @@
         "publishers": [
           "Hooded Horse"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2295060"
       },
       "inMyList": false,
       "source": "api"
@@ -12755,7 +14445,8 @@
         "publishers": [
           "Red Spring Studio"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2185510"
       },
       "inMyList": false,
       "source": "api"
@@ -12799,7 +14490,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/1798230"
       },
       "inMyList": false,
       "source": "api"
@@ -12845,7 +14537,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2503230"
       },
       "inMyList": false,
       "source": "api"
@@ -12894,7 +14587,8 @@
         "publishers": [
           "Blumhouse Games"
         ],
-        "hypes": 25
+        "hypes": 25,
+        "steamUrl": "https://store.steampowered.com/app/3255110/Grave_Seasons/"
       },
       "inMyList": false,
       "source": "api"
@@ -12943,7 +14637,8 @@
         "publishers": [
           "PLAYISM"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2425200/_/"
       },
       "inMyList": false,
       "source": "api"
@@ -12993,7 +14688,8 @@
         "publishers": [
           "Gravity"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/1902860/Light_Odyssey/"
       },
       "inMyList": false,
       "source": "api"
@@ -13047,7 +14743,8 @@
         "publishers": [
           "Retroware"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2303850/Toxic_Crusaders/"
       },
       "inMyList": false,
       "source": "api"
@@ -13093,7 +14790,8 @@
         "publishers": [
           "ynoham"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2248150/Gunmetal_Gothic/"
       },
       "inMyList": false,
       "source": "api"
@@ -13146,7 +14844,8 @@
         "publishers": [
           "Qloud Games"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2320980/Loftia/"
       },
       "inMyList": false,
       "source": "api"
@@ -13193,7 +14892,8 @@
         "publishers": [
           "Daedalic Entertainment"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/2464520"
       },
       "inMyList": false,
       "source": "api"
@@ -13236,7 +14936,53 @@
         "publishers": [
           "Shosha Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2509360"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Garbage Country",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8s0l.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 260303,
+        "name": "Garbage Country",
+        "slug": "garbage-country",
+        "url": "https://www.igdb.com/games/garbage-country",
+        "summary": "Drive through a pixel art 3D wasteland. Explore vast procedural terrains dotted with hand-crafted landmarks, each holding echoes of a forgotten past.",
+        "firstReleaseDate": 1798675200,
+        "cover": "co8s0l",
+        "genres": [
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scns85",
+          "scns87",
+          "scns89",
+          "scns8b",
+          "scns8d",
+          "scns8f"
+        ],
+        "artworks": [
+          "ar2g2d"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Noio"
+        ],
+        "publishers": [
+          "Noio"
+        ],
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/2530870"
       },
       "inMyList": false,
       "source": "api"
@@ -13299,7 +15045,8 @@
           "Marvelous Europe Ltd.",
           "XSEED Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3254990/Corpse_Party_II_Darkness_Distortion/"
       },
       "inMyList": false,
       "source": "api"
@@ -13339,7 +15086,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2517080"
       },
       "inMyList": false,
       "source": "api"
@@ -13394,7 +15142,8 @@
         "publishers": [
           "Mossy Grove Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2341620"
       },
       "inMyList": false,
       "source": "api"
@@ -13440,7 +15189,8 @@
         "publishers": [
           "Oopsie Daisies Studio"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/2257440"
       },
       "inMyList": false,
       "source": "api"
@@ -13487,7 +15237,8 @@
           "Galaktus",
           "Twigames"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2362070"
       },
       "inMyList": false,
       "source": "api"
@@ -13533,7 +15284,8 @@
         "publishers": [
           "xena-spectrale"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2559740"
       },
       "inMyList": false,
       "source": "api"
@@ -13587,7 +15339,8 @@
         "publishers": [
           "Abandoned Sheep"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2111550"
       },
       "inMyList": false,
       "source": "api"
@@ -13629,7 +15382,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2636460"
       },
       "inMyList": false,
       "source": "api"
@@ -13686,7 +15440,8 @@
         "publishers": [
           "Sunny Lab Games"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/2967950"
       },
       "inMyList": false,
       "source": "api"
@@ -13739,7 +15494,8 @@
         "publishers": [
           "SFB Games"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/1696770"
       },
       "inMyList": false,
       "source": "api"
@@ -13765,6 +15521,7 @@
         ],
         "platforms": [
           "PC (Microsoft Windows)",
+          "PlayStation 5",
           "Mac"
         ],
         "screenshots": [
@@ -13778,7 +15535,10 @@
           "scpuyy"
         ],
         "artworks": [
-          "ar2o82"
+          "ar57nd",
+          "ar57ne",
+          "ar57nc",
+          "ar57nf"
         ],
         "releaseDates": [],
         "developers": [
@@ -13787,7 +15547,8 @@
         "publishers": [
           "Panic"
         ],
-        "hypes": 18
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/1478500"
       },
       "inMyList": false,
       "source": "api"
@@ -13829,7 +15590,8 @@
         "publishers": [
           "Marutoku Base"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2749250/LOD/"
       },
       "inMyList": false,
       "source": "api"
@@ -13882,7 +15644,8 @@
           "Mr. Podunkian",
           "Mr. Podunkian"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2175840/Sunkissed_City/"
       },
       "inMyList": false,
       "source": "api"
@@ -13933,7 +15696,8 @@
         "publishers": [
           "Kwalee"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/2355020/Lost_Hellden/"
       },
       "inMyList": false,
       "source": "api"
@@ -13984,7 +15748,8 @@
         "publishers": [
           "imaginarylab"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2706980"
       },
       "inMyList": false,
       "source": "api"
@@ -14026,7 +15791,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2659980"
       },
       "inMyList": false,
       "source": "api"
@@ -14072,7 +15838,8 @@
         "publishers": [
           "Frogwares"
         ],
-        "hypes": 33
+        "hypes": 34,
+        "steamUrl": "https://store.steampowered.com/app/2825860"
       },
       "inMyList": false,
       "source": "api"
@@ -14116,7 +15883,8 @@
         "publishers": [
           "Studio Pixel Punk"
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2872300"
       },
       "inMyList": false,
       "source": "api"
@@ -14168,7 +15936,8 @@
         "publishers": [
           "FIEND GAMES"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2816730"
       },
       "inMyList": false,
       "source": "api"
@@ -14216,48 +15985,8 @@
         "publishers": [
           "Serafini Productions"
         ],
-        "hypes": 8
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Lost in the Roots",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaabm.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 298235,
-        "name": "Lost in the Roots",
-        "slug": "lost-in-the-roots",
-        "url": "https://www.igdb.com/games/lost-in-the-roots",
-        "summary": "A 2D adventure with a twisted story about guilt, where a girl is kidnapped and held in an attic somewhere in the countryside. Why and who took the girl to this godforsaken place? What to do when there is nowhere to run?",
-        "firstReleaseDate": 1798675200,
-        "cover": "coaabm",
-        "genres": [
-          "Point-and-click",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scrzxv",
-          "scrzxx",
-          "scrzxy",
-          "scrzy1",
-          "scrzy0",
-          "scrzy3"
-        ],
-        "artworks": [
-          "ar40t8"
-        ],
-        "releaseDates": [],
-        "developers": [],
-        "publishers": [],
-        "hypes": 3
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/2846530"
       },
       "inMyList": false,
       "source": "api"
@@ -14301,7 +16030,8 @@
         "publishers": [
           "VoodooDuck"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2867470"
       },
       "inMyList": false,
       "source": "api"
@@ -14341,7 +16071,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2979500/"
       },
       "inMyList": false,
       "source": "api"
@@ -14388,7 +16119,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2938870"
       },
       "inMyList": false,
       "source": "api"
@@ -14434,7 +16166,8 @@
         "publishers": [
           "Top Hat Studios"
         ],
-        "hypes": 14
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/2830030"
       },
       "inMyList": false,
       "source": "api"
@@ -14481,7 +16214,8 @@
         "publishers": [
           "Paper Cult"
         ],
-        "hypes": 19
+        "hypes": 19,
+        "steamUrl": "https://store.steampowered.com/app/1913120"
       },
       "inMyList": false,
       "source": "api"
@@ -14528,7 +16262,8 @@
         "publishers": [
           "Devolver Digital"
         ],
-        "hypes": 19
+        "hypes": 19,
+        "steamUrl": "https://store.steampowered.com/app/1363940/Tenjutsu/"
       },
       "inMyList": false,
       "source": "api"
@@ -14576,7 +16311,8 @@
         "publishers": [
           "Annapurna Interactive"
         ],
-        "hypes": 60
+        "hypes": 60,
+        "steamUrl": "https://store.steampowered.com/app/2582320/Mixtape/"
       },
       "inMyList": false,
       "source": "api"
@@ -14620,7 +16356,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2826790"
       },
       "inMyList": false,
       "source": "api"
@@ -14666,7 +16403,8 @@
         "publishers": [
           "CSquareStudio"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3002520/Gummy_Nightmares/"
       },
       "inMyList": false,
       "source": "api"
@@ -14715,7 +16453,8 @@
         "publishers": [
           "Clickteam"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/3078140/Five_Laps_at_Freddys/"
       },
       "inMyList": false,
       "source": "api"
@@ -14758,7 +16497,8 @@
         "publishers": [
           "Magic Pie Games"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/2979810/POLYARIS/"
       },
       "inMyList": false,
       "source": "api"
@@ -14805,7 +16545,8 @@
         "publishers": [
           "Peachieevee"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3157160/Cupids_Chatroom/"
       },
       "inMyList": false,
       "source": "api"
@@ -14854,7 +16595,8 @@
         "publishers": [
           "MythicOwl"
         ],
-        "hypes": 13
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/3090810"
       },
       "inMyList": false,
       "source": "api"
@@ -14892,7 +16634,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2542020"
       },
       "inMyList": false,
       "source": "api"
@@ -14947,7 +16690,8 @@
         "publishers": [
           "Team17"
         ],
-        "hypes": 18
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/2333000/Silver_Pines/"
       },
       "inMyList": false,
       "source": "api"
@@ -14995,7 +16739,8 @@
         "publishers": [
           "Mythwright"
         ],
-        "hypes": 4
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3119540/Scriptorium_Master_of_Manuscripts/"
       },
       "inMyList": false,
       "source": "api"
@@ -15041,7 +16786,8 @@
           "HK HERO ENTERTAINMENT"
         ],
         "publishers": [],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2512880/CrisisX/"
       },
       "inMyList": false,
       "source": "api"
@@ -15093,7 +16839,8 @@
         "publishers": [
           "Springloaded"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2365790"
       },
       "inMyList": false,
       "source": "api"
@@ -15139,7 +16886,8 @@
         "publishers": [
           "TomorrowHead Studio"
         ],
-        "hypes": 29
+        "hypes": 29,
+        "steamUrl": "https://store.steampowered.com/app/3144860/"
       },
       "inMyList": false,
       "source": "api"
@@ -15184,7 +16932,8 @@
         "publishers": [
           "Knights Peak"
         ],
-        "hypes": 23
+        "hypes": 23,
+        "steamUrl": "https://store.steampowered.com/app/3161310/Hela/"
       },
       "inMyList": false,
       "source": "api"
@@ -15233,7 +16982,8 @@
           "Hooded Horse",
           "Ubisoft Pictures"
         ],
-        "hypes": 37
+        "hypes": 37,
+        "steamUrl": "https://store.steampowered.com/app/3105440"
       },
       "inMyList": false,
       "source": "api"
@@ -15279,7 +17029,8 @@
         "publishers": [
           "MOON CATALYST"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3018390/"
       },
       "inMyList": false,
       "source": "api"
@@ -15323,7 +17074,8 @@
         "publishers": [
           "Regl Studios"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2950860/Shadows_of_the_Werewolf"
       },
       "inMyList": false,
       "source": "api"
@@ -15368,7 +17120,8 @@
         "publishers": [
           "Ironward"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2805850"
       },
       "inMyList": false,
       "source": "api"
@@ -15412,7 +17165,8 @@
         "publishers": [
           "Flyway Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2697940/Ascend_to_ZERO/"
       },
       "inMyList": false,
       "source": "api"
@@ -15459,7 +17213,8 @@
         "publishers": [
           "Kakao Games"
         ],
-        "hypes": 26
+        "hypes": 26,
+        "steamUrl": "https://store.steampowered.com/app/3218230"
       },
       "inMyList": false,
       "source": "api"
@@ -15512,7 +17267,8 @@
         "publishers": [
           "Kwalee"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3058660"
       },
       "inMyList": false,
       "source": "api"
@@ -15565,7 +17321,8 @@
         "publishers": [
           "CI Games"
         ],
-        "hypes": 45
+        "hypes": 45,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -15613,7 +17370,8 @@
         "publishers": [
           "Nebule Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2669060/Beyond_Astra/"
       },
       "inMyList": false,
       "source": "api"
@@ -15659,7 +17417,8 @@
         "publishers": [
           "Fulqrum Publishing"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/2461440/"
       },
       "inMyList": false,
       "source": "api"
@@ -15704,7 +17463,8 @@
         "publishers": [
           "THE BROTHERHOOD"
         ],
-        "hypes": 12
+        "hypes": 12,
+        "steamUrl": "https://store.steampowered.com/app/2591790"
       },
       "inMyList": false,
       "source": "api"
@@ -15752,7 +17512,8 @@
         "publishers": [
           "Gaijin Entertainment"
         ],
-        "hypes": 35
+        "hypes": 35,
+        "steamUrl": "https://store.steampowered.com/app/2887580/Active_Matter/"
       },
       "inMyList": false,
       "source": "api"
@@ -15807,7 +17568,8 @@
         "publishers": [
           "Artificial Disasters"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3258580"
       },
       "inMyList": false,
       "source": "api"
@@ -15852,7 +17614,8 @@
         "publishers": [
           "Softboi Games"
         ],
-        "hypes": 19
+        "hypes": 19,
+        "steamUrl": "https://store.steampowered.com/app/3257270/Haunted_by_Femboy/"
       },
       "inMyList": false,
       "source": "api"
@@ -15896,7 +17659,8 @@
         "publishers": [
           "Shiro Games"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/3276050"
       },
       "inMyList": false,
       "source": "api"
@@ -15940,7 +17704,8 @@
           "Something We Made",
           "Popagenda"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2900640/TOEM_2/"
       },
       "inMyList": false,
       "source": "api"
@@ -15985,7 +17750,8 @@
         "publishers": [
           "Team17"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2213700/Sintopia/"
       },
       "inMyList": false,
       "source": "api"
@@ -16032,7 +17798,8 @@
         "publishers": [
           "Saber Interactive"
         ],
-        "hypes": 28
+        "hypes": 29,
+        "steamUrl": "https://store.steampowered.com/app/1967610"
       },
       "inMyList": false,
       "source": "api"
@@ -16079,7 +17846,8 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 116
+        "hypes": 117,
+        "steamUrl": "https://store.steampowered.com/app/2638890"
       },
       "inMyList": false,
       "source": "api"
@@ -16127,7 +17895,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1804730"
       },
       "inMyList": false,
       "source": "api"
@@ -16170,7 +17939,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3196440"
       },
       "inMyList": false,
       "source": "api"
@@ -16214,7 +17984,8 @@
         "publishers": [
           "NovaSphera Studio"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3094690/Elflock/"
       },
       "inMyList": false,
       "source": "api"
@@ -16266,7 +18037,8 @@
           "Funselektor Labs",
           "Serenity Forge"
         ],
-        "hypes": 27
+        "hypes": 27,
+        "steamUrl": "https://store.steampowered.com/app/2929250"
       },
       "inMyList": false,
       "source": "api"
@@ -16317,7 +18089,8 @@
         "publishers": [
           "HideWorks"
         ],
-        "hypes": 15
+        "hypes": 15,
+        "steamUrl": "https://store.steampowered.com/app/3299920"
       },
       "inMyList": false,
       "source": "api"
@@ -16359,53 +18132,8 @@
         "publishers": [
           "JDBRYANT"
         ],
-        "hypes": 3
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Darwin's Paradox!",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e1h.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 331202,
-        "name": "Darwin's Paradox!",
-        "slug": "darwins-paradox",
-        "url": "https://www.igdb.com/games/darwins-paradox",
-        "summary": "Dive into the adventure with Darwin, an octopus as endearing as he is ingenious, torn from the ocean and trapped in a vast and mysterious industrial complex. Harness his unique talents and abilities to help him overcome the many dangers and traps in this captivating platformer and adventure game.",
-        "firstReleaseDate": 1798675200,
-        "cover": "co9e1h",
-        "genres": [
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)",
-          "PlayStation 5",
-          "Nintendo Switch"
-        ],
-        "screenshots": [
-          "scvcf8",
-          "scvcfd",
-          "scvcf9",
-          "scvcfb",
-          "scvcfc",
-          "scvcfa",
-          "scvcfe"
-        ],
-        "artworks": [
-          "ar3b6a"
-        ],
-        "releaseDates": [],
-        "developers": [],
-        "publishers": [
-          "Konami"
-        ],
-        "hypes": 27
+        "hypes": 3,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -16455,7 +18183,8 @@
         "publishers": [
           "Team17"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/1445880/Rockbeasts/"
       },
       "inMyList": false,
       "source": "api"
@@ -16499,7 +18228,8 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/2738170"
       },
       "inMyList": false,
       "source": "api"
@@ -16544,7 +18274,8 @@
           "The Pokémon Company",
           "Nintendo"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -16594,7 +18325,8 @@
         "publishers": [
           "Defiant Development"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3075410/Hordes_of_Fate__A_Hand_of_Fate_Adventure/"
       },
       "inMyList": false,
       "source": "api"
@@ -16630,7 +18362,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/3459340/Laceys_Flash_Games/"
       },
       "inMyList": false,
       "source": "api"
@@ -16673,7 +18406,8 @@
         "publishers": [
           "Brainlag Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3453490"
       },
       "inMyList": false,
       "source": "api"
@@ -16713,7 +18447,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3498700"
       },
       "inMyList": false,
       "source": "api"
@@ -16755,7 +18490,8 @@
         "publishers": [
           "Apamate Studio"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3325720"
       },
       "inMyList": false,
       "source": "api"
@@ -16806,7 +18542,8 @@
         "publishers": [
           "Humble Games"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1748110"
       },
       "inMyList": false,
       "source": "api"
@@ -16849,7 +18586,8 @@
           "Spina"
         ],
         "publishers": [],
-        "hypes": 14
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/3462190/PHASE_ZERO/"
       },
       "inMyList": false,
       "source": "api"
@@ -16895,7 +18633,8 @@
         "publishers": [
           "V Publishing"
         ],
-        "hypes": 4
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3563470"
       },
       "inMyList": false,
       "source": "api"
@@ -16940,7 +18679,8 @@
         "publishers": [
           "UNIKAT Label"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3535760"
       },
       "inMyList": false,
       "source": "api"
@@ -16986,7 +18726,8 @@
         "publishers": [
           "Path Games"
         ],
-        "hypes": 18
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/1879940/Dark_Mass/"
       },
       "inMyList": false,
       "source": "api"
@@ -17026,7 +18767,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3269430"
       },
       "inMyList": false,
       "source": "api"
@@ -17065,7 +18807,8 @@
         "publishers": [
           "Nintendo"
         ],
-        "hypes": 12
+        "hypes": 12,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -17111,7 +18854,8 @@
         "publishers": [
           "Devolver Digital"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/1454370/"
       },
       "inMyList": false,
       "source": "api"
@@ -17165,7 +18909,8 @@
         "publishers": [
           "Eastasiasoft"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3479420"
       },
       "inMyList": false,
       "source": "api"
@@ -17217,7 +18962,8 @@
           "Outersloth",
           "Coldblood"
         ],
-        "hypes": 28
+        "hypes": 28,
+        "steamUrl": "https://store.steampowered.com/app/2318330"
       },
       "inMyList": false,
       "source": "api"
@@ -17270,7 +19016,8 @@
         "publishers": [
           "tinyBuild"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3183760"
       },
       "inMyList": false,
       "source": "api"
@@ -17317,7 +19064,8 @@
         "publishers": [
           "Mooneye Studios"
         ],
-        "hypes": 14
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/1728620"
       },
       "inMyList": false,
       "source": "api"
@@ -17361,7 +19109,8 @@
         "publishers": [
           "PLAYISM"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3406810"
       },
       "inMyList": false,
       "source": "api"
@@ -17407,7 +19156,8 @@
         "publishers": [
           "Electronic Arts"
         ],
-        "hypes": 32
+        "hypes": 32,
+        "steamUrl": "https://store.steampowered.com/app/2075800/STAR_WARS_Zero_Company/"
       },
       "inMyList": false,
       "source": "api"
@@ -17463,7 +19213,8 @@
         "publishers": [
           "Digital Vortex Entertainment"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/3629430"
       },
       "inMyList": false,
       "source": "api"
@@ -17502,7 +19253,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3393850/Dicewood"
       },
       "inMyList": false,
       "source": "api"
@@ -17545,7 +19297,8 @@
         "publishers": [
           "Silver Lining Interactive"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3601680"
       },
       "inMyList": false,
       "source": "api"
@@ -17591,7 +19344,8 @@
         "publishers": [
           "BornMonkie"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3358170"
       },
       "inMyList": false,
       "source": "api"
@@ -17640,7 +19394,8 @@
         "publishers": [
           "Nullhusk Agency"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3703360/WORLD_OF_DOGS/"
       },
       "inMyList": false,
       "source": "api"
@@ -17683,7 +19438,8 @@
         "publishers": [
           "Po Kolu Studio"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3583970/Mycelium_The_Silent_Contract/"
       },
       "inMyList": false,
       "source": "api"
@@ -17736,7 +19492,8 @@
         "publishers": [
           "Digital Happiness"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/3500810"
       },
       "inMyList": false,
       "source": "api"
@@ -17783,7 +19540,8 @@
         "publishers": [
           "NetEase Games"
         ],
-        "hypes": 25
+        "hypes": 25,
+        "steamUrl": "https://store.steampowered.com/app/3633680/Sea_of_Remnants/"
       },
       "inMyList": false,
       "source": "api"
@@ -17829,7 +19587,8 @@
         "publishers": [
           "Urban Games"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3493540"
       },
       "inMyList": false,
       "source": "api"
@@ -17892,7 +19651,8 @@
           "Big Fan Games",
           "Devolver Digital"
         ],
-        "hypes": 18
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/3115160"
       },
       "inMyList": false,
       "source": "api"
@@ -17937,7 +19697,8 @@
           "OPIA GAMES"
         ],
         "publishers": [],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3524780"
       },
       "inMyList": false,
       "source": "api"
@@ -17984,7 +19745,8 @@
         "publishers": [
           "Gentle Troll Entertainment"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3500880/Tavern_Talk_Stories_Dreamwalker/"
       },
       "inMyList": false,
       "source": "api"
@@ -18028,7 +19790,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3355100/A_Planet_Full_of_Cats/"
       },
       "inMyList": false,
       "source": "api"
@@ -18077,60 +19840,8 @@
         "publishers": [
           "505 Games"
         ],
-        "hypes": 24
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Marvel Tokon: Fighting Souls",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wwj.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 347132,
-        "name": "Marvel Tokon: Fighting Souls",
-        "slug": "marvel-tokon-fighting-souls",
-        "url": "https://www.igdb.com/games/marvel-tokon-fighting-souls",
-        "summary": "Assemble your team of legendary Marvel characters in the ultimate 4v4 tag team fighter from PlayStation Studios, Arc System Works and Marvel Games.\nImmerse yourself in the Marvel universe like never before with an iconic roster of heroes and villains, authentic stages, and intuitive gameplay mechanics. Experience the thrill of fast-paced over the top action with stunning anime-inspired visuals, where every battle is a unique and exciting team VS battle experience.",
-        "firstReleaseDate": 1798675200,
-        "cover": "co9wwj",
-        "genres": [
-          "Fighting"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "scx7bu",
-          "scx7bv",
-          "scx7bw",
-          "scx7bx",
-          "scx7by",
-          "scx7bz",
-          "scx7c0",
-          "scx7c1",
-          "scyrtc",
-          "scyrtd",
-          "scyrte"
-        ],
-        "artworks": [
-          "ar3nw1",
-          "ar3nw7",
-          "ar3nw6"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Arc System Works"
-        ],
-        "publishers": [
-          "PlayStation Studios",
-          "Sony Interactive Entertainment",
-          "Marvel Games"
-        ],
-        "hypes": 33
+        "hypes": 24,
+        "steamUrl": "https://store.steampowered.com/app/1883810"
       },
       "inMyList": false,
       "source": "api"
@@ -18180,7 +19891,8 @@
         "publishers": [
           "Playstack"
         ],
-        "hypes": 42
+        "hypes": 42,
+        "steamUrl": "https://store.steampowered.com/app/2584270"
       },
       "inMyList": false,
       "source": "api"
@@ -18225,7 +19937,8 @@
         "publishers": [
           "Epic Games Publishing"
         ],
-        "hypes": 59
+        "hypes": 60,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -18268,7 +19981,8 @@
         "publishers": [
           "PlaySide"
         ],
-        "hypes": 33
+        "hypes": 33,
+        "steamUrl": "https://store.steampowered.com/app/2838950"
       },
       "inMyList": false,
       "source": "api"
@@ -18314,7 +20028,8 @@
         "publishers": [
           "Epic Games Publishing"
         ],
-        "hypes": 58
+        "hypes": 58,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -18362,7 +20077,8 @@
         "publishers": [
           "Drinkbox Studios"
         ],
-        "hypes": 22
+        "hypes": 22,
+        "steamUrl": "https://store.steampowered.com/app/2974160"
       },
       "inMyList": false,
       "source": "api"
@@ -18407,7 +20123,8 @@
         "publishers": [
           "Night Street Games"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/2721340"
       },
       "inMyList": false,
       "source": "api"
@@ -18451,7 +20168,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/897160"
       },
       "inMyList": false,
       "source": "api"
@@ -18507,7 +20225,8 @@
         "publishers": [
           "Friday Sundae"
         ],
-        "hypes": 30
+        "hypes": 30,
+        "steamUrl": "https://store.steampowered.com/app/3725190/There_Are_No_Ghosts_at_the_Grand/"
       },
       "inMyList": false,
       "source": "api"
@@ -18552,7 +20271,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3002550"
       },
       "inMyList": false,
       "source": "api"
@@ -18590,7 +20310,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3758980"
       },
       "inMyList": false,
       "source": "api"
@@ -18641,7 +20362,8 @@
         "publishers": [
           "Kwalee"
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2174380/Call_of_the_Elder_Gods/"
       },
       "inMyList": false,
       "source": "api"
@@ -18692,7 +20414,8 @@
         "publishers": [
           "New Tales"
         ],
-        "hypes": 9
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/2467880"
       },
       "inMyList": false,
       "source": "api"
@@ -18738,7 +20461,8 @@
         "publishers": [
           "Doctor Shinobi"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3464670/Dead_Watch/"
       },
       "inMyList": false,
       "source": "api"
@@ -18782,7 +20506,8 @@
         "publishers": [
           "Ghoulish"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3722090/Parasensor/"
       },
       "inMyList": false,
       "source": "api"
@@ -18830,7 +20555,8 @@
         "publishers": [
           "Randwerk"
         ],
-        "hypes": 14
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/3624140"
       },
       "inMyList": false,
       "source": "api"
@@ -18876,7 +20602,8 @@
         "publishers": [
           "DON'T NOD"
         ],
-        "hypes": 47
+        "hypes": 47,
+        "steamUrl": "https://store.steampowered.com/app/1966410"
       },
       "inMyList": false,
       "source": "api"
@@ -18922,7 +20649,8 @@
         "publishers": [
           "EVR Studio"
         ],
-        "hypes": 55
+        "hypes": 55,
+        "steamUrl": "https://store.steampowered.com/app/2889030/MUDANG_Two_Hearts/"
       },
       "inMyList": false,
       "source": "api"
@@ -18969,7 +20697,8 @@
         "publishers": [
           "Kingsglory"
         ],
-        "hypes": 30
+        "hypes": 30,
+        "steamUrl": "https://store.steampowered.com/app/4126040"
       },
       "inMyList": false,
       "source": "api"
@@ -19014,7 +20743,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 18
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/2210150"
       },
       "inMyList": false,
       "source": "api"
@@ -19059,7 +20789,8 @@
         "publishers": [
           "Hyper Games"
         ],
-        "hypes": 14
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/3256150"
       },
       "inMyList": false,
       "source": "api"
@@ -19105,7 +20836,8 @@
         "publishers": [
           "Astra Logical"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3168110"
       },
       "inMyList": false,
       "source": "api"
@@ -19149,7 +20881,8 @@
         "publishers": [
           "Muse Games"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2278950"
       },
       "inMyList": false,
       "source": "api"
@@ -19194,7 +20927,8 @@
         "publishers": [
           "Frozen Way"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2573060/"
       },
       "inMyList": false,
       "source": "api"
@@ -19238,7 +20972,8 @@
         "publishers": [
           "Watt Studio"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3348640"
       },
       "inMyList": false,
       "source": "api"
@@ -19285,7 +21020,8 @@
         "publishers": [
           "Kalypso Media"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2808550"
       },
       "inMyList": false,
       "source": "api"
@@ -19334,7 +21070,8 @@
           "Saber Interactive",
           "Boss Team Games"
         ],
-        "hypes": 26
+        "hypes": 26,
+        "steamUrl": "https://store.steampowered.com/app/1551980"
       },
       "inMyList": false,
       "source": "api"
@@ -19378,7 +21115,8 @@
         "publishers": [
           "Softboi Games"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/3367820/My_Femboy_Roommate_Special_Weekend/"
       },
       "inMyList": false,
       "source": "api"
@@ -19428,7 +21166,8 @@
         "publishers": [
           "Top Hat Studios"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/3699590/Well_Dweller/"
       },
       "inMyList": false,
       "source": "api"
@@ -19479,7 +21218,8 @@
           "One More Level",
           "Lyrical Games"
         ],
-        "hypes": 48
+        "hypes": 48,
+        "steamUrl": "https://store.steampowered.com/app/2828710"
       },
       "inMyList": false,
       "source": "api"
@@ -19526,7 +21266,8 @@
         "publishers": [
           "Focus Entertainment"
         ],
-        "hypes": 15
+        "hypes": 15,
+        "steamUrl": "https://store.steampowered.com/app/2141130/"
       },
       "inMyList": false,
       "source": "api"
@@ -19573,7 +21314,8 @@
         "publishers": [
           "Deep Silver"
         ],
-        "hypes": 19
+        "hypes": 19,
+        "steamUrl": "https://store.steampowered.com/app/2272360"
       },
       "inMyList": false,
       "source": "api"
@@ -19618,7 +21360,8 @@
         "publishers": [
           "ZA/UM"
         ],
-        "hypes": 32
+        "hypes": 32,
+        "steamUrl": "https://store.steampowered.com/app/2863680"
       },
       "inMyList": false,
       "source": "api"
@@ -19665,7 +21408,8 @@
         "publishers": [
           "Assemble Entertainment"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3816930"
       },
       "inMyList": false,
       "source": "api"
@@ -19710,7 +21454,8 @@
         "publishers": [
           "Kalypso Media"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/1853440"
       },
       "inMyList": false,
       "source": "api"
@@ -19763,7 +21508,8 @@
         "publishers": [
           "Timberline Studio Inc."
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2417470"
       },
       "inMyList": false,
       "source": "api"
@@ -19811,7 +21557,8 @@
         "publishers": [
           "Team17"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3079210"
       },
       "inMyList": false,
       "source": "api"
@@ -19857,7 +21604,8 @@
         "publishers": [
           "Netmarble"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/3718160"
       },
       "inMyList": false,
       "source": "api"
@@ -19905,7 +21653,8 @@
         "publishers": [
           "Scoreboardgames"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3649680"
       },
       "inMyList": false,
       "source": "api"
@@ -19957,7 +21706,8 @@
         "publishers": [
           "tinyBuild"
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/3283240"
       },
       "inMyList": false,
       "source": "api"
@@ -20004,7 +21754,8 @@
           "Bonfire Studios",
           "DRIMAGE"
         ],
-        "hypes": 6
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/3333850"
       },
       "inMyList": false,
       "source": "api"
@@ -20057,7 +21808,8 @@
         "publishers": [
           "Annapurna Interactive"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/1895460/Dtopia/"
       },
       "inMyList": false,
       "source": "api"
@@ -20108,7 +21860,8 @@
         "publishers": [
           "Annapurna Interactive"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1725710/Demi_and_the_Fractured_Dream/"
       },
       "inMyList": false,
       "source": "api"
@@ -20158,7 +21911,8 @@
         "publishers": [
           "Shueisha Games"
         ],
-        "hypes": 10
+        "hypes": 10,
+        "steamUrl": "https://store.steampowered.com/app/4018380"
       },
       "inMyList": false,
       "source": "api"
@@ -20208,7 +21962,8 @@
         "publishers": [
           "Devolver Digital"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3181650"
       },
       "inMyList": false,
       "source": "api"
@@ -20260,7 +22015,8 @@
           "Serafini Productions",
           "Wired Productions"
         ],
-        "hypes": 7
+        "hypes": 7,
+        "steamUrl": "https://store.steampowered.com/app/3886200"
       },
       "inMyList": false,
       "source": "api"
@@ -20307,7 +22063,8 @@
         "publishers": [
           "IceSitruuna"
         ],
-        "hypes": 5
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/3983000"
       },
       "inMyList": false,
       "source": "api"
@@ -20358,7 +22115,8 @@
         "publishers": [
           "Wolf Haus Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3401960/"
       },
       "inMyList": false,
       "source": "api"
@@ -20397,7 +22155,8 @@
         "publishers": [
           "Astarte Industries"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": null
       },
       "inMyList": false,
       "source": "api"
@@ -20445,7 +22204,8 @@
         "publishers": [
           "PlaySide"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2852140"
       },
       "inMyList": false,
       "source": "api"
@@ -20490,7 +22250,8 @@
         "publishers": [
           "Auroch Digital"
         ],
-        "hypes": 4
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3669620"
       },
       "inMyList": false,
       "source": "api"
@@ -20538,7 +22299,8 @@
         "publishers": [
           "Serafini Productions"
         ],
-        "hypes": 4
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/4051470"
       },
       "inMyList": false,
       "source": "api"
@@ -20586,7 +22348,8 @@
         "publishers": [
           "Fictions"
         ],
-        "hypes": 14
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/3660710"
       },
       "inMyList": false,
       "source": "api"
@@ -20637,7 +22400,8 @@
         "publishers": [
           "Cococucumber"
         ],
-        "hypes": 8
+        "hypes": 8,
+        "steamUrl": "https://store.steampowered.com/app/1115990"
       },
       "inMyList": false,
       "source": "api"
@@ -20691,7 +22455,8 @@
         "publishers": [
           "Poncle"
         ],
-        "hypes": 15
+        "hypes": 15,
+        "steamUrl": "https://store.steampowered.com/app/3265700"
       },
       "inMyList": false,
       "source": "api"
@@ -20735,7 +22500,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3273260/Lost_Host/"
       },
       "inMyList": false,
       "source": "api"
@@ -20784,7 +22550,8 @@
         "publishers": [
           "Cellar Door Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3749830"
       },
       "inMyList": false,
       "source": "api"
@@ -20830,7 +22597,8 @@
         "publishers": [
           "Raw Fury"
         ],
-        "hypes": 5
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/4094660"
       },
       "inMyList": false,
       "source": "api"
@@ -20879,7 +22647,8 @@
         "publishers": [
           "New Blood Interactive"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/4176460"
       },
       "inMyList": false,
       "source": "api"
@@ -20925,7 +22694,8 @@
         "publishers": [
           "Spellgarden Games"
         ],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3693650"
       },
       "inMyList": false,
       "source": "api"
@@ -20971,7 +22741,8 @@
           "Capybara Games"
         ],
         "publishers": [],
-        "hypes": 3
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2971960"
       },
       "inMyList": false,
       "source": "api"
@@ -21022,7 +22793,8 @@
         "publishers": [
           "tinyBuild"
         ],
-        "hypes": 11
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/3812600"
       },
       "inMyList": false,
       "source": "api"
@@ -21067,7 +22839,8 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 15
+        "hypes": 15,
+        "steamUrl": "https://store.steampowered.com/app/2675650"
       },
       "inMyList": false,
       "source": "api"
@@ -21111,7 +22884,8 @@
           "GPTTRACK50 Inc"
         ],
         "publishers": [],
-        "hypes": 16
+        "hypes": 17,
+        "steamUrl": "https://store.steampowered.com/app/3486530"
       },
       "inMyList": false,
       "source": "api"
@@ -21163,7 +22937,8 @@
         "publishers": [
           "Frictional Games"
         ],
-        "hypes": 49
+        "hypes": 50,
+        "steamUrl": "https://store.steampowered.com/app/2924520"
       },
       "inMyList": false,
       "source": "api"
@@ -21221,7 +22996,8 @@
         "publishers": [
           "Arc Games"
         ],
-        "hypes": 17
+        "hypes": 17,
+        "steamUrl": "https://store.steampowered.com/app/499170"
       },
       "inMyList": false,
       "source": "api"
@@ -21269,7 +23045,8 @@
         "publishers": [
           "Bandai Namco Entertainment Inc."
         ],
-        "hypes": 29
+        "hypes": 30,
+        "steamUrl": "https://store.steampowered.com/app/2288340"
       },
       "inMyList": false,
       "source": "api"

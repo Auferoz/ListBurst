@@ -48,7 +48,7 @@ const PLATFORM_IDS = [6, 48, 49, 130, 167, 169, 512];
 const MIN_HYPES = 2;
 
 // Campos IGDB para la query de juegos por mes
-const GAME_FIELDS = `name, summary, first_release_date, cover.image_id, genres.name, platforms.name, screenshots.image_id, artworks.image_id, slug, url, involved_companies.company.name, involved_companies.developer, involved_companies.publisher, hypes`;
+const GAME_FIELDS = `name, summary, first_release_date, cover.image_id, genres.name, platforms.name, screenshots.image_id, artworks.image_id, slug, url, involved_companies.company.name, involved_companies.developer, involved_companies.publisher, hypes, websites.url`;
 
 // ============================================
 // Helpers
@@ -175,6 +175,8 @@ function normalizeIGDB(igdbData) {
             ?.map((ic) => ic.company?.name)
             ?.filter(Boolean) || [],
         hypes: igdbData.hypes || 0,
+        // Detectar Steam URL por dominio (category no se expande como sub-campo en IGDB)
+        steamUrl: igdbData.websites?.find((w) => w.url?.includes('store.steampowered.com'))?.url || null,
     };
 }
 

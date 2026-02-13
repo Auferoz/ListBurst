@@ -7,6 +7,7 @@ import CardSeriesList from '../../components/Globals/CardSeriesList.astro';
 import FilterBar from '../../components/Globals/FilterBar.astro';
 import CardDashboard from '../../components/Globals/CardDashboard.astro';
 import IconDeviceTv from '../../components/Icons/IconDeviceTv.astro';
+import IconSearchOff from '../../components/Icons/IconSearchOff.astro';
 
 // Leer series directamente del caché (sin llamadas API)
 const seriesData = seriesCache.series;
@@ -51,51 +52,69 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
 ---
 
 <Layout>
-    <main class="max-w-7xl w-full mx-auto p-4">
-        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <h1 class="text-xl font-bold justify-between flex items-center">Series List <span id="series-count" class="text-sm text-zinc-400"></span></h1>
-			<!-- <p class="text-xs text-start">
-				Lista de mis series vistas organizadas por temporadas. Usa los filtros para encontrar series según tus preferencias.
-			</p> -->
-        </header>
+    <main class="max-w-7xl w-full mx-auto p-4 pb-24 space-y-6">
+        <!-- Header -->
+        <header class="relative">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/80 mb-1">Collection</p>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                        Series
+                    </h1>
+                    <p class="text-sm text-zinc-500 mt-1">
+                        {totalSeasons} temporadas vistas
+                        <span class="text-zinc-600">&middot;</span>
+                        <span class="text-green-400/70">{completedSeasons} completadas</span>
+                        <span class="text-zinc-600">&middot;</span>
+                        <span class="text-amber-400/70">{ongoingSeasons} en progreso</span>
+                        <span id="series-count" class="text-zinc-400"></span>
+                    </p>
+                </div>
 
-        <!-- Dashboard Datos -->
-        <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <CardDashboard text="Total temporadas" number={totalSeasons} color="sky" id="dash-total">
-                <IconDeviceTv width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="Completadas" number={completedSeasons} color="green" id="dash-completed">
-                <IconDeviceTv width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="En progreso" number={ongoingSeasons} color="amber" id="dash-ongoing">
-                <IconDeviceTv width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="Plataformas" number={totalPlatforms} color="violet" id="dash-platforms">
-                <IconDeviceTv width={24} height={24} />
-            </CardDashboard>
-        </section>
+                <!-- Dashboard compacto -->
+                <section class="grid grid-cols-2 gap-2 sm:gap-3 w-full lg:w-auto lg:max-w-sm">
+                    <CardDashboard text="Total temporadas" number={totalSeasons} color="sky" id="dash-total">
+                        <IconDeviceTv width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Completadas" number={completedSeasons} color="green" id="dash-completed">
+                        <IconDeviceTv width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="En progreso" number={ongoingSeasons} color="amber" id="dash-ongoing">
+                        <IconDeviceTv width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Plataformas" number={totalPlatforms} color="violet" id="dash-platforms">
+                        <IconDeviceTv width={20} height={20} />
+                    </CardDashboard>
+                </section>
+            </div>
+
+            <!-- Linea decorativa -->
+            <div class="mt-4 h-px bg-gradient-to-r from-amber-500/40 via-zinc-700/40 to-transparent"></div>
+        </header>
 
         <!-- Filtros -->
         <FilterBar
             filters={[
-                { id: "filter-year", label: "Año", options: yearOptions, defaultValue: String(defaultYear) },
-                { id: "filter-genre", label: "Género", options: genreOptions, capitalize: true },
+                { id: "filter-year", label: "Ano", options: yearOptions, defaultValue: String(defaultYear) },
+                { id: "filter-genre", label: "Genero", options: genreOptions, capitalize: true },
                 { id: "filter-status", label: "Estado", options: statusOptions },
-                // { id: "filter-platform", label: "Plataforma", options: platformOptions, capitalize: true },
-                // { id: "filter-order", label: "Orden", options: orderOptions, defaultValue: "newest", includeAll: false },
             ]}
         />
 
         <!-- Grid de Series -->
-        <div id="series-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 pb-20">
+        <div id="series-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {seriesDataWithIndex.map((data, index) => (
                 <CardSeriesList data={data} index={index} />
             ))}
         </div>
 
         <!-- Mensaje cuando no hay resultados -->
-        <div id="no-results" class="hidden text-center py-12 text-zinc-400">
-            <p class="text-lg">No se encontraron series con los filtros seleccionados</p>
+        <div id="no-results" class="hidden flex flex-col items-center justify-center py-16 text-zinc-500">
+            <div class="mb-3 text-zinc-600">
+                <IconSearchOff width={48} height={48} />
+            </div>
+            <p class="text-lg font-medium text-zinc-400">Sin resultados</p>
+            <p class="text-sm mt-1">Prueba ajustando los filtros para encontrar series</p>
         </div>
     </main>
 </Layout>

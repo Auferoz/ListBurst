@@ -6,6 +6,7 @@ import CardGamesList from '../../components/Globals/CardGamesList.astro';
 import FilterBar from '../../components/Globals/FilterBar.astro';
 import CardDashboard from '../../components/Globals/CardDashboard.astro';
 import IconGamepad from '../../components/Icons/IconGamepad.astro';
+import IconSearchOff from '../../components/Icons/IconSearchOff.astro';
 
 // Obtener años disponibles (más reciente primero)
 const availableYears = getAvailableYears().reverse();
@@ -44,54 +45,79 @@ const gamesWithIndex = ListGames.map((game, index) => ({
     ...game,
     originalIndex: index,
 }));
+
+// Stats pre-calculadas para el header
+const totalGames = gamesWithIndex.length;
+const playingCount = gamesWithIndex.filter(g => g.estado === "Jugando").length;
+const pausedCount = gamesWithIndex.filter(g => g.estado === "Pausado").length;
+const completedCount = gamesWithIndex.filter(g => g.estado === "Completado").length;
+const abandonedCount = gamesWithIndex.filter(g => g.estado === "Abandonado").length;
 ---
 
 <Layout>
-    <main class="max-w-7xl w-full mx-auto p-4">
-        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <h1 class="text-xl font-bold justify-between flex items-center">Games List <span id="games-count" class="text-sm text-zinc-400"></span></h1>
-            <!-- <p class="text-xs text-start">
-                Lista de mis juegos organizados por plataforma y estado. Usa los filtros para encontrar juegos según tus preferencias.
-            </p> -->
-        </header>
+    <main class="max-w-7xl w-full mx-auto p-4 pb-24 space-y-6">
+        <!-- Header -->
+        <header class="relative">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-400/80 mb-1">Collection</p>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                        Games
+                    </h1>
+                    <p class="text-sm text-zinc-500 mt-1">
+                        {totalGames} juegos en total
+                        <span class="text-zinc-600">&middot;</span>
+                        <span class="text-green-400/70">{playingCount} jugando</span>
+                        <span class="text-zinc-600">&middot;</span>
+                        <span class="text-violet-400/70">{completedCount} completados</span>
+                        <span id="games-count" class="text-zinc-400"></span>
+                    </p>
+                </div>
 
-        <!-- Dashboard Datos -->
-        <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-            <CardDashboard text="Jugando" number={gamesWithIndex.filter(g => g.estado === "Jugando").length} color="green" id="dash-playing">
-                <IconGamepad width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="Pausados" number={gamesWithIndex.filter(g => g.estado === "Pausado").length} color="amber" id="dash-paused">
-                <IconGamepad width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="Completados" number={gamesWithIndex.filter(g => g.estado === "Completado").length} color="violet" id="dash-completed">
-                <IconGamepad width={24} height={24} />
-            </CardDashboard>
-            <CardDashboard text="Abandonados" number={gamesWithIndex.filter(g => g.estado === "Abandonado").length} color="red" id="dash-abandoned">
-                <IconGamepad width={24} height={24} />
-            </CardDashboard>
-        </section>
+                <!-- Dashboard compacto -->
+                <section class="grid grid-cols-2 gap-2 sm:gap-3 w-full lg:w-auto lg:max-w-sm">
+                    <CardDashboard text="Jugando" number={playingCount} color="green" id="dash-playing">
+                        <IconGamepad width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Pausados" number={pausedCount} color="amber" id="dash-paused">
+                        <IconGamepad width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Completados" number={completedCount} color="violet" id="dash-completed">
+                        <IconGamepad width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Abandonados" number={abandonedCount} color="red" id="dash-abandoned">
+                        <IconGamepad width={20} height={20} />
+                    </CardDashboard>
+                </section>
+            </div>
+
+            <!-- Linea decorativa -->
+            <div class="mt-4 h-px bg-gradient-to-r from-violet-500/40 via-zinc-700/40 to-transparent"></div>
+        </header>
 
         <!-- Filtros -->
         <FilterBar
             filters={[
-                { id: "filter-year", label: "Año", options: yearOptions, defaultValue: String(defaultYear) },
-                // { id: "filter-genre", label: "Género", options: genreOptions, capitalize: true },
+                { id: "filter-year", label: "Ano", options: yearOptions, defaultValue: String(defaultYear) },
                 { id: "filter-status", label: "Estado", options: statusOptions, capitalize: true },
                 { id: "filter-platform", label: "Plataforma", options: platformOptions, capitalize: true },
-                // { id: "filter-order", label: "Orden", options: orderOptions, defaultValue: "newest", includeAll: false },
             ]}
         />
 
         <!-- Grid de Games -->
-        <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 pb-20">
+        <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {gamesWithIndex.map((game, index) => (
                 <CardGamesList data={game} index={index} />
             ))}
         </div>
 
         <!-- Mensaje cuando no hay resultados -->
-        <div id="no-results" class="hidden text-center py-12 text-zinc-400">
-            <p class="text-lg">No se encontraron juegos con los filtros seleccionados</p>
+        <div id="no-results" class="hidden flex flex-col items-center justify-center py-16 text-zinc-500">
+            <div class="mb-3 text-zinc-600">
+                <IconSearchOff width={48} height={48} />
+            </div>
+            <p class="text-lg font-medium text-zinc-400">Sin resultados</p>
+            <p class="text-sm mt-1">Prueba ajustando los filtros para encontrar juegos</p>
         </div>
     </main>
 </Layout>

@@ -340,8 +340,8 @@ export const ListSeriesSeasons = [
         statusViewed: "completed"
     },
     {
-        idTrakt: "what-if-2021",
-        numberSeason: 3,
+        idTrakt: "x-men-97",
+        numberSeason: 1,
         yearViewed: 2026,
         platformViewed: "Disney+",
         statusViewed: "ongoing"

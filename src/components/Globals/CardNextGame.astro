@@ -1,4 +1,6 @@
 ---
+import IconSteam from '../Icons/IconSteam.astro';
+
 /**
  * CardNextGame - Card horizontal para juegos de próximo lanzamiento
  *
@@ -21,6 +23,7 @@ interface IGDBData {
     releaseDates: { human: string; date?: number; platform: string | null }[];
     developers: string[];
     publishers: string[];
+    steamUrl: string | null;
 }
 
 interface Props {
@@ -105,6 +108,7 @@ const isoDate = releaseDate.toISOString();
 const genres = igdb?.genres?.slice(0, 2) || [];
 const developer = igdb?.developers?.[0] || null;
 const platforms = igdb?.platforms || [];
+const steamUrl = igdb?.steamUrl || null;
 
 // Artwork de fondo: screenshot o artwork de IGDB
 const bgImageId = igdb?.screenshots?.[0] || igdb?.artworks?.[0] || null;
@@ -210,6 +214,19 @@ const progressColor = proximity === 'imminent'
                 <time class="text-zinc-500 tabular-nums" datetime={isoDate}>
                     {formattedDate}
                 </time>
+
+                {steamUrl && (
+                    <a
+                        href={steamUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="steam-link inline-flex items-center justify-center text-zinc-500 transition-colors duration-150 hover:text-[#66c0f4]"
+                        title="Ver en Steam"
+                        aria-label={`Ver ${title} en Steam`}
+                    >
+                        <IconSteam width={14} height={14} />
+                    </a>
+                )}
 
                 {platformTags.length > 0 && (
                     <div class="flex items-center gap-1 ml-auto">
