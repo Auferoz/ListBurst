@@ -1,13 +1,23 @@
 export const proximamenteGames = [
 	{
-		title: "MIO: Memories in Orbit",
-		poster: "https://i.3djuegos.com/juegos/19814/mio_memories_in_orbit/fotos/ficha/mio_memories_in_orbit-5901335.webp",
-		dateRelease: "20-01-2026",
+		title: "Metal Gear Solid Master Collection: Volume 1",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jaw.webp",
+		dateRelease: "23-10-2023",
 	},
 	{
 		title: "Dispatch",
 		poster: "https://i.3djuegos.com/juegos/20141/dispatch/fotos/ficha/dispatch-5936351.webp",
 		dateRelease: "22-10-2025",
+	},
+	{
+		title: "Tokyo Xtreme Racer",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9bk8.webp",
+		dateRelease: "24-09-2025",
+	},
+	{
+		title: "MIO: Memories in Orbit",
+		poster: "https://i.3djuegos.com/juegos/19814/mio_memories_in_orbit/fotos/ficha/mio_memories_in_orbit-5901335.webp",
+		dateRelease: "20-01-2026",
 	},
 	{
 		title: "CODE VEIN II",
@@ -23,6 +33,11 @@ export const proximamenteGames = [
 		title: "ReAnimal",
 		poster: "https://i.3djuegos.com/juegos/19933/reanimal/fotos/ficha/reanimal-5913054.webp",
 		dateRelease: "13-02-2026",
+	},
+	{
+		title: "Gear.Club Unlimited 3",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob09t.webp",
+		dateRelease: "18-02-2026",
 	},
 	{
 		title: "Resident Evil 9: Requiem",
@@ -50,9 +65,19 @@ export const proximamenteGames = [
 		dateRelease: "19-03-2026",
 	},
 	{
+		title: "Death Stranding 2: On The Beach",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.webp",
+		dateRelease: "19-03-2026",
+	},
+	{
 		title: "Pragmata",
 		poster: "https://i.3djuegos.com/juegos/17372/pragmata/fotos/ficha/pragmata-5965600.webp",
 		dateRelease: "24-04-2026",
+	},
+	{
+		title: "007 First Light",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.webp",
+		dateRelease: "27-05-2026",
 	},
 	{
 		title: "LEGO Batman: Legacy of The Dark Knight",
@@ -60,9 +85,19 @@ export const proximamenteGames = [
 		dateRelease: "29-05-2026",
 	},
 	{
+		title: "Beast of Reincarnation",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobc5q.webp",
+		dateRelease: "01-08-2026",
+	},
+	{
 		title: "Phantom Blade Zero",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob64v.webp",
 		dateRelease: "09-09-2026",
+	},
+	{
+		title: "Grand Theft Auto VI",
+		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rwo.webp",
+		dateRelease: "18-11-2026",
 	},
 	{
 		title: "Forza Horizon 6",
@@ -85,11 +120,6 @@ export const proximamenteGames = [
 		dateRelease: "31-12-2026",
 	},
 	{
-		title: "Grand Theft Auto VI",
-		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rwo.webp",
-		dateRelease: "18-11-2026",
-	},
-	{
 		title: "Silent Hill: Townfall",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5l17.webp",
 		dateRelease: "31-12-2026",
@@ -98,11 +128,6 @@ export const proximamenteGames = [
 		title: "Fable",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co8bop.webp",
 		dateRelease: "31-12-2026",
-	},
-	{
-		title: "007 First Light",
-		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.webp",
-		dateRelease: "27-05-2026",
 	},
 	{
 		title: "Yoshi and the Mysterious Book",
@@ -155,16 +180,6 @@ export const proximamenteGames = [
 		dateRelease: "31-12-2026",
 	},
 	{
-		title: "Gear.Club Unlimited 3",
-		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob09t.webp",
-		dateRelease: "18-02-2026",
-	},
-	{
-		title: "Tokyo Xtreme Racer",
-		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9bk8.webp",
-		dateRelease: "24-09-2025",
-	},
-	{
 		title: "Star Wars: Galactic Racer",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0lg.webp",
 		dateRelease: "31-12-2026",
@@ -173,11 +188,6 @@ export const proximamenteGames = [
 		title: "Kena: Scars of Kosmora",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobih5.webp",
 		dateRelease: "31-12-2026",
-	},
-	{
-		title: "Death Stranding 2: On The Beach",
-		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.webp",
-		dateRelease: "19-03-2026",
 	},
 	{
 		title: "Control Resonant",
@@ -190,19 +200,9 @@ export const proximamenteGames = [
 		dateRelease: "31-12-2026",
 	},
 	{
-		title: "Beast of Reincarnation",
-		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobc5q.webp",
-		dateRelease: "01-08-2026",
-	},
-	{
 		title: "Star Wars: Galactic Racer",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0lg.webp",
 		dateRelease: "31-12-2026",
-	},
-	{
-		title: "Metal Gear Solid Master Collection: Volume 1",
-		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jaw.webp",
-		dateRelease: "23-10-2023",
 	},
 	{
 		title: "Metal Gear Solid Master Collection: Volume 2",
@@ -213,11 +213,6 @@ export const proximamenteGames = [
 		title: "Darwin's Paradox",
 		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e1h.webp",
 		dateRelease: "31-12-2026",
-	},
-	{
-		title: "God of War: Sons of Sparta",
-		poster: "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigb.webp",
-		dateRelease: "12-02-2026",
 	},
 	{
 		title: "Castlevania Belmont's Curse",

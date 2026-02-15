@@ -47,4 +47,13 @@ export const StreamingServiceAccounts = [
         email: "adesigns7@gmail.com",
         plan: "FREE",
     },
+    {
+        name: "Paramount+",
+        url: "https://www.paramountplus.com/",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Paramount_Plus.svg/640px-Paramount_Plus.svg.png",
+        password: "25334769#Burst",
+        email: "adesigns7@gmail.com",
+        plan: "FREE",
+    },
+
 ]

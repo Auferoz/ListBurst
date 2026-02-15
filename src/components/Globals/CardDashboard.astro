@@ -14,11 +14,11 @@
 interface Props {
     text: string;
     number: number | string;
-    color?: 'violet' | 'sky' | 'green' | 'red' | 'amber' | 'zinc' | 'teal' | 'indigo';
+    color?: 'violet' | 'sky' | 'green' | 'red' | 'amber' | 'zinc' | 'teal' | 'indigo' | 'stone';
     id?: string;
 }
 
-const { text, number, color = 'violet', id } = Astro.props;
+const { text, number, color = 'stone', id } = Astro.props;
 
 // Mapeo de colores a clases Tailwind
 const colorMap: Record<string, { iconBg: string; accent: string; hover: string; iconText: string }> = {
@@ -69,6 +69,12 @@ const colorMap: Record<string, { iconBg: string; accent: string; hover: string; 
         iconText: 'text-indigo-400',
         accent: 'bg-indigo-500/40',
         hover: 'hover:border-indigo-500/25',
+    },
+    stone: {
+        iconBg: 'bg-stone-500/10',
+        iconText: 'text-stone-400',
+        accent: 'bg-stone-500/40',
+        hover: 'hover:border-stone-500/25',
     },
 };
 

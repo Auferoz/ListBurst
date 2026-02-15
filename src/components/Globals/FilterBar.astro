@@ -2,9 +2,10 @@
 /**
  * FilterBar - Componente global reutilizable para filtros
  *
- * Genera una barra de filtros con <select> nativos estilizados.
- * Dispara eventos `filter-change` y `filter-reset` en el document
- * para que cada página gestione su lógica de filtrado.
+ * Genera una barra de filtros con <select> nativos estilizados y
+ * botones toggle opcionales. Dispara eventos `filter-change` y
+ * `filter-reset` en el document para que cada página gestione su
+ * lógica de filtrado.
  *
  * La config de IDs y defaults se pasa al script via data-* attributes
  * en el elemento raíz, evitando `define:vars` (incompatible con View Transitions).
@@ -15,6 +16,9 @@
  *         { id: "filter-year", label: "Año", options: yearOptions, defaultValue: "2026" },
  *         { id: "filter-genre", label: "Género", options: genreOptions, capitalize: true },
  *         { id: "filter-order", label: "Orden", options: orderOptions, defaultValue: "newest", includeAll: false },
+ *     ]}
+ *     toggles={[
+ *         { id: "toggle-my-list", label: "Mi lista", icon: '<path d="M5 2h14..."/>', activeColor: "emerald" },
  *     ]}
  * />
  */
@@ -34,17 +38,65 @@ interface FilterConfig {
     capitalize?: boolean;
 }
 
-interface Props {
-    filters: FilterConfig[];
+interface ToggleConfig {
+    id: string;
+    label: string;
+    /** SVG inner content (paths, circles, etc.) rendered inside a 24x24 viewBox */
+    icon: string;
+    /** Color scheme name: "emerald" (default), "sky", "amber", "violet", "red", "teal" */
+    activeColor?: string;
+    ariaLabel?: string;
 }
 
-const { filters } = Astro.props;
+interface Props {
+    filters: FilterConfig[];
+    toggles?: ToggleConfig[];
+}
+
+const { filters, toggles = [] } = Astro.props;
 
 // Preparar config para pasar al script via data attributes
 const filterIds = filters.map(f => f.id);
 const filterDefaults: Record<string, string> = {};
 filters.forEach(f => {
     filterDefaults[f.id] = f.defaultValue || (f.includeAll !== false ? "all" : f.options[0]?.value || "");
+});
+
+const toggleIds = toggles.map(t => t.id);
+
+// Mapa de colores para toggles: clases inactivas y activas
+const toggleColorMap: Record<string, { inactive: string[]; active: string[] }> = {
+    emerald: {
+        inactive: ['bg-zinc-800', 'border-white/6', 'text-zinc-500'],
+        active: ['bg-emerald-500/15', 'border-emerald-500/40', 'text-emerald-400'],
+    },
+    sky: {
+        inactive: ['bg-zinc-800', 'border-white/6', 'text-zinc-500'],
+        active: ['bg-sky-500/15', 'border-sky-500/40', 'text-sky-400'],
+    },
+    amber: {
+        inactive: ['bg-zinc-800', 'border-white/6', 'text-zinc-500'],
+        active: ['bg-amber-500/15', 'border-amber-500/40', 'text-amber-400'],
+    },
+    violet: {
+        inactive: ['bg-zinc-800', 'border-white/6', 'text-zinc-500'],
+        active: ['bg-violet-500/15', 'border-violet-500/40', 'text-violet-400'],
+    },
+    red: {
+        inactive: ['bg-zinc-800', 'border-white/6', 'text-zinc-500'],
+        active: ['bg-red-500/15', 'border-red-500/40', 'text-red-400'],
+    },
+    teal: {
+        inactive: ['bg-zinc-800', 'border-white/6', 'text-zinc-500'],
+        active: ['bg-teal-500/15', 'border-teal-500/40', 'text-teal-400'],
+    },
+};
+
+// Serializar las clases de color por toggle para el script
+const toggleColorsData: Record<string, { inactive: string[]; active: string[] }> = {};
+toggles.forEach(t => {
+    const color = t.activeColor || 'emerald';
+    toggleColorsData[t.id] = toggleColorMap[color] || toggleColorMap['emerald'];
 });
 ---
 
@@ -53,6 +105,8 @@ filters.forEach(f => {
     id="filters"
     data-filter-ids={JSON.stringify(filterIds)}
     data-filter-defaults={JSON.stringify(filterDefaults)}
+    data-toggle-ids={JSON.stringify(toggleIds)}
+    data-toggle-colors={JSON.stringify(toggleColorsData)}
 >
     <div class="flex flex-row items-center justify-between">
 
@@ -78,6 +132,7 @@ filters.forEach(f => {
     </div>
 
     <div class="flex flex-wrap items-end gap-2.5">
+        {/* Selects de filtro */}
         {filters.map((filter) => (
             <div class="flex flex-col items-start gap-1">
                 <label
@@ -121,6 +176,32 @@ filters.forEach(f => {
             </div>
         ))}
 
+        {/* Botones toggle */}
+        {toggles.map((toggle) => {
+            const colors = toggleColorsData[toggle.id];
+            return (
+                <div class="flex flex-col items-start gap-1">
+                    <span class="text-[10px] font-medium text-zinc-500 uppercase tracking-wide select-none">
+                        {toggle.label}
+                    </span>
+                    <button
+                        id={toggle.id}
+                        type="button"
+                        class:list={[
+                            "filter-toggle inline-flex items-center justify-center w-8 h-7.5",
+                            ...colors.inactive,
+                            "border rounded-lg cursor-pointer",
+                            "transition-all duration-150 ease-out",
+                            "focus-visible:outline-none",
+                        ]}
+                        aria-label={toggle.ariaLabel || toggle.label}
+                        aria-pressed="false"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" set:html={toggle.icon} />
+                    </button>
+                </div>
+            );
+        })}
     </div>
 
     <!-- Indicador de filtros activos -->
@@ -145,10 +226,17 @@ filters.forEach(f => {
         // Leer config desde data attributes
         const filterIds: string[] = JSON.parse(filtersSection.dataset.filterIds || '[]');
         const filterDefaults: Record<string, string> = JSON.parse(filtersSection.dataset.filterDefaults || '{}');
+        const toggleIds: string[] = JSON.parse(filtersSection.dataset.toggleIds || '[]');
+        const toggleColors: Record<string, { inactive: string[]; active: string[] }> = JSON.parse(filtersSection.dataset.toggleColors || '{}');
+
         const resetBtn = document.getElementById('filter-reset');
         const indicator = document.getElementById('filter-active-indicator');
 
-        // Escuchar change en cada select
+        // Estado de toggles (todos inician en false)
+        const toggleStates: Record<string, boolean> = {};
+        toggleIds.forEach(id => { toggleStates[id] = false; });
+
+        // --- Selects ---
         filterIds.forEach(id => {
             const select = document.getElementById(id) as HTMLSelectElement | null;
             if (select) {
@@ -156,23 +244,65 @@ filters.forEach(f => {
             }
         });
 
-        // Reset
+        // --- Toggles ---
+        toggleIds.forEach(id => {
+            const btn = document.getElementById(id) as HTMLButtonElement | null;
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    toggleStates[id] = !toggleStates[id];
+                    updateToggleVisual(id);
+                    emitFilterChange();
+                }, { signal });
+            }
+        });
+
+        function updateToggleVisual(id: string) {
+            const btn = document.getElementById(id) as HTMLButtonElement | null;
+            if (!btn) return;
+            const colors = toggleColors[id];
+            if (!colors) return;
+
+            const isActive = toggleStates[id];
+            btn.setAttribute('aria-pressed', String(isActive));
+
+            if (isActive) {
+                colors.inactive.forEach(c => btn.classList.remove(c));
+                colors.active.forEach(c => btn.classList.add(c));
+            } else {
+                colors.active.forEach(c => btn.classList.remove(c));
+                colors.inactive.forEach(c => btn.classList.add(c));
+            }
+        }
+
+        // --- Reset ---
         if (resetBtn) {
             resetBtn.addEventListener('click', () => {
+                // Reset selects
                 filterIds.forEach(id => {
                     const select = document.getElementById(id) as HTMLSelectElement | null;
                     if (select) select.value = filterDefaults[id];
+                });
+                // Reset toggles
+                toggleIds.forEach(id => {
+                    toggleStates[id] = false;
+                    updateToggleVisual(id);
                 });
                 emitFilterChange();
                 document.dispatchEvent(new CustomEvent('filter-reset'));
             }, { signal });
         }
 
+        // --- Emit ---
         function emitFilterChange() {
             const values: Record<string, string> = {};
+            // Valores de selects
             filterIds.forEach(id => {
                 const select = document.getElementById(id) as HTMLSelectElement | null;
                 if (select) values[id] = select.value;
+            });
+            // Valores de toggles (como "true"/"false")
+            toggleIds.forEach(id => {
+                values[id] = String(toggleStates[id]);
             });
 
             document.dispatchEvent(new CustomEvent('filter-change', { detail: values }));
@@ -180,9 +310,10 @@ filters.forEach(f => {
         }
 
         function updateIndicator(values: Record<string, string>) {
-            const hasActive = filterIds.some(id => values[id] !== filterDefaults[id]);
+            const hasActiveFilter = filterIds.some(id => values[id] !== filterDefaults[id]);
+            const hasActiveToggle = toggleIds.some(id => toggleStates[id]);
             if (indicator) {
-                indicator.classList.toggle('active', hasActive);
+                indicator.classList.toggle('active', hasActiveFilter || hasActiveToggle);
             }
         }
 
@@ -191,6 +322,9 @@ filters.forEach(f => {
         filterIds.forEach(id => {
             const select = document.getElementById(id) as HTMLSelectElement | null;
             if (select) initialValues[id] = select.value;
+        });
+        toggleIds.forEach(id => {
+            initialValues[id] = String(toggleStates[id]);
         });
         updateIndicator(initialValues);
     }

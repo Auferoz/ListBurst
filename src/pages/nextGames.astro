@@ -121,7 +121,7 @@ const nextDays = nextRelease
 			<div class="mt-4 h-px bg-gradient-to-r from-emerald-500/40 via-zinc-700/40 to-transparent"></div>
 		</header>
 
-		<!-- Filtro por mes -->
+		<!-- Filtros -->
 		<FilterBar
 			filters={[
 				{
@@ -133,6 +133,15 @@ const nextDays = nextRelease
 					allLabel: "Todos los meses",
 				},
 			]}
+			toggles={[
+				{
+					id: "toggle-my-list",
+					label: "Mi lista",
+					icon: '<path d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1z"/>',
+					activeColor: "emerald",
+					ariaLabel: "Filtrar solo mi lista",
+				},
+			]}
 		/>
 
 		<!-- Grupos por mes -->
@@ -142,7 +151,7 @@ const nextDays = nextRelease
 				<div class="flex items-center gap-3">
 					<h2 class="text-lg font-bold text-white tracking-tight whitespace-nowrap">{group.label}</h2>
 					<div class="flex-1 h-px bg-zinc-800"></div>
-					<span class="text-xs text-zinc-600 tabular-nums whitespace-nowrap">{group.games.length} {group.games.length === 1 ? 'juego' : 'juegos'}</span>
+					<span class="month-count text-xs text-zinc-600 tabular-nums whitespace-nowrap">{group.games.length} {group.games.length === 1 ? 'juego' : 'juegos'}</span>
 				</div>
 
 				<!-- Grid de cards -->
@@ -160,7 +169,7 @@ const nextDays = nextRelease
 				<div class="flex items-center gap-3">
 					<h2 class="text-lg font-bold text-zinc-400 tracking-tight whitespace-nowrap">Por confirmar</h2>
 					<div class="flex-1 h-px bg-zinc-800/60"></div>
-					<span class="text-xs text-zinc-600 tabular-nums whitespace-nowrap">{tbaGames.length} juegos</span>
+					<span class="month-count text-xs text-zinc-600 tabular-nums whitespace-nowrap">{tbaGames.length} juegos</span>
 				</div>
 
 				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -209,51 +218,111 @@ const nextDays = nextRelease
 </script>
 
 <script>
+	let filterController: AbortController | null = null;
+
 	function initMonthFilter() {
+		filterController?.abort();
+		filterController = new AbortController();
+		const { signal } = filterController;
+
 		const monthSections = document.querySelectorAll<HTMLElement>('.month-section');
 		const tbaSection = document.querySelector<HTMLElement>('.tba-section');
 
 		function applyFilter(values: Record<string, string>) {
 			const selectedMonth = values['filter-month'] || 'all';
+			const myListOnly = values['toggle-my-list'] === 'true';
 
+			// Filtrar secciones de mes + cards individuales
 			monthSections.forEach((section) => {
 				const key = section.dataset.monthKey;
-				if (selectedMonth === 'all' || key === selectedMonth) {
-					section.style.display = '';
-				} else {
+				const monthMatch = selectedMonth === 'all' || key === selectedMonth;
+
+				if (!monthMatch) {
 					section.style.display = 'none';
+					return;
+				}
+
+				// Dentro de la seccion, filtrar cards por myList
+				const cards = section.querySelectorAll<HTMLElement>('.card-next-game');
+				let visibleCount = 0;
+
+				cards.forEach((card) => {
+					if (myListOnly && card.dataset.inMyList !== 'true') {
+						card.style.display = 'none';
+					} else {
+						card.style.display = '';
+						visibleCount++;
+					}
+				});
+
+				// Si no hay cards visibles en esta seccion, ocultarla
+				section.style.display = visibleCount > 0 ? '' : 'none';
+
+				// Actualizar el conteo en el header del mes
+				const countSpan = section.querySelector('.month-count');
+				if (countSpan) {
+					countSpan.textContent = `${visibleCount} ${visibleCount === 1 ? 'juego' : 'juegos'}`;
 				}
 			});
 
-			// TBA: mostrar solo cuando se selecciona "Todos"
+			// TBA section: misma logica
 			if (tbaSection) {
-				tbaSection.style.display = selectedMonth === 'all' ? '' : 'none';
+				const tbaMonthMatch = selectedMonth === 'all';
+
+				if (!tbaMonthMatch) {
+					tbaSection.style.display = 'none';
+				} else {
+					const tbaCards = tbaSection.querySelectorAll<HTMLElement>('.card-next-game');
+					let tbaVisible = 0;
+
+					tbaCards.forEach((card) => {
+						if (myListOnly && card.dataset.inMyList !== 'true') {
+							card.style.display = 'none';
+						} else {
+							card.style.display = '';
+							tbaVisible++;
+						}
+					});
+
+					tbaSection.style.display = tbaVisible > 0 ? '' : 'none';
+
+					const tbaCount = tbaSection.querySelector('.month-count');
+					if (tbaCount) {
+						tbaCount.textContent = `${tbaVisible} ${tbaVisible === 1 ? 'juego' : 'juegos'}`;
+					}
+				}
 			}
 		}
 
-		// Escuchar cambios de filtro del FilterBar
+		function getCurrentFilterValues(): Record<string, string> {
+			const select = document.getElementById('filter-month') as HTMLSelectElement | null;
+			const toggleBtn = document.getElementById('toggle-my-list') as HTMLButtonElement | null;
+			return {
+				'filter-month': select?.value || 'all',
+				'toggle-my-list': toggleBtn?.getAttribute('aria-pressed') || 'false',
+			};
+		}
+
+		// Escuchar cambios de filtro del FilterBar (incluye selects y toggles)
 		document.addEventListener('filter-change', ((e: CustomEvent) => {
 			applyFilter(e.detail);
-		}) as EventListener);
+		}) as EventListener, { signal });
 
 		// Escuchar reset
 		document.addEventListener('filter-reset', () => {
-			// El FilterBar ya resetea los selects a sus defaults,
-			// pero filter-change se dispara justo antes, asi que
-			// usamos un pequeño delay para leer el valor post-reset
 			setTimeout(() => {
-				const select = document.getElementById('filter-month') as HTMLSelectElement | null;
-				if (select) {
-					applyFilter({ 'filter-month': select.value });
-				}
+				applyFilter(getCurrentFilterValues());
 			}, 10);
-		});
+		}, { signal });
 
-		// Aplicar filtro inicial (el default es el mes actual)
-		const select = document.getElementById('filter-month') as HTMLSelectElement | null;
-		if (select) {
-			applyFilter({ 'filter-month': select.value });
-		}
+		// Cleanup en View Transitions
+		const currentController = filterController;
+		document.addEventListener('astro:before-preparation', () => {
+			currentController?.abort();
+		}, { once: true });
+
+		// Aplicar filtro inicial
+		applyFilter(getCurrentFilterValues());
 	}
 
 	document.addEventListener('astro:page-load', initMonthFilter);
