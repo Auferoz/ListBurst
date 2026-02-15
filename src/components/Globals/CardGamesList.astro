@@ -75,11 +75,11 @@ const statusColorClasses = (() => {
         case 'Jugando':
             return 'border-green-700/50 shadow-green-700/20 hover:shadow-green-700/40';
         case 'Completado':
-            return 'border-sky-700/50 shadow-sky-700/20 hover:shadow-sky-700/40';
+            return 'border-teal-700/50 shadow-teal-700/20 hover:shadow-teal-700/40';
         case 'Abandonado':
             return 'border-zinc-600/50 shadow-zinc-600/20 hover:shadow-zinc-600/40';
         default:
-            return 'border-sky-700/50 shadow-sky-700/20 hover:shadow-sky-700/40';
+            return 'border-teal-700/50 shadow-teal-700/20 hover:shadow-teal-700/40';
     }
 })();
 ---
@@ -87,7 +87,7 @@ const statusColorClasses = (() => {
 <a
     href={detailUrl}
     class:list={[
-        "card-game block group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow",
+        "card-game block group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow max-h-36.5",
         statusColorClasses
     ]}
     data-year={yearsPlayed}
@@ -120,17 +120,17 @@ const statusColorClasses = (() => {
         </figure>
 
         <!-- Info Section -->
-        <div class="flex flex-1 flex-col justify-between py-1">
-            <header>
-                <h3 class="text-base font-semibold text-white leading-tight">
+        <div class="flex flex-1 flex-col justify-between py-1 min-w-0">
+            <header class="min-w-0">
+                <h3 class="text-sm font-semibold text-white leading-snug line-clamp-2">
                     {title}
-                    {releaseYear && <span class="text-xs text-zinc-400">({releaseYear})</span>}
                 </h3>
-                <p class="text-xs text-zinc-500 mt-0.5">
-                    {companie}
+                <p class="text-xs text-zinc-400 mt-0.5 truncate">
+                    {releaseYear && <span>{releaseYear}</span>}
+                    {companie && <span> · {companie}</span>}
                 </p>
                 {genres.length > 0 && (
-                    <p class="text-xs text-zinc-400 mt-0.5 capitalize">
+                    <p class="text-xs text-zinc-400 mt-0.5 capitalize truncate">
                         {genres.slice(0, 3).join(', ')}
                     </p>
                 )}
@@ -148,7 +148,7 @@ const statusColorClasses = (() => {
                 )}
                 {/* Icono de estado */}
                 {estado === 'Completado' && (
-                    <span class="ml-auto text-violet-400" title="Completado">
+                    <span class="ml-auto text-teal-400" title="Completado">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
@@ -174,7 +174,7 @@ const statusColorClasses = (() => {
 
         <!-- Game page detail link -->
         <span
-            class="absolute top-2 right-2 p-1 text-zinc-200 hover:text-white transition-colors"
+            class="absolute top-2 right-0 p-1 text-zinc-200 hover:text-white transition-colors"
             aria-label={`Ver detalle de ${title}`}
         >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">

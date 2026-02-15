@@ -50,7 +50,7 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
         <header class="relative">
             <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
                 <div>
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400/80 mb-1">Collection</p>
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400/80 mb-1">Collection</p>
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                         Movies
                     </h1>
@@ -65,8 +65,8 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
                 </div>
 
                 <!-- Dashboard compacto -->
-                <section class="grid grid-cols-2 gap-2 sm:gap-3 w-full lg:w-auto lg:max-w-sm">
-                    <CardDashboard text="Total peliculas" number={totalMovies} color="sky" id="dash-total">
+                <section class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3 w-full lg:w-auto lg:max-w-xxl">
+                    <CardDashboard text="Total peliculas" number={totalMovies} color="indigo" id="dash-total">
                         <IconMovie width={20} height={20} />
                     </CardDashboard>
                     <CardDashboard text="Generos" number={totalGenres} color="violet" id="dash-genres">
@@ -82,7 +82,7 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
             </div>
 
             <!-- Linea decorativa -->
-            <div class="mt-4 h-px bg-gradient-to-r from-sky-500/40 via-zinc-700/40 to-transparent"></div>
+            <div class="mt-4 h-px bg-gradient-to-r from-indigo-500/40 via-zinc-700/40 to-transparent"></div>
         </header>
 
         <!-- Filtros -->

@@ -81,8 +81,8 @@ const formatListedAt = (dateString: string | undefined) => {
 };
 const formattedListedAt = formatListedAt(listedAt);
 
-// Color de borde fijo para películas (sky)
-const borderClasses = 'border-sky-700/50 shadow-sky-700/20 hover:shadow-sky-700/40';
+// Color de borde fijo para películas (indigo)
+const borderClasses = 'border-indigo-700/50 shadow-indigo-700/20 hover:shadow-indigo-700/40';
 
 // URL de detalle
 const movieSlug = movie?.ids?.slug;
@@ -107,7 +107,7 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
 >
     <!-- Background Image with Mask (usando movieFanart o movieBanner) -->
     <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+        class="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-40"
         style={`background-image: url('${movieFanart || movieBanner}'); mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);`}
     ></div>
 
@@ -128,18 +128,18 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
         </figure>
 
         <!-- Info Section -->
-        <div class="flex flex-1 flex-col justify-between py-1">
-            <header>
-                <h3 class="text-base font-semibold text-white leading-tight">
+        <div class="flex flex-1 flex-col justify-between py-1 min-w-0">
+            <header class="min-w-0">
+                <h3 class="text-sm font-semibold text-white leading-snug line-clamp-2">
                     {title}
-                    {year && <span class="text-xs text-zinc-400">({year})</span>}
                 </h3>
-                <p class="text-xs text-zinc-400 mt-0.5">
-                    {duration && <span>{duration}</span>}
-                    {certification && <span class="ml-1 px-1 py-0.5 bg-zinc-700 rounded text-[10px]">{certification}</span>}
+                <p class="text-xs text-zinc-400 mt-0.5 truncate">
+                    {year && <span>{year}</span>}
+                    {duration && <span> · {duration}</span>}
+                    {certification && <span class="ml-1 px-1 py-0.5 bg-zinc-700 rounded text-[10px] align-middle">{certification}</span>}
                 </p>
                 {genres.length > 0 && (
-                    <p class="text-xs text-zinc-400 mt-0.5 capitalize">
+                    <p class="text-xs text-zinc-400 mt-0.5 capitalize truncate">
                         {genres.slice(0, 3).join(', ')}
                     </p>
                 )}
@@ -202,7 +202,7 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
         <!-- Options Modal Button -->
         <button
             type="button"
-            class="absolute top-2 right-2 p-1 text-zinc-200 hover:text-white transition-colors"
+            class="absolute top-2 right-0 p-1 text-zinc-200 hover:text-white transition-colors"
             aria-label="Opciones"
         >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">

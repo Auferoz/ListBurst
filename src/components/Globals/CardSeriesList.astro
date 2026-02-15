@@ -69,7 +69,7 @@ const seasonPremiere = formatSeasonPremiere(season?.first_aired);
 // Clases de color según el estado
 const statusColorClasses = isOngoing
     ? 'border-green-700/50 shadow-green-700/20 hover:shadow-green-700/40'
-    : 'border-sky-700/50 shadow-sky-700/20 hover:shadow-sky-700/40';
+    : 'border-blue-700/50 shadow-blue-700/20 hover:shadow-blue-700/40';
 
 // URL de la página de detalle
 const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
@@ -79,7 +79,7 @@ const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
 <a
     href={detailUrl}
     class:list={[
-        "card-series group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow",
+        "card-series group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow max-h-36.5",
         statusColorClasses
     ]}
     data-year={yearViewed}
@@ -104,7 +104,7 @@ const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
 
     <!-- Background Image with Mask (usando showBanner) -->
     <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+        class="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-40"
         style={`background-image: url('${showBanner}'); mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);`}
     ></div>
 
@@ -125,17 +125,17 @@ const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
         </figure>
 
         <!-- Info Section -->
-        <div class="flex flex-1 flex-col justify-between py-1">
-            <header>
-                <h3 class="text-base font-semibold text-white leading-tight">
+        <div class="flex flex-1 flex-col justify-between py-1 min-w-0">
+            <header class="min-w-0">
+                <h3 class="text-sm font-semibold text-white leading-snug line-clamp-2">
                     {title}
-                    {seasonPremiere && <span class="text-xs text-zinc-400">· {seasonPremiere}</span>}
                 </h3>
-                <p class="text-xs text-zinc-400 mt-0.5">
-                    Season {seasonNumber} {episodeCount && `· ${episodeCount} Episodes`}
+                <p class="text-xs text-zinc-400 mt-0.5 truncate">
+                    {seasonPremiere && <span>{seasonPremiere} ·</span>}
+                    S{seasonNumber} {episodeCount && `· ${episodeCount} Eps`}
                 </p>
                 {genres.length > 0 && (
-                    <p class="text-xs text-zinc-400 mt-0.5 capitalize">
+                    <p class="text-xs text-zinc-400 mt-0.5 capitalize truncate">
                         {genres.slice(0, 2).join(', ')}
                     </p>
                 )}
@@ -162,7 +162,7 @@ const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
         <!-- Options Modal Button -->
         <button
             type="button"
-            class="absolute top-2 right-2 p-1 text-zinc-200 hover:text-white transition-colors"
+            class="absolute top-2 right-0 p-1 text-zinc-200 hover:text-white transition-colors"
             aria-label="Opciones"
         >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">

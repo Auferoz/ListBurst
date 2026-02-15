@@ -27,6 +27,7 @@ interface Props {
         companie: string;
         poster: string;
         trailer: string;
+        artworks: string;
         genre: string;
         estado: string;
         horasTotal: number;
@@ -47,6 +48,8 @@ const { game } = Astro.props;
 const posterUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.poster}`;
 // Versión más grande para el hero background
 const posterHeroUrl = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.poster}`;
+
+const artworksBG = `https://images.igdb.com/igdb/image/upload/t_1080p/${game.artworks}`;
 
 // Datos derivados
 const title = game.title || 'Sin título';
@@ -100,7 +103,7 @@ const formatDateShort = (dateStr: string) => {
 const estadoColor = (() => {
     switch (estado) {
         case 'Jugando': return 'text-green-400';
-        case 'Completado': return 'text-sky-400';
+        case 'Completado': return 'text-teal-400';
         case 'Abandonado': return 'text-zinc-400';
         default: return 'text-zinc-400';
     }
@@ -116,8 +119,8 @@ const slug = getGameSlug(title);
         <section class="relative h-[67vh] overflow-hidden">
             <!-- Poster como fondo blurred -->
             <div
-                class="absolute inset-0 bg-cover bg-top bg-no-repeat scale-110 blur-2xl opacity-30"
-                style={`background-image: url('${posterHeroUrl}');`}
+                class="absolute inset-0 bg-cover bg-top bg-no-repeat scale-110 blur-2xl opacity-50 xl:blur-none xl:opacity-90"
+                style={`background-image: url('${artworksBG}');`}
             ></div>
 
             <!-- Overlay oscuro -->
@@ -187,7 +190,7 @@ const slug = getGameSlug(title);
                     {logrosTotal > 0 && (
                         <div class="mt-2 w-full bg-zinc-700 rounded-full h-1.5">
                             <div
-                                class="bg-sky-600 h-1.5 rounded-full transition-all"
+                                class="bg-teal-600 h-1.5 rounded-full transition-all"
                                 style={`width: ${logrosPercent}%`}
                             ></div>
                         </div>

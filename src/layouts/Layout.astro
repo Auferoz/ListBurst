@@ -5,6 +5,12 @@ import '../styles/global.css'
 import '@fontsource-variable/nunito-sans';
 
 import MenuHeader from '../components/Globals/MenuHeader.astro'
+
+interface Props {
+	hideMenu?: boolean;
+}
+
+const { hideMenu = false } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
@@ -17,7 +23,7 @@ import MenuHeader from '../components/Globals/MenuHeader.astro'
 		<ClientRouter />
 	</head>
 	<body>
-		<MenuHeader />
+		{!hideMenu && <MenuHeader />}
 		<slot />
 	</body>
 </html>

@@ -60,7 +60,7 @@ const abandonedCount = gamesWithIndex.filter(g => g.estado === "Abandonado").len
         <header class="relative">
             <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
                 <div>
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-400/80 mb-1">Collection</p>
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal-400/80 mb-1">Collection</p>
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                         Games
                     </h1>
@@ -69,20 +69,20 @@ const abandonedCount = gamesWithIndex.filter(g => g.estado === "Abandonado").len
                         <span class="text-zinc-600">&middot;</span>
                         <span class="text-green-400/70">{playingCount} jugando</span>
                         <span class="text-zinc-600">&middot;</span>
-                        <span class="text-violet-400/70">{completedCount} completados</span>
+                        <span class="text-teal-400/70">{completedCount} completados</span>
                         <span id="games-count" class="text-zinc-400"></span>
                     </p>
                 </div>
 
                 <!-- Dashboard compacto -->
-                <section class="grid grid-cols-2 gap-2 sm:gap-3 w-full lg:w-auto lg:max-w-sm">
+                <section class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3 w-full lg:w-auto lg:max-w-xxl">
                     <CardDashboard text="Jugando" number={playingCount} color="green" id="dash-playing">
                         <IconGamepad width={20} height={20} />
                     </CardDashboard>
                     <CardDashboard text="Pausados" number={pausedCount} color="amber" id="dash-paused">
                         <IconGamepad width={20} height={20} />
                     </CardDashboard>
-                    <CardDashboard text="Completados" number={completedCount} color="violet" id="dash-completed">
+                    <CardDashboard text="Completados" number={completedCount} color="teal" id="dash-completed">
                         <IconGamepad width={20} height={20} />
                     </CardDashboard>
                     <CardDashboard text="Abandonados" number={abandonedCount} color="red" id="dash-abandoned">
@@ -92,7 +92,7 @@ const abandonedCount = gamesWithIndex.filter(g => g.estado === "Abandonado").len
             </div>
 
             <!-- Linea decorativa -->
-            <div class="mt-4 h-px bg-gradient-to-r from-violet-500/40 via-zinc-700/40 to-transparent"></div>
+            <div class="mt-4 h-px bg-gradient-to-r from-teal-500/40 via-zinc-700/40 to-transparent"></div>
         </header>
 
         <!-- Filtros -->

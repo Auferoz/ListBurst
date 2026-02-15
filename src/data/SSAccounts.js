@@ -2,7 +2,7 @@ export const StreamingServiceAccounts = [
     {
         name: "Netflix",
         url: "https://www.netflix.com/",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Netflix_Logomark.png/640px-Netflix_Logomark.png",
         password: "26802577-4As",
         email: "adesigns7@gmail.com",
         plan: "Premium",
@@ -10,7 +10,7 @@ export const StreamingServiceAccounts = [
     {
         name: "Disney+",
         url: "https://www.disneyplus.com/",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Disney%2B_logo.svg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Disney_Plus_logo.svg/640px-Disney_Plus_logo.svg.png",
         password: "25334769Disney",
         email: "adesigns7@gmail.com",
         plan: "Premium",
@@ -18,7 +18,7 @@ export const StreamingServiceAccounts = [
     {
         name: "Crunchyroll",
         url: "https://www.crunchyroll.com/",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Crunchyroll_logo.svg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Crunchyroll_logo_2024.png/640px-Crunchyroll_logo_2024.png",
         password: "25334769a",
         email: "alfredosaavedrachile@gmail.com",
         plan: "Mega Fan",
@@ -26,7 +26,7 @@ export const StreamingServiceAccounts = [
     {
         name: "HBO Max",
         url: "https://www.hbomax.com/",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/HBO_Max_2024.svg/640px-HBO_Max_2024.svg.png",
         password: "25334769hbo",
         email: "adesigns7@gmail.com",
         plan: "Platino",
@@ -34,17 +34,17 @@ export const StreamingServiceAccounts = [
     {
         name: "Amazon Prime Video",
         url: "https://www.amazon.com/prime-video",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Amazon_Prime_Video_Logo.svg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Prime_Video_logo.svg/640px-Amazon_Prime_Video_logo.svg.png",
         password: "26802577-4As",
         email: "adesigns7@gmail.com",
-        plan: "",
+        plan: "FREE",
     },
     {
         name: "Apple TV+",
         url: "https://tv.apple.com/",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_TV_Plus_Logo.svg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Apple_TV_Plus_Logo.svg/640px-Apple_TV_Plus_Logo.svg.png",
         password: "25334769Burst_",
         email: "adesigns7@gmail.com",
-        plan: "",
+        plan: "FREE",
     },
 ]

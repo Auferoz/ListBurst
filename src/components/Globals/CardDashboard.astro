@@ -14,7 +14,7 @@
 interface Props {
     text: string;
     number: number | string;
-    color?: 'violet' | 'sky' | 'green' | 'red' | 'amber' | 'zinc';
+    color?: 'violet' | 'sky' | 'green' | 'red' | 'amber' | 'zinc' | 'teal' | 'indigo';
     id?: string;
 }
 
@@ -57,6 +57,18 @@ const colorMap: Record<string, { iconBg: string; accent: string; hover: string; 
         iconText: 'text-zinc-400',
         accent: 'bg-zinc-500/40',
         hover: 'hover:border-zinc-500/25',
+    },
+    teal: {
+        iconBg: 'bg-teal-500/10',
+        iconText: 'text-teal-400',
+        accent: 'bg-teal-500/40',
+        hover: 'hover:border-teal-500/25',
+    },
+    indigo: {
+        iconBg: 'bg-indigo-500/10',
+        iconText: 'text-indigo-400',
+        accent: 'bg-indigo-500/40',
+        hover: 'hover:border-indigo-500/25',
     },
 };
 

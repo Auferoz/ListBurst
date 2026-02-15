@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-02-13T00:20:12.320Z",
-  "totalGames": 456,
+  "fetchedAt": "2026-02-14T11:32:46.558Z",
+  "totalGames": 462,
   "myListCount": 49,
-  "apiOnlyCount": 407,
-  "bothCount": 26,
+  "apiOnlyCount": 413,
+  "bothCount": 28,
   "games": [
     {
       "localData": {
@@ -246,7 +246,8 @@
         "platforms": [
           "Xbox Series X|S",
           "PC (Microsoft Windows)",
-          "PlayStation 5"
+          "PlayStation 5",
+          "Mac"
         ],
         "screenshots": [
           "scyfx7",
@@ -270,17 +271,22 @@
           {
             "human": "Feb 12, 2026",
             "date": 1770854400,
-            "platform": "PC (Microsoft Windows)"
-          },
-          {
-            "human": "Feb 12, 2026",
-            "date": 1770854400,
             "platform": "Xbox Series X|S"
           },
           {
             "human": "Feb 12, 2026",
             "date": 1770854400,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "Feb 12, 2026",
+            "date": 1770854400,
             "platform": "PlayStation 5"
+          },
+          {
+            "human": "Feb 12, 2026",
+            "date": 1770854400,
+            "platform": "Mac"
           }
         ],
         "developers": [
@@ -458,7 +464,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 280,
+        "hypes": 287,
         "steamUrl": "https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/"
       },
       "inMyList": true,
@@ -668,7 +674,7 @@
         "publishers": [
           "Pearl Abyss"
         ],
-        "hypes": 207,
+        "hypes": 209,
         "steamUrl": "https://store.steampowered.com/app/3321460"
       },
       "inMyList": true,
@@ -761,7 +767,7 @@
         "publishers": [
           "PlaySide"
         ],
-        "hypes": 62,
+        "hypes": 61,
         "steamUrl": "https://store.steampowered.com/app/2416450/"
       },
       "inMyList": true,
@@ -830,7 +836,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 177,
+        "hypes": 176,
         "steamUrl": "https://store.steampowered.com/app/3357650/PRAGMATA/"
       },
       "inMyList": true,
@@ -920,7 +926,7 @@
         "publishers": [
           "WB Games"
         ],
-        "hypes": 59,
+        "hypes": 58,
         "steamUrl": "https://store.steampowered.com/app/2215200"
       },
       "inMyList": true,
@@ -978,7 +984,7 @@
         "publishers": [
           "S-Game"
         ],
-        "hypes": 132,
+        "hypes": 131,
         "steamUrl": "https://store.steampowered.com/app/4115450"
       },
       "inMyList": true,
@@ -1057,7 +1063,7 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 59,
+        "hypes": 58,
         "steamUrl": "https://store.steampowered.com/app/2483190"
       },
       "inMyList": true,
@@ -1341,7 +1347,7 @@
         "url": "https://www.igdb.com/games/silent-hill-townfall",
         "summary": "Returning to an island town to ‘put things right’, Simon Ordell descends into a world of tense evasion, explosive confrontations, and mind-bending puzzles that slowly surface the truth of St. Amelia.",
         "firstReleaseDate": 1798675200,
-        "cover": "co5l17",
+        "cover": "cobih4",
         "genres": [
           "Adventure"
         ],
@@ -1350,10 +1356,20 @@
           "PlayStation 5"
         ],
         "screenshots": [
-          "scjfq5"
+          "scjfq5",
+          "sc11x88",
+          "sc11x82",
+          "sc11x83",
+          "sc11x84",
+          "sc11x85",
+          "sc11x86",
+          "sc11x87"
         ],
         "artworks": [
-          "ar1xde"
+          "ar5b7h",
+          "ar5b7i",
+          "ar5b7j",
+          "ar5b7k"
         ],
         "releaseDates": [
           {
@@ -1368,13 +1384,13 @@
           }
         ],
         "developers": [
-          "No Code"
+          "Screen Burn"
         ],
         "publishers": [
           "Annapurna Interactive",
           "Konami"
         ],
-        "hypes": 31,
+        "hypes": 41,
         "steamUrl": "https://store.steampowered.com/app/1636440/SILENT_HILL_Townfall"
       },
       "inMyList": true,
@@ -1440,7 +1456,7 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 277,
+        "hypes": 280,
         "steamUrl": "https://store.steampowered.com/app/2769570"
       },
       "inMyList": true,
@@ -1515,7 +1531,7 @@
         "publishers": [
           "IO Interactive"
         ],
-        "hypes": 194,
+        "hypes": 198,
         "steamUrl": "https://store.steampowered.com/app/3768760/007_First_Light/"
       },
       "inMyList": true,
@@ -1841,7 +1857,7 @@
         "publishers": [
           "Bandai Namco Entertainment"
         ],
-        "hypes": 147,
+        "hypes": 150,
         "steamUrl": "https://store.steampowered.com/app/3751260"
       },
       "inMyList": true,
@@ -2249,7 +2265,7 @@
         "url": "https://www.igdb.com/games/star-wars-galactic-racer",
         "summary": "STAR WARS: Galactic Racer is a runs-based, high-stakes reinvention of racing born in the lawless Outer Rim. With the Empire gone and the galaxy rebuilding, The Galactic League is created: an underground, unsanctioned circuit where syndicates bankroll chaos and champions are forged.",
         "firstReleaseDate": 1798675200,
-        "cover": "cob0lg",
+        "cover": "cobihx",
         "genres": [
           "Racing",
           "Sport",
@@ -2269,13 +2285,14 @@
         ],
         "artworks": [
           "ar4v24",
-          "ar4v25"
+          "ar4v25",
+          "ar5bb4"
         ],
         "releaseDates": [
           {
             "human": "2026",
             "date": 1798675200,
-            "platform": "Xbox Series X|S"
+            "platform": "PC (Microsoft Windows)"
           },
           {
             "human": "2026",
@@ -2285,7 +2302,7 @@
           {
             "human": "2026",
             "date": 1798675200,
-            "platform": "PC (Microsoft Windows)"
+            "platform": "Xbox Series X|S"
           }
         ],
         "developers": [
@@ -2294,7 +2311,7 @@
         "publishers": [
           "Secret Mode"
         ],
-        "hypes": 37,
+        "hypes": 38,
         "steamUrl": "https://store.steampowered.com/app/4078430"
       },
       "inMyList": true,
@@ -2311,15 +2328,23 @@
         "name": "Kena: Scars of Kosmora",
         "slug": "kena-scars-of-kosmora",
         "url": "https://www.igdb.com/games/kena-scars-of-kosmora",
-        "summary": null,
+        "summary": "In Kena: Scars of Kosmora, Kena is older and renowned as a Spirit Guide. In hopes of finding answers to the affliction she has endured all her life, Kena travels to the mysterious island of Kosmora. Home to distinct cultures and regions, Kosmora is full of buried secrets from a tragic past.",
         "firstReleaseDate": 1798675200,
-        "cover": "cobih5",
-        "genres": [],
+        "cover": "cobihr",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
         "platforms": [
           "PC (Microsoft Windows)",
           "PlayStation 5"
         ],
-        "screenshots": [],
+        "screenshots": [
+          "sc11x9s",
+          "sc11x9t",
+          "sc11x9u",
+          "sc11x9v"
+        ],
         "artworks": [],
         "releaseDates": [
           {
@@ -2333,9 +2358,13 @@
             "platform": "PlayStation 5"
           }
         ],
-        "developers": [],
-        "publishers": [],
-        "hypes": 4,
+        "developers": [
+          "Ember Lab"
+        ],
+        "publishers": [
+          "Sony Interactive Entertainment"
+        ],
+        "hypes": 8,
         "steamUrl": null
       },
       "inMyList": true,
@@ -2410,7 +2439,8 @@
           "Kojima Productions"
         ],
         "publishers": [
-          "Sony Interactive Entertainment"
+          "Sony Interactive Entertainment",
+          "Kojima Productions"
         ],
         "hypes": 188,
         "steamUrl": "https://store.steampowered.com/app/3280350/"
@@ -2483,7 +2513,7 @@
         "publishers": [
           "Remedy Entertainment"
         ],
-        "hypes": 91,
+        "hypes": 94,
         "steamUrl": "https://store.steampowered.com/app/3669870/"
       },
       "inMyList": true,
@@ -2545,11 +2575,11 @@
         "publishers": [
           "ProbablyMonsters"
         ],
-        "hypes": 2,
+        "hypes": 12,
         "steamUrl": "https://store.steampowered.com/app/4317690/Crimson_Moon/"
       },
       "inMyList": true,
-      "source": "mylist"
+      "source": "both"
     },
     {
       "localData": {
@@ -2611,7 +2641,7 @@
         "publishers": [
           "Fictions"
         ],
-        "hypes": 64,
+        "hypes": 67,
         "steamUrl": "https://store.steampowered.com/app/2001760"
       },
       "inMyList": true,
@@ -2630,7 +2660,7 @@
         "url": "https://www.igdb.com/games/star-wars-galactic-racer",
         "summary": "STAR WARS: Galactic Racer is a runs-based, high-stakes reinvention of racing born in the lawless Outer Rim. With the Empire gone and the galaxy rebuilding, The Galactic League is created: an underground, unsanctioned circuit where syndicates bankroll chaos and champions are forged.",
         "firstReleaseDate": 1798675200,
-        "cover": "cob0lg",
+        "cover": "cobihx",
         "genres": [
           "Racing",
           "Sport",
@@ -2650,13 +2680,14 @@
         ],
         "artworks": [
           "ar4v24",
-          "ar4v25"
+          "ar4v25",
+          "ar5bb4"
         ],
         "releaseDates": [
           {
             "human": "2026",
             "date": 1798675200,
-            "platform": "Xbox Series X|S"
+            "platform": "PC (Microsoft Windows)"
           },
           {
             "human": "2026",
@@ -2666,7 +2697,7 @@
           {
             "human": "2026",
             "date": 1798675200,
-            "platform": "PC (Microsoft Windows)"
+            "platform": "Xbox Series X|S"
           }
         ],
         "developers": [
@@ -2675,7 +2706,7 @@
         "publishers": [
           "Secret Mode"
         ],
-        "hypes": 37,
+        "hypes": 38,
         "steamUrl": "https://store.steampowered.com/app/4078430"
       },
       "inMyList": true,
@@ -2839,7 +2870,7 @@
         "publishers": [
           "Konami"
         ],
-        "hypes": 3,
+        "hypes": 12,
         "steamUrl": "https://store.steampowered.com/app/3859630/METAL_GEAR_SOLID_MASTER_COLLECTION_Vol2"
       },
       "inMyList": true,
@@ -2879,7 +2910,10 @@
           "scvcfe"
         ],
         "artworks": [
-          "ar3b6a"
+          "ar3b6a",
+          "ar5b85",
+          "ar5b86",
+          "ar5b87"
         ],
         "releaseDates": [
           {
@@ -2909,7 +2943,7 @@
         "publishers": [
           "Konami"
         ],
-        "hypes": 29,
+        "hypes": 34,
         "steamUrl": "https://store.steampowered.com/app/2989180"
       },
       "inMyList": true,
@@ -2923,18 +2957,27 @@
       },
       "igdb": {
         "id": 389443,
-        "name": "God of War: Sons of Sparta",
+        "name": "God of War Sons of Sparta",
         "slug": "god-of-war-sons-of-sparta",
         "url": "https://www.igdb.com/games/god-of-war-sons-of-sparta",
-        "summary": null,
+        "summary": "Every legend has a beginning – before he was a God, before he was a father, Kratos was a young Spartan!\nExperience an untold chapter in Kratos’ journey set during the harsh years of Spartan training alongside his brother Deimos. Through endless trials, their minds, bodies, and hearts have been molded to become Spartan soldiers for whom duty and honor mean everything.\nAfter a fellow cadet goes missing, Kratos and Deimos vow to find him and embark on an adventure that will put their training and Spartan spirit to the test.",
         "firstReleaseDate": 1770854400,
         "cover": "cobigb",
-        "genres": [],
+        "genres": [
+          "Platform"
+        ],
         "platforms": [
           "PlayStation 5"
         ],
-        "screenshots": [],
-        "artworks": [],
+        "screenshots": [
+          "sc11xcb",
+          "sc11xcc",
+          "sc11xcd",
+          "sc11xce"
+        ],
+        "artworks": [
+          "ar5b8j"
+        ],
         "releaseDates": [
           {
             "human": "Feb 12, 2026",
@@ -2942,8 +2985,12 @@
             "platform": "PlayStation 5"
           }
         ],
-        "developers": [],
-        "publishers": [],
+        "developers": [
+          "Mega Cat Studios"
+        ],
+        "publishers": [
+          "Sony Interactive Entertainment"
+        ],
         "hypes": 2,
         "steamUrl": null
       },
@@ -2961,15 +3008,18 @@
         "name": "Castlevania: Belmont's Curse",
         "slug": "castlevania-belmonts-curse",
         "url": "https://www.igdb.com/games/castlevania-belmonts-curse",
-        "summary": "Crimson Curse —Will Your Fate Bloom in Despair or Salvation Set 23 years after Castlevania Dracula's Curse - follow a young Belmont's journey in an all new 2D Action-Exploration title from KONAMI, Evil Empire and Motion Twin.",
+        "summary": "Crimson Curse —Will Your Fate Bloom in Despair or Salvation. Set 23 years after Castlevania Dracula's Curse - follow a young Belmont's journey in an all new 2D Action-Exploration title from KONAMI, Evil Empire and Motion Twin.",
         "firstReleaseDate": 1798675200,
         "cover": "cobigs",
         "genres": [
-          "Role-playing (RPG)"
+          "Role-playing (RPG)",
+          "Adventure"
         ],
         "platforms": [
+          "Xbox Series X|S",
           "PC (Microsoft Windows)",
-          "PlayStation 5"
+          "PlayStation 5",
+          "Nintendo Switch"
         ],
         "screenshots": [
           "sc11x74",
@@ -2996,20 +3046,31 @@
           {
             "human": "2026",
             "date": 1798675200,
+            "platform": "Xbox Series X|S"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
             "platform": "PlayStation 5"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "Nintendo Switch"
           }
         ],
         "developers": [
-          "Konami"
+          "Evil Empire",
+          "Motion Twin"
         ],
         "publishers": [
           "Konami"
         ],
-        "hypes": 1,
+        "hypes": 19,
         "steamUrl": "https://store.steampowered.com/app/4231820"
       },
       "inMyList": true,
-      "source": "mylist"
+      "source": "both"
     },
     {
       "localData": {
@@ -3024,13 +3085,26 @@
         "url": "https://www.igdb.com/games/rev-noir",
         "summary": "When Hope Sparks Catastrophe\n\nIn a world shrouded in lightfall, a natural phenomenon that brings death to those it touches,\nA lonely boy who suffers from amnesia becomes acquainted with a special girl.\nTogether, they set out on a journey to stop this phenomenon,\nBelieving that the journey will save the world, and in turn, save her.\n\nFate, bestowed by the Gods?\nOr the power of will, borne from within humankind?\nTheir journey ends up shaking the world.\n\nUnravel the mandate of heaven, and weave together the threads of hope in this completely new RPG experience.",
         "firstReleaseDate": null,
-        "cover": "cobigm",
-        "genres": [],
+        "cover": "cobiht",
+        "genres": [
+          "Role-playing (RPG)"
+        ],
         "platforms": [
           "PlayStation 5"
         ],
-        "screenshots": [],
-        "artworks": [],
+        "screenshots": [
+          "sc11xa4",
+          "sc11xa5",
+          "sc11xa1",
+          "sc11xa2",
+          "sc11xa3",
+          "sc11xa6",
+          "sc11xa7",
+          "sc11xa8"
+        ],
+        "artworks": [
+          "ar5b8a"
+        ],
         "releaseDates": [
           {
             "human": "TBD",
@@ -3038,8 +3112,10 @@
           }
         ],
         "developers": [],
-        "publishers": [],
-        "hypes": 2,
+        "publishers": [
+          "Konami"
+        ],
+        "hypes": 9,
         "steamUrl": null
       },
       "inMyList": true,
@@ -3052,40 +3128,30 @@
         "dateRelease": "31-12-2028"
       },
       "igdb": {
-        "id": 389438,
+        "id": 143750,
         "name": "John Wick",
-        "slug": "john-wick--1",
-        "url": "https://www.igdb.com/games/john-wick--1",
-        "summary": "This new John Wick video game will feature an original gameplay narrative set in the John Wick timeline years before the Impossible Task and will deliver on the signature style and unique elements fans expect from a John Wick mission, including a hard-hitting gun-fu combat system, jaw-dropping camerawork, intense driving experiences, cinematic storytelling, and a bold range of atmospherically immersive environments.",
+        "slug": "john-wick",
+        "url": "https://www.igdb.com/games/john-wick",
+        "summary": "This action platformer game is based on a fake NES tribute video for the John Wick movie for what might've looked like if a NES game was released back in the day.",
         "firstReleaseDate": null,
-        "cover": "cobigt",
-        "genres": [],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
+        "cover": "co2trd",
+        "genres": [
+          "Platform",
+          "Hack and slash/Beat 'em up",
+          "Arcade"
         ],
-        "screenshots": [],
+        "platforms": [],
+        "screenshots": [
+          "scwhkk",
+          "scwhkl",
+          "scwhkm",
+          "scwhko"
+        ],
         "artworks": [],
-        "releaseDates": [
-          {
-            "human": "TBD",
-            "platform": "PC (Microsoft Windows)"
-          },
-          {
-            "human": "TBD",
-            "platform": "Xbox Series X|S"
-          },
-          {
-            "human": "TBD",
-            "platform": "PlayStation 5"
-          }
-        ],
-        "developers": [
-          "Saber Interactive"
-        ],
+        "releaseDates": [],
+        "developers": [],
         "publishers": [],
-        "hypes": 5,
+        "hypes": 1,
         "steamUrl": null
       },
       "inMyList": true,
@@ -3163,8 +3229,10 @@
         "developers": [
           "Krafton Montréal Studio"
         ],
-        "publishers": [],
-        "hypes": 5,
+        "publishers": [
+          "Krafton"
+        ],
+        "hypes": 12,
         "steamUrl": null
       },
       "inMyList": true,
@@ -4324,6 +4392,60 @@
     },
     {
       "localData": {
+        "title": "Sector Unknown",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa2da.webp",
+        "dateRelease": "12-02-2026"
+      },
+      "igdb": {
+        "id": 291287,
+        "name": "Sector Unknown",
+        "slug": "sector-unknown",
+        "url": "https://www.igdb.com/games/sector-unknown",
+        "summary": "Sector Unknown is a story-rich, isometric RPG set in a shadowy expanse of space. Begin on a desolate planet, establish a stronghold, explore space, ally with or dominate local factions, and ignite a rebellion against a despotic organization bent on exploiting the sector's resources and inhabitants.",
+        "firstReleaseDate": 1770854400,
+        "cover": "coa2da",
+        "genres": [
+          "Role-playing (RPG)"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scr594",
+          "scr58z",
+          "scr599",
+          "scr59e",
+          "scr59j",
+          "scr59o",
+          "scr59u",
+          "scr59z",
+          "scr5a2",
+          "scr5a5",
+          "scr5a7",
+          "scr5a9",
+          "scr5ab",
+          "scr5ac",
+          "scr5ad",
+          "scr5ae"
+        ],
+        "artworks": [
+          "ar2tb3"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Creative Storm Entertainment"
+        ],
+        "publishers": [
+          "Creative Storm Entertainment"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2734270"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Rogue Point",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobf3b.webp",
         "dateRelease": "12-02-2026"
@@ -4499,7 +4621,7 @@
     {
       "localData": {
         "title": "Yakuza Kiwami 3 & Dark Ties",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coavx7.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobj1p.webp",
         "dateRelease": "12-02-2026"
       },
       "igdb": {
@@ -4509,7 +4631,7 @@
         "url": "https://www.igdb.com/games/yakuza-kiwami-3-and-dark-ties",
         "summary": "YAKUZA KIWAMI 3 is an extreme remake of the action-adventure beat 'em up Yakuza 3 featuring ex-yakuza Kazuma Kiryu's fight to protect those he loves. DARK TIES is a brand-new game featuring Yoshitaka Mine from Yakuza 3 included as a separate action-packed experience.",
         "firstReleaseDate": 1770854400,
-        "cover": "coavx7",
+        "cover": "cobj1p",
         "genres": [
           "Role-playing (RPG)",
           "Adventure"
@@ -5117,6 +5239,57 @@
     },
     {
       "localData": {
+        "title": "Paranormasight: The Mermaid's Curse",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobftx.webp",
+        "dateRelease": "19-02-2026"
+      },
+      "igdb": {
+        "id": 388426,
+        "name": "Paranormasight: The Mermaid's Curse",
+        "slug": "paranormasight-the-mermaids-curse",
+        "url": "https://www.igdb.com/games/paranormasight-the-mermaids-curse",
+        "summary": "A brand new PARANORMASIGHT tale begins in Ise-Shima, Japan—a region rich in mermaid legends.\n\nJoin a cast of fascinating characters investigating the mysteries of the Mermaids of Ise. Unravel their different perspectives on the case and guide the story to its thrilling conclusion.",
+        "firstReleaseDate": 1771459200,
+        "cover": "cobftx",
+        "genres": [
+          "Role-playing (RPG)",
+          "Simulator",
+          "Adventure",
+          "Visual Novel"
+        ],
+        "platforms": [
+          "Android",
+          "PC (Microsoft Windows)",
+          "iOS",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sc11m93",
+          "sc11m97",
+          "sc11m92",
+          "sc11m94",
+          "sc11m95",
+          "sc11m96"
+        ],
+        "artworks": [
+          "ar582m",
+          "ar582n"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Xeen"
+        ],
+        "publishers": [
+          "Square Enix"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2701440"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Emberbane",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob7rl.webp",
         "dateRelease": "24-02-2026"
@@ -5214,55 +5387,6 @@
         ],
         "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/1651600"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "The Seven Deadly Sins: Origin",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobi46.webp",
-        "dateRelease": "01-03-2026"
-      },
-      "igdb": {
-        "id": 194143,
-        "name": "The Seven Deadly Sins: Origin",
-        "slug": "the-seven-deadly-sins-origin",
-        "url": "https://www.igdb.com/games/the-seven-deadly-sins-origin",
-        "summary": "The Seven Deadly Sins: Origin is an open-world action RPG set in the universe of The Seven Deadly Sins. Step into the role of Prince Tristan of Liones and explore an open-world Britannia, as you embark on a journey to restore order to a world thrown into chaos by the collision of time and space.",
-        "firstReleaseDate": 1772323200,
-        "cover": "cobi46",
-        "genres": [
-          "Role-playing (RPG)",
-          "Adventure"
-        ],
-        "platforms": [
-          "Android",
-          "PC (Microsoft Windows)",
-          "iOS",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "scg7vf",
-          "scyhdg",
-          "scyhdh",
-          "scyhdi",
-          "scyhdj"
-        ],
-        "artworks": [
-          "ar3ogl",
-          "ar42is",
-          "ar42it"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Netmarble F&C"
-        ],
-        "publishers": [
-          "Netmarble"
-        ],
-        "hypes": 13,
-        "steamUrl": "https://store.steampowered.com/app/3679080"
       },
       "inMyList": false,
       "source": "api"
@@ -5814,7 +5938,7 @@
         "publishers": [
           "Bungie"
         ],
-        "hypes": 75,
+        "hypes": 80,
         "steamUrl": "https://store.steampowered.com/app/3065800/"
       },
       "inMyList": false,
@@ -5964,7 +6088,7 @@
         "publishers": [
           "Thunderful"
         ],
-        "hypes": 21,
+        "hypes": 22,
         "steamUrl": "https://store.steampowered.com/app/2997230"
       },
       "inMyList": false,
@@ -6310,7 +6434,7 @@
         "publishers": [
           "Focus Entertainment"
         ],
-        "hypes": 30,
+        "hypes": 31,
         "steamUrl": "https://store.steampowered.com/app/2157830"
       },
       "inMyList": false,
@@ -6358,7 +6482,7 @@
         "publishers": [
           "Cyber Temple"
         ],
-        "hypes": 10,
+        "hypes": 11,
         "steamUrl": "https://store.steampowered.com/app/3132870/"
       },
       "inMyList": false,
@@ -6455,8 +6579,57 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 12,
+        "hypes": 13,
         "steamUrl": "https://store.steampowered.com/app/2852190"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "The Seven Deadly Sins: Origin",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobi46.webp",
+        "dateRelease": "16-03-2026"
+      },
+      "igdb": {
+        "id": 194143,
+        "name": "The Seven Deadly Sins: Origin",
+        "slug": "the-seven-deadly-sins-origin",
+        "url": "https://www.igdb.com/games/the-seven-deadly-sins-origin",
+        "summary": "The Seven Deadly Sins: Origin is an open-world action RPG set in the universe of The Seven Deadly Sins. Step into the role of Prince Tristan of Liones and explore an open-world Britannia, as you embark on a journey to restore order to a world thrown into chaos by the collision of time and space.",
+        "firstReleaseDate": 1773619200,
+        "cover": "cobi46",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
+        "platforms": [
+          "Android",
+          "PC (Microsoft Windows)",
+          "iOS",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scg7vf",
+          "scyhdg",
+          "scyhdh",
+          "scyhdi",
+          "scyhdj"
+        ],
+        "artworks": [
+          "ar3ogl",
+          "ar42is",
+          "ar42it"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Netmarble F&C"
+        ],
+        "publishers": [
+          "Netmarble"
+        ],
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/3679080"
       },
       "inMyList": false,
       "source": "api"
@@ -6694,7 +6867,7 @@
         "publishers": [
           "Milestone"
         ],
-        "hypes": 33,
+        "hypes": 32,
         "steamUrl": "https://store.steampowered.com/app/2814990"
       },
       "inMyList": false,
@@ -6742,6 +6915,50 @@
         "publishers": [],
         "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/3363680"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Etrange Overlord",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coatgs.webp",
+        "dateRelease": "26-03-2026"
+      },
+      "igdb": {
+        "id": 376699,
+        "name": "Etrange Overlord",
+        "slug": "etrange-overlord",
+        "url": "https://www.igdb.com/games/etrange-overlord",
+        "summary": "Join Étrange on this musical odyssey as she seeks to conquer hell in the pursuit of living her best afterlife.",
+        "firstReleaseDate": 1774483200,
+        "cover": "coatgs",
+        "genres": [
+          "Role-playing (RPG)"
+        ],
+        "platforms": [
+          "PlayStation 4",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sc109dd",
+          "sc109dg",
+          "sc109dh",
+          "sc109di",
+          "sc109df",
+          "sc109de"
+        ],
+        "artworks": [
+          "ar4nht",
+          "ar4nhu"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3515480"
       },
       "inMyList": false,
       "source": "api"
@@ -8413,6 +8630,46 @@
     },
     {
       "localData": {
+        "title": "Panzer Strike",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9475.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 324314,
+        "name": "Panzer Strike",
+        "slug": "panzer-strike--1",
+        "url": "https://www.igdb.com/games/panzer-strike--1",
+        "summary": "Authentic RTS gameplay straight out of the 2000s. Command your troops, develop strategies, and win World War II battles. Huge maps, thousands of units, long-range firepower, and no building mechanics!",
+        "firstReleaseDate": 1774915200,
+        "cover": "co9475",
+        "genres": [
+          "Simulator",
+          "Strategy"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scunx1",
+          "scunx2",
+          "scunx3",
+          "scunx4",
+          "scunx5"
+        ],
+        "artworks": [
+          "ar37nq"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3305930"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Tombwater",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co94bx.webp",
         "dateRelease": "31-03-2026"
@@ -8499,7 +8756,7 @@
         "publishers": [
           "tiny Build"
         ],
-        "hypes": 12,
+        "hypes": 13,
         "steamUrl": "https://store.steampowered.com/app/2706020"
       },
       "inMyList": false,
@@ -8920,7 +9177,7 @@
         "publishers": [
           "Headup Games"
         ],
-        "hypes": 37,
+        "hypes": 38,
         "steamUrl": "https://store.steampowered.com/app/3288210/Super_Meat_Boy_3D/"
       },
       "inMyList": false,
@@ -9666,7 +9923,7 @@
         "publishers": [
           "Nintendo"
         ],
-        "hypes": 23,
+        "hypes": 24,
         "steamUrl": null
       },
       "inMyList": false,
@@ -9803,7 +10060,7 @@
         "publishers": [
           "Sony Interactive Entertainment"
         ],
-        "hypes": 86,
+        "hypes": 87,
         "steamUrl": null
       },
       "inMyList": false,
@@ -10250,7 +10507,7 @@
         "publishers": [
           "Square Enix"
         ],
-        "hypes": 20,
+        "hypes": 21,
         "steamUrl": "https://store.steampowered.com/app/3483510/The_Adventures_of_Elliot_The_Millennium_Tales/"
       },
       "inMyList": false,
@@ -10555,7 +10812,7 @@
         "publishers": [
           "Yacht Club Games"
         ],
-        "hypes": 33,
+        "hypes": 37,
         "steamUrl": "https://store.steampowered.com/app/1875580/Mina_the_Hollower"
       },
       "inMyList": false,
@@ -11798,7 +12055,7 @@
           "Illfonic",
           "Gun Interactive"
         ],
-        "hypes": 16,
+        "hypes": 17,
         "steamUrl": "https://store.steampowered.com/app/3219630"
       },
       "inMyList": false,
@@ -13114,7 +13371,7 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 6,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/1670650"
       },
       "inMyList": false,
@@ -14399,7 +14656,7 @@
         "publishers": [
           "Hooded Horse"
         ],
-        "hypes": 4,
+        "hypes": 5,
         "steamUrl": "https://store.steampowered.com/app/2295060"
       },
       "inMyList": false,
@@ -14587,7 +14844,7 @@
         "publishers": [
           "Blumhouse Games"
         ],
-        "hypes": 25,
+        "hypes": 26,
         "steamUrl": "https://store.steampowered.com/app/3255110/Grave_Seasons/"
       },
       "inMyList": false,
@@ -15547,7 +15804,7 @@
         "publishers": [
           "Panic"
         ],
-        "hypes": 18,
+        "hypes": 20,
         "steamUrl": "https://store.steampowered.com/app/1478500"
       },
       "inMyList": false,
@@ -15985,7 +16242,7 @@
         "publishers": [
           "Serafini Productions"
         ],
-        "hypes": 8,
+        "hypes": 9,
         "steamUrl": "https://store.steampowered.com/app/2846530"
       },
       "inMyList": false,
@@ -17321,7 +17578,7 @@
         "publishers": [
           "CI Games"
         ],
-        "hypes": 45,
+        "hypes": 46,
         "steamUrl": null
       },
       "inMyList": false,
@@ -17798,7 +18055,7 @@
         "publishers": [
           "Saber Interactive"
         ],
-        "hypes": 29,
+        "hypes": 30,
         "steamUrl": "https://store.steampowered.com/app/1967610"
       },
       "inMyList": false,
@@ -17846,7 +18103,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 117,
+        "hypes": 118,
         "steamUrl": "https://store.steampowered.com/app/2638890"
       },
       "inMyList": false,
@@ -19840,7 +20097,7 @@
         "publishers": [
           "505 Games"
         ],
-        "hypes": 24,
+        "hypes": 25,
         "steamUrl": "https://store.steampowered.com/app/1883810"
       },
       "inMyList": false,
@@ -20935,6 +21192,55 @@
     },
     {
       "localData": {
+        "title": "Above the Snow",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9z91.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 349373,
+        "name": "Above the Snow",
+        "slug": "above-the-snow",
+        "url": "https://www.igdb.com/games/above-the-snow",
+        "summary": "Join the shelter crew, and let’s create the best Alpine resort around! Enjoy rich character stories, customize your shelter, attract and rescue alpinists, dive into hotel management, and map out trails! Grab your map, zip up your jacket, fill your thermos, and brace for the worst winter of the ’60s!",
+        "firstReleaseDate": 1798675200,
+        "cover": "co9z91",
+        "genres": [
+          "Simulator",
+          "Strategy",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scxih3",
+          "scxih4",
+          "scxih5",
+          "scxih6",
+          "scxih7",
+          "scxih8",
+          "scxih9"
+        ],
+        "artworks": [
+          "ar3qe6",
+          "ar3qe8",
+          "ar3qec",
+          "ar3qe7"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [
+          "Wandering Wizard"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2423760/Above_the_Snow/"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Tsarevna",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob16g.webp",
         "dateRelease": "31-12-2026"
@@ -21070,7 +21376,7 @@
           "Saber Interactive",
           "Boss Team Games"
         ],
-        "hypes": 26,
+        "hypes": 27,
         "steamUrl": "https://store.steampowered.com/app/1551980"
       },
       "inMyList": false,
@@ -21218,7 +21524,7 @@
           "One More Level",
           "Lyrical Games"
         ],
-        "hypes": 48,
+        "hypes": 49,
         "steamUrl": "https://store.steampowered.com/app/2828710"
       },
       "inMyList": false,
@@ -21360,7 +21666,7 @@
         "publishers": [
           "ZA/UM"
         ],
-        "hypes": 32,
+        "hypes": 33,
         "steamUrl": "https://store.steampowered.com/app/2863680"
       },
       "inMyList": false,
@@ -22015,7 +22321,7 @@
           "Serafini Productions",
           "Wired Productions"
         ],
-        "hypes": 7,
+        "hypes": 8,
         "steamUrl": "https://store.steampowered.com/app/3886200"
       },
       "inMyList": false,
@@ -22357,7 +22663,7 @@
     {
       "localData": {
         "title": "Echo Generation 2",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coavdz.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobibf.webp",
         "dateRelease": "31-12-2026"
       },
       "igdb": {
@@ -22367,7 +22673,7 @@
         "url": "https://www.igdb.com/games/echo-generation-2",
         "summary": "Embark on a sci-fi deckbuilding RPG odyssey. Gather your crew, craft powerful decks, and battle across the stars to find your way home. Deal the cards. Defy the cosmos. Embrace the adventure.",
         "firstReleaseDate": 1798675200,
-        "cover": "coavdz",
+        "cover": "cobibf",
         "genres": [
           "Role-playing (RPG)",
           "Adventure",
@@ -22391,7 +22697,8 @@
         ],
         "artworks": [
           "ar4pm9",
-          "ar4pma"
+          "ar4pma",
+          "ar5bcb"
         ],
         "releaseDates": [],
         "developers": [
@@ -23045,8 +23352,60 @@
         "publishers": [
           "Bandai Namco Entertainment Inc."
         ],
-        "hypes": 30,
+        "hypes": 29,
         "steamUrl": "https://store.steampowered.com/app/2288340"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Brigandine Abyss",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobihe.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 389424,
+        "name": "Brigandine Abyss",
+        "slug": "brigandine-abyss",
+        "url": "https://www.igdb.com/games/brigandine-abyss",
+        "summary": "The king of Solginat is dead, and a new would-be emperor stands over the corpse. Confront the dark in one of six different storylines as you manage resources, rally your monsters, and stand against the empire",
+        "firstReleaseDate": 1798675200,
+        "cover": "cobihe",
+        "genres": [
+          "Strategy"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "Nintendo Switch 2",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sc11x8v",
+          "sc11x8w",
+          "sc11x8x",
+          "sc11x8y",
+          "sc11x8z",
+          "sc11x90",
+          "sc11x91",
+          "sc11x92",
+          "sc11x93",
+          "sc11x94"
+        ],
+        "artworks": [
+          "ar5b7t",
+          "ar5b7u"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Happinet Corporation"
+        ],
+        "publishers": [
+          "NIS America, Inc."
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3211430"
       },
       "inMyList": false,
       "source": "api"
