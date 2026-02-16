@@ -113,7 +113,11 @@ const estadoColor = (() => {
 const slug = getGameSlug(title);
 ---
 
-<Layout>
+<Layout
+    title={title}
+    description={description ? description.slice(0, 160) : `${title} — ${companie}. Estado: ${estado}. ${hours}h jugadas.`}
+    image={artworksBG || posterHeroUrl || undefined}
+>
     <main class="min-h-screen mb-12">
         <!-- Hero con poster blurred de fondo -->
         <section class="relative h-[67vh] overflow-hidden">

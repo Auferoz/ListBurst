@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CardDashboard from "../components/Globals/CardDashboard.astro";
+import SectionDashboard from "../components/Globals/SectionDashboard.astro";
 import IconDeviceTv from "../components/Icons/IconDeviceTv.astro";
 import IconMovie from "../components/Icons/IconMovie.astro";
 import IconGamepad from "../components/Icons/IconGamepad.astro";
@@ -8,11 +9,11 @@ import IconClapperboard from "../components/Icons/IconClapperboard.astro";
 import IconClock from "../components/Icons/IconClock.astro";
 import IconTrophy from "../components/Icons/IconTrophy.astro";
 import IconStar from "../components/Icons/IconStar.astro";
-import IconUser from "../components/Icons/IconUser.astro";
 import IconEye from "../components/Icons/IconEye.astro";
 
 import moviesCache from '../data/cache/movies.json';
 import seriesCache from '../data/cache/series.json';
+import userCache from '../data/cache/userProfileStats.json';
 import { ListGames } from '../data/gamesDB';
 
 // ─── SERIES STATS ───────────────────────────────────────────
@@ -60,14 +61,25 @@ const totalGamingHours = ListGames.reduce((sum, g) => sum + (g.horasTotal || 0),
 const totalAchievements = ListGames.reduce((sum, g) => sum + (g.logros_obt || 0), 0);
 const completedGames = ListGames.filter(g => g.estado === "Completado").length;
 
-// ─── GLOBAL STATS ───────────────────────────────────────────
-const totalAllHours = totalSeriesHours + totalMoviesHours + totalGamingHours;
-const totalAllItems = uniqueMovies + uniqueShows + totalGames;
-const totalAllGenres = new Set([
-	...(moviesCache.movies as any[]).flatMap(m => m.movie?.genres || []),
-	...(seriesCache.series as any[]).flatMap(s => s.show?.genres || []),
-	...ListGames.flatMap(g => g.genre.split(',').map((x: string) => x.trim().toLowerCase())),
-]).size;
+// ─── USER PROFILE & GLOBAL STATS (/users/auferoz) ───────────
+const { profile, stats: userStats } = userCache as any;
+const avatarUrl = profile.images?.avatar?.full;
+const globalMovies = userStats.movies.watched;
+const globalShows = userStats.shows.watched;
+const globalEpisodes = userStats.episodes.watched;
+const globalMoviesHours = Math.round(userStats.movies.minutes / 60);
+const globalSeriesHours = Math.round(userStats.episodes.minutes / 60);
+const globalRatings = userStats.ratings.total;
+const globalAvgRating = globalRatings > 0
+	? (Object.entries(userStats.ratings.distribution as Record<string, number>)
+		.reduce((sum, [score, count]) => sum + Number(score) * count, 0) / globalRatings).toFixed(1)
+	: '0';
+const totalAllHours = globalSeriesHours + globalMoviesHours + totalGamingHours;
+const totalAllItems = globalMovies + globalShows + totalGames;
+
+// ─── SUBPAGES SUMMARY (suma de datos locales) ───────────────
+const localItems = uniqueMovies + uniqueShows + totalGames;
+const localHours = totalSeriesHours + totalMoviesHours + totalGamingHours;
 
 // ─── VERSION ────────────────────────────────────────────────
 const date = new Date();
@@ -94,10 +106,10 @@ const formatted =
 						href="https://trakt.tv/users/auferoz"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="shrink-0 w-11 h-11 rounded-full bg-neutral-500/15 border border-neutral-500/25 flex items-center justify-center text-neutral-400 font-bold text-lg hover:bg-neutral-500/25 hover:border-neutral-500/40 transition-all duration-200"
+						class="shrink-0 w-11 h-11 rounded-full overflow-hidden border border-neutral-500/25 hover:border-neutral-500/40 transition-all duration-200"
 						title="Ver perfil en Trakt"
 					>
-						A
+						<img src={avatarUrl} alt="Auferoz" class="w-full h-full object-cover" loading="eager" />
 					</a>
 					<div>
 						<p class="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400/80 mb-0.5">Auferoz</p>
@@ -109,119 +121,105 @@ const formatted =
 				<span class="text-[10px] text-zinc-600 tabular-nums font-medium shrink-0">v0.0{formatted}</span>
 			</div>
 
-			<p class="text-sm text-zinc-500 mt-3">
-				<span class="text-slate-400/70">{totalAllItems} items</span>
-				<span class="text-zinc-600">&middot;</span>
-				<span class="text-green-400/70">{totalAllHours}h de entretenimiento</span>
-				<span class="text-zinc-600">&middot;</span>
-				<span class="text-amber-400/70">{totalAllGenres} generos</span>
-			</p>
+			<div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3">
+				<div class="flex items-center gap-1.5">
+					<span class="w-1 h-1 rounded-full bg-slate-400/60"></span>
+					<span class="text-sm font-semibold tabular-nums text-slate-300">{(globalMovies + globalShows).toLocaleString('es')}</span>
+					<span class="text-xs text-zinc-500">media</span>
+				</div>
+				<div class="flex items-center gap-1.5">
+					<span class="w-1 h-1 rounded-full bg-green-400/60"></span>
+					<span class="text-sm font-semibold tabular-nums text-green-300">{totalAllHours.toLocaleString('es')}h</span>
+					<span class="text-xs text-zinc-500">entretenimiento</span>
+				</div>
+				<div class="flex items-center gap-1.5">
+					<span class="w-1 h-1 rounded-full bg-amber-400/60"></span>
+					<span class="text-sm font-semibold tabular-nums text-amber-300">{globalAvgRating}</span>
+					<span class="text-xs text-zinc-500">rating promedio</span>
+				</div>
+				<div class="flex items-center gap-1.5">
+					<span class="w-1 h-1 rounded-full bg-sky-400/60"></span>
+					<span class="text-sm font-semibold tabular-nums text-sky-300">{globalEpisodes.toLocaleString('es')}</span>
+					<span class="text-xs text-zinc-500">eps de</span>
+					<span class="text-xs text-sky-500">{globalShows}</span>
+					<span class="text-xs text-zinc-500">shows</span>
+				</div>
+				<div class="flex items-center gap-1.5">
+					<span class="w-1 h-1 rounded-full bg-indigo-400/60"></span>
+					<span class="text-sm font-semibold tabular-nums text-indigo-300">{globalMovies.toLocaleString('es')}</span>
+					<span class="text-xs text-zinc-500">movies</span>
+				</div>
+			</div>
 
-			<div class="mt-4 h-px bg-linear-to-r from-neutral-500/40 via-zinc-700/40 to-transparent"></div>
 		</header>
 
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<!-- GLOBAL SUMMARY                                         -->
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<section>
-			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400/80 mb-3">Resumen Global</p>
-			<div class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3">
-				<CardDashboard text="Total Items" number={totalAllItems} color="neutral">
+		<SectionDashboard title="Resumen Local" color="neutral">
+			<CardDashboard text="Total Items" number={localItems} color="neutral">
+				<IconEye width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Horas Totales" number={`${localHours}h`} color="neutral">
+				<IconClock width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Shows" number={uniqueShows} color="neutral">
+				<IconDeviceTv width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Peliculas unicas" number={uniqueMovies} color="neutral">
+				<IconMovie width={20} height={20} />
+			</CardDashboard>
+		</SectionDashboard>
+
+		<SectionDashboard title="Series Collection" color="sky">
+			<CardDashboard text="Temporadas" number={totalSeasons} color="sky">
+				<IconDeviceTv width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Episodios" number={totalEpisodes} color="sky">
+				<IconClapperboard width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Horas Series" number={`${totalSeriesHours}h`} color="sky">
+				<IconClock width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Shows Unicos" number={uniqueShows} color="sky">
+				<IconStar width={20} height={20} />
+			</CardDashboard>
+		</SectionDashboard>
+
+		<SectionDashboard title="Peliculas Collection" color="indigo">
+			<CardDashboard text="Total Peliculas" number={totalMovies} color="indigo">
+				<IconMovie width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Peliculas Unicas" number={uniqueMovies} color="indigo">
+				<IconEye width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Horas Movies" number={`${totalMoviesHours}h`} color="indigo">
+				<IconClock width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Rating Promedio" number={avgMovieRating} color="indigo">
+				<IconStar width={20} height={20} />
+			</CardDashboard>
+		</SectionDashboard>
+
+		<SectionDashboard title="Videojuegos Collection" color="teal">
+			<CardDashboard text="Total Juegos" number={totalGames} color="teal">
+				<IconGamepad width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Horas Gaming" number={`${totalGamingHours}h`} color="teal">
+				<IconClock width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Logros" number={totalAchievements} color="teal">
+				<IconTrophy width={20} height={20} />
+			</CardDashboard>
+			<CardDashboard text="Completados" number={completedGames} color="teal">
+				<IconTrophy width={20} height={20} />
+			</CardDashboard>
+		</SectionDashboard>
+
+		<SectionDashboard title="Streaming" color="stone">
+			<CardDashboard text="Total Streamings" number="7" color="stone">
+				<a href="/streaming">
 					<IconEye width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Horas Totales" number={`${totalAllHours}h`} color="neutral">
-					<IconClock width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Shows Unicos" number={uniqueShows} color="neutral">
-					<IconDeviceTv width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Peliculas Unicas" number={uniqueMovies} color="neutral">
-					<IconMovie width={20} height={20} />
-				</CardDashboard>
-			</div>
-		</section>
-
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<!-- SERIES                                                  -->
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<section>
-			<div class="h-px bg-linear-to-r from-sky-500/40 via-zinc-700/40 to-transparent mb-4"></div>
-			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400/80 mb-3">Series</p>
-			<div class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3">
-				<CardDashboard text="Temporadas" number={totalSeasons} color="sky">
-					<IconDeviceTv width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Episodios" number={totalEpisodes} color="sky">
-					<IconClapperboard width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Horas Series" number={`${totalSeriesHours}h`} color="sky">
-					<IconClock width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Shows Unicos" number={uniqueShows} color="sky">
-					<IconStar width={20} height={20} />
-				</CardDashboard>
-			</div>
-		</section>
-
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<!-- MOVIES                                                  -->
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<section>
-			<div class="h-px bg-linear-to-r from-indigo-500/40 via-zinc-700/40 to-transparent mb-4"></div>
-			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400/80 mb-3">Peliculas</p>
-			<div class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3">
-				<CardDashboard text="Total Peliculas" number={totalMovies} color="indigo">
-					<IconMovie width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Peliculas Unicas" number={uniqueMovies} color="indigo">
-					<IconEye width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Horas Movies" number={`${totalMoviesHours}h`} color="indigo">
-					<IconClock width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Rating Promedio" number={avgMovieRating} color="indigo">
-					<IconStar width={20} height={20} />
-				</CardDashboard>
-			</div>
-		</section>
-
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<!-- GAMES                                                   -->
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<section>
-			<div class="h-px bg-linear-to-r from-teal-500/40 via-zinc-700/40 to-transparent mb-4"></div>
-			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal-400/80 mb-3">Videojuegos</p>
-			<div class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3">
-				<CardDashboard text="Total Juegos" number={totalGames} color="teal">
-					<IconGamepad width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Horas Gaming" number={`${totalGamingHours}h`} color="teal">
-					<IconClock width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Logros" number={totalAchievements} color="teal">
-					<IconTrophy width={20} height={20} />
-				</CardDashboard>
-				<CardDashboard text="Completados" number={completedGames} color="green">
-					<IconTrophy width={20} height={20} />
-				</CardDashboard>
-			</div>
-		</section>
-
-		<!-- ═══════════════════════════════════════════════════════ -->
-		<!-- Streaming                                               -->
-		<!-- ═══════════════════════════════════════════════════════ -->
-
-		<section>
-			<div class="h-px bg-linear-to-r from-stone-500/40 via-zinc-700/40 to-transparent mb-4"></div>
-			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-stone-400/80 mb-3">Streaming</p>
-			<div class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3">
-				<CardDashboard text="Total Streamings" number="7" color="stone">
-					<a href="/streaming">
-						<IconEye width={20} height={20} />
-					</a>
-				</CardDashboard>
-			</div>
-		</section>
+				</a>
+			</CardDashboard>
+		</SectionDashboard>
 
 	</main>
 </Layout>

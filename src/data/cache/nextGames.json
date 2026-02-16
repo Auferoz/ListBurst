@@ -1,10 +1,202 @@
 {
-  "fetchedAt": "2026-02-14T11:32:46.558Z",
+  "fetchedAt": "2026-02-16T00:12:20.494Z",
   "totalGames": 462,
-  "myListCount": 49,
-  "apiOnlyCount": 413,
+  "myListCount": 48,
+  "apiOnlyCount": 414,
   "bothCount": 28,
   "games": [
+    {
+      "localData": {
+        "title": "Metal Gear Solid Master Collection: Volume 1",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jaw.webp",
+        "dateRelease": "23-10-2023"
+      },
+      "igdb": {
+        "id": 250635,
+        "name": "Metal Gear Solid Master Collection: Volume 1",
+        "slug": "metal-gear-solid-master-collection-volume-1",
+        "url": "https://www.igdb.com/games/metal-gear-solid-master-collection-volume-1",
+        "summary": "Metal Gear Solid Master Collection: Volume 1 compiles the early entries in the Metal Gear series into a single package, offering players the opportunity to experience the origins of stealth action gameplay. The collection includes the following titles: Metal Gear, Metal Gear 2: Solid Snake, Metal Gear Solid (with VR Missions/Special Missions), Metal Gear Solid 2: Sons of Liberty (HD Collection version), Metal Gear Solid 3: Snake Eater (HD Collection version), as well as the NES/Famicom version of Metal Gear and Snake’s Revenge. Regional versions of the titles are available as additional downloads.\n\nAdditional content includes the digital graphic novels Metal Gear Solid: Digital Graphic Novel and Metal Gear Solid 2: Digital Graphic Novel. A set of digital books is also provided, comprising screenplay and master books for Metal Gear, Metal Gear 2: Solid Snake, Metal Gear Solid, Metal Gear Solid 2: Sons of Liberty, and Metal Gear Solid 3: Snake Eater. These books can be accessed from the game’s main menu.\n\nThe collection also features the Metal Gear Solid: Digital Soundtrack.",
+        "firstReleaseDate": 1698105600,
+        "cover": "co6jaw",
+        "genres": [
+          "Shooter",
+          "Tactical",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PlayStation 4",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scn3ka",
+          "scn3kb",
+          "scn3kc",
+          "scn3ln",
+          "scn3lo",
+          "scn3lp",
+          "scn3lq",
+          "scn3lr",
+          "scn3ls"
+        ],
+        "artworks": [
+          "ar2ddh",
+          "ar2ddi",
+          "ar2ddo",
+          "ar2ddj"
+        ],
+        "releaseDates": [
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "PlayStation 4"
+          },
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "Nintendo Switch"
+          },
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Oct 24, 2023",
+            "date": 1698105600,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "Konami"
+        ],
+        "publishers": [
+          "Konami"
+        ],
+        "hypes": 0,
+        "steamUrl": "https://store.steampowered.com/app/2131630/METAL_GEAR_SOLID_MASTER_COLLECTION_Vol1_METAL_GEAR_SOLID/"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Dispatch",
+        "poster": "https://i.3djuegos.com/juegos/20141/dispatch/fotos/ficha/dispatch-5936351.webp",
+        "dateRelease": "22-10-2025"
+      },
+      "igdb": {
+        "id": 339997,
+        "name": "Dispatch",
+        "slug": "dispatch--4",
+        "url": "https://www.igdb.com/games/dispatch--4",
+        "summary": "You're called to a mysterious house for a late night medical emergency.",
+        "firstReleaseDate": 1602460800,
+        "cover": "co9o6p",
+        "genres": [],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scw9s4",
+          "scw9s5",
+          "scw9s6",
+          "scw9s7",
+          "scw9s8"
+        ],
+        "artworks": [
+          "ar3k41"
+        ],
+        "releaseDates": [
+          {
+            "human": "Oct 12, 2020",
+            "date": 1602460800,
+            "platform": "Mac"
+          },
+          {
+            "human": "Oct 12, 2020",
+            "date": 1602460800,
+            "platform": "PC (Microsoft Windows)"
+          }
+        ],
+        "developers": [
+          "Jacob Vincent",
+          "Justin Kirkwood"
+        ],
+        "publishers": [],
+        "hypes": 0,
+        "steamUrl": null
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Tokyo Xtreme Racer",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9bk8.webp",
+        "dateRelease": "24-09-2025"
+      },
+      "igdb": {
+        "id": 20710,
+        "name": "Tokyo Xtreme Racer",
+        "slug": "tokyo-xtreme-racer",
+        "url": "https://www.igdb.com/games/tokyo-xtreme-racer",
+        "summary": "Tokyo Xtreme Racer is a racing video game released in 1999 as one of the console's launch titles, the game was one of the first mission-based racing games. The gameplay involves the player challenging other drivers on the Shuto Expressway in order to gain money to modify and enhance his or her car. The game features a wide variety of Japanese cars and tuning parts to purchase as the player progresses through rivals.\nWhen released in Japan, Shutokō Battle was one of the best selling Dreamcast titles at this time. The game is based on illegal highway racing in Tokyo's Wangan highway with custom tuned cars. A such phenomenon is growing popular in Japan since the 1990s with dedicated manga (Shutokō Battle's biggest inspiration being Wangan Midnight), anime series and video games (C1 Circuit, Wangan Trial, Naniwa Wangan Battle).",
+        "firstReleaseDate": 930182400,
+        "cover": "co5a1y",
+        "genres": [
+          "Racing"
+        ],
+        "platforms": [
+          "Dreamcast"
+        ],
+        "screenshots": [
+          "scijp7",
+          "scijp5",
+          "scijp8",
+          "scijp6"
+        ],
+        "artworks": [],
+        "releaseDates": [
+          {
+            "human": "Jun 24, 1999",
+            "date": 930182400,
+            "platform": "Dreamcast"
+          },
+          {
+            "human": "Sep 09, 1999",
+            "date": 936835200,
+            "platform": "Dreamcast"
+          },
+          {
+            "human": "Oct 14, 1999",
+            "date": 939859200,
+            "platform": "Dreamcast"
+          }
+        ],
+        "developers": [
+          "Genki"
+        ],
+        "publishers": [
+          "Crave Entertainment",
+          "Genki",
+          "Ubisoft Entertainment"
+        ],
+        "hypes": 0,
+        "steamUrl": null
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
     {
       "localData": {
         "title": "MIO: Memories in Orbit",
@@ -83,58 +275,6 @@
         ],
         "hypes": 50,
         "steamUrl": "https://store.steampowered.com/app/1672810/MIO_Memories_in_Orbit/"
-      },
-      "inMyList": true,
-      "source": "mylist"
-    },
-    {
-      "localData": {
-        "title": "Dispatch",
-        "poster": "https://i.3djuegos.com/juegos/20141/dispatch/fotos/ficha/dispatch-5936351.webp",
-        "dateRelease": "22-10-2025"
-      },
-      "igdb": {
-        "id": 339997,
-        "name": "Dispatch",
-        "slug": "dispatch--4",
-        "url": "https://www.igdb.com/games/dispatch--4",
-        "summary": "You're called to a mysterious house for a late night medical emergency.",
-        "firstReleaseDate": 1602460800,
-        "cover": "co9o6p",
-        "genres": [],
-        "platforms": [
-          "PC (Microsoft Windows)",
-          "Mac"
-        ],
-        "screenshots": [
-          "scw9s4",
-          "scw9s5",
-          "scw9s6",
-          "scw9s7",
-          "scw9s8"
-        ],
-        "artworks": [
-          "ar3k41"
-        ],
-        "releaseDates": [
-          {
-            "human": "Oct 12, 2020",
-            "date": 1602460800,
-            "platform": "Mac"
-          },
-          {
-            "human": "Oct 12, 2020",
-            "date": 1602460800,
-            "platform": "PC (Microsoft Windows)"
-          }
-        ],
-        "developers": [
-          "Jacob Vincent",
-          "Justin Kirkwood"
-        ],
-        "publishers": [],
-        "hypes": 0,
-        "steamUrl": null
       },
       "inMyList": true,
       "source": "mylist"
@@ -382,6 +522,84 @@
     },
     {
       "localData": {
+        "title": "Gear.Club Unlimited 3",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob09t.webp",
+        "dateRelease": "18-02-2026"
+      },
+      "igdb": {
+        "id": 381154,
+        "name": "Gear.Club Unlimited 3",
+        "slug": "gear-dot-club-unlimited-3--1",
+        "url": "https://www.igdb.com/games/gear-dot-club-unlimited-3--1",
+        "summary": "The Gear.Club series is back! Customize and set up your favourite cars to race at top speed along the roads of the French Mediterranean coast and Japan. Don't just win – show off your style!",
+        "firstReleaseDate": 1771459200,
+        "cover": "cob09t",
+        "genres": [
+          "Racing",
+          "Simulator",
+          "Sport"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "Nintendo Switch 2",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sc10t0j",
+          "sc10t0k",
+          "sc10t0l",
+          "sc10t0m",
+          "sc10t0n",
+          "sc10t0o",
+          "sc10t0p",
+          "sc10t0q"
+        ],
+        "artworks": [
+          "ar4ux3",
+          "ar4ux4"
+        ],
+        "releaseDates": [
+          {
+            "human": "Feb 16, 2026",
+            "date": 1771200000,
+            "platform": "Nintendo Switch 2"
+          },
+          {
+            "human": "Feb 19, 2026",
+            "date": 1771459200,
+            "platform": "Nintendo Switch 2"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "2026",
+            "date": 1798675200,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "Eden Games"
+        ],
+        "publishers": [
+          "Nacon"
+        ],
+        "hypes": 0,
+        "steamUrl": "https://store.steampowered.com/app/3659460"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
         "title": "Resident Evil 9: Requiem",
         "poster": "https://i.3djuegos.com/juegos/20426/resident_evil_9_requiem/fotos/ficha/resident_evil_9_requiem-5965849.webp",
         "dateRelease": "27-02-2026"
@@ -464,7 +682,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 287,
+        "hypes": 289,
         "steamUrl": "https://store.steampowered.com/app/3764200/Resident_Evil_Requiem/"
       },
       "inMyList": true,
@@ -589,7 +807,7 @@
           "Coatsink Software",
           "Thunderful"
         ],
-        "hypes": 111,
+        "hypes": 112,
         "steamUrl": "https://store.steampowered.com/app/1663850"
       },
       "inMyList": true,
@@ -775,6 +993,84 @@
     },
     {
       "localData": {
+        "title": "Death Stranding 2: On The Beach",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.webp",
+        "dateRelease": "19-03-2026"
+      },
+      "igdb": {
+        "id": 228530,
+        "name": "Death Stranding 2: On the Beach",
+        "slug": "death-stranding-2-on-the-beach",
+        "url": "https://www.igdb.com/games/death-stranding-2-on-the-beach",
+        "summary": "Embark on an inspiring mission of human connection beyond the UCA. Sam — with companions by his side — sets out on a new journey to save humanity from extinction. Join them as they traverse a world beset by otherworldly enemies, obstacles and a haunting question: should we have connected?",
+        "firstReleaseDate": 1750896000,
+        "cover": "co9ipx",
+        "genres": [
+          "Shooter",
+          "Adventure"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scka9g",
+          "scka9h",
+          "scka9e",
+          "scka9j",
+          "scka9k",
+          "scka9f",
+          "scka9i",
+          "scqbvr",
+          "scqbvi",
+          "scqbvj",
+          "scqbvk",
+          "scqbvl",
+          "scqbvt",
+          "scqbvq",
+          "scqbvm",
+          "scqbvn",
+          "scqbvo",
+          "scqbvp",
+          "scqbvs"
+        ],
+        "artworks": [
+          "ar3meb",
+          "ar3mea",
+          "ar3me9"
+        ],
+        "releaseDates": [
+          {
+            "human": "Jun 26, 2025",
+            "date": 1750896000,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Jun 24, 2025",
+            "date": 1750723200,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Mar 19, 2026",
+            "date": 1773878400,
+            "platform": "PC (Microsoft Windows)"
+          }
+        ],
+        "developers": [
+          "Kojima Productions"
+        ],
+        "publishers": [
+          "Sony Interactive Entertainment",
+          "Kojima Productions"
+        ],
+        "hypes": 188,
+        "steamUrl": "https://store.steampowered.com/app/3280350/"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
         "title": "Pragmata",
         "poster": "https://i.3djuegos.com/juegos/17372/pragmata/fotos/ficha/pragmata-5965600.webp",
         "dateRelease": "24-04-2026"
@@ -806,7 +1102,18 @@
           "sc8blb"
         ],
         "artworks": [
-          "ar3o1x"
+          "ar3o1x",
+          "ar5bmn",
+          "ar5bmp",
+          "ar5c08",
+          "ar5c00",
+          "ar5c01",
+          "ar5c02",
+          "ar5c03",
+          "ar5c04",
+          "ar5c05",
+          "ar5c06",
+          "ar5c07"
         ],
         "releaseDates": [
           {
@@ -836,8 +1143,83 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 176,
+        "hypes": 177,
         "steamUrl": "https://store.steampowered.com/app/3357650/PRAGMATA/"
+      },
+      "inMyList": true,
+      "source": "both"
+    },
+    {
+      "localData": {
+        "title": "007 First Light",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.webp",
+        "dateRelease": "27-05-2026"
+      },
+      "igdb": {
+        "id": 141114,
+        "name": "007 First Light",
+        "slug": "007-first-light",
+        "url": "https://www.igdb.com/games/007-first-light",
+        "summary": "Earn the Number. 007 First Light is a thrilling espionage action-adventure game from IO Interactive. Follow James Bond as a young, resourceful, and sometimes reckless recruit in MI6's training programme, and discover an origin story of the world’s most famous spy.",
+        "firstReleaseDate": 1779840000,
+        "cover": "coaoiz",
+        "genres": [
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "Nintendo Switch 2",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scx79u",
+          "scx79v",
+          "scx79w",
+          "scx79x",
+          "scyx6q",
+          "scyx6r",
+          "scz0hs",
+          "scz0ht"
+        ],
+        "artworks": [
+          "ar3n69",
+          "ar3n6a",
+          "ar3n6b",
+          "ar3n6k",
+          "ar3nvk",
+          "ar44ue"
+        ],
+        "releaseDates": [
+          {
+            "human": "May 27, 2026",
+            "date": 1779840000,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "May 27, 2026",
+            "date": 1779840000,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "May 27, 2026",
+            "date": 1779840000,
+            "platform": "Xbox Series X|S"
+          },
+          {
+            "human": "May 27, 2026",
+            "date": 1779840000,
+            "platform": "Nintendo Switch 2"
+          }
+        ],
+        "developers": [
+          "IO Interactive"
+        ],
+        "publishers": [
+          "IO Interactive"
+        ],
+        "hypes": 199,
+        "steamUrl": "https://store.steampowered.com/app/3768760/007_First_Light/"
       },
       "inMyList": true,
       "source": "both"
@@ -934,6 +1316,72 @@
     },
     {
       "localData": {
+        "title": "Beast of Reincarnation",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobc5q.webp",
+        "dateRelease": "01-08-2026"
+      },
+      "igdb": {
+        "id": 348180,
+        "name": "Beast of Reincarnation",
+        "slug": "beast-of-reincarnation",
+        "url": "https://www.igdb.com/games/beast-of-reincarnation",
+        "summary": "In post-apocalyptic Japan, humanity’s last hope may rest with Emma and her loyal canine companion, Koo. Explore what it means to be human in Beast of Reincarnation, an expansive one-person, one-dog action RPG built around demanding, technical combat. What awaits at journey’s end?",
+        "firstReleaseDate": 1785801600,
+        "cover": "cobc5q",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scxbca",
+          "scxbcb",
+          "scxbcc",
+          "scxbcd",
+          "scxbce",
+          "scxbcf"
+        ],
+        "artworks": [
+          "ar3ouz",
+          "ar558h",
+          "ar558i",
+          "ar558j"
+        ],
+        "releaseDates": [
+          {
+            "human": "Aug 04, 2026",
+            "date": 1785801600,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "Aug 04, 2026",
+            "date": 1785801600,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Aug 04, 2026",
+            "date": 1785801600,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "Game Freak"
+        ],
+        "publishers": [
+          "Fictions"
+        ],
+        "hypes": 69,
+        "steamUrl": "https://store.steampowered.com/app/2001760"
+      },
+      "inMyList": true,
+      "source": "both"
+    },
+    {
+      "localData": {
         "title": "Phantom Blade Zero",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob64v.webp",
         "dateRelease": "09-09-2026"
@@ -986,6 +1434,80 @@
         ],
         "hypes": 131,
         "steamUrl": "https://store.steampowered.com/app/4115450"
+      },
+      "inMyList": true,
+      "source": "both"
+    },
+    {
+      "localData": {
+        "title": "Grand Theft Auto VI",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rwo.webp",
+        "dateRelease": "18-11-2026"
+      },
+      "igdb": {
+        "id": 52189,
+        "name": "Grand Theft Auto VI",
+        "slug": "grand-theft-auto-vi",
+        "url": "https://www.igdb.com/games/grand-theft-auto-vi",
+        "summary": "Grand Theft Auto VI heads to the state of Leonida, home to the neon-soaked streets of Vice City and beyond in the biggest, most immersive evolution of the Grand Theft Auto series yet.",
+        "firstReleaseDate": 1795046400,
+        "cover": "co9rwo",
+        "genres": [
+          "Shooter",
+          "Racing",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scwpqj",
+          "scpsp7",
+          "scpsp6",
+          "scpsp8",
+          "scpsp9",
+          "sc10vlj",
+          "sc10vlk",
+          "sc10vll",
+          "sc10vlm",
+          "sc10vln",
+          "sc10vlo",
+          "sc10vlp",
+          "sc10vlq",
+          "sc10vlr",
+          "sc10vls",
+          "sc10vlt",
+          "sc10vlu",
+          "sc10vlv"
+        ],
+        "artworks": [
+          "ar4wh8",
+          "ar52fz",
+          "ar52g0",
+          "ar52g1"
+        ],
+        "releaseDates": [
+          {
+            "human": "Nov 19, 2026",
+            "date": 1795046400,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Nov 19, 2026",
+            "date": 1795046400,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "Rockstar Games"
+        ],
+        "publishers": [
+          "Rockstar Games",
+          "Take-Two Interactive"
+        ],
+        "hypes": 775,
+        "steamUrl": null
       },
       "inMyList": true,
       "source": "both"
@@ -1063,7 +1585,7 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 58,
+        "hypes": 59,
         "steamUrl": "https://store.steampowered.com/app/2483190"
       },
       "inMyList": true,
@@ -1202,7 +1724,7 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 62,
+        "hypes": 61,
         "steamUrl": "https://store.steampowered.com/app/3010850"
       },
       "inMyList": true,
@@ -1255,80 +1777,6 @@
           "Sony Interactive Entertainment"
         ],
         "hypes": 135,
-        "steamUrl": null
-      },
-      "inMyList": true,
-      "source": "both"
-    },
-    {
-      "localData": {
-        "title": "Grand Theft Auto VI",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rwo.webp",
-        "dateRelease": "18-11-2026"
-      },
-      "igdb": {
-        "id": 52189,
-        "name": "Grand Theft Auto VI",
-        "slug": "grand-theft-auto-vi",
-        "url": "https://www.igdb.com/games/grand-theft-auto-vi",
-        "summary": "Grand Theft Auto VI heads to the state of Leonida, home to the neon-soaked streets of Vice City and beyond in the biggest, most immersive evolution of the Grand Theft Auto series yet.",
-        "firstReleaseDate": 1795046400,
-        "cover": "co9rwo",
-        "genres": [
-          "Shooter",
-          "Racing",
-          "Adventure"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "scwpqj",
-          "scpsp7",
-          "scpsp6",
-          "scpsp8",
-          "scpsp9",
-          "sc10vlj",
-          "sc10vlk",
-          "sc10vll",
-          "sc10vlm",
-          "sc10vln",
-          "sc10vlo",
-          "sc10vlp",
-          "sc10vlq",
-          "sc10vlr",
-          "sc10vls",
-          "sc10vlt",
-          "sc10vlu",
-          "sc10vlv"
-        ],
-        "artworks": [
-          "ar4wh8",
-          "ar52fz",
-          "ar52g0",
-          "ar52g1"
-        ],
-        "releaseDates": [
-          {
-            "human": "Nov 19, 2026",
-            "date": 1795046400,
-            "platform": "PlayStation 5"
-          },
-          {
-            "human": "Nov 19, 2026",
-            "date": 1795046400,
-            "platform": "Xbox Series X|S"
-          }
-        ],
-        "developers": [
-          "Rockstar Games"
-        ],
-        "publishers": [
-          "Rockstar Games",
-          "Take-Two Interactive"
-        ],
-        "hypes": 775,
         "steamUrl": null
       },
       "inMyList": true,
@@ -1390,7 +1838,7 @@
           "Annapurna Interactive",
           "Konami"
         ],
-        "hypes": 41,
+        "hypes": 43,
         "steamUrl": "https://store.steampowered.com/app/1636440/SILENT_HILL_Townfall"
       },
       "inMyList": true,
@@ -1458,81 +1906,6 @@
         ],
         "hypes": 280,
         "steamUrl": "https://store.steampowered.com/app/2769570"
-      },
-      "inMyList": true,
-      "source": "both"
-    },
-    {
-      "localData": {
-        "title": "007 First Light",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.webp",
-        "dateRelease": "27-05-2026"
-      },
-      "igdb": {
-        "id": 141114,
-        "name": "007 First Light",
-        "slug": "007-first-light",
-        "url": "https://www.igdb.com/games/007-first-light",
-        "summary": "Earn the Number. 007 First Light is a thrilling espionage action-adventure game from IO Interactive. Follow James Bond as a young, resourceful, and sometimes reckless recruit in MI6's training programme, and discover an origin story of the world’s most famous spy.",
-        "firstReleaseDate": 1779840000,
-        "cover": "coaoiz",
-        "genres": [
-          "Adventure"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "Nintendo Switch 2",
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "scx79u",
-          "scx79v",
-          "scx79w",
-          "scx79x",
-          "scyx6q",
-          "scyx6r",
-          "scz0hs",
-          "scz0ht"
-        ],
-        "artworks": [
-          "ar3n69",
-          "ar3n6a",
-          "ar3n6b",
-          "ar3n6k",
-          "ar3nvk",
-          "ar44ue"
-        ],
-        "releaseDates": [
-          {
-            "human": "May 27, 2026",
-            "date": 1779840000,
-            "platform": "PC (Microsoft Windows)"
-          },
-          {
-            "human": "May 27, 2026",
-            "date": 1779840000,
-            "platform": "PlayStation 5"
-          },
-          {
-            "human": "May 27, 2026",
-            "date": 1779840000,
-            "platform": "Xbox Series X|S"
-          },
-          {
-            "human": "May 27, 2026",
-            "date": 1779840000,
-            "platform": "Nintendo Switch 2"
-          }
-        ],
-        "developers": [
-          "IO Interactive"
-        ],
-        "publishers": [
-          "IO Interactive"
-        ],
-        "hypes": 198,
-        "steamUrl": "https://store.steampowered.com/app/3768760/007_First_Light/"
       },
       "inMyList": true,
       "source": "both"
@@ -2049,7 +2422,7 @@
         "publishers": [
           "THQ Nordic"
         ],
-        "hypes": 27,
+        "hypes": 28,
         "steamUrl": "https://store.steampowered.com/app/1203170"
       },
       "inMyList": true,
@@ -2110,147 +2483,11 @@
         "publishers": [
           "Skydance New Media"
         ],
-        "hypes": 76,
+        "hypes": 77,
         "steamUrl": null
       },
       "inMyList": true,
       "source": "both"
-    },
-    {
-      "localData": {
-        "title": "Gear.Club Unlimited 3",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob09t.webp",
-        "dateRelease": "18-02-2026"
-      },
-      "igdb": {
-        "id": 381154,
-        "name": "Gear.Club Unlimited 3",
-        "slug": "gear-dot-club-unlimited-3--1",
-        "url": "https://www.igdb.com/games/gear-dot-club-unlimited-3--1",
-        "summary": "The Gear.Club series is back! Customize and set up your favourite cars to race at top speed along the roads of the French Mediterranean coast and Japan. Don't just win – show off your style!",
-        "firstReleaseDate": 1771459200,
-        "cover": "cob09t",
-        "genres": [
-          "Racing",
-          "Simulator",
-          "Sport"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "Nintendo Switch 2",
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "sc10t0j",
-          "sc10t0k",
-          "sc10t0l",
-          "sc10t0m",
-          "sc10t0n",
-          "sc10t0o",
-          "sc10t0p",
-          "sc10t0q"
-        ],
-        "artworks": [
-          "ar4ux3",
-          "ar4ux4"
-        ],
-        "releaseDates": [
-          {
-            "human": "Feb 16, 2026",
-            "date": 1771200000,
-            "platform": "Nintendo Switch 2"
-          },
-          {
-            "human": "Feb 19, 2026",
-            "date": 1771459200,
-            "platform": "Nintendo Switch 2"
-          },
-          {
-            "human": "2026",
-            "date": 1798675200,
-            "platform": "PC (Microsoft Windows)"
-          },
-          {
-            "human": "2026",
-            "date": 1798675200,
-            "platform": "PlayStation 5"
-          },
-          {
-            "human": "2026",
-            "date": 1798675200,
-            "platform": "Xbox Series X|S"
-          }
-        ],
-        "developers": [
-          "Eden Games"
-        ],
-        "publishers": [
-          "Nacon"
-        ],
-        "hypes": 0,
-        "steamUrl": "https://store.steampowered.com/app/3659460"
-      },
-      "inMyList": true,
-      "source": "mylist"
-    },
-    {
-      "localData": {
-        "title": "Tokyo Xtreme Racer",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9bk8.webp",
-        "dateRelease": "24-09-2025"
-      },
-      "igdb": {
-        "id": 20710,
-        "name": "Tokyo Xtreme Racer",
-        "slug": "tokyo-xtreme-racer",
-        "url": "https://www.igdb.com/games/tokyo-xtreme-racer",
-        "summary": "Tokyo Xtreme Racer is a racing video game released in 1999 as one of the console's launch titles, the game was one of the first mission-based racing games. The gameplay involves the player challenging other drivers on the Shuto Expressway in order to gain money to modify and enhance his or her car. The game features a wide variety of Japanese cars and tuning parts to purchase as the player progresses through rivals.\nWhen released in Japan, Shutokō Battle was one of the best selling Dreamcast titles at this time. The game is based on illegal highway racing in Tokyo's Wangan highway with custom tuned cars. A such phenomenon is growing popular in Japan since the 1990s with dedicated manga (Shutokō Battle's biggest inspiration being Wangan Midnight), anime series and video games (C1 Circuit, Wangan Trial, Naniwa Wangan Battle).",
-        "firstReleaseDate": 930182400,
-        "cover": "co5a1y",
-        "genres": [
-          "Racing"
-        ],
-        "platforms": [
-          "Dreamcast"
-        ],
-        "screenshots": [
-          "scijp7",
-          "scijp5",
-          "scijp8",
-          "scijp6"
-        ],
-        "artworks": [],
-        "releaseDates": [
-          {
-            "human": "Jun 24, 1999",
-            "date": 930182400,
-            "platform": "Dreamcast"
-          },
-          {
-            "human": "Sep 09, 1999",
-            "date": 936835200,
-            "platform": "Dreamcast"
-          },
-          {
-            "human": "Oct 14, 1999",
-            "date": 939859200,
-            "platform": "Dreamcast"
-          }
-        ],
-        "developers": [
-          "Genki"
-        ],
-        "publishers": [
-          "Crave Entertainment",
-          "Genki",
-          "Ubisoft Entertainment"
-        ],
-        "hypes": 0,
-        "steamUrl": null
-      },
-      "inMyList": true,
-      "source": "mylist"
     },
     {
       "localData": {
@@ -2311,7 +2548,7 @@
         "publishers": [
           "Secret Mode"
         ],
-        "hypes": 38,
+        "hypes": 39,
         "steamUrl": "https://store.steampowered.com/app/4078430"
       },
       "inMyList": true,
@@ -2369,84 +2606,6 @@
       },
       "inMyList": true,
       "source": "both"
-    },
-    {
-      "localData": {
-        "title": "Death Stranding 2: On The Beach",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.webp",
-        "dateRelease": "19-03-2026"
-      },
-      "igdb": {
-        "id": 228530,
-        "name": "Death Stranding 2: On the Beach",
-        "slug": "death-stranding-2-on-the-beach",
-        "url": "https://www.igdb.com/games/death-stranding-2-on-the-beach",
-        "summary": "Embark on an inspiring mission of human connection beyond the UCA. Sam — with companions by his side — sets out on a new journey to save humanity from extinction. Join them as they traverse a world beset by otherworldly enemies, obstacles and a haunting question: should we have connected?",
-        "firstReleaseDate": 1750896000,
-        "cover": "co9ipx",
-        "genres": [
-          "Shooter",
-          "Adventure"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "scka9g",
-          "scka9h",
-          "scka9e",
-          "scka9j",
-          "scka9k",
-          "scka9f",
-          "scka9i",
-          "scqbvr",
-          "scqbvi",
-          "scqbvj",
-          "scqbvk",
-          "scqbvl",
-          "scqbvt",
-          "scqbvq",
-          "scqbvm",
-          "scqbvn",
-          "scqbvo",
-          "scqbvp",
-          "scqbvs"
-        ],
-        "artworks": [
-          "ar3meb",
-          "ar3mea",
-          "ar3me9"
-        ],
-        "releaseDates": [
-          {
-            "human": "Jun 26, 2025",
-            "date": 1750896000,
-            "platform": "PlayStation 5"
-          },
-          {
-            "human": "Jun 24, 2025",
-            "date": 1750723200,
-            "platform": "PlayStation 5"
-          },
-          {
-            "human": "Mar 19, 2026",
-            "date": 1773878400,
-            "platform": "PC (Microsoft Windows)"
-          }
-        ],
-        "developers": [
-          "Kojima Productions"
-        ],
-        "publishers": [
-          "Sony Interactive Entertainment",
-          "Kojima Productions"
-        ],
-        "hypes": 188,
-        "steamUrl": "https://store.steampowered.com/app/3280350/"
-      },
-      "inMyList": true,
-      "source": "mylist"
     },
     {
       "localData": {
@@ -2575,74 +2734,8 @@
         "publishers": [
           "ProbablyMonsters"
         ],
-        "hypes": 12,
+        "hypes": 13,
         "steamUrl": "https://store.steampowered.com/app/4317690/Crimson_Moon/"
-      },
-      "inMyList": true,
-      "source": "both"
-    },
-    {
-      "localData": {
-        "title": "Beast of Reincarnation",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobc5q.webp",
-        "dateRelease": "01-08-2026"
-      },
-      "igdb": {
-        "id": 348180,
-        "name": "Beast of Reincarnation",
-        "slug": "beast-of-reincarnation",
-        "url": "https://www.igdb.com/games/beast-of-reincarnation",
-        "summary": "In post-apocalyptic Japan, humanity’s last hope may rest with Emma and her loyal canine companion, Koo. Explore what it means to be human in Beast of Reincarnation, an expansive one-person, one-dog action RPG built around demanding, technical combat. What awaits at journey’s end?",
-        "firstReleaseDate": 1785801600,
-        "cover": "cobc5q",
-        "genres": [
-          "Role-playing (RPG)",
-          "Adventure"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "scxbca",
-          "scxbcb",
-          "scxbcc",
-          "scxbcd",
-          "scxbce",
-          "scxbcf"
-        ],
-        "artworks": [
-          "ar3ouz",
-          "ar558h",
-          "ar558i",
-          "ar558j"
-        ],
-        "releaseDates": [
-          {
-            "human": "Aug 04, 2026",
-            "date": 1785801600,
-            "platform": "PC (Microsoft Windows)"
-          },
-          {
-            "human": "Aug 04, 2026",
-            "date": 1785801600,
-            "platform": "PlayStation 5"
-          },
-          {
-            "human": "Aug 04, 2026",
-            "date": 1785801600,
-            "platform": "Xbox Series X|S"
-          }
-        ],
-        "developers": [
-          "Game Freak"
-        ],
-        "publishers": [
-          "Fictions"
-        ],
-        "hypes": 67,
-        "steamUrl": "https://store.steampowered.com/app/2001760"
       },
       "inMyList": true,
       "source": "both"
@@ -2706,90 +2799,8 @@
         "publishers": [
           "Secret Mode"
         ],
-        "hypes": 38,
+        "hypes": 39,
         "steamUrl": "https://store.steampowered.com/app/4078430"
-      },
-      "inMyList": true,
-      "source": "mylist"
-    },
-    {
-      "localData": {
-        "title": "Metal Gear Solid Master Collection: Volume 1",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jaw.webp",
-        "dateRelease": "23-10-2023"
-      },
-      "igdb": {
-        "id": 250635,
-        "name": "Metal Gear Solid Master Collection: Volume 1",
-        "slug": "metal-gear-solid-master-collection-volume-1",
-        "url": "https://www.igdb.com/games/metal-gear-solid-master-collection-volume-1",
-        "summary": "Metal Gear Solid Master Collection: Volume 1 compiles the early entries in the Metal Gear series into a single package, offering players the opportunity to experience the origins of stealth action gameplay. The collection includes the following titles: Metal Gear, Metal Gear 2: Solid Snake, Metal Gear Solid (with VR Missions/Special Missions), Metal Gear Solid 2: Sons of Liberty (HD Collection version), Metal Gear Solid 3: Snake Eater (HD Collection version), as well as the NES/Famicom version of Metal Gear and Snake’s Revenge. Regional versions of the titles are available as additional downloads.\n\nAdditional content includes the digital graphic novels Metal Gear Solid: Digital Graphic Novel and Metal Gear Solid 2: Digital Graphic Novel. A set of digital books is also provided, comprising screenplay and master books for Metal Gear, Metal Gear 2: Solid Snake, Metal Gear Solid, Metal Gear Solid 2: Sons of Liberty, and Metal Gear Solid 3: Snake Eater. These books can be accessed from the game’s main menu.\n\nThe collection also features the Metal Gear Solid: Digital Soundtrack.",
-        "firstReleaseDate": 1698105600,
-        "cover": "co6jaw",
-        "genres": [
-          "Shooter",
-          "Tactical",
-          "Adventure"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PlayStation 4",
-          "PC (Microsoft Windows)",
-          "PlayStation 5",
-          "Nintendo Switch"
-        ],
-        "screenshots": [
-          "scn3ka",
-          "scn3kb",
-          "scn3kc",
-          "scn3ln",
-          "scn3lo",
-          "scn3lp",
-          "scn3lq",
-          "scn3lr",
-          "scn3ls"
-        ],
-        "artworks": [
-          "ar2ddh",
-          "ar2ddi",
-          "ar2ddo",
-          "ar2ddj"
-        ],
-        "releaseDates": [
-          {
-            "human": "Oct 24, 2023",
-            "date": 1698105600,
-            "platform": "PlayStation 4"
-          },
-          {
-            "human": "Oct 24, 2023",
-            "date": 1698105600,
-            "platform": "Nintendo Switch"
-          },
-          {
-            "human": "Oct 24, 2023",
-            "date": 1698105600,
-            "platform": "PC (Microsoft Windows)"
-          },
-          {
-            "human": "Oct 24, 2023",
-            "date": 1698105600,
-            "platform": "PlayStation 5"
-          },
-          {
-            "human": "Oct 24, 2023",
-            "date": 1698105600,
-            "platform": "Xbox Series X|S"
-          }
-        ],
-        "developers": [
-          "Konami"
-        ],
-        "publishers": [
-          "Konami"
-        ],
-        "hypes": 0,
-        "steamUrl": "https://store.steampowered.com/app/2131630/METAL_GEAR_SOLID_MASTER_COLLECTION_Vol1_METAL_GEAR_SOLID/"
       },
       "inMyList": true,
       "source": "mylist"
@@ -2943,59 +2954,11 @@
         "publishers": [
           "Konami"
         ],
-        "hypes": 34,
+        "hypes": 35,
         "steamUrl": "https://store.steampowered.com/app/2989180"
       },
       "inMyList": true,
       "source": "both"
-    },
-    {
-      "localData": {
-        "title": "God of War: Sons of Sparta",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigb.webp",
-        "dateRelease": "12-02-2026"
-      },
-      "igdb": {
-        "id": 389443,
-        "name": "God of War Sons of Sparta",
-        "slug": "god-of-war-sons-of-sparta",
-        "url": "https://www.igdb.com/games/god-of-war-sons-of-sparta",
-        "summary": "Every legend has a beginning – before he was a God, before he was a father, Kratos was a young Spartan!\nExperience an untold chapter in Kratos’ journey set during the harsh years of Spartan training alongside his brother Deimos. Through endless trials, their minds, bodies, and hearts have been molded to become Spartan soldiers for whom duty and honor mean everything.\nAfter a fellow cadet goes missing, Kratos and Deimos vow to find him and embark on an adventure that will put their training and Spartan spirit to the test.",
-        "firstReleaseDate": 1770854400,
-        "cover": "cobigb",
-        "genres": [
-          "Platform"
-        ],
-        "platforms": [
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "sc11xcb",
-          "sc11xcc",
-          "sc11xcd",
-          "sc11xce"
-        ],
-        "artworks": [
-          "ar5b8j"
-        ],
-        "releaseDates": [
-          {
-            "human": "Feb 12, 2026",
-            "date": 1770854400,
-            "platform": "PlayStation 5"
-          }
-        ],
-        "developers": [
-          "Mega Cat Studios"
-        ],
-        "publishers": [
-          "Sony Interactive Entertainment"
-        ],
-        "hypes": 2,
-        "steamUrl": null
-      },
-      "inMyList": true,
-      "source": "mylist"
     },
     {
       "localData": {
@@ -3066,7 +3029,7 @@
         "publishers": [
           "Konami"
         ],
-        "hypes": 19,
+        "hypes": 24,
         "steamUrl": "https://store.steampowered.com/app/4231820"
       },
       "inMyList": true,
@@ -4820,7 +4783,7 @@
           "Gamepie"
         ],
         "publishers": [],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/2622820"
       },
       "inMyList": false,
@@ -4996,7 +4959,7 @@
         "publishers": [
           "Tripwire Interactive"
         ],
-        "hypes": 7,
+        "hypes": 8,
         "steamUrl": "https://store.steampowered.com/app/3054690/Norse/"
       },
       "inMyList": false,
@@ -5580,7 +5543,7 @@
         "publishers": [
           "Mega Crit Games"
         ],
-        "hypes": 63,
+        "hypes": 64,
         "steamUrl": "https://store.steampowered.com/app/2868840"
       },
       "inMyList": false,
@@ -5938,7 +5901,7 @@
         "publishers": [
           "Bungie"
         ],
-        "hypes": 80,
+        "hypes": 81,
         "steamUrl": "https://store.steampowered.com/app/3065800/"
       },
       "inMyList": false,
@@ -9682,6 +9645,55 @@
     },
     {
       "localData": {
+        "title": "Above the Snow",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9z91.webp",
+        "dateRelease": "01-04-2026"
+      },
+      "igdb": {
+        "id": 349373,
+        "name": "Above the Snow",
+        "slug": "above-the-snow",
+        "url": "https://www.igdb.com/games/above-the-snow",
+        "summary": "Join the shelter crew, and let’s create the best Alpine resort around! Enjoy rich character stories, customize your shelter, attract and rescue alpinists, dive into hotel management, and map out trails! Grab your map, zip up your jacket, fill your thermos, and brace for the worst winter of the ’60s!",
+        "firstReleaseDate": 1775001600,
+        "cover": "co9z91",
+        "genres": [
+          "Simulator",
+          "Strategy",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scxih3",
+          "scxih4",
+          "scxih5",
+          "scxih6",
+          "scxih7",
+          "scxih8",
+          "scxih9"
+        ],
+        "artworks": [
+          "ar3qe6",
+          "ar3qe8",
+          "ar3qec",
+          "ar3qe7"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [
+          "Wandering Wizard"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2423760/Above_the_Snow/"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "ChainStaff",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8bgp.webp",
         "dateRelease": "08-04-2026"
@@ -10253,7 +10265,7 @@
         "publishers": [
           "Bandai Namco Entertainment"
         ],
-        "hypes": 95,
+        "hypes": 96,
         "steamUrl": "https://store.steampowered.com/app/2255370"
       },
       "inMyList": false,
@@ -10464,7 +10476,7 @@
     {
       "localData": {
         "title": "The Adventures of Elliot: The Millennium Tales",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobfu9.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobj0x.webp",
         "dateRelease": "18-06-2026"
       },
       "igdb": {
@@ -10474,7 +10486,7 @@
         "url": "https://www.igdb.com/games/the-adventures-of-elliot-the-millennium-tales",
         "summary": "The Adventure of Elliot: The Millennium Tales is an action RPG set in the world of Philabieldia - a beautiful but savage land dominated by warring beast tribes. Humanity’s last bastion is the Kingdom of Huther, protected by its tall walls and Princess Heuria’s powerful magic.\n\nWhen a mysterious set of ruins is discovered, a young adventurer named Elliot and his fairy companion Faie are sent off on a journey to investigate. What seems like a simple, if dangerous, mission soon becomes a grand saga that will be woven across time and space.",
         "firstReleaseDate": 1781740800,
-        "cover": "cobfu9",
+        "cover": "cobj0x",
         "genres": [
           "Role-playing (RPG)",
           "Adventure"
@@ -10812,7 +10824,7 @@
         "publishers": [
           "Yacht Club Games"
         ],
-        "hypes": 37,
+        "hypes": 39,
         "steamUrl": "https://store.steampowered.com/app/1875580/Mina_the_Hollower"
       },
       "inMyList": false,
@@ -11263,6 +11275,53 @@
         ],
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/2702260"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Silent Planet - Elegy of a Dying World",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa9cs.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 286178,
+        "name": "Silent Planet - Elegy of a Dying World",
+        "slug": "silent-planet-elegy-of-a-dying-world",
+        "url": "https://www.igdb.com/games/silent-planet-elegy-of-a-dying-world",
+        "summary": "Silent Planet is an exploration-focused, dark action side-scroller rooted in Cosmic horror. Explore the claustrophobic corridors of a massive underground complex filled with the remnants of technological and biological horrors created by a dead civilization.",
+        "firstReleaseDate": 1782777600,
+        "cover": "coa9cs",
+        "genres": [
+          "Platform",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scqipk",
+          "scqipn",
+          "scqipi",
+          "scqipo",
+          "scqipl",
+          "scqipm",
+          "scqipj"
+        ],
+        "artworks": [
+          "ar2s0a"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Vertex Zero"
+        ],
+        "publishers": [
+          "Red Dunes Games"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2742920/Silent_Planet/"
       },
       "inMyList": false,
       "source": "api"
@@ -12010,7 +12069,7 @@
           "Sony Interactive Entertainment",
           "Marvel Games"
         ],
-        "hypes": 34,
+        "hypes": 35,
         "steamUrl": "https://store.steampowered.com/app/3787240"
       },
       "inMyList": false,
@@ -12055,7 +12114,7 @@
           "Illfonic",
           "Gun Interactive"
         ],
-        "hypes": 17,
+        "hypes": 18,
         "steamUrl": "https://store.steampowered.com/app/3219630"
       },
       "inMyList": false,
@@ -12558,7 +12617,7 @@
         "publishers": [
           "Nihon Falcom"
         ],
-        "hypes": 3,
+        "hypes": 5,
         "steamUrl": null
       },
       "inMyList": false,
@@ -15804,7 +15863,7 @@
         "publishers": [
           "Panic"
         ],
-        "hypes": 20,
+        "hypes": 21,
         "steamUrl": "https://store.steampowered.com/app/1478500"
       },
       "inMyList": false,
@@ -16423,7 +16482,7 @@
         "publishers": [
           "Top Hat Studios"
         ],
-        "hypes": 14,
+        "hypes": 15,
         "steamUrl": "https://store.steampowered.com/app/2830030"
       },
       "inMyList": false,
@@ -16568,7 +16627,7 @@
         "publishers": [
           "Annapurna Interactive"
         ],
-        "hypes": 60,
+        "hypes": 59,
         "steamUrl": "https://store.steampowered.com/app/2582320/Mixtape/"
       },
       "inMyList": false,
@@ -19413,7 +19472,7 @@
         "publishers": [
           "Electronic Arts"
         ],
-        "hypes": 32,
+        "hypes": 31,
         "steamUrl": "https://store.steampowered.com/app/2075800/STAR_WARS_Zero_Company/"
       },
       "inMyList": false,
@@ -21186,55 +21245,6 @@
         ],
         "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/2573060/"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Above the Snow",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9z91.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 349373,
-        "name": "Above the Snow",
-        "slug": "above-the-snow",
-        "url": "https://www.igdb.com/games/above-the-snow",
-        "summary": "Join the shelter crew, and let’s create the best Alpine resort around! Enjoy rich character stories, customize your shelter, attract and rescue alpinists, dive into hotel management, and map out trails! Grab your map, zip up your jacket, fill your thermos, and brace for the worst winter of the ’60s!",
-        "firstReleaseDate": 1798675200,
-        "cover": "co9z91",
-        "genres": [
-          "Simulator",
-          "Strategy",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scxih3",
-          "scxih4",
-          "scxih5",
-          "scxih6",
-          "scxih7",
-          "scxih8",
-          "scxih9"
-        ],
-        "artworks": [
-          "ar3qe6",
-          "ar3qe8",
-          "ar3qec",
-          "ar3qe7"
-        ],
-        "releaseDates": [],
-        "developers": [],
-        "publishers": [
-          "Wandering Wizard"
-        ],
-        "hypes": 3,
-        "steamUrl": "https://store.steampowered.com/app/2423760/Above_the_Snow/"
       },
       "inMyList": false,
       "source": "api"
@@ -23373,6 +23383,7 @@
         "firstReleaseDate": 1798675200,
         "cover": "cobihe",
         "genres": [
+          "Simulator",
           "Strategy"
         ],
         "platforms": [

@@ -162,7 +162,11 @@ const writers = (people?.crew?.writing || [])
 const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
 ---
 
-<Layout title={`${title} - ${seasonTitle}`}>
+<Layout
+    title={`${title} - ${seasonTitle}`}
+    description={overview ? overview.slice(0, 160) : `${title} — ${seasonTitle}. Episodios, reparto y más.`}
+    image={showFanart || seasonPoster || showPoster || undefined}
+>
     <main class="min-h-screen mb-12">
         <!-- Hero con fanart de fondo -->
         <section

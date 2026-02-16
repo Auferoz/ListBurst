@@ -1,5 +1,10 @@
 # CLAUDE.md - ListBurst Project Guide
 
+# Instrucciones
+
+- Responde siempre en español
+- Usa terminología técnica en español cuando sea posible
+
 ## Project Overview
 
 ListBurst is a personal multimedia tracking dashboard for movies, TV series, and video games. It also includes an upcoming game releases section with countdown timers. Built with Astro 5.x, deployed to Cloudflare Workers at the edge. The UI is written in **Spanish**; code uses a mix of Spanish and English variable names.

@@ -1,0 +1,45 @@
+---
+/**
+ * SectionDashboard - Sección reutilizable para el dashboard
+ *
+ * Renderiza un divider coloreado, título y grid de cards.
+ * Las cards se pasan via <slot />.
+ *
+ * @example
+ * <SectionDashboard title="Series" color="sky">
+ *     <CardDashboard text="Temporadas" number={10} color="sky">
+ *         <IconDeviceTv width={20} height={20} />
+ *     </CardDashboard>
+ * </SectionDashboard>
+ */
+
+interface Props {
+	title: string;
+	color?: 'violet' | 'sky' | 'green' | 'red' | 'amber' | 'zinc' | 'teal' | 'indigo' | 'stone' | 'neutral';
+}
+
+const { title, color = 'neutral' } = Astro.props;
+
+const colorMap: Record<string, { divider: string; title: string }> = {
+	violet:  { divider: 'from-violet-500/40',  title: 'text-violet-400/80' },
+	sky:     { divider: 'from-sky-500/40',     title: 'text-sky-400/80' },
+	green:   { divider: 'from-green-500/40',   title: 'text-green-400/80' },
+	red:     { divider: 'from-red-500/40',     title: 'text-red-400/80' },
+	amber:   { divider: 'from-amber-500/40',   title: 'text-amber-400/80' },
+	zinc:    { divider: 'from-zinc-500/40',    title: 'text-zinc-400/80' },
+	teal:    { divider: 'from-teal-500/40',    title: 'text-teal-400/80' },
+	indigo:  { divider: 'from-indigo-500/40',  title: 'text-indigo-400/80' },
+	stone:   { divider: 'from-stone-500/40',   title: 'text-stone-400/80' },
+	neutral: { divider: 'from-neutral-500/40', title: 'text-neutral-400/80' },
+};
+
+const c = colorMap[color] || colorMap.neutral;
+---
+
+<section>
+	<div class:list={["h-px bg-linear-to-r via-zinc-700/40 to-transparent mb-4", c.divider]}></div>
+	<p class:list={["text-xs font-semibold uppercase tracking-[0.2em] mb-3", c.title]}>{title}</p>
+	<div class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3">
+		<slot />
+	</div>
+</section>

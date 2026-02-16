@@ -1,25 +1,78 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 
-import '../styles/global.css' 
+import '../styles/global.css'
 import '@fontsource-variable/nunito-sans';
 
 import MenuHeader from '../components/Globals/MenuHeader.astro'
 
 interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	type?: 'website' | 'article';
+	noindex?: boolean;
 	hideMenu?: boolean;
 }
 
-const { hideMenu = false } = Astro.props;
+const SITE_NAME = 'ListBurst';
+const SITE_URL = Astro.site?.href || Astro.url.origin;
+const DEFAULT_DESCRIPTION = 'Dashboard personal de seguimiento de películas, series y videojuegos. Estadísticas, listas y próximos lanzamientos.';
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
+
+const {
+	title,
+	description = DEFAULT_DESCRIPTION,
+	image = DEFAULT_IMAGE,
+	type = 'website',
+	noindex = false,
+	hideMenu = false,
+} = Astro.props;
+
+const pageTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+const canonicalURL = new URL(Astro.url.pathname, SITE_URL);
 ---
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- SEO básico -->
+		<title>{pageTitle}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL.href} />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<title>ListBurst</title>
+		<link rel="icon" href="/favicon.ico" sizes="32x32" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL.href} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:site_name" content={SITE_NAME} />
+		<meta property="og:locale" content="es_ES" />
+
+		<!-- Twitter / X -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL.href} />
+		<meta name="twitter:title" content={pageTitle} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+
+		<!-- Tema y color -->
+		<meta name="theme-color" content="#18181b" />
+		<meta name="color-scheme" content="dark" />
+
+		<!-- Preconnect a CDNs de imágenes usados -->
+		<link rel="preconnect" href="https://walter.trakt.tv" />
+		<link rel="preconnect" href="https://images.igdb.com" />
+
 		<ClientRouter />
 	</head>
 	<body>

@@ -162,7 +162,11 @@ const directors = (people?.crew?.directing || [])
 const directorText = directors.length > 0 ? directors.join(', ') : null;
 ---
 
-<Layout title={`${title} (${year})`}>
+<Layout
+    title={`${title} (${year})`}
+    description={overview ? overview.slice(0, 160) : `Información sobre ${title} (${year}) — puntuaciones, reparto y más.`}
+    image={movieFanart || moviePoster || undefined}
+>
     <main class="min-h-screen mb-12">
         <!-- Hero con fanart de fondo -->
         <section
