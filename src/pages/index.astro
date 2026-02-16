@@ -94,13 +94,13 @@ const formatted =
 						href="https://trakt.tv/users/auferoz"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="shrink-0 w-11 h-11 rounded-full bg-violet-500/15 border border-violet-500/25 flex items-center justify-center text-violet-400 font-bold text-lg hover:bg-violet-500/25 hover:border-violet-500/40 transition-all duration-200"
+						class="shrink-0 w-11 h-11 rounded-full bg-neutral-500/15 border border-neutral-500/25 flex items-center justify-center text-neutral-400 font-bold text-lg hover:bg-neutral-500/25 hover:border-neutral-500/40 transition-all duration-200"
 						title="Ver perfil en Trakt"
 					>
 						A
 					</a>
 					<div>
-						<p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-400/80 mb-0.5">Auferoz</p>
+						<p class="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400/80 mb-0.5">Auferoz</p>
 						<h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-none">
 							Dashboard
 						</h1>
@@ -110,32 +110,32 @@ const formatted =
 			</div>
 
 			<p class="text-sm text-zinc-500 mt-3">
-				<span class="text-violet-400/70">{totalAllItems} items</span>
+				<span class="text-slate-400/70">{totalAllItems} items</span>
 				<span class="text-zinc-600">&middot;</span>
 				<span class="text-green-400/70">{totalAllHours}h de entretenimiento</span>
 				<span class="text-zinc-600">&middot;</span>
 				<span class="text-amber-400/70">{totalAllGenres} generos</span>
 			</p>
 
-			<div class="mt-4 h-px bg-linear-to-r from-violet-500/40 via-zinc-700/40 to-transparent"></div>
+			<div class="mt-4 h-px bg-linear-to-r from-neutral-500/40 via-zinc-700/40 to-transparent"></div>
 		</header>
 
 		<!-- ═══════════════════════════════════════════════════════ -->
 		<!-- GLOBAL SUMMARY                                         -->
 		<!-- ═══════════════════════════════════════════════════════ -->
 		<section>
-			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-400/80 mb-3">Resumen Global</p>
+			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400/80 mb-3">Resumen Global</p>
 			<div class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3">
-				<CardDashboard text="Total Items" number={totalAllItems} color="violet">
+				<CardDashboard text="Total Items" number={totalAllItems} color="neutral">
 					<IconEye width={20} height={20} />
 				</CardDashboard>
-				<CardDashboard text="Horas Totales" number={`${totalAllHours}h`} color="violet">
+				<CardDashboard text="Horas Totales" number={`${totalAllHours}h`} color="neutral">
 					<IconClock width={20} height={20} />
 				</CardDashboard>
-				<CardDashboard text="Shows Unicos" number={uniqueShows} color="violet">
+				<CardDashboard text="Shows Unicos" number={uniqueShows} color="neutral">
 					<IconDeviceTv width={20} height={20} />
 				</CardDashboard>
-				<CardDashboard text="Peliculas Unicas" number={uniqueMovies} color="violet">
+				<CardDashboard text="Peliculas Unicas" number={uniqueMovies} color="neutral">
 					<IconMovie width={20} height={20} />
 				</CardDashboard>
 			</div>
