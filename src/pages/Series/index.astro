@@ -8,6 +8,7 @@ import FilterBar from '../../components/Globals/FilterBar.astro';
 import CardDashboard from '../../components/Globals/CardDashboard.astro';
 import IconDeviceTv from '../../components/Icons/IconDeviceTv.astro';
 import IconSearchOff from '../../components/Icons/IconSearchOff.astro';
+import StatsBar from '../../components/Globals/StatsBar.astro';
 
 // Leer series directamente del caché (sin llamadas API)
 const seriesData = seriesCache.series;
@@ -43,6 +44,13 @@ const totalSeasons = seriesData.length;
 const completedSeasons = seriesData.filter(d => d.localData?.statusViewed === 'completed').length;
 const ongoingSeasons = seriesData.filter(d => d.localData?.statusViewed === 'ongoing').length;
 const totalPlatforms = allPlatforms.length;
+const totalEpisodes = (seriesData as any[]).reduce((sum, entry) => sum + (entry.episodes?.length || entry.season?.episode_count || 0), 0);
+const totalSeriesHours = Math.round((seriesData as any[]).reduce((sum, entry) => {
+    const eps = entry.episodes?.length || entry.season?.episode_count || 0;
+    const runtime = entry.show?.runtime || 0;
+    return sum + (eps * runtime);
+}, 0) / 60);
+const uniqueShows = seriesCache.uniqueShows;
 
 // Agregar índice para ordenamiento
 const seriesDataWithIndex = seriesData.map((data, index) => ({
@@ -61,14 +69,17 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                         Series
                     </h1>
-                    <p class="text-sm text-zinc-500 mt-1">
-                        {totalSeasons} temporadas vistas
-                        <span class="text-zinc-600">&middot;</span>
-                        <span class="text-green-400/70">{completedSeasons} completadas</span>
-                        <span class="text-zinc-600">&middot;</span>
-                        <span class="text-sky-400/70">{ongoingSeasons} en progreso</span>
-                        <span id="series-count" class="text-zinc-400"></span>
-                    </p>
+
+                    <!-- Stats -->
+                    <div class="mt-3">
+                        <StatsBar items={[
+                            { color: "sky", value: String(totalSeasons), label: "temporadas" },
+                            { color: "green", value: String(completedSeasons), label: "completadas" },
+                            { color: "sky", value: String(totalEpisodes.toLocaleString('es')), label: "episodios" },
+                            { color: "green", value: `${totalSeriesHours.toLocaleString('es')}h`, label: "vistas" },
+                            { color: "slate", value: String(uniqueShows), label: "shows únicos" },
+                        ]} />
+                    </div>
                 </div>
 
                 <!-- Dashboard compacto -->
@@ -87,6 +98,7 @@ const seriesDataWithIndex = seriesData.map((data, index) => ({
                     </CardDashboard>
                 </section>
             </div>
+
 
             <!-- Linea decorativa -->
             <div class="mt-4 h-px bg-gradient-to-r from-sky-500/40 via-zinc-700/40 to-transparent"></div>

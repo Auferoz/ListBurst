@@ -1,5 +1,8 @@
 ---
 import { getImageUrl } from '../../services/apiTrakt';
+import IconCheck from '../Icons/IconCheck.astro';
+import IconDotsVertical from '../Icons/IconDotsVertical.astro';
+import IconRotateClockwise from '../Icons/IconRotateClockwise.astro';
 
 /**
  * Props: recibe el objeto completo con show, season y localData
@@ -151,9 +154,12 @@ const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
                 </span>
                 {isWatched && (
                     <span class="ml-auto text-violet-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
+                        <IconCheck width={20} height={20} />
+                    </span>
+                )}
+                {isOngoing && (
+                    <span class="ml-auto text-green-400">
+                        <IconRotateClockwise width={20} height={20} />
                     </span>
                 )}
             </footer>
@@ -165,11 +171,7 @@ const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
             class="absolute top-2 right-0 p-1 text-zinc-200 hover:text-white transition-colors"
             aria-label="Opciones"
         >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="5" r="2"></circle>
-                <circle cx="12" cy="12" r="2"></circle>
-                <circle cx="12" cy="19" r="2"></circle>
-            </svg>
+            <IconDotsVertical width={20} height={20} />
         </button>
     </div>
 </a>

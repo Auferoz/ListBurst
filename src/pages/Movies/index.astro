@@ -7,6 +7,7 @@ import FilterBar from '../../components/Globals/FilterBar.astro';
 import CardDashboard from '../../components/Globals/CardDashboard.astro';
 import IconMovie from '../../components/Icons/IconMovie.astro';
 import IconSearchOff from '../../components/Icons/IconSearchOff.astro';
+import StatsBar from '../../components/Globals/StatsBar.astro';
 
 // Leer películas directamente del caché (sin llamadas API)
 const moviesWithRatings = moviesCache.movies;
@@ -54,14 +55,16 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                         Movies
                     </h1>
-                    <p class="text-sm text-zinc-500 mt-1">
-                        {totalMovies} peliculas vistas
-                        <span class="text-zinc-600">&middot;</span>
-                        <span class="text-green-400/70">{totalHours}h de contenido</span>
-                        <span class="text-zinc-600">&middot;</span>
-                        <span class="text-amber-400/70">{avgRating} rating promedio</span>
-                        <span id="movies-count" class="text-zinc-400"></span>
-                    </p>
+
+                    <!-- Stats -->
+                    <div class="mt-3">
+                        <StatsBar items={[
+                            { color: "indigo", value: String(totalMovies), label: "películas" },
+                            { color: "green", value: `${totalHours}h`, label: "de contenido" },
+                            { color: "amber", value: String(avgRating), label: "rating promedio" },
+                            { color: "violet", value: String(totalGenres), label: "géneros" },
+                        ]} />
+                    </div>
                 </div>
 
                 <!-- Dashboard compacto -->
@@ -80,6 +83,7 @@ const moviesWithIndex = moviesWithRatings.map((data, index) => ({
                     </CardDashboard>
                 </section>
             </div>
+
 
             <!-- Linea decorativa -->
             <div class="mt-4 h-px bg-gradient-to-r from-indigo-500/40 via-zinc-700/40 to-transparent"></div>

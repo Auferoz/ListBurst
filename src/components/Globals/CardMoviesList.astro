@@ -5,6 +5,7 @@ import IconRottenTomatoes from '../Icons/IconRottenTomatoes.astro';
 import IconMetacritic from '../Icons/IconMetacritic.astro';
 import IconPopcorn from '../Icons/IconPopcorn.astro';
 import IconTrakt from '../Icons/IconTrakt.astro';
+import IconDotsVertical from '../Icons/IconDotsVertical.astro';
 
 /**
  * Props: recibe el objeto completo con movie y datos adicionales
@@ -205,11 +206,7 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
             class="absolute top-2 right-0 p-1 text-zinc-200 hover:text-white transition-colors"
             aria-label="Opciones"
         >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="5" r="2"></circle>
-                <circle cx="12" cy="12" r="2"></circle>
-                <circle cx="12" cy="19" r="2"></circle>
-            </svg>
+            <IconDotsVertical width={20} height={20} />
         </button>
     </div>
 </article>

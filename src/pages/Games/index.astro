@@ -7,6 +7,7 @@ import FilterBar from '../../components/Globals/FilterBar.astro';
 import CardDashboard from '../../components/Globals/CardDashboard.astro';
 import IconGamepad from '../../components/Icons/IconGamepad.astro';
 import IconSearchOff from '../../components/Icons/IconSearchOff.astro';
+import StatsBar from '../../components/Globals/StatsBar.astro';
 
 // Obtener años disponibles (más reciente primero)
 const availableYears = getAvailableYears().reverse();
@@ -52,6 +53,8 @@ const playingCount = gamesWithIndex.filter(g => g.estado === "Jugando").length;
 const pausedCount = gamesWithIndex.filter(g => g.estado === "Pausado").length;
 const completedCount = gamesWithIndex.filter(g => g.estado === "Completado").length;
 const abandonedCount = gamesWithIndex.filter(g => g.estado === "Abandonado").length;
+const totalGamingHours = ListGames.reduce((sum, g) => sum + (g.horasTotal || 0), 0);
+const totalAchievements = ListGames.reduce((sum, g) => sum + (g.logros_obt || 0), 0);
 ---
 
 <Layout title="Juegos" description="Lista de videojuegos jugados con horas, logros, plataformas y estado.">
@@ -64,14 +67,17 @@ const abandonedCount = gamesWithIndex.filter(g => g.estado === "Abandonado").len
                     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                         Games
                     </h1>
-                    <p class="text-sm text-zinc-500 mt-1">
-                        {totalGames} juegos en total
-                        <span class="text-zinc-600">&middot;</span>
-                        <span class="text-green-400/70">{playingCount} jugando</span>
-                        <span class="text-zinc-600">&middot;</span>
-                        <span class="text-teal-400/70">{completedCount} completados</span>
-                        <span id="games-count" class="text-zinc-400"></span>
-                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="mt-3">
+                        <StatsBar items={[
+                            { color: "teal", value: String(totalGames), label: "juegos" },
+                            { color: "green", value: String(playingCount), label: "jugando" },
+                            { color: "teal", value: String(completedCount), label: "completados" },
+                            { color: "green", value: `${totalGamingHours.toLocaleString('es')}h`, label: "jugadas" },
+                            { color: "amber", value: String(totalAchievements), label: "logros" },
+                        ]} />
+                    </div>
                 </div>
 
                 <!-- Dashboard compacto -->
@@ -90,6 +96,7 @@ const abandonedCount = gamesWithIndex.filter(g => g.estado === "Abandonado").len
                     </CardDashboard>
                 </section>
             </div>
+
 
             <!-- Linea decorativa -->
             <div class="mt-4 h-px bg-gradient-to-r from-teal-500/40 via-zinc-700/40 to-transparent"></div>

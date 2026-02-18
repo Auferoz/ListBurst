@@ -1,0 +1,93 @@
+---
+/**
+ * StatsBar - Barra compacta de estadísticas con puntos de color
+ *
+ * Cada item muestra: [dot] [valor] [label] [extras...]
+ *
+ * @example
+ * <StatsBar items={[
+ *     { color: "green", value: "2,500h", label: "entretenimiento" },
+ *     { color: "sky", value: "4,200", label: "eps de", extras: [{ text: "45", color: "sky" }, { text: "shows" }] },
+ * ]} />
+ */
+
+interface StatSegment {
+    text: string;
+    /** Tailwind color name (e.g. "sky", "amber"). Si no se pasa, usa zinc-500 */
+    color?: string;
+}
+
+interface StatItem {
+    /** Tailwind color name para el dot y el valor (e.g. "slate", "green", "amber") */
+    color: string;
+    /** Valor numérico/texto principal */
+    value: string;
+    /** Texto descriptivo tras el valor */
+    label: string;
+    /** Segmentos extra con color opcional después del label */
+    extras?: StatSegment[];
+}
+
+interface Props {
+    items: StatItem[];
+}
+
+const { items } = Astro.props;
+
+// Mapeo de nombre de color → clases Tailwind
+const dotColorMap: Record<string, string> = {
+    slate: 'bg-slate-400/60',
+    green: 'bg-green-400/60',
+    amber: 'bg-amber-400/60',
+    sky: 'bg-sky-400/60',
+    indigo: 'bg-indigo-400/60',
+    teal: 'bg-teal-400/60',
+    violet: 'bg-violet-400/60',
+    red: 'bg-red-400/60',
+    emerald: 'bg-emerald-400/60',
+    zinc: 'bg-zinc-400/60',
+};
+
+const valueColorMap: Record<string, string> = {
+    slate: 'text-slate-300',
+    green: 'text-green-300',
+    amber: 'text-amber-300',
+    sky: 'text-sky-300',
+    indigo: 'text-indigo-300',
+    teal: 'text-teal-300',
+    violet: 'text-violet-300',
+    red: 'text-red-300',
+    emerald: 'text-emerald-300',
+    zinc: 'text-zinc-300',
+};
+
+const extraColorMap: Record<string, string> = {
+    slate: 'text-slate-500',
+    green: 'text-green-500',
+    amber: 'text-amber-500',
+    sky: 'text-sky-500',
+    indigo: 'text-indigo-500',
+    teal: 'text-teal-500',
+    violet: 'text-violet-500',
+    red: 'text-red-500',
+    emerald: 'text-emerald-500',
+    zinc: 'text-zinc-500',
+};
+---
+
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+    {items.map((item) => (
+        <div class="flex items-center gap-1.5">
+            <span class:list={["w-1 h-1 rounded-full", dotColorMap[item.color] || 'bg-zinc-400/60']}></span>
+            <span class:list={["text-sm font-semibold tabular-nums", valueColorMap[item.color] || 'text-zinc-300']}>
+                {item.value}
+            </span>
+            <span class="text-xs text-zinc-500">{item.label}</span>
+            {item.extras?.map((seg) => (
+                <span class:list={["text-xs", seg.color ? (extraColorMap[seg.color] || 'text-zinc-500') : 'text-zinc-500']}>
+                    {seg.text}
+                </span>
+            ))}
+        </div>
+    ))}
+</div>
