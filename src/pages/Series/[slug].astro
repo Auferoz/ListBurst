@@ -180,11 +180,11 @@ const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
             <div class="absolute bottom-0 left-0 right-0 p-8">
                 <div class="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:items-end gap-6">
                     <!-- Poster de la temporada -->
-                    <figure class="shrink-0 hidden md:block">
+                    <figure class="shrink-0">
                         <img
                             src={seasonPoster || showPoster}
                             alt={`Poster de ${title} ${seasonTitle}`}
-                            class="w-48 rounded-xl shadow-2xl border border-zinc-700"
+                            class="w-36 md:w-48 rounded-xl shadow-2xl border border-zinc-700"
                             transition:name={`poster-series-${idTrakt}-s${numberSeason}`}
                         />
                     </figure>

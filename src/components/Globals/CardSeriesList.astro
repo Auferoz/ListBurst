@@ -122,7 +122,7 @@ const detailUrl = `/Series/${localData.idTrakt}-season-${seasonNumber}`;
                 class="h-28 w-auto rounded-lg object-cover shadow-md"
                 src={seasonPoster}
                 alt={`Poster de ${title}`}
-                loading="lazy"
+                loading="eager"
                 transition:name={`poster-series-${localData.idTrakt}-s${seasonNumber}`}
             />
         </figure>

@@ -180,11 +180,11 @@ const directorText = directors.length > 0 ? directors.join(', ') : null;
             <div class="absolute bottom-0 left-0 right-0 p-8">
                 <div class="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:items-end gap-6">
                     <!-- Poster de la película -->
-                    <figure class="shrink-0 hidden md:block">
+                    <figure class="shrink-0">
                         <img
                             src={moviePoster}
                             alt={`Poster de ${title}`}
-                            class="w-48 rounded-xl shadow-2xl border border-zinc-700"
+                            class="w-36 md:w-48 rounded-xl shadow-2xl border border-zinc-700"
                             transition:name={movie?.ids?.slug ? `poster-movie-${movie.ids.slug}` : undefined}
                         />
                     </figure>
@@ -436,7 +436,7 @@ const directorText = directors.length > 0 ? directors.join(', ') : null;
             </details> -->
 
             <!-- Volver -->
-            <a href="/Series" class="fixed bottom-18 lg:bottom-4 right-4 bg-zinc-800 px-3 py-2 rounded-lg border border-zinc-700">
+            <a href="/Movies" class="fixed bottom-18 lg:bottom-4 right-4 bg-zinc-800 px-3 py-2 rounded-lg border border-zinc-700">
                 <IconArrowBack width={24} height={24} />
             </a>
         </section>

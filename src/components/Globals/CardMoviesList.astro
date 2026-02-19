@@ -123,7 +123,7 @@ const detailUrl = movieSlug ? `/Movies/${movieSlug}` : null;
                 class="h-28 w-auto rounded-lg object-cover shadow-md"
                 src={moviePoster}
                 alt={`Poster de ${title}`}
-                loading="lazy"
+                loading="eager"
                 transition:name={movieSlug ? `poster-movie-${movieSlug}` : undefined}
             />
         </figure>
