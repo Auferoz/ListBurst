@@ -23,8 +23,10 @@ const Trakt_CLIENT_ID = import.meta.env.Trakt_CLIENT_ID;
  */
 const getHeaders = () => ({
     "Content-Type": "application/json",
+    "Accept": "application/json",
     "trakt-api-version": "2",
     "trakt-api-key": Trakt_CLIENT_ID,
+    "User-Agent": "ListBurst/1.0 (+https://list-burst.adesigns7.workers.dev)",
 });
 
 /**

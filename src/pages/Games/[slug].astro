@@ -134,7 +134,7 @@ const slug = getGameSlug(title);
             <div class="absolute bottom-0 left-0 right-0 p-8">
                 <div class="max-w-7xl mx-auto flex flex-col items-center md:flex-row md:items-end gap-6">
                     <!-- Poster del juego (visible en mobile y desktop) -->
-                    <figure class="shrink-0">
+                    <figure class="shrink-0 hidden md:block">
                         <img
                             src={posterUrl}
                             alt={`Poster de ${title}`}

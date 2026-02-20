@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(npx astro build:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(source:*)",
+      "Bash(curl:*)",
+      "Bash(node -e \"fetch\\(''https://httpbin.org/headers'', {headers: {''Content-Type'': ''application/json''}}\\).then\\(r => r.json\\(\\)\\).then\\(d => console.log\\(JSON.stringify\\(d, null, 2\\)\\)\\)\")",
+      "Bash(node -e \":*)",
+      "Bash(node -e:*)"
     ]
   }
 }
