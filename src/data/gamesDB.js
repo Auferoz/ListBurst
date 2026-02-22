@@ -1323,6 +1323,31 @@ export const ListGames = [
         description: "Sumérgete en Wheel World como Kat, una ciclista elegida por antiguos espíritus ciclistas. Compite contra equipos de élite, tunea tu bicicleta y realiza el esperado ritual del Gran Cambio para salvar un universo al borde del abismo. Tu bicicleta es tu destino."
     },
     {
+        title: "Windrose",
+        released: "",
+        companie: "Windrose Crew",
+        poster: "coay9m.webp",
+        trailer: "EDnFI1SLMLo",
+        artworks: "ar4uzq.webp",
+        genre: "Role-playing (RPG), Adventure",
+        estado: "Completado",
+        horasTotal: 4,
+        logros_obt: 0,
+        logros_total: 0,
+        console_pc: "Steam",
+        igdbId: 380441,
+        first_year_played: 2026,
+        dates_played: {
+            y2026: { fecha_inicio: "22/02/2026", fecha_final: "22/02/2026", horas: "4" },
+            y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
+        },
+        years_played: { y2026: true, y2025: false, y2024: false, y2023: false, y2022: false },
+        description: "Windrose es una aventura de supervivencia ambientada en la era de la piratería. Explora un mundo abierto procedural, recolecta, construye y crea objetos. Derrota a jefes desafiantes en combates al estilo Souls. Navega con tu barco, lucha en tierra y mar, juega solo o con amigos."
+    },
+    {
         title: "World of Goo",
         released: "03/04/2013",
         companie: "2D Boy",

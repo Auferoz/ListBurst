@@ -246,10 +246,9 @@ const progressColor = proximity === 'imminent'
     <!-- Overlay cuenta atrás en tiempo real -->
     {!isTBA && !isReleased && (
         <div
-            class="countdown-overlay absolute inset-0 z-20 flex items-center justify-center rounded-xl opacity-0 pointer-events-none transition-all duration-300"
+            class="countdown-overlay absolute inset-0 z-20 flex items-center justify-center rounded-xl bg-zinc-950/80 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300"
             data-target-date={isoDate}
         >
-            <div class="absolute inset-0 bg-zinc-950/80 backdrop-blur-sm rounded-xl"></div>
             <div class="relative z-10 flex gap-3 sm:gap-4">
                 <div class="flex flex-col items-center">
                     <span class:list={["countdown-days text-2xl sm:text-3xl font-bold tabular-nums leading-none", countdownClasses[proximity]]}>--</span>
