@@ -386,6 +386,13 @@ export const ListSeriesSeasons = [
         numberSeason: 1,
         yearViewed: 2026,
         platformViewed: "Disney+",
+        statusViewed: "completed"
+    },
+    {
+        idTrakt: "wonder-man",
+        numberSeason: 1,
+        yearViewed: 2026,
+        platformViewed: "Disney+",
         statusViewed: "ongoing"
     },
 ];
