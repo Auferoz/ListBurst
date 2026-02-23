@@ -16,14 +16,16 @@ import IconTrakt from '../../components/Icons/IconTrakt.astro';
 import IconArrowBack from '../../components/Icons/IconArrowBack.astro';
 import IconStar from '../../components/Icons/IconStar.astro';
 import IconUser from '../../components/Icons/IconUser.astro';
+import ExtraVideos from '../../components/Globals/ExtraVideos.astro';
 
 // Generar todas las rutas estáticas desde el caché (sin llamadas API)
 export function getStaticPaths() {
     const peopleLookup = moviesCache.people as Record<string, (typeof moviesCache.people)[keyof typeof moviesCache.people]>;
+    const videosLookup = (moviesCache as any).videos as Record<string, any[]> || {};
 
     // Deduplicar por slug (una película puede estar en varias listas)
     const moviesBySlug = new Map<string, (typeof moviesCache.movies)[number]>();
-    
+
     for (const movieData of moviesCache.movies) {
         const slug = movieData.movie?.ids?.slug;
         if (slug) {
@@ -36,6 +38,7 @@ export function getStaticPaths() {
         props: {
             movie: movieData.movie,
             people: peopleLookup[slug] ?? null,
+            videos: videosLookup[slug] ?? [],
             localData: {
                 yearViewed: movieData.yearViewed,
                 rank: movieData.rank,
@@ -50,6 +53,7 @@ export function getStaticPaths() {
 interface Props {
     movie: any;
     people: any;
+    videos: any[];
     localData: {
         yearViewed: number;
         rank?: number;
@@ -64,7 +68,7 @@ interface Props {
     };
 }
 
-const { movie, people, localData } = Astro.props;
+const { movie, people, videos: rawVideos, localData } = Astro.props;
 const { yearViewed, rank, listedAt, externalRatings } = localData;
 
 // Imágenes
@@ -147,9 +151,36 @@ const writers = (people?.crew?.writing || [])
     .filter(Boolean);
 const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
 
-// Trailer
-const trailerUrl: string | null = movie?.trailer || null;
-const trailerYoutubeId = trailerUrl?.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] || null;
+// Videos (API videos + fallback al trailer del show)
+const extractYoutubeId = (url: string | null | undefined) =>
+    url?.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] || null;
+
+const videoTypeLabels: Record<string, string> = {
+    trailer: 'Trailer',
+    teaser: 'Teaser',
+    clip: 'Clip',
+    featurette: 'Featurette',
+    'behind the scenes': 'Behind the Scenes',
+    opening_credits: 'Opening Credits',
+};
+
+const apiVideos = (rawVideos || [])
+    .filter((v: any) => v.site === 'youtube' && extractYoutubeId(v.url))
+    .map((v: any) => ({
+        youtubeId: extractYoutubeId(v.url)!,
+        title: v.title || videoTypeLabels[v.type] || 'Video',
+        type: v.type || 'trailer',
+        label: videoTypeLabels[v.type] || v.type || 'Video',
+        official: v.official ?? true,
+    }));
+
+// Fallback: si no hay videos de la API, usar el trailer del objeto movie
+const fallbackTrailerId = extractYoutubeId(movie?.trailer);
+const allVideos = apiVideos.length > 0
+    ? apiVideos
+    : fallbackTrailerId
+        ? [{ youtubeId: fallbackTrailerId, title: 'Trailer', type: 'trailer', label: 'Trailer', official: true }]
+        : [];
 
 // Datos del cast
 const cast = people?.cast || [];
@@ -391,23 +422,9 @@ const directorText = directors.length > 0 ? directors.join(', ') : null;
                 </div>
             )}
 
-            <!-- Trailer -->
-            {trailerYoutubeId && (
-                <div class="mb-8">
-                    <h2 class="text-xl font-bold text-white mb-4">Trailer</h2>
-                    <div class="relative rounded-xl overflow-hidden border border-zinc-700/40 shadow-lg shadow-black/20 bg-black">
-                        <div class="aspect-video">
-                            <iframe
-                                src={`https://www.youtube-nocookie.com/embed/${trailerYoutubeId}?rel=0&modestbranding=1`}
-                                title={`Trailer de ${title}`}
-                                class="w-full h-full"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                                loading="lazy"
-                            />
-                        </div>
-                    </div>
-                </div>
+            <!-- Extra: Videos -->
+            {allVideos.length > 0 && (
+                <ExtraVideos videos={allVideos} accentColor="indigo" title={title} />
             )}
 
             <!-- DEBUG: JSON completo -->

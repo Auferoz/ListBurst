@@ -7,7 +7,9 @@
       "Bash(curl:*)",
       "Bash(node -e \"fetch\\(''https://httpbin.org/headers'', {headers: {''Content-Type'': ''application/json''}}\\).then\\(r => r.json\\(\\)\\).then\\(d => console.log\\(JSON.stringify\\(d, null, 2\\)\\)\\)\")",
       "Bash(node -e \":*)",
-      "Bash(node -e:*)"
+      "Bash(node -e:*)",
+      "WebFetch(domain:trakt.docs.apiary.io)",
+      "WebSearch"
     ]
   }
 }

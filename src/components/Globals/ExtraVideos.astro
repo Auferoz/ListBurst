@@ -1,0 +1,200 @@
+---
+/**
+ * VideoMedia - Componente de tabs para mostrar videos agrupados por tipo
+ *
+ * Agrupa videos (trailers, teasers, clips, featurettes, etc.) en pestañas
+ * con navegación interactiva. Si solo hay un tipo, muestra directamente
+ * sin tabs. Compatible con View Transitions via astro:page-load.
+ *
+ * @example
+ * <VideoMedia
+ *     videos={allVideos}
+ *     accentColor="indigo"
+ *     title="Título de la película"
+ * />
+ */
+
+interface Video {
+    youtubeId: string;
+    title: string;
+    type: string;
+    label: string;
+    official: boolean;
+}
+
+interface Props {
+    videos: Video[];
+    accentColor?: 'indigo' | 'sky' | 'teal';
+    title?: string;
+}
+
+const { videos, accentColor = 'indigo', title = '' } = Astro.props;
+
+// Agrupar videos por tipo
+const groupedVideos = new Map<string, { label: string; videos: Video[] }>();
+
+// Orden de prioridad para las tabs
+const typeOrder = ['trailer', 'teaser', 'clip', 'featurette', 'behind the scenes', 'opening_credits'];
+
+for (const video of videos) {
+    const key = video.type;
+    if (!groupedVideos.has(key)) {
+        groupedVideos.set(key, { label: video.label, videos: [] });
+    }
+    groupedVideos.get(key)!.videos.push(video);
+}
+
+// Ordenar las tabs según prioridad
+const sortedTabs = [...groupedVideos.entries()].sort((a, b) => {
+    const indexA = typeOrder.indexOf(a[0]);
+    const indexB = typeOrder.indexOf(b[0]);
+    return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+});
+
+const hasTabs = sortedTabs.length > 1;
+const componentId = `video-media-${Math.random().toString(36).slice(2, 8)}`;
+
+// Mapeo de colores accent para las tabs
+const accentStyles: Record<string, { tab: string; tabActive: string; badge: string }> = {
+    indigo: {
+        tab: 'text-zinc-400 hover:text-indigo-300',
+        tabActive: 'text-indigo-400 border-indigo-400',
+        badge: 'bg-indigo-500/20 text-indigo-400',
+    },
+    sky: {
+        tab: 'text-zinc-400 hover:text-sky-300',
+        tabActive: 'text-sky-400 border-sky-400',
+        badge: 'bg-sky-500/20 text-sky-400',
+    },
+    teal: {
+        tab: 'text-zinc-400 hover:text-teal-300',
+        tabActive: 'text-teal-400 border-teal-400',
+        badge: 'bg-teal-500/20 text-teal-400',
+    },
+};
+
+const styles = accentStyles[accentColor] || accentStyles.indigo;
+---
+
+<div class="mb-8" id={componentId}>
+    <h2 class="text-xl font-bold text-white mb-4">Extra: Videos</h2>
+
+    {/* Tabs de navegación */}
+    {hasTabs && (
+        <div class="flex items-center gap-1 mb-4 border-b border-zinc-700/50 overflow-x-auto scrollbar-hide" data-video-tabs>
+            {sortedTabs.map(([type, group], i) => (
+                <button
+                    type="button"
+                    class:list={[
+                        'tab-btn flex items-center gap-1.5 px-3 py-2 text-sm font-medium border-b-2 transition-all duration-200 whitespace-nowrap cursor-pointer',
+                        i === 0 ? styles.tabActive : `${styles.tab} border-transparent`,
+                    ]}
+                    data-tab-type={type}
+                    data-accent-active={styles.tabActive}
+                    data-accent-inactive={`${styles.tab} border-transparent`}
+                >
+                    {group.label}
+                    <span class:list={[
+                        'text-[10px] font-semibold px-1.5 py-0.5 rounded-full leading-none',
+                        i === 0 ? styles.badge : 'bg-zinc-700/50 text-zinc-500',
+                    ]} data-tab-count>
+                        {group.videos.length}
+                    </span>
+                </button>
+            ))}
+        </div>
+    )}
+
+    {/* Paneles de contenido */}
+    {sortedTabs.map(([type, group], tabIndex) => {
+        const isSingle = group.videos.length === 1;
+        return (
+            <div
+                class:list={['tab-panel', tabIndex === 0 ? '' : 'hidden']}
+                data-tab-panel={type}
+            >
+                <div class={`grid gap-4 ${isSingle ? '' : 'md:grid-cols-2'}`}>
+                    {group.videos.map((video) => (
+                        <div>
+                            <div class="relative rounded-xl overflow-hidden border border-zinc-700/40 shadow-lg shadow-black/20 bg-black">
+                                <div class="aspect-video">
+                                    <iframe
+                                        src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0&modestbranding=1`}
+                                        title={video.title}
+                                        class="w-full h-full"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </div>
+                            {!isSingle && (
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span class={`text-sm text-zinc-400 truncate`} title={video.title}>{video.title}</span>
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    })}
+</div>
+
+<style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+
+<script define:vars={{ componentId }}>
+document.addEventListener('astro:page-load', () => {
+    const container = document.getElementById(componentId);
+    if (!container) return;
+
+    const controller = new AbortController();
+    const tabs = container.querySelectorAll('.tab-btn');
+    const panels = container.querySelectorAll('.tab-panel');
+
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const type = tab.dataset.tabType;
+            const activeClasses = tab.dataset.accentActive;
+            const inactiveClasses = tab.dataset.accentInactive;
+
+            // Actualizar tabs
+            tabs.forEach((t) => {
+                const isActive = t.dataset.tabType === type;
+                // Limpiar todas las clases de estado
+                t.className = 'tab-btn flex items-center gap-1.5 px-3 py-2 text-sm font-medium border-b-2 transition-all duration-200 whitespace-nowrap cursor-pointer';
+                // Aplicar clases según estado
+                const classes = isActive ? activeClasses : t.dataset.accentInactive;
+                if (classes) {
+                    classes.split(' ').filter(Boolean).forEach(c => t.classList.add(c));
+                }
+
+                // Actualizar badge count
+                const badge = t.querySelector('[data-tab-count]');
+                if (badge) {
+                    const activeBadge = activeClasses.includes('indigo') ? 'bg-indigo-500/20 text-indigo-400'
+                        : activeClasses.includes('sky') ? 'bg-sky-500/20 text-sky-400'
+                        : 'bg-teal-500/20 text-teal-400';
+                    badge.className = 'text-[10px] font-semibold px-1.5 py-0.5 rounded-full leading-none ' +
+                        (isActive ? activeBadge : 'bg-zinc-700/50 text-zinc-500');
+                }
+            });
+
+            // Actualizar paneles
+            panels.forEach((panel) => {
+                panel.classList.toggle('hidden', panel.dataset.tabPanel !== type);
+            });
+        }, { signal: controller.signal });
+    });
+
+    document.addEventListener('astro:before-preparation', () => controller.abort(), { once: true });
+});
+</script>

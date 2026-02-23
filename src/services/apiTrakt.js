@@ -370,6 +370,46 @@ export const getMoviesByYear = async (username, year) => {
 };
 
 // ============================================
+// VIDEOS
+// ============================================
+
+/**
+ * Obtiene todos los videos de una película (trailers, teasers, clips, featurettes)
+ * @param {string} movieId - Trakt slug, Trakt ID o IMDB ID
+ * @returns {Promise<Array>} - Array de videos
+ *
+ * @example
+ * const videos = await getMovieVideos("tron-legacy-2010");
+ * // Retorna: [{ title, url, site, type, size, official, published_at, country, language }]
+ */
+export const getMovieVideos = async (movieId) => {
+    try {
+        return await fetchTrakt(`/movies/${movieId}/videos`);
+    } catch (error) {
+        console.warn(`⚠️ Sin videos para película ${movieId}: ${error.message}`);
+        return [];
+    }
+};
+
+/**
+ * Obtiene todos los videos de una serie (trailers, teasers, clips, featurettes)
+ * @param {string} showId - Trakt slug, Trakt ID o IMDB ID
+ * @returns {Promise<Array>} - Array de videos
+ *
+ * @example
+ * const videos = await getShowVideos("game-of-thrones");
+ * // Retorna: [{ title, url, site, type, size, official, published_at, country, language }]
+ */
+export const getShowVideos = async (showId) => {
+    try {
+        return await fetchTrakt(`/shows/${showId}/videos`);
+    } catch (error) {
+        console.warn(`⚠️ Sin videos para serie ${showId}: ${error.message}`);
+        return [];
+    }
+};
+
+// ============================================
 // FUNCIONES AUXILIARES
 // ============================================
 
@@ -518,6 +558,10 @@ export default {
     getSeasonPeople,
     getPerson,
     getPersonShows,
+
+    // Videos
+    getMovieVideos,
+    getShowVideos,
 
     // Helpers
     getImageUrl,

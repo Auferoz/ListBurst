@@ -12,6 +12,7 @@ import IconArrowBack from '../../components/Icons/IconArrowBack.astro';
 import IconStar from '../../components/Icons/IconStar.astro';
 import IconUser from '../../components/Icons/IconUser.astro';
 import IconPlayerPlay from '../../components/Icons/IconPlayerPlay.astro';
+import ExtraVideos from '../../components/Globals/ExtraVideos.astro';
 
 // Generar todas las rutas estáticas desde el caché (sin llamadas API)
 export function getStaticPaths() {
@@ -24,6 +25,7 @@ export function getStaticPaths() {
                 season: entry.season,
                 people: entry.people,
                 episodes: entry.episodes || [],
+                videos: entry.videos || [],
                 localData: entry.localData,
             },
         };
@@ -36,6 +38,7 @@ interface Props {
     season: any;
     people: any;
     episodes: any[];
+    videos: any[];
     localData: {
         idTrakt: string;
         numberSeason: number;
@@ -45,7 +48,7 @@ interface Props {
     };
 }
 
-const { show, season, people, episodes: rawEpisodes, localData } = Astro.props;
+const { show, season, people, episodes: rawEpisodes, videos: rawVideos, localData } = Astro.props;
 const { idTrakt, numberSeason, yearViewed, platformViewed, statusViewed } = localData;
 
 // Imágenes
@@ -80,9 +83,36 @@ const formatRuntime = (minutes: number | undefined | null) => {
 const episodeDuration = formatRuntime(runtimePerEpisode);
 const seasonTotalDuration = formatRuntime(totalSeasonMinutes);
 
-// Trailer
-const trailerUrl: string | null = show?.trailer || null;
-const trailerYoutubeId = trailerUrl?.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] || null;
+// Videos (API videos + fallback al trailer del show)
+const extractYoutubeId = (url: string | null | undefined) =>
+    url?.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] || null;
+
+const videoTypeLabels: Record<string, string> = {
+    trailer: 'Trailer',
+    teaser: 'Teaser',
+    clip: 'Clip',
+    featurette: 'Featurette',
+    'behind the scenes': 'Behind the Scenes',
+    opening_credits: 'Opening Credits',
+};
+
+const apiVideos = (rawVideos || [])
+    .filter((v: any) => v.site === 'youtube' && extractYoutubeId(v.url))
+    .map((v: any) => ({
+        youtubeId: extractYoutubeId(v.url)!,
+        title: v.title || videoTypeLabels[v.type] || 'Video',
+        type: v.type || 'trailer',
+        label: videoTypeLabels[v.type] || v.type || 'Video',
+        official: v.official ?? true,
+    }));
+
+// Fallback: si no hay videos de la API, usar el trailer del objeto show
+const fallbackTrailerId = extractYoutubeId(show?.trailer);
+const allVideos = apiVideos.length > 0
+    ? apiVideos
+    : fallbackTrailerId
+        ? [{ youtubeId: fallbackTrailerId, title: 'Trailer', type: 'trailer', label: 'Trailer', official: true }]
+        : [];
 
 // Datos adicionales de la serie
 const showStatus = show?.status;
@@ -429,23 +459,9 @@ const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
                 </div>
             )}
 
-            <!-- Trailer -->
-            {trailerYoutubeId && (
-                <div class="mb-8">
-                    <h2 class="text-xl font-bold text-white mb-4">Trailer</h2>
-                    <div class="relative rounded-xl overflow-hidden border border-zinc-700/40 shadow-lg shadow-black/20 bg-black">
-                        <div class="aspect-video">
-                            <iframe
-                                src={`https://www.youtube-nocookie.com/embed/${trailerYoutubeId}?rel=0&modestbranding=1`}
-                                title={`Trailer de ${title}`}
-                                class="w-full h-full"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                                loading="lazy"
-                            />
-                        </div>
-                    </div>
-                </div>
+            <!-- Extra: Videos -->
+            {allVideos.length > 0 && (
+                <ExtraVideos videos={allVideos} accentColor="sky" title={title} />
             )}
 
             <!-- DEBUG: JSON completo -->

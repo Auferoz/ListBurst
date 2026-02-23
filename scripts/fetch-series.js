@@ -138,11 +138,27 @@ async function main() {
                         console.warn(`     ⚠️ Sin episodes para ${idTrakt} S${numberSeason}`);
                     }
 
+                    // Obtener videos de la serie (con caché para no repetir)
+                    let videos = [];
+                    if (!showsCache.has(`${idTrakt}_videos`)) {
+                        try {
+                            console.log(`     📥 Videos: ${idTrakt}`);
+                            videos = await fetchTrakt(`/shows/${idTrakt}/videos`);
+                            showsCache.set(`${idTrakt}_videos`, videos);
+                        } catch (error) {
+                            console.warn(`     ⚠️ Sin videos para ${idTrakt}`);
+                            showsCache.set(`${idTrakt}_videos`, []);
+                        }
+                    } else {
+                        videos = showsCache.get(`${idTrakt}_videos`);
+                    }
+
                     return {
                         show,
                         season,
                         people,
                         episodes,
+                        videos,
                         localData,
                     };
                 } catch (error) {

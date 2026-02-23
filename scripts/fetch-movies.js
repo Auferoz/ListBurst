@@ -2,13 +2,16 @@
  * Script para generar caché local de películas
  * Llama a Trakt API + OMDB API y guarda todo en src/data/cache/movies.json
  *
- * Uso: npm run fetch:movies
+ * Uso:
+ *   npm run fetch:movies          # Fetch completo (todas las listas)
+ *   npm run fetch:movies:current   # Solo lista del año actual (rápido)
+ *
  * Requiere: .env con Trakt_CLIENT_ID y OMDB_API_KEY
  */
 
 import 'dotenv/config';
 import { ListMovies } from '../src/data/MoviesDB.js';
-import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -23,6 +26,9 @@ const OMDB_API_KEY = process.env.OMDB_API_KEY;
 const TRAKT_USERNAME = "auferoz";
 const BASE_URL = "https://api.trakt.tv";
 const OMDB_BASE_URL = "https://www.omdbapi.com/";
+
+const CURRENT_YEAR = new Date().getFullYear();
+const isCurrentOnly = process.argv.includes("--current");
 
 if (!TRAKT_CLIENT_ID) {
     console.error("❌ Falta Trakt_CLIENT_ID en .env");
@@ -140,20 +146,55 @@ async function fetchOMDB(imdbId, retries = 2) {
     return null;
 }
 
+/**
+ * Carga el caché existente si existe
+ */
+function loadExistingCache(cachePath) {
+    try {
+        if (existsSync(cachePath)) {
+            const raw = readFileSync(cachePath, "utf-8");
+            return JSON.parse(raw);
+        }
+    } catch (error) {
+        console.warn(`⚠️ No se pudo leer caché existente: ${error.message}`);
+    }
+    return null;
+}
+
 // ============================================
 // Lógica principal
 // ============================================
 
 async function main() {
     const startTime = Date.now();
-    console.log("🎬 Fetching movies...\n");
+    const cachePath = resolve(__dirname, "../src/data/cache/movies.json");
+    const cacheDir = dirname(cachePath);
 
-    // PASO 1: Obtener películas de todas las listas de Trakt
-    console.log(`📋 Obteniendo películas de ${ListMovies.length} listas...\n`);
+    if (isCurrentOnly) {
+        console.log(`🎬 Fetching movies (solo año actual: ${CURRENT_YEAR})...\n`);
+    } else {
+        console.log("🎬 Fetching movies (todas las listas)...\n");
+    }
 
-    const allMovies = [];
+    // Cargar caché existente para modo --current
+    const existingCache = isCurrentOnly ? loadExistingCache(cachePath) : null;
 
-    for (const listData of ListMovies) {
+    if (isCurrentOnly && !existingCache) {
+        console.error("❌ No existe caché previo. Ejecuta primero un fetch completo: npm run fetch:movies");
+        process.exit(1);
+    }
+
+    // Determinar qué listas fetchear
+    const listsToFetch = isCurrentOnly
+        ? ListMovies.filter((l) => l.idTraktList === `movies-${CURRENT_YEAR}`)
+        : ListMovies;
+
+    // PASO 1: Obtener películas de las listas correspondientes
+    console.log(`📋 Obteniendo películas de ${listsToFetch.length} lista(s)...\n`);
+
+    const freshMovies = [];
+
+    for (const listData of listsToFetch) {
         const { idTraktList, description } = listData;
         const yearMatch = idTraktList.match(/movies-(\d{4})/);
         const yearViewed = yearMatch ? parseInt(yearMatch[1]) : null;
@@ -172,13 +213,24 @@ async function main() {
             }));
 
             console.log(`     ✅ ${mapped.length} películas`);
-            allMovies.push(...mapped);
+            freshMovies.push(...mapped);
         } catch (error) {
             console.error(`     ❌ Error en ${idTraktList}: ${error.message}`);
         }
     }
 
-    console.log(`\n📊 Total películas: ${allMovies.length}\n`);
+    // Combinar: en modo --current, mantener películas de otros años del caché
+    let allMovies;
+    if (isCurrentOnly) {
+        const cachedOtherYears = existingCache.movies.filter(
+            (m) => m.yearViewed !== CURRENT_YEAR
+        );
+        allMovies = [...cachedOtherYears, ...freshMovies];
+        console.log(`\n📊 Películas: ${freshMovies.length} actualizadas (${CURRENT_YEAR}) + ${cachedOtherYears.length} del caché = ${allMovies.length} total\n`);
+    } else {
+        allMovies = freshMovies;
+        console.log(`\n📊 Total películas: ${allMovies.length}\n`);
+    }
 
     // PASO 2: Deduplicar por slug
     const moviesBySlug = new Map();
@@ -191,36 +243,77 @@ async function main() {
     const uniqueMovies = Array.from(moviesBySlug.values());
     console.log(`🔄 Películas únicas (por slug): ${uniqueMovies.length}\n`);
 
-    // PASO 3: Enriquecer con ratings de OMDB
-    console.log("⭐ Obteniendo ratings de OMDB...\n");
-
-    const OMDB_BATCH_SIZE = 5;
-    const ratingsMap = new Map();
-
-    for (let i = 0; i < uniqueMovies.length; i += OMDB_BATCH_SIZE) {
-        const batch = uniqueMovies.slice(i, i + OMDB_BATCH_SIZE);
-        const batchNum = Math.floor(i / OMDB_BATCH_SIZE) + 1;
-        const totalBatches = Math.ceil(uniqueMovies.length / OMDB_BATCH_SIZE);
-
-        if (batchNum % 10 === 1 || batchNum === totalBatches) {
-            console.log(`  ⭐ OMDB batch ${batchNum}/${totalBatches}...`);
-        }
-
-        const results = await Promise.all(
-            batch.map(async (m) => {
-                const imdbId = m.movie?.ids?.imdb;
-                if (!imdbId) return [null, null];
-                const ratings = await fetchOMDB(imdbId);
-                return [imdbId, ratings];
-            })
-        );
-
-        for (const [imdbId, ratings] of results) {
-            if (imdbId && ratings) ratingsMap.set(imdbId, ratings);
+    // Determinar qué slugs son nuevos (solo necesitan fetch de OMDB/people/videos)
+    const existingSlugs = new Set();
+    if (isCurrentOnly && existingCache) {
+        for (const m of existingCache.movies) {
+            const s = m.movie?.ids?.slug;
+            if (s) existingSlugs.add(s);
         }
     }
 
-    console.log(`\n  ✅ Ratings obtenidos: ${ratingsMap.size}\n`);
+    const newSlugs = isCurrentOnly
+        ? freshMovies
+            .map((m) => m.movie?.ids?.slug)
+            .filter((s) => s && !existingSlugs.has(s))
+        : Array.from(moviesBySlug.keys());
+
+    const newUniqueMovies = isCurrentOnly
+        ? uniqueMovies.filter((m) => newSlugs.includes(m.movie?.ids?.slug))
+        : uniqueMovies;
+
+    if (isCurrentOnly && newSlugs.length === 0) {
+        console.log("ℹ️  No hay películas nuevas que enriquecer.\n");
+    } else if (isCurrentOnly) {
+        console.log(`🆕 ${newSlugs.length} película(s) nueva(s) para enriquecer\n`);
+    }
+
+    // PASO 3: Enriquecer con ratings de OMDB (solo nuevas en modo --current)
+    const ratingsMap = new Map();
+
+    // En modo --current, cargar ratings existentes
+    if (isCurrentOnly && existingCache) {
+        for (const m of existingCache.movies) {
+            const imdbId = m.movie?.ids?.imdb;
+            if (imdbId && m.externalRatings) {
+                ratingsMap.set(imdbId, m.externalRatings);
+            }
+        }
+        console.log(`  ♻️  ${ratingsMap.size} ratings cargados del caché`);
+    }
+
+    if (newUniqueMovies.length > 0) {
+        console.log("⭐ Obteniendo ratings de OMDB...\n");
+
+        const OMDB_BATCH_SIZE = 5;
+
+        for (let i = 0; i < newUniqueMovies.length; i += OMDB_BATCH_SIZE) {
+            const batch = newUniqueMovies.slice(i, i + OMDB_BATCH_SIZE);
+            const batchNum = Math.floor(i / OMDB_BATCH_SIZE) + 1;
+            const totalBatches = Math.ceil(newUniqueMovies.length / OMDB_BATCH_SIZE);
+
+            if (batchNum % 10 === 1 || batchNum === totalBatches) {
+                console.log(`  ⭐ OMDB batch ${batchNum}/${totalBatches}...`);
+            }
+
+            const results = await Promise.all(
+                batch.map(async (m) => {
+                    const imdbId = m.movie?.ids?.imdb;
+                    if (!imdbId) return [null, null];
+                    // En modo --current, no re-fetchear ratings que ya tenemos
+                    if (isCurrentOnly && ratingsMap.has(imdbId)) return [null, null];
+                    const ratings = await fetchOMDB(imdbId);
+                    return [imdbId, ratings];
+                })
+            );
+
+            for (const [imdbId, ratings] of results) {
+                if (imdbId && ratings) ratingsMap.set(imdbId, ratings);
+            }
+        }
+
+        console.log(`\n  ✅ Ratings obtenidos: ${ratingsMap.size}\n`);
+    }
 
     // Agregar ratings a las películas
     const moviesWithRatings = allMovies.map((movieData) => {
@@ -229,52 +322,108 @@ async function main() {
         return { ...movieData, externalRatings };
     });
 
-    // PASO 4: Obtener people/cast para cada película única
-    console.log("👥 Obteniendo cast de películas...\n");
-
-    const peopleMap = {};
+    // Slugs únicos para los siguientes pasos
     const slugs = Array.from(moviesBySlug.keys());
-    const PEOPLE_BATCH_SIZE = 3;
 
-    for (let i = 0; i < slugs.length; i += PEOPLE_BATCH_SIZE) {
-        const batch = slugs.slice(i, i + PEOPLE_BATCH_SIZE);
-        const batchNum = Math.floor(i / PEOPLE_BATCH_SIZE) + 1;
-        const totalBatches = Math.ceil(slugs.length / PEOPLE_BATCH_SIZE);
+    // PASO 4: Obtener videos (solo nuevos en modo --current)
+    const videosMap = {};
 
-        if (batchNum % 10 === 1 || batchNum === totalBatches) {
-            console.log(`  👥 People batch ${batchNum}/${totalBatches}...`);
-        }
-
-        const results = await Promise.all(
-            batch.map(async (slug) => {
-                try {
-                    const people = await fetchTrakt(`/movies/${slug}/people?extended=full,images`);
-                    return [slug, people];
-                } catch (error) {
-                    console.warn(`     ⚠️ Sin cast para ${slug}: ${error.message}`);
-                    return [slug, null];
-                }
-            })
-        );
-
-        for (const [slug, people] of results) {
-            if (people) peopleMap[slug] = people;
-        }
+    // Cargar videos existentes del caché
+    if (isCurrentOnly && existingCache?.videos) {
+        Object.assign(videosMap, existingCache.videos);
+        console.log(`  ♻️  ${Object.keys(videosMap).length} videos cargados del caché`);
     }
 
-    console.log(`\n  ✅ Cast obtenido: ${Object.keys(peopleMap).length} películas\n`);
+    const slugsForVideos = isCurrentOnly ? newSlugs : slugs;
 
-    // PASO 5: Guardar en JSON
+    if (slugsForVideos.length > 0) {
+        console.log("🎬 Obteniendo videos de películas...\n");
+
+        const VIDEO_BATCH_SIZE = 3;
+
+        for (let i = 0; i < slugsForVideos.length; i += VIDEO_BATCH_SIZE) {
+            const batch = slugsForVideos.slice(i, i + VIDEO_BATCH_SIZE);
+            const batchNum = Math.floor(i / VIDEO_BATCH_SIZE) + 1;
+            const totalBatches = Math.ceil(slugsForVideos.length / VIDEO_BATCH_SIZE);
+
+            if (batchNum % 10 === 1 || batchNum === totalBatches) {
+                console.log(`  🎬 Videos batch ${batchNum}/${totalBatches}...`);
+            }
+
+            const results = await Promise.all(
+                batch.map(async (slug) => {
+                    try {
+                        const videos = await fetchTrakt(`/movies/${slug}/videos`);
+                        return [slug, videos];
+                    } catch (error) {
+                        console.warn(`     ⚠️ Sin videos para ${slug}: ${error.message}`);
+                        return [slug, []];
+                    }
+                })
+            );
+
+            for (const [slug, videos] of results) {
+                if (videos && videos.length > 0) videosMap[slug] = videos;
+            }
+        }
+
+        console.log(`\n  ✅ Videos obtenidos: ${Object.keys(videosMap).length} películas\n`);
+    }
+
+    // PASO 5: Obtener people/cast (solo nuevos en modo --current)
+    const peopleMap = {};
+
+    // Cargar people existentes del caché
+    if (isCurrentOnly && existingCache?.people) {
+        Object.assign(peopleMap, existingCache.people);
+        console.log(`  ♻️  ${Object.keys(peopleMap).length} cast cargados del caché`);
+    }
+
+    const slugsForPeople = isCurrentOnly ? newSlugs : slugs;
+
+    if (slugsForPeople.length > 0) {
+        console.log("👥 Obteniendo cast de películas...\n");
+
+        const PEOPLE_BATCH_SIZE = 3;
+
+        for (let i = 0; i < slugsForPeople.length; i += PEOPLE_BATCH_SIZE) {
+            const batch = slugsForPeople.slice(i, i + PEOPLE_BATCH_SIZE);
+            const batchNum = Math.floor(i / PEOPLE_BATCH_SIZE) + 1;
+            const totalBatches = Math.ceil(slugsForPeople.length / PEOPLE_BATCH_SIZE);
+
+            if (batchNum % 10 === 1 || batchNum === totalBatches) {
+                console.log(`  👥 People batch ${batchNum}/${totalBatches}...`);
+            }
+
+            const results = await Promise.all(
+                batch.map(async (slug) => {
+                    try {
+                        const people = await fetchTrakt(`/movies/${slug}/people?extended=full,images`);
+                        return [slug, people];
+                    } catch (error) {
+                        console.warn(`     ⚠️ Sin cast para ${slug}: ${error.message}`);
+                        return [slug, null];
+                    }
+                })
+            );
+
+            for (const [slug, people] of results) {
+                if (people) peopleMap[slug] = people;
+            }
+        }
+
+        console.log(`\n  ✅ Cast obtenido: ${Object.keys(peopleMap).length} películas\n`);
+    }
+
+    // PASO 6: Guardar en JSON
     const cacheData = {
         fetchedAt: new Date().toISOString(),
         totalMovies: moviesWithRatings.length,
         uniqueMovies: uniqueMovies.length,
         movies: moviesWithRatings,
         people: peopleMap,
+        videos: videosMap,
     };
-
-    const cachePath = resolve(__dirname, "../src/data/cache/movies.json");
-    const cacheDir = dirname(cachePath);
 
     if (!existsSync(cacheDir)) {
         mkdirSync(cacheDir, { recursive: true });
@@ -286,9 +435,10 @@ async function main() {
     const fileSize = (Buffer.byteLength(JSON.stringify(cacheData)) / 1024 / 1024).toFixed(2);
 
     console.log("═══════════════════════════════════════");
-    console.log(`✅ Movies cache guardado en src/data/cache/movies.json`);
+    console.log(`✅ Movies cache guardado ${isCurrentOnly ? `(modo rápido: ${CURRENT_YEAR})` : "(completo)"}`);
     console.log(`   📊 ${moviesWithRatings.length} películas (${uniqueMovies.length} únicas)`);
     console.log(`   👥 ${Object.keys(peopleMap).length} cast entries`);
+    console.log(`   🎬 ${Object.keys(videosMap).length} video entries`);
     console.log(`   ⭐ ${ratingsMap.size} ratings OMDB`);
     console.log(`   📡 ${traktRequestCount} requests Trakt, ${omdbRequestCount} requests OMDB`);
     console.log(`   📁 ${fileSize} MB`);
