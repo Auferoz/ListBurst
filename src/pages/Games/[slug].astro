@@ -7,6 +7,10 @@
 import { ListGames, getGameSlug } from '../../data/gamesDB';
 import Layout from '../../layouts/Layout.astro';
 import IconArrowBack from '../../components/Icons/IconArrowBack.astro';
+import IconMetacritic from '../../components/Icons/IconMetacritic.astro';
+import IconOpenCritic from '../../components/Icons/IconOpenCritic.astro';
+import IconRAWG from '../../components/Icons/IconRAWG.astro';
+import gameRatingsData from '../../data/cache/gameRatings.json';
 
 // Generar todas las rutas estáticas (sin llamadas API, todo local)
 export function getStaticPaths() {
@@ -111,6 +115,9 @@ const estadoColor = (() => {
 
 // Slug para view transitions
 const slug = getGameSlug(title);
+
+// Ratings del juego desde caché
+const gameRatings = gameRatingsData.ratings?.[slug] || null;
 ---
 
 <Layout
@@ -167,6 +174,65 @@ const slug = getGameSlug(title);
 
         <!-- Contenido principal -->
         <section class="max-w-7xl mx-auto p-4 md:p-8">
+            <!-- Ratings de críticas -->
+            {gameRatings && (gameRatings.metacritic || gameRatings.openCriticScore || gameRatings.rawgRating) && (
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+                    {gameRatings.metacritic && (
+                        <a
+                            href={gameRatings.metacriticUrl || '#'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="group relative overflow-hidden rounded-xl border border-amber-500/20 bg-zinc-800/60 p-4 transition-colors hover:border-amber-500/50 hover:bg-zinc-800/80"
+                        >
+                            <div class="absolute top-0 left-0 h-1 bg-amber-400" style={`width: ${gameRatings.metacritic}%`}></div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <IconMetacritic width="22" height="22" />
+                                <span class="text-xs text-zinc-500 font-medium uppercase tracking-wide group-hover:text-zinc-400 transition-colors">Metacritic</span>
+                            </div>
+                            <span class="text-2xl font-bold text-amber-300">{gameRatings.metacritic}</span>
+                            <span class="text-xs text-zinc-500 ml-1">/100</span>
+                        </a>
+                    )}
+                    {gameRatings.openCriticScore && (
+                        <a
+                            href={gameRatings.openCriticUrl || '#'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="group relative overflow-hidden rounded-xl border border-emerald-500/20 bg-zinc-800/60 p-4 transition-colors hover:border-emerald-500/50 hover:bg-zinc-800/80"
+                        >
+                            <div class="absolute top-0 left-0 h-1 bg-emerald-400" style={`width: ${gameRatings.openCriticScore}%`}></div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <IconOpenCritic width="22" height="22" />
+                                <span class="text-xs text-zinc-500 font-medium uppercase tracking-wide group-hover:text-zinc-400 transition-colors">OpenCritic</span>
+                            </div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-2xl font-bold text-emerald-400">{gameRatings.openCriticScore}</span>
+                                <span class="text-xs text-zinc-500">/100</span>
+                            </div>
+                            {gameRatings.openCriticRecommended && (
+                                <p class="text-[10px] text-emerald-500/60 mt-1">{gameRatings.openCriticRecommended} recomendado</p>
+                            )}
+                        </a>
+                    )}
+                    {gameRatings.rawgRating && (
+                        <a
+                            href={gameRatings.rawgUrl || '#'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="group relative overflow-hidden rounded-xl border border-zinc-600/30 bg-zinc-800/60 p-4 transition-colors hover:border-zinc-500/50 hover:bg-zinc-800/80"
+                        >
+                            <div class="absolute top-0 left-0 h-1 bg-zinc-400" style={`width: ${(gameRatings.rawgRating / 5) * 100}%`}></div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <IconRAWG width="22" height="22" />
+                                <span class="text-xs text-zinc-500 font-medium uppercase tracking-wide group-hover:text-zinc-400 transition-colors">RAWG</span>
+                            </div>
+                            <span class="text-2xl font-bold text-white">{gameRatings.rawgRating}</span>
+                            <span class="text-xs text-zinc-500 ml-1">/5</span>
+                        </a>
+                    )}
+                </div>
+            )}
+
             <!-- Stats Cards -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
                 <!-- Estado -->

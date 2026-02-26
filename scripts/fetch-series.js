@@ -2,13 +2,16 @@
  * Script para generar caché local de series
  * Llama a Trakt API y guarda todo en src/data/cache/series.json
  *
- * Uso: npm run fetch:series
+ * Uso:
+ *   npm run fetch:series          # Fetch completo (todas las series)
+ *   npm run fetch:series:current   # Solo series del año actual (rápido)
+ *
  * Requiere: .env con Trakt_CLIENT_ID
  */
 
 import 'dotenv/config';
-import { ListSeriesSeasons } from '../src/data/SeriesDB.js';
-import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { ListSeriesSeasons, ListSeriesByYear } from '../src/data/SeriesDB.js';
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -20,6 +23,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const TRAKT_CLIENT_ID = process.env.Trakt_CLIENT_ID;
 const BASE_URL = "https://api.trakt.tv";
+
+const CURRENT_YEAR = new Date().getFullYear();
+const isCurrentOnly = process.argv.includes("--current");
 
 if (!TRAKT_CLIENT_ID) {
     console.error("❌ Falta Trakt_CLIENT_ID en .env");
@@ -75,24 +81,84 @@ async function fetchTrakt(endpoint, retries = 3) {
     }
 }
 
+/**
+ * Carga el caché existente si existe
+ */
+function loadExistingCache(cachePath) {
+    try {
+        if (existsSync(cachePath)) {
+            const raw = readFileSync(cachePath, "utf-8");
+            return JSON.parse(raw);
+        }
+    } catch (error) {
+        console.warn(`⚠️ No se pudo leer caché existente: ${error.message}`);
+    }
+    return null;
+}
+
 // ============================================
 // Lógica principal
 // ============================================
 
 async function main() {
     const startTime = Date.now();
-    console.log("📺 Fetching series...\n");
-    console.log(`📋 Procesando ${ListSeriesSeasons.length} entradas de series/temporadas...\n`);
+    const cachePath = resolve(__dirname, "../src/data/cache/series.json");
+    const cacheDir = dirname(cachePath);
 
-    // Caché de shows para no repetir la misma serie
+    if (isCurrentOnly) {
+        console.log(`📺 Fetching series (solo año actual: ${CURRENT_YEAR})...\n`);
+    } else {
+        console.log("📺 Fetching series (todas las entradas)...\n");
+    }
+
+    // Cargar caché existente para modo --current
+    const existingCache = isCurrentOnly ? loadExistingCache(cachePath) : null;
+
+    if (isCurrentOnly && !existingCache) {
+        console.error("❌ No existe caché previo. Ejecuta primero un fetch completo: npm run fetch:series");
+        process.exit(1);
+    }
+
+    // Determinar qué entradas fetchear
+    let entriesToFetch;
+    if (isCurrentOnly) {
+        const currentYearGroup = ListSeriesByYear.find(g => g.year === CURRENT_YEAR);
+        entriesToFetch = currentYearGroup
+            ? currentYearGroup.series.map(s => ({ ...s, yearViewed: CURRENT_YEAR }))
+            : [];
+    } else {
+        entriesToFetch = ListSeriesSeasons;
+    }
+
+    console.log(`📋 Procesando ${entriesToFetch.length} entradas de series/temporadas...\n`);
+
+    // En modo --current, construir caché de shows desde el caché existente
+    // para no re-fetchear metadata de series que ya existen
     const showsCache = new Map();
+
+    if (isCurrentOnly && existingCache) {
+        for (const entry of existingCache.series) {
+            if (entry.show) {
+                const slug = entry.show.ids?.slug;
+                if (slug && !showsCache.has(slug)) {
+                    showsCache.set(slug, entry.show);
+                }
+                // También cachear videos si existen
+                if (entry.videos && !showsCache.has(`${slug}_videos`)) {
+                    showsCache.set(`${slug}_videos`, entry.videos);
+                }
+            }
+        }
+        console.log(`  ♻️  ${showsCache.size} entradas de shows/videos cargadas del caché\n`);
+    }
+
     const results = [];
     const BATCH_SIZE = 3;
 
-    for (let i = 0; i < ListSeriesSeasons.length; i += BATCH_SIZE) {
-        const batch = ListSeriesSeasons.slice(i, i + BATCH_SIZE);
+    for (let i = 0; i < entriesToFetch.length; i += BATCH_SIZE) {
+        const batch = entriesToFetch.slice(i, i + BATCH_SIZE);
         const batchNum = Math.floor(i / BATCH_SIZE) + 1;
-        const totalBatches = Math.ceil(ListSeriesSeasons.length / BATCH_SIZE);
+        const totalBatches = Math.ceil(entriesToFetch.length / BATCH_SIZE);
 
         console.log(`  📺 Batch ${batchNum}/${totalBatches}...`);
 
@@ -176,16 +242,33 @@ async function main() {
         results.push(...batchResults);
     }
 
+    // Combinar: en modo --current, mantener entradas de otros años del caché
+    let allResults;
+    if (isCurrentOnly) {
+        const cachedOtherYears = existingCache.series.filter(
+            (entry) => entry.localData?.yearViewed !== CURRENT_YEAR
+        );
+        allResults = [...cachedOtherYears, ...results];
+        console.log(`\n📊 Series: ${results.length} actualizadas (${CURRENT_YEAR}) + ${cachedOtherYears.length} del caché = ${allResults.length} total\n`);
+    } else {
+        allResults = results;
+        console.log(`\n📊 Total entradas: ${allResults.length}\n`);
+    }
+
+    // Contar shows únicos
+    const uniqueShowSlugs = new Set();
+    for (const entry of allResults) {
+        const slug = entry.show?.ids?.slug || entry.localData?.idTrakt;
+        if (slug) uniqueShowSlugs.add(slug);
+    }
+
     // Guardar en JSON
     const cacheData = {
         fetchedAt: new Date().toISOString(),
-        totalEntries: results.length,
-        uniqueShows: showsCache.size,
-        series: results,
+        totalEntries: allResults.length,
+        uniqueShows: uniqueShowSlugs.size,
+        series: allResults,
     };
-
-    const cachePath = resolve(__dirname, "../src/data/cache/series.json");
-    const cacheDir = dirname(cachePath);
 
     if (!existsSync(cacheDir)) {
         mkdirSync(cacheDir, { recursive: true });
@@ -196,9 +279,9 @@ async function main() {
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
     const fileSize = (Buffer.byteLength(JSON.stringify(cacheData)) / 1024 / 1024).toFixed(2);
 
-    console.log("\n═══════════════════════════════════════");
-    console.log(`✅ Series cache guardado en src/data/cache/series.json`);
-    console.log(`   📊 ${results.length} entradas (${showsCache.size} series únicas)`);
+    console.log("═══════════════════════════════════════");
+    console.log(`✅ Series cache guardado ${isCurrentOnly ? `(modo rápido: ${CURRENT_YEAR})` : "(completo)"}`);
+    console.log(`   📊 ${allResults.length} entradas (${uniqueShowSlugs.size} series únicas)`);
     console.log(`   📡 ${requestCount} requests Trakt`);
     console.log(`   📁 ${fileSize} MB`);
     console.log(`   ⏱️  ${elapsed}s`);

@@ -1,0 +1,302 @@
+{
+  "fetchedAt": "2026-02-25T16:45:41.640Z",
+  "ratings": {
+    "ao-tennis-2": {
+      "metacritic": 67,
+      "metacriticUrl": "https://www.metacritic.com/game/ao-tennis-2/",
+      "rawgRating": 3.7,
+      "rawgUrl": "https://rawg.io/games/ao-tennis-2"
+    },
+    "batman-return-to-arkham-arkham-asylum": {
+      "metacritic": 75,
+      "metacriticUrl": "https://www.metacritic.com/game/batman-return-to-arkham/",
+      "rawgRating": 4.4,
+      "rawgUrl": "https://rawg.io/games/batman-return-to-arkham"
+    },
+    "black-desert": {
+      "metacritic": 73,
+      "metacriticUrl": "https://www.metacritic.com/game/black-desert-online/",
+      "rawgRating": 2.9,
+      "rawgUrl": "https://rawg.io/games/black-desert-online"
+    },
+    "bright-memory": {
+      "metacritic": 55,
+      "metacriticUrl": "https://www.metacritic.com/game/bright-memory/",
+      "rawgRating": 3.5,
+      "rawgUrl": "https://rawg.io/games/bright-memory"
+    },
+    "call-of-duty-2003": {
+      "metacritic": 91,
+      "metacriticUrl": "https://www.metacritic.com/game/call-of-duty/",
+      "rawgRating": 4.2,
+      "rawgUrl": "https://rawg.io/games/call-of-duty"
+    },
+    "call-of-duty-2": {
+      "metacritic": 91,
+      "metacriticUrl": "https://www.metacritic.com/game/call-of-duty/",
+      "rawgRating": 4.2,
+      "rawgUrl": "https://rawg.io/games/call-of-duty"
+    },
+    "call-of-duty-4-modern-warfare-2007": {
+      "metacritic": 92,
+      "metacriticUrl": "https://www.metacritic.com/game/modern-warfare/",
+      "rawgRating": 4.4,
+      "rawgUrl": "https://rawg.io/games/modern-warfare"
+    },
+    "call-of-duty-warzone-20": {
+      "metacriticUrl": "https://www.metacritic.com/game/call-of-duty-warzone-20/",
+      "rawgRating": 3.1,
+      "rawgUrl": "https://rawg.io/games/call-of-duty-warzone-20"
+    },
+    "call-of-duty-world-at-war": {
+      "metacritic": 83,
+      "metacriticUrl": "https://www.metacritic.com/game/call-of-duty-world-at-war/",
+      "rawgRating": 4,
+      "rawgUrl": "https://rawg.io/games/call-of-duty-world-at-war"
+    },
+    "clair-obscur-expedition-33": {
+      "metacriticUrl": "https://www.metacritic.com/game/clair-obscur-expedition-33/",
+      "rawgRating": 4.5,
+      "rawgUrl": "https://rawg.io/games/clair-obscur-expedition-33"
+    },
+    "crash-bandicoot-n-sane-trilogy-c1": {
+      "metacritic": 81,
+      "metacriticUrl": "https://www.metacritic.com/game/crash-bandicoot-n-sane-trilogy/",
+      "rawgRating": 4.1,
+      "rawgUrl": "https://rawg.io/games/crash-bandicoot-n-sane-trilogy"
+    },
+    "darksiders-genesis": {
+      "metacritic": 76,
+      "metacriticUrl": "https://www.metacritic.com/game/darksiders-genesis/",
+      "rawgRating": 3.6,
+      "rawgUrl": "https://rawg.io/games/darksiders-genesis"
+    },
+    "descenders": {
+      "metacritic": 76,
+      "metacriticUrl": "https://www.metacritic.com/game/descenders/",
+      "rawgRating": 3.4,
+      "rawgUrl": "https://rawg.io/games/descenders"
+    },
+    "diablo-iv": {
+      "metacritic": 90,
+      "metacriticUrl": "https://www.metacritic.com/game/diablo-iv/",
+      "rawgRating": 3.8,
+      "rawgUrl": "https://rawg.io/games/diablo-iv"
+    },
+    "eiyuden-chronicle-rising": {
+      "metacriticUrl": "https://www.metacritic.com/game/eiyuden-chronicle-rising/",
+      "rawgRating": 3.5,
+      "rawgUrl": "https://rawg.io/games/eiyuden-chronicle-rising"
+    },
+    "enshrouded": {
+      "metacriticUrl": "https://www.metacritic.com/game/enshrouded-2024/",
+      "rawgRating": 3.4,
+      "rawgUrl": "https://rawg.io/games/enshrouded-2024"
+    },
+    "euro-truck-simulator-2": {
+      "metacritic": 79,
+      "metacriticUrl": "https://www.metacritic.com/game/euro-truck-simulator-2/",
+      "rawgRating": 4.1,
+      "rawgUrl": "https://rawg.io/games/euro-truck-simulator-2"
+    },
+    "evoland": {
+      "metacritic": 61,
+      "metacriticUrl": "https://www.metacritic.com/game/evoland/",
+      "rawgRating": 3.8,
+      "rawgUrl": "https://rawg.io/games/evoland"
+    },
+    "f1-23": {
+      "metacriticUrl": "https://www.metacritic.com/game/f1-23/",
+      "rawgRating": 3.6,
+      "rawgUrl": "https://rawg.io/games/f1-23"
+    },
+    "final-fantasy-viii": {
+      "metacritic": 90,
+      "metacriticUrl": "https://www.metacritic.com/game/final-fantasy-viii/",
+      "rawgRating": 4.3,
+      "rawgUrl": "https://rawg.io/games/final-fantasy-viii"
+    },
+    "final-fantasy-viii-remastered": {
+      "metacritic": 79,
+      "metacriticUrl": "https://www.metacritic.com/game/final-fantasy-viii-remastered/",
+      "rawgRating": 4.1,
+      "rawgUrl": "https://rawg.io/games/final-fantasy-viii-remastered"
+    },
+    "final-fantasy-xiii": {
+      "metacritic": 77,
+      "metacriticUrl": "https://www.metacritic.com/game/final-fantasy-xiii/",
+      "rawgRating": 3.5,
+      "rawgUrl": "https://rawg.io/games/final-fantasy-xiii"
+    },
+    "final-fantasy-xvi": {
+      "metacritic": 88,
+      "metacriticUrl": "https://www.metacritic.com/game/final-fantasy-xvi/",
+      "rawgRating": 4.1,
+      "rawgUrl": "https://rawg.io/games/final-fantasy-xvi"
+    },
+    "final-fantasy-xvi-demo": {
+      "metacriticUrl": "https://www.metacritic.com/game/final-fantasy-1987/",
+      "rawgRating": 3.7,
+      "rawgUrl": "https://rawg.io/games/final-fantasy-1987"
+    },
+    "granblue-fantasy-relink": {
+      "metacriticUrl": "https://www.metacritic.com/game/granblue-fantasy-relink/",
+      "rawgRating": 3.4,
+      "rawgUrl": "https://rawg.io/games/granblue-fantasy-relink"
+    },
+    "guitar-hero-iii-legends-of-rock": {
+      "metacritic": 82,
+      "metacriticUrl": "https://www.metacritic.com/game/guitar-hero-3-legends-of-rock/",
+      "rawgRating": 4.4,
+      "rawgUrl": "https://rawg.io/games/guitar-hero-3-legends-of-rock"
+    },
+    "helldivers-2": {
+      "metacriticUrl": "https://www.metacritic.com/game/helldivers-2/",
+      "rawgRating": 4.3,
+      "rawgUrl": "https://rawg.io/games/helldivers-2"
+    },
+    "hogwarts-legacy": {
+      "metacriticUrl": "https://www.metacritic.com/game/hogwarts-legacy/",
+      "rawgRating": 3.9,
+      "rawgUrl": "https://rawg.io/games/hogwarts-legacy"
+    },
+    "inside": {
+      "metacritic": 87,
+      "metacriticUrl": "https://www.metacritic.com/game/inside/",
+      "rawgRating": 4.4,
+      "rawgUrl": "https://rawg.io/games/inside"
+    },
+    "inzoi": {
+      "metacriticUrl": "https://www.metacritic.com/game/inzoi/",
+      "rawgRating": 2.7,
+      "rawgUrl": "https://rawg.io/games/inzoi"
+    },
+    "inzoi-creative-studio": {
+      "metacriticUrl": "https://www.metacritic.com/game/inzoi/",
+      "rawgRating": 2.7,
+      "rawgUrl": "https://rawg.io/games/inzoi"
+    },
+    "jusant": {
+      "metacriticUrl": "https://www.metacritic.com/game/jusant/",
+      "rawgRating": 4,
+      "rawgUrl": "https://rawg.io/games/jusant"
+    },
+    "last-epoch": {
+      "metacriticUrl": "https://www.metacritic.com/game/last-epoch/",
+      "rawgRating": 3.6,
+      "rawgUrl": "https://rawg.io/games/last-epoch"
+    },
+    "league-of-legends": {
+      "metacritic": 78,
+      "metacriticUrl": "https://www.metacritic.com/game/league-of-legends/",
+      "rawgRating": 3.7,
+      "rawgUrl": "https://rawg.io/games/league-of-legends"
+    },
+    "limbo": {
+      "metacritic": 88,
+      "metacriticUrl": "https://www.metacritic.com/game/limbo/",
+      "rawgRating": 4.1,
+      "rawgUrl": "https://rawg.io/games/limbo"
+    },
+    "lost-ark": {
+      "metacritic": 81,
+      "metacriticUrl": "https://www.metacritic.com/game/lost-ark/",
+      "rawgRating": 3.2,
+      "rawgUrl": "https://rawg.io/games/lost-ark"
+    },
+    "metro-2033": {
+      "metacritic": 79,
+      "metacriticUrl": "https://www.metacritic.com/game/metro-2033/",
+      "rawgRating": 3.9,
+      "rawgUrl": "https://rawg.io/games/metro-2033"
+    },
+    "minecraft-java-edition": {
+      "metacritic": 83,
+      "metacriticUrl": "https://www.metacritic.com/game/minecraft/",
+      "rawgRating": 4.4,
+      "rawgUrl": "https://rawg.io/games/minecraft"
+    },
+    "mu-online-gunbi": {
+      "metacriticUrl": "https://www.metacritic.com/game/mu-complex/",
+      "rawgUrl": "https://rawg.io/games/mu-complex"
+    },
+    "once-human": {
+      "metacriticUrl": "https://www.metacritic.com/game/once-human/",
+      "rawgRating": 2.8,
+      "rawgUrl": "https://rawg.io/games/once-human"
+    },
+    "palworld": {
+      "metacriticUrl": "https://www.metacritic.com/game/palworld/",
+      "rawgRating": 3.5,
+      "rawgUrl": "https://rawg.io/games/palworld"
+    },
+    "planet-of-lana": {
+      "metacriticUrl": "https://www.metacritic.com/game/planet-of-lana/",
+      "rawgRating": 4,
+      "rawgUrl": "https://rawg.io/games/planet-of-lana"
+    },
+    "portal": {
+      "metacritic": 90,
+      "metacriticUrl": "https://www.metacritic.com/game/portal/",
+      "rawgRating": 4.5,
+      "rawgUrl": "https://rawg.io/games/portal"
+    },
+    "pragmata-sketchbook-demo": {
+      "metacriticUrl": "https://www.metacritic.com/game/pragmata/",
+      "rawgUrl": "https://rawg.io/games/pragmata"
+    },
+    "rematch": {
+      "metacriticUrl": "https://www.metacritic.com/game/rematch-2025/",
+      "rawgRating": 2.7,
+      "rawgUrl": "https://rawg.io/games/rematch-2025"
+    },
+    "resident-evil-2": {
+      "metacritic": 91,
+      "metacriticUrl": "https://www.metacritic.com/game/resident-evil-2-2019/",
+      "rawgRating": 4.5,
+      "rawgUrl": "https://rawg.io/games/resident-evil-2-2019"
+    },
+    "scarlet-nexus": {
+      "metacritic": 79,
+      "metacriticUrl": "https://www.metacritic.com/game/scarlet-nexus/",
+      "rawgRating": 3.6,
+      "rawgUrl": "https://rawg.io/games/scarlet-nexus"
+    },
+    "senuas-saga-hellblade-ii": {
+      "metacriticUrl": "https://www.metacritic.com/game/senuas-saga-hellblade-ii/",
+      "rawgRating": 3.9,
+      "rawgUrl": "https://rawg.io/games/senuas-saga-hellblade-ii"
+    },
+    "symphonia": {
+      "metacriticUrl": "https://www.metacritic.com/game/symphonia/",
+      "rawgUrl": "https://rawg.io/games/symphonia"
+    },
+    "the-gunk": {
+      "metacritic": 69,
+      "metacriticUrl": "https://www.metacritic.com/game/the-gunk/",
+      "rawgRating": 3.6,
+      "rawgUrl": "https://rawg.io/games/the-gunk"
+    },
+    "the-incredible-adventures-of-van-helsing": {
+      "metacritic": 72,
+      "metacriticUrl": "https://www.metacritic.com/game/the-incredible-adventures-of-van-helsing/",
+      "rawgRating": 3.4,
+      "rawgUrl": "https://rawg.io/games/the-incredible-adventures-of-van-helsing"
+    },
+    "wheel-world": {
+      "metacriticUrl": "https://www.metacritic.com/game/wheel-world/",
+      "rawgRating": 3.9,
+      "rawgUrl": "https://rawg.io/games/wheel-world"
+    },
+    "windrose": {
+      "metacriticUrl": "https://www.metacritic.com/game/windrose-island/",
+      "rawgUrl": "https://rawg.io/games/windrose-island"
+    },
+    "world-of-goo": {
+      "metacritic": 90,
+      "metacriticUrl": "https://www.metacritic.com/game/world-of-goo/",
+      "rawgRating": 4,
+      "rawgUrl": "https://rawg.io/games/world-of-goo"
+    }
+  }
+}

@@ -10,9 +10,11 @@
     "fetch:movies": "node scripts/fetch-movies.js",
     "fetch:movies:current": "node scripts/fetch-movies.js --current",
     "fetch:series": "node scripts/fetch-series.js",
+    "fetch:series:current": "node scripts/fetch-series.js --current",
     "fetch:games": "node scripts/fetch-next-games.js",
+    "fetch:games:ratings": "node scripts/fetch-game-ratings.js",
     "fetch:profile": "node scripts/fetch-user-stats.js",
-    "fetch:all": "node scripts/fetch-movies.js && node scripts/fetch-series.js && node scripts/fetch-next-games.js && node scripts/fetch-user-stats.js"
+    "fetch:all": "node scripts/fetch-movies.js && node scripts/fetch-series.js && node scripts/fetch-next-games.js && node scripts/fetch-game-ratings.js && node scripts/fetch-user-stats.js"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
