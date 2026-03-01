@@ -81,7 +81,8 @@ export const ListSeriesByYear = [
             { idTrakt: "marvel-zombies", numberSeason: 1, platformViewed: "Disney+", statusViewed: "completed" },
             { idTrakt: "wonder-man", numberSeason: 1, platformViewed: "Disney+", statusViewed: "completed" },
             { idTrakt: "love-death-robots", numberSeason: 4, platformViewed: "Netflix", statusViewed: "completed" },
-            { idTrakt: "rick-and-morty", numberSeason: 8, platformViewed: "HBO Max", statusViewed: "ongoing" },
+            { idTrakt: "rick-and-morty", numberSeason: 8, platformViewed: "HBO Max", statusViewed: "completed" },
+            { idTrakt: "formula-1-drive-to-survive", numberSeason: 8, platformViewed: "Netflix", statusViewed: "ongoing" },
         ]
     },
 ];

@@ -386,7 +386,7 @@ const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
                             const characterName = member.character || '';
                             return (
                                 <div class="group relative">
-                                    <div class="aspect-[3/4] rounded-xl overflow-hidden bg-zinc-800/80 border border-zinc-700/40 shadow-lg shadow-black/20">
+                                    <div class="aspect-3/4 rounded-xl overflow-hidden bg-zinc-800/80 border border-zinc-700/40 shadow-lg shadow-black/20">
                                         {headshot ? (
                                             <img
                                                 src={headshot}
@@ -395,11 +395,11 @@ const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
                                                 loading="lazy"
                                             />
                                         ) : (
-                                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-b from-zinc-700/30 to-zinc-800 text-zinc-600">
+                                            <div class="w-full h-full flex items-center justify-center bg-linear-to-b from-zinc-700/30 to-zinc-800 text-zinc-600">
                                                 <IconUser width={56} height={56} />
                                             </div>
                                         )}
-                                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 pt-8">
+                                        <div class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/90 via-black/50 to-transparent p-3 pt-8">
                                             <p class="text-sm font-semibold text-white leading-tight truncate" title={actorName}>{actorName}</p>
                                             <p class="text-xs text-zinc-400 truncate mt-0.5" title={characterName}>{characterName}</p>
                                         </div>
@@ -432,7 +432,7 @@ const writerText = writers.length > 0 ? [...new Set(writers)].join(', ') : null;
                                                 loading="lazy"
                                             />
                                         ) : (
-                                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-700/30 to-zinc-800 text-zinc-600">
+                                            <div class="w-full h-full flex items-center justify-center bg-linear-to-br from-zinc-700/30 to-zinc-800 text-zinc-600">
                                                 <IconPlayerPlay width={40} height={40} />
                                             </div>
                                         )}
