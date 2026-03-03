@@ -140,6 +140,13 @@ const nextDays = nextRelease
 					activeColor: "emerald",
 					ariaLabel: "Filtrar solo mi lista",
 				},
+				{
+					id: "toggle-show-released",
+					label: "Lanzados",
+					icon: '<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 18a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 11h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 16.496v1.504l1 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+					activeColor: "sky",
+					ariaLabel: "Mostrar juegos ya lanzados",
+				},
 			]}
 		/>
 
@@ -230,6 +237,7 @@ const nextDays = nextRelease
 		function applyFilter(values: Record<string, string>) {
 			const selectedMonth = values['filter-month'] || 'all';
 			const myListOnly = values['toggle-my-list'] === 'true';
+			const showReleased = values['toggle-show-released'] === 'true';
 
 			// Filtrar secciones de mes + cards individuales
 			monthSections.forEach((section) => {
@@ -241,12 +249,21 @@ const nextDays = nextRelease
 					return;
 				}
 
-				// Dentro de la seccion, filtrar cards por myList
+				// Dentro de la seccion, filtrar cards
 				const cards = section.querySelectorAll<HTMLElement>('.card-next-game');
 				let visibleCount = 0;
 
 				cards.forEach((card) => {
-					if (myListOnly && card.dataset.inMyList !== 'true') {
+					const isReleased = card.dataset.isReleased === 'true';
+					const isInMyList = card.dataset.inMyList === 'true';
+
+					// Ocultar juegos ya lanzados a menos que el toggle esté activo
+					if (isReleased && !showReleased) {
+						card.style.display = 'none';
+						return;
+					}
+
+					if (myListOnly && !isInMyList) {
 						card.style.display = 'none';
 					} else {
 						card.style.display = '';
@@ -296,9 +313,11 @@ const nextDays = nextRelease
 		function getCurrentFilterValues(): Record<string, string> {
 			const select = document.getElementById('filter-month') as HTMLSelectElement | null;
 			const toggleBtn = document.getElementById('toggle-my-list') as HTMLButtonElement | null;
+			const toggleReleased = document.getElementById('toggle-show-released') as HTMLButtonElement | null;
 			return {
 				'filter-month': select?.value || 'all',
 				'toggle-my-list': toggleBtn?.getAttribute('aria-pressed') || 'false',
+				'toggle-show-released': toggleReleased?.getAttribute('aria-pressed') || 'false',
 			};
 		}
 
