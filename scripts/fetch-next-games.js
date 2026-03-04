@@ -48,7 +48,7 @@ const PLATFORM_IDS = [6, 48, 49, 130, 167, 169, 512];
 const MIN_HYPES = 2;
 
 // Campos IGDB para la query de juegos por mes
-const GAME_FIELDS = `name, summary, first_release_date, cover.image_id, genres.name, platforms.name, screenshots.image_id, artworks.image_id, slug, url, involved_companies.company.name, involved_companies.developer, involved_companies.publisher, hypes, websites.url`;
+const GAME_FIELDS = `name, summary, first_release_date, cover.image_id, genres.name, platforms.name, screenshots.image_id, artworks.image_id, slug, url, involved_companies.company.name, involved_companies.developer, involved_companies.publisher, hypes, websites.url, videos.video_id, videos.name`;
 
 // ============================================
 // Helpers
@@ -120,6 +120,21 @@ async function fetchIGDB(accessToken, endpoint, body, retries = 3) {
 }
 
 /**
+ * Buscar un juego en IGDB por ID directo
+ */
+async function fetchGameById(accessToken, igdbId) {
+    const body = `fields ${GAME_FIELDS}, release_dates.human, release_dates.date, release_dates.platform.name; where id = ${igdbId}; limit 1;`;
+
+    try {
+        const results = await fetchIGDB(accessToken, "/games", body);
+        return results?.[0] || null;
+    } catch (error) {
+        console.warn(`     ⚠️ Error buscando ID ${igdbId}: ${error.message}`);
+        return null;
+    }
+}
+
+/**
  * Buscar un juego en IGDB por título (para juegos de mi lista)
  */
 async function searchGame(accessToken, title) {
@@ -177,6 +192,8 @@ function normalizeIGDB(igdbData) {
         hypes: igdbData.hypes || 0,
         // Detectar Steam URL por dominio (category no se expande como sub-campo en IGDB)
         steamUrl: igdbData.websites?.find((w) => w.url?.includes('store.steampowered.com'))?.url || null,
+        // Primer video de YouTube (trailer)
+        youtubeTrailer: igdbData.videos?.[0]?.video_id || null,
     };
 }
 
@@ -246,6 +263,7 @@ async function main() {
 
     const myListResults = [];
     let myFoundCount = 0;
+    let myNotFoundCount = 0;
 
     for (let i = 0; i < proximamenteGames.length; i += BATCH_SIZE) {
         const batch = proximamenteGames.slice(i, i + BATCH_SIZE);
@@ -256,22 +274,37 @@ async function main() {
 
         const results = await Promise.all(
             batch.map(async (game) => {
-                const igdbData = await searchGame(accessToken, game.title);
+                // Buscar por igdbId si está disponible, sino por título
+                const igdbData = game.igdbId
+                    ? await fetchGameById(accessToken, game.igdbId)
+                    : await searchGame(accessToken, game.title);
+
+                const normalized = normalizeIGDB(igdbData);
 
                 if (igdbData) {
                     myFoundCount++;
                     console.log(`     ✅ ${game.title} → "${igdbData.name}" (ID: ${igdbData.id})`);
                 } else {
-                    console.log(`     ❌ ${game.title} → No encontrado`);
+                    myNotFoundCount++;
+                    console.log(`     ❌ ${game.title} → No encontrado en IGDB`);
                 }
+
+                // Construir localData desde IGDB (poster, fecha)
+                const coverUrl = normalized?.cover
+                    ? `https://images.igdb.com/igdb/image/upload/t_cover_big/${normalized.cover}.webp`
+                    : "";
+
+                const dateRelease = normalized?.firstReleaseDate
+                    ? unixToDateStr(normalized.firstReleaseDate)
+                    : "31-12-2026"; // TBA si IGDB no tiene fecha
 
                 return {
                     localData: {
                         title: game.title,
-                        poster: game.poster,
-                        dateRelease: game.dateRelease,
+                        poster: coverUrl,
+                        dateRelease,
                     },
-                    igdb: normalizeIGDB(igdbData),
+                    igdb: normalized,
                     inMyList: true,
                     source: "mylist",
                 };
@@ -281,7 +314,11 @@ async function main() {
         myListResults.push(...results);
     }
 
-    console.log(`\n   ✅ Mi lista: ${myFoundCount}/${proximamenteGames.length} encontrados en IGDB\n`);
+    console.log(`\n   ✅ Mi lista: ${myFoundCount}/${proximamenteGames.length} encontrados en IGDB`);
+    if (myNotFoundCount > 0) {
+        console.log(`   ⚠️  ${myNotFoundCount} juegos no encontrados (aparecerán como TBA sin poster)`);
+    }
+    console.log();
 
     // Set de IGDB IDs de mi lista para cruce posterior
     const myListIGDBIds = new Set(

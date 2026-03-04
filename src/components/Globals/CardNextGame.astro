@@ -1,5 +1,6 @@
 ---
 import IconSteam from '../Icons/IconSteam.astro';
+import IconBrandYoutube from '../Icons/IconBrandYoutube.astro';
 import IconBookmarkFilled from '../Icons/IconBookmarkFilled.astro';
 
 /**
@@ -25,6 +26,7 @@ interface IGDBData {
     developers: string[];
     publishers: string[];
     steamUrl: string | null;
+    youtubeTrailer: string | null;
 }
 
 interface Props {
@@ -110,6 +112,7 @@ const genres = igdb?.genres?.slice(0, 2) || [];
 const developer = igdb?.developers?.[0] || null;
 const platforms = igdb?.platforms || [];
 const steamUrl = igdb?.steamUrl || null;
+const youtubeTrailer = igdb?.youtubeTrailer || null;
 
 // Artwork de fondo: screenshot o artwork de IGDB
 const bgImageId = igdb?.screenshots?.[0] || igdb?.artworks?.[0] || null;
@@ -227,6 +230,19 @@ const progressColor = proximity === 'imminent'
                         aria-label={`Ver ${title} en Steam`}
                     >
                         <IconSteam width={14} height={14} />
+                    </a>
+                )}
+
+                {youtubeTrailer && (
+                    <a
+                        href={`https://www.youtube.com/watch?v=${youtubeTrailer}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="trailer-link inline-flex items-center justify-center text-zinc-500 transition-colors duration-150 hover:text-[#ff0000]"
+                        title="Ver trailer"
+                        aria-label={`Ver trailer de ${title}`}
+                    >
+                        <IconBrandYoutube width={14} height={14} />
                     </a>
                 )}
 
