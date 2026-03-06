@@ -23,17 +23,17 @@
   },
   "stats": {
     "movies": {
-      "plays": 1001,
-      "watched": 1001,
-      "minutes": 110842,
+      "plays": 1008,
+      "watched": 1008,
+      "minutes": 111620,
       "collected": 0,
-      "ratings": 335,
+      "ratings": 342,
       "comments": 0
     },
     "shows": {
-      "watched": 226,
+      "watched": 230,
       "collected": 0,
-      "ratings": 117,
+      "ratings": 118,
       "comments": 0
     },
     "seasons": {
@@ -41,9 +41,9 @@
       "comments": 0
     },
     "episodes": {
-      "plays": 11090,
-      "watched": 11089,
-      "minutes": 388068,
+      "plays": 11140,
+      "watched": 11140,
+      "minutes": 390045,
       "collected": 0,
       "ratings": 1,
       "comments": 0
@@ -54,16 +54,16 @@
       "following": 0
     },
     "ratings": {
-      "total": 527,
+      "total": 535,
       "distribution": {
         "1": 0,
         "2": 1,
         "3": 3,
         "4": 9,
         "5": 46,
-        "6": 135,
-        "7": 237,
-        "8": 81,
+        "6": 136,
+        "7": 243,
+        "8": 82,
         "9": 15,
         "10": 0
       }

@@ -58,4 +58,5 @@ export const proximamenteGames = [
 	{ title: "Planet of Lana II: Children of the Leaf" },
 	{ title: "Homura Hime" },
 	{ title: "Monster Hunter Stories 3: Twisted Reflection" },
+	{ title: "Echoes of Aincrad" },
 ];

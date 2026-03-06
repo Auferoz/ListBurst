@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-03-04T11:14:00.168Z",
-  "totalGames": 447,
-  "myListCount": 50,
-  "apiOnlyCount": 397,
+  "fetchedAt": "2026-03-06T19:45:49.041Z",
+  "totalGames": 451,
+  "myListCount": 51,
+  "apiOnlyCount": 400,
   "bothCount": 29,
   "games": [
     {
@@ -27,6 +27,7 @@
         "platforms": [
           "Xbox Series X|S",
           "PlayStation 4",
+          "Nintendo Switch 2",
           "PC (Microsoft Windows)",
           "PlayStation 5",
           "Nintendo Switch"
@@ -73,6 +74,11 @@
             "human": "Oct 24, 2023",
             "date": 1698105600,
             "platform": "Xbox Series X|S"
+          },
+          {
+            "human": "Feb 12, 2026",
+            "date": 1770854400,
+            "platform": "Nintendo Switch 2"
           }
         ],
         "developers": [
@@ -717,6 +723,7 @@
           "Adventure"
         ],
         "platforms": [
+          "Xbox Series X|S",
           "PC (Microsoft Windows)",
           "PlayStation 5"
         ],
@@ -746,6 +753,11 @@
             "human": "Q1 2027",
             "date": 1806451200,
             "platform": "PlayStation 5"
+          },
+          {
+            "human": "2027",
+            "date": 1830211200,
+            "platform": "Xbox Series X|S"
           }
         ],
         "developers": [
@@ -793,7 +805,7 @@
           "scahjh"
         ],
         "artworks": [
-          "arcn8"
+          "ar5if4"
         ],
         "releaseDates": [
           {
@@ -819,7 +831,7 @@
           "Coatsink Software",
           "Thunderful"
         ],
-        "hypes": 119,
+        "hypes": 120,
         "steamUrl": "https://store.steampowered.com/app/1663850",
         "youtubeTrailer": "cWkOcpZEk4I"
       },
@@ -905,7 +917,7 @@
         "publishers": [
           "Pearl Abyss"
         ],
-        "hypes": 240,
+        "hypes": 246,
         "steamUrl": "https://store.steampowered.com/app/3321460",
         "youtubeTrailer": "RqA5Du0v5lM"
       },
@@ -1089,7 +1101,7 @@
       "localData": {
         "title": "Pragmata",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wwv.webp",
-        "dateRelease": "24-04-2026"
+        "dateRelease": "17-04-2026"
       },
       "igdb": {
         "id": 134612,
@@ -1097,7 +1109,7 @@
         "slug": "pragmata",
         "url": "https://www.igdb.com/games/pragmata",
         "summary": "An all-new Science Fiction action adventure with its own unique hacking twist!\nIt is the near future, and protagonists Hugh and his android companion Diana, must work together as they make their way through the cold lunar research station.",
-        "firstReleaseDate": 1776988800,
+        "firstReleaseDate": 1776384000,
         "cover": "co9wwv",
         "genres": [
           "Shooter",
@@ -1133,24 +1145,24 @@
         ],
         "releaseDates": [
           {
-            "human": "Apr 24, 2026",
-            "date": 1776988800,
+            "human": "Apr 17, 2026",
+            "date": 1776384000,
+            "platform": "Nintendo Switch 2"
+          },
+          {
+            "human": "Apr 17, 2026",
+            "date": 1776384000,
             "platform": "PC (Microsoft Windows)"
           },
           {
-            "human": "Apr 24, 2026",
-            "date": 1776988800,
+            "human": "Apr 17, 2026",
+            "date": 1776384000,
             "platform": "PlayStation 5"
           },
           {
-            "human": "Apr 24, 2026",
-            "date": 1776988800,
+            "human": "Apr 17, 2026",
+            "date": 1776384000,
             "platform": "Xbox Series X|S"
-          },
-          {
-            "human": "Apr 24, 2026",
-            "date": 1776988800,
-            "platform": "Nintendo Switch 2"
           }
         ],
         "developers": [
@@ -1159,7 +1171,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 194,
+        "hypes": 195,
         "steamUrl": "https://store.steampowered.com/app/3357650/PRAGMATA/",
         "youtubeTrailer": "0FTq_snLzIw"
       },
@@ -1235,7 +1247,7 @@
         "publishers": [
           "IO Interactive"
         ],
-        "hypes": 208,
+        "hypes": 211,
         "steamUrl": "https://store.steampowered.com/app/3768760/007_First_Light/",
         "youtubeTrailer": "slAhuh21ii8"
       },
@@ -2648,7 +2660,7 @@
         "publishers": [
           "Sony Interactive Entertainment"
         ],
-        "hypes": 45,
+        "hypes": 46,
         "steamUrl": "https://store.steampowered.com/app/3485810",
         "youtubeTrailer": "12EQpTwn4lY"
       },
@@ -2720,7 +2732,7 @@
         "publishers": [
           "Remedy Entertainment"
         ],
-        "hypes": 101,
+        "hypes": 102,
         "steamUrl": "https://store.steampowered.com/app/3669870/",
         "youtubeTrailer": "e1_eZyFM5-4"
       },
@@ -3152,7 +3164,7 @@
         "publishers": [
           "Sony Interactive Entertainment"
         ],
-        "hypes": 34,
+        "hypes": 36,
         "steamUrl": null,
         "youtubeTrailer": "G_tq12WisX8"
       },
@@ -3193,7 +3205,7 @@
         "publishers": [
           "Krafton"
         ],
-        "hypes": 30,
+        "hypes": 31,
         "steamUrl": null,
         "youtubeTrailer": "Cz6NK4164iY"
       },
@@ -3286,7 +3298,7 @@
         "publishers": [
           "Thunderful"
         ],
-        "hypes": 22,
+        "hypes": 23,
         "steamUrl": "https://store.steampowered.com/app/2997230",
         "youtubeTrailer": "pBSApS3A37U"
       },
@@ -3424,6 +3436,69 @@
     },
     {
       "localData": {
+        "title": "Echoes of Aincrad",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpxh.webp",
+        "dateRelease": "10-07-2026"
+      },
+      "igdb": {
+        "id": 393932,
+        "name": "Echoes of Aincrad",
+        "slug": "echoes-of-aincrad",
+        "url": "https://www.igdb.com/games/echoes-of-aincrad",
+        "summary": "Step into the legendary floating castle of Aincrad, a realm of breathtaking beauty and unforgiving danger. What seemed to be a dream adventure has now become a fight for survival. Among thousands of trapped souls, your journey is yours alone; will you rise, endure, and forge bonds that define your destiny? Or will you perish while facing enemies stronger, faster, and more ruthless than you imagined?\n\nThis is not just a game. It’s a battle for survival.\n\nTake up your weapon. Shape your legend. Conquer Aincrad. RISK YOUR REALITY!",
+        "firstReleaseDate": 1783641600,
+        "cover": "cobpxh",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sc12i5s",
+          "sc12i5t",
+          "sc12i5u"
+        ],
+        "artworks": [
+          "ar5ied",
+          "ar5ij9",
+          "ar5ija"
+        ],
+        "releaseDates": [
+          {
+            "human": "Jul 10, 2026",
+            "date": 1783641600,
+            "platform": "PlayStation 5"
+          },
+          {
+            "human": "Jul 10, 2026",
+            "date": 1783641600,
+            "platform": "PC (Microsoft Windows)"
+          },
+          {
+            "human": "Jul 10, 2026",
+            "date": 1783641600,
+            "platform": "Xbox Series X|S"
+          }
+        ],
+        "developers": [
+          "Game Studio Inc."
+        ],
+        "publishers": [
+          "Bandai Namco Entertainment Inc."
+        ],
+        "hypes": 0,
+        "steamUrl": "https://store.steampowered.com/app/2244210/",
+        "youtubeTrailer": "U5IUKHX0cSA"
+      },
+      "inMyList": true,
+      "source": "mylist"
+    },
+    {
+      "localData": {
         "title": "Offering App",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5jwa.webp",
         "dateRelease": "01-03-2026"
@@ -3466,61 +3541,6 @@
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/1860560",
         "youtubeTrailer": "MeHlQAwHMhI"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Subliminal",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coasaz.webp",
-        "dateRelease": "01-03-2026"
-      },
-      "igdb": {
-        "id": 233669,
-        "name": "Subliminal",
-        "slug": "subliminal--1",
-        "url": "https://www.igdb.com/games/subliminal--1",
-        "summary": "Subliminal is a psychological horror game inspired by the urban legend of The Backrooms. Bleeding-edge lighting and rendering, handcrafted open-ended levels, light and perspective-based puzzles, nostalgic spaces, unfamiliar faces, and a rotting feeling that something is not quite right.",
-        "firstReleaseDate": 1772323200,
-        "cover": "coasaz",
-        "genres": [
-          "Puzzle",
-          "Simulator",
-          "Strategy",
-          "Indie"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "sctqmx",
-          "sctqmy",
-          "sctqn4",
-          "sctqn1",
-          "sctqn3",
-          "sctqn5"
-        ],
-        "artworks": [
-          "ar4lne",
-          "ar4lnf",
-          "ar4lng",
-          "ar4lp6",
-          "ar4lp5"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Accidental Studios"
-        ],
-        "publishers": [
-          "Gone-Shootin",
-          "Infini Fun"
-        ],
-        "hypes": 11,
-        "steamUrl": "https://store.steampowered.com/app/2300840/Subliminal",
-        "youtubeTrailer": "Oe8lU18G89Q"
       },
       "inMyList": false,
       "source": "api"
@@ -4135,7 +4155,7 @@
         "publishers": [
           "Bungie"
         ],
-        "hypes": 92,
+        "hypes": 93,
         "steamUrl": "https://store.steampowered.com/app/3065800/",
         "youtubeTrailer": "wwH2aNBrq7c"
       },
@@ -4196,8 +4216,116 @@
     },
     {
       "localData": {
+        "title": "Dysplaced",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobjgz.webp",
+        "dateRelease": "05-03-2026"
+      },
+      "igdb": {
+        "id": 258472,
+        "name": "Dysplaced",
+        "slug": "dysplaced",
+        "url": "https://www.igdb.com/games/dysplaced",
+        "summary": "You are the Guardian - the last hope for a realm under peril. Summoned from our world into theirs, you'll venture into a vast and beautiful fantastic realm to learn, master and thrive - and to chase away the darkness. Forge your destiny from the ruins - break nearly everything to save the realm!",
+        "firstReleaseDate": 1772668800,
+        "cover": "cobjgz",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PlayStation 4",
+          "Nintendo Switch 2",
+          "Android",
+          "PC (Microsoft Windows)",
+          "iOS",
+          "PlayStation 5",
+          "PlayStation",
+          "Xbox One",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scnjun",
+          "scnjuo",
+          "scnjup",
+          "scnjuq",
+          "scnjur",
+          "scnjut",
+          "scnjuv"
+        ],
+        "artworks": [
+          "ar5cdo",
+          "ar5cqy",
+          "ar5cqz"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "10tons"
+        ],
+        "publishers": [
+          "10tons"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2430390",
+        "youtubeTrailer": "nifZJ10UfAA"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Slay the Spire II",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co82c5.webp",
+        "dateRelease": "05-03-2026"
+      },
+      "igdb": {
+        "id": 296831,
+        "name": "Slay the Spire II",
+        "slug": "slay-the-spire-ii",
+        "url": "https://www.igdb.com/games/slay-the-spire-ii",
+        "summary": "The iconic roguelike deckbuilder returns!\n\nCraft a unique deck, encounter bizarre creatures, and discover relics of immense power in Slay the Spire 2 - featuring new characters, cards, events, alternate acts, and more!",
+        "firstReleaseDate": 1772668800,
+        "cover": "co82c5",
+        "genres": [
+          "Strategy",
+          "Indie",
+          "Card & Board Game"
+        ],
+        "platforms": [
+          "Linux",
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scrupb",
+          "scrupd",
+          "scrupf",
+          "scrup6",
+          "scrup8",
+          "scrup9"
+        ],
+        "artworks": [
+          "ar2w86"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Mega Crit Games"
+        ],
+        "publishers": [
+          "Mega Crit Games"
+        ],
+        "hypes": 67,
+        "steamUrl": "https://store.steampowered.com/app/2868840",
+        "youtubeTrailer": "krDFltgjLtE"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Docked",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa0w.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpe5.webp",
         "dateRelease": "05-03-2026"
       },
       "igdb": {
@@ -4207,7 +4335,7 @@
         "url": "https://www.igdb.com/games/docked",
         "summary": "Return home to Port Wake and rebuild your family business. Docked is a realistic simulator where you operate heavy machinery, restore and develop the port's infrastructure, and manage day-to-day operations to help your port expand and thrive.",
         "firstReleaseDate": 1772668800,
-        "cover": "coaa0w",
+        "cover": "cobpe5",
         "genres": [
           "Simulator"
         ],
@@ -4227,7 +4355,9 @@
         ],
         "artworks": [
           "ar40iz",
-          "ar40j3"
+          "ar40j3",
+          "ar5hzo",
+          "ar5hzp"
         ],
         "releaseDates": [],
         "developers": [
@@ -4293,6 +4423,57 @@
     },
     {
       "localData": {
+        "title": "Aethus",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobhd5.webp",
+        "dateRelease": "06-03-2026"
+      },
+      "igdb": {
+        "id": 270142,
+        "name": "Aethus",
+        "slug": "aethus",
+        "url": "https://www.igdb.com/games/aethus",
+        "summary": "Explore a vast underground world to mine, refine and craft hundreds of items, then build up your modular surface Outpost to farm hydroponic crops, prospect for gems and automate your resource-gathering in this sci-fi survival-crafter where the story always provides a reason to dig deeper.",
+        "firstReleaseDate": 1772755200,
+        "cover": "cobhd5",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "sc11ooc",
+          "sc11oo4",
+          "sc11oob",
+          "sc11oo8",
+          "sc11ood",
+          "sc11oo5",
+          "sc11oo6",
+          "sc11oo7",
+          "sc11oo9",
+          "sc11ooa",
+          "sc11ooe"
+        ],
+        "artworks": [
+          "ar2k5v"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Pawsmonaut Games"
+        ],
+        "publishers": [
+          "Pawsmonaut Games"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2541530",
+        "youtubeTrailer": null
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Over The Top: WWI",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa56l.webp",
         "dateRelease": "06-03-2026"
@@ -4352,7 +4533,7 @@
         "publishers": [
           "Flying Squirrel Entertainment"
         ],
-        "hypes": 4,
+        "hypes": 5,
         "steamUrl": "https://store.steampowered.com/app/2778610",
         "youtubeTrailer": "RvEQwEABVdA"
       },
@@ -4717,55 +4898,6 @@
     },
     {
       "localData": {
-        "title": "DarkSwitch",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9v99.webp",
-        "dateRelease": "12-03-2026"
-      },
-      "igdb": {
-        "id": 345416,
-        "name": "DarkSwitch",
-        "slug": "darkswitch",
-        "url": "https://www.igdb.com/games/darkswitch",
-        "summary": "The Tree provides, the Tree protects, the Tree Prevails!\n\nDark Switch is a vertical city builder set in the boughs of a gigantic tree. Defend your leafy home against the perils of the creeping fog by managing light and flame.\n\nGather resources, research technologies, and send pioneers to explore the ruins of those who came before: discover their secrets and doom.\n\nSet in a world of folk horror and creeping dread, DarkSwitch blends vertical city-building, tower defense, and exploration into a unique strategic experience.\n\nNavigate a stunning, dangerous, dark fantasy world enriched by cinematic cutscenes and an atmospheric soundtrack from Silent Hill composer Akira Yamaoka!",
-        "firstReleaseDate": 1773273600,
-        "cover": "co9v99",
-        "genres": [
-          "Strategy",
-          "Tactical",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scwzwy",
-          "scwzwz",
-          "scwzx0",
-          "scwzx1",
-          "scwzx2",
-          "scwzx3"
-        ],
-        "artworks": [
-          "ar3m3e",
-          "ar3p6d",
-          "ar3p6e"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Cyber Temple"
-        ],
-        "publishers": [
-          "Cyber Temple"
-        ],
-        "hypes": 13,
-        "steamUrl": "https://store.steampowered.com/app/3132870/",
-        "youtubeTrailer": "NmAdvoXnAKQ"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
         "title": "1348: Ex Voto",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab7x.webp",
         "dateRelease": "12-03-2026"
@@ -4964,6 +5096,57 @@
     },
     {
       "localData": {
+        "title": "Grind Survivors",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabh6.webp",
+        "dateRelease": "16-03-2026"
+      },
+      "igdb": {
+        "id": 361967,
+        "name": "Grind Survivors",
+        "slug": "grind-survivors",
+        "url": "https://www.igdb.com/games/grind-survivors",
+        "summary": "Grind Survivors is a fast-paced action roguelike where demon hunters face endless hellspawn. Dodge, loot, and blast through brutal bullet-hell combat with dynamic builds and ever-changing weapons in a scorched, demon-ridden world.",
+        "firstReleaseDate": 1773619200,
+        "cover": "coabh6",
+        "genres": [
+          "Indie"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scympd",
+          "scympe",
+          "scympn",
+          "scympf",
+          "scympg",
+          "scymph",
+          "scympi",
+          "scympj",
+          "scympk",
+          "scympl",
+          "scympm"
+        ],
+        "artworks": [
+          "ar41g2",
+          "ar41g3"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [
+          "Assemble Entertainment"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3816930",
+        "youtubeTrailer": "nWhyW_1H0U8"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Starship Troopers: Ultimate Bug War!",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobi26.webp",
         "dateRelease": "16-03-2026"
@@ -5054,7 +5237,7 @@
         "publishers": [
           "Catoptric Games"
         ],
-        "hypes": 4,
+        "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/2707950/Pakinpaks/",
         "youtubeTrailer": "7pBahrtjk5Y"
       },
@@ -5947,6 +6130,61 @@
     },
     {
       "localData": {
+        "title": "Subliminal",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coasaz.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 233669,
+        "name": "Subliminal",
+        "slug": "subliminal--1",
+        "url": "https://www.igdb.com/games/subliminal--1",
+        "summary": "Subliminal is a psychological horror game inspired by the urban legend of The Backrooms. Bleeding-edge lighting and rendering, handcrafted open-ended levels, light and perspective-based puzzles, nostalgic spaces, unfamiliar faces, and a rotting feeling that something is not quite right.",
+        "firstReleaseDate": 1774915200,
+        "cover": "coasaz",
+        "genres": [
+          "Puzzle",
+          "Simulator",
+          "Strategy",
+          "Indie"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sctqmx",
+          "sctqmy",
+          "sctqn4",
+          "sctqn1",
+          "sctqn3",
+          "sctqn5"
+        ],
+        "artworks": [
+          "ar4lne",
+          "ar4lnf",
+          "ar4lng",
+          "ar4lp6",
+          "ar4lp5"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Accidental Studios"
+        ],
+        "publishers": [
+          "Gone-Shootin",
+          "Infini Fun"
+        ],
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/2300840/Subliminal",
+        "youtubeTrailer": "Oe8lU18G89Q"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "One Card One Shot: Mafia",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7i1e.webp",
         "dateRelease": "31-03-2026"
@@ -6183,13 +6421,13 @@
     },
     {
       "localData": {
-        "title": "Crown of greed",
+        "title": "Crown of Greed",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coawei.webp",
         "dateRelease": "31-03-2026"
       },
       "igdb": {
         "id": 279766,
-        "name": "Crown of greed",
+        "name": "Crown of Greed",
         "slug": "crown-of-greed",
         "url": "https://www.igdb.com/games/crown-of-greed",
         "summary": "Ascend to the throne of Rodovia - a mystical realm inspired by Slavic mythology. Engage in an unusual, indirect management system in which you can't issue direct orders and must skillfully bend your subjects and heroes to your will. Perfect your ruling skills to build, expand and secure your legacy.",
@@ -6208,7 +6446,7 @@
         "publishers": [],
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/1697870/Crown_of_greed/",
-        "youtubeTrailer": null
+        "youtubeTrailer": "84Mtxl8adWw"
       },
       "inMyList": false,
       "source": "api"
@@ -6306,54 +6544,6 @@
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/2228250",
         "youtubeTrailer": "-iZBTAKOGSI"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Rita",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95uq.webp",
-        "dateRelease": "31-03-2026"
-      },
-      "igdb": {
-        "id": 302037,
-        "name": "Rita",
-        "slug": "rita",
-        "url": "https://www.igdb.com/games/rita",
-        "summary": "Rita is a cozy adventure where a little chicklet solves word-based puzzles to transform the world around her. Follow her story across generations, meet her grandchicklet, and be a part of her legacy.",
-        "firstReleaseDate": 1774915200,
-        "cover": "co95uq",
-        "genres": [
-          "Puzzle",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "Linux",
-          "PC (Microsoft Windows)",
-          "Mac"
-        ],
-        "screenshots": [
-          "scsavv",
-          "scsavx",
-          "scsavz",
-          "scsaw1",
-          "scsaw3"
-        ],
-        "artworks": [
-          "ar2xwk"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "SporkTank"
-        ],
-        "publishers": [
-          "SporkTank"
-        ],
-        "hypes": 3,
-        "steamUrl": "https://store.steampowered.com/app/2984850",
-        "youtubeTrailer": "D-wQiPIUwYo"
       },
       "inMyList": false,
       "source": "api"
@@ -7173,56 +7363,6 @@
     },
     {
       "localData": {
-        "title": "The Cube, Save Us",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coap4g.webp",
-        "dateRelease": "31-03-2026"
-      },
-      "igdb": {
-        "id": 366870,
-        "name": "The Cube, Save Us",
-        "slug": "the-cube-save-us",
-        "url": "https://www.igdb.com/games/the-cube-save-us",
-        "summary": "The Cube, Save Us is an action-packed, close-combat extraction game set in a post-apocalyptic world. Pass each of the cube gates that presents its own surroundings and monsters. Survive the mutants and fellow raiders in close combat and come out on top by escaping the cube.",
-        "firstReleaseDate": 1774915200,
-        "cover": "coap4g",
-        "genres": [
-          "Hack and slash/Beat 'em up"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scz3s5",
-          "scz3s6",
-          "scz3s7",
-          "scz3s8",
-          "scz3s9",
-          "scz3s0",
-          "scz3s1",
-          "scz3s2",
-          "scz3s3",
-          "scz3s4"
-        ],
-        "artworks": [
-          "ar47ez",
-          "ar47f3"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "XLGAMES"
-        ],
-        "publishers": [
-          "XLGAMES"
-        ],
-        "hypes": 3,
-        "steamUrl": "https://store.steampowered.com/app/3810880",
-        "youtubeTrailer": "mKEoM5N-Eyg"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
         "title": "The Floor Above",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coammi.webp",
         "dateRelease": "31-03-2026"
@@ -7733,6 +7873,61 @@
     },
     {
       "localData": {
+        "title": "The Occultist",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa9j6.webp",
+        "dateRelease": "08-04-2026"
+      },
+      "igdb": {
+        "id": 306855,
+        "name": "The Occultist",
+        "slug": "the-occultist",
+        "url": "https://www.igdb.com/games/the-occultist",
+        "summary": "The Occultist is a first-person narrative thriller. You play as Alan Rebels, a paranormal investigator who travels to an abandoned British island after his father's disappearance. Explore GodStone island, face supernatural entities, and uncover long-buried occult rituals.",
+        "firstReleaseDate": 1775606400,
+        "cover": "coa9j6",
+        "genres": [
+          "Puzzle",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "scyilb",
+          "scyilc",
+          "scyild",
+          "scyile",
+          "scyilf",
+          "scyilg",
+          "scyilh",
+          "scyili"
+        ],
+        "artworks": [
+          "ar3zvi",
+          "ar403r",
+          "ar403s",
+          "ar403t",
+          "ar403u"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "DALOAR"
+        ],
+        "publishers": [
+          "Daedalic Entertainment"
+        ],
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/2092840/The_Occultist/",
+        "youtubeTrailer": "aiuWUVGYteM"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Samson",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coay8a.webp",
         "dateRelease": "08-04-2026"
@@ -7781,6 +7976,55 @@
         "hypes": 20,
         "steamUrl": "https://store.steampowered.com/app/3634520",
         "youtubeTrailer": "OQ4z_yQE5Xo"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "DarkSwitch",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9v99.webp",
+        "dateRelease": "09-04-2026"
+      },
+      "igdb": {
+        "id": 345416,
+        "name": "DarkSwitch",
+        "slug": "darkswitch",
+        "url": "https://www.igdb.com/games/darkswitch",
+        "summary": "The Tree provides, the Tree protects, the Tree Prevails!\n\nDark Switch is a vertical city builder set in the boughs of a gigantic tree. Defend your leafy home against the perils of the creeping fog by managing light and flame.\n\nGather resources, research technologies, and send pioneers to explore the ruins of those who came before: discover their secrets and doom.\n\nSet in a world of folk horror and creeping dread, DarkSwitch blends vertical city-building, tower defense, and exploration into a unique strategic experience.\n\nNavigate a stunning, dangerous, dark fantasy world enriched by cinematic cutscenes and an atmospheric soundtrack from Silent Hill composer Akira Yamaoka!",
+        "firstReleaseDate": 1775692800,
+        "cover": "co9v99",
+        "genres": [
+          "Strategy",
+          "Tactical",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scwzwy",
+          "scwzwz",
+          "scwzx0",
+          "scwzx1",
+          "scwzx2",
+          "scwzx3"
+        ],
+        "artworks": [
+          "ar3m3e",
+          "ar3p6d",
+          "ar3p6e"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Cyber Temple"
+        ],
+        "publishers": [
+          "Cyber Temple"
+        ],
+        "hypes": 13,
+        "steamUrl": "https://store.steampowered.com/app/3132870/",
+        "youtubeTrailer": "NmAdvoXnAKQ"
       },
       "inMyList": false,
       "source": "api"
@@ -8128,7 +8372,7 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 23,
+        "hypes": 24,
         "steamUrl": "https://store.steampowered.com/app/2760560",
         "youtubeTrailer": "ThN3eSfWqUo"
       },
@@ -8471,7 +8715,14 @@
           "scrl17",
           "scrl18",
           "scrl11",
-          "scrl12"
+          "scrl12",
+          "sc12hs0",
+          "sc12hs1",
+          "sc12hs2",
+          "sc12hs3",
+          "sc12hs4",
+          "sc12hs5",
+          "sc12hs6"
         ],
         "artworks": [
           "ar2v38"
@@ -9153,6 +9404,9 @@
         "firstReleaseDate": 1781654400,
         "cover": "coaawz",
         "genres": [
+          "Platform",
+          "Racing",
+          "Sport",
           "Adventure"
         ],
         "platforms": [
@@ -9182,7 +9436,7 @@
         "publishers": [
           "Fireshine Games"
         ],
-        "hypes": 25,
+        "hypes": 26,
         "steamUrl": "https://store.steampowered.com/app/2524850",
         "youtubeTrailer": "o_Xmv9eAIZA"
       },
@@ -10260,6 +10514,53 @@
     },
     {
       "localData": {
+        "title": "Aokaki",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8be9.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 304947,
+        "name": "Aokaki",
+        "slug": "aokaki",
+        "url": "https://www.igdb.com/games/aokaki",
+        "summary": "Aokaki is a fast-paced 2D platformer where you play as an isopod ronin. Explore fun and challenging levels while battling against the forces of the evil Shogun in this bug inhabited pixelart world.",
+        "firstReleaseDate": 1782777600,
+        "cover": "co8be9",
+        "genres": [
+          "Platform",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scsnme",
+          "scsnmg",
+          "scsnmh",
+          "scsnmi",
+          "scsnmf",
+          "scsnmd"
+        ],
+        "artworks": [
+          "ar2zgz"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Concha Indigo"
+        ],
+        "publishers": [
+          "Minicactus Games"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2925520/",
+        "youtubeTrailer": "QtyCR_jx2x0"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Lifted",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa4jd.webp",
         "dateRelease": "30-06-2026"
@@ -10550,7 +10851,7 @@
           "Rusty Lake"
         ],
         "publishers": [],
-        "hypes": 5,
+        "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/3636770/Servant_of_the_Lake/",
         "youtubeTrailer": "jP8ZpfawlZI"
       },
@@ -11604,7 +11905,7 @@
           "Something We Made",
           "Popagenda"
         ],
-        "hypes": 5,
+        "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/2900640/TOEM_2/",
         "youtubeTrailer": "ze4DSeIhYAQ"
       },
@@ -11670,6 +11971,65 @@
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/3470500",
         "youtubeTrailer": "84ovL9cuVDk"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Fading Echo",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpgb.webp",
+        "dateRelease": "30-09-2026"
+      },
+      "igdb": {
+        "id": 347887,
+        "name": "Fading Echo",
+        "slug": "fading-echo",
+        "url": "https://www.igdb.com/games/fading-echo",
+        "summary": "In Fading Echo, you rise as a young Legend to confront the Paradox before it consumes your world. Dive into this fast-paced action-adventure where you’ll travel across realities, battle fierce enemies, transform into a living water ball, and unleash devastating combos.",
+        "firstReleaseDate": 1790726400,
+        "cover": "cobpgb",
+        "genres": [
+          "Platform",
+          "Role-playing (RPG)",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sc11jlj",
+          "sc11jlk",
+          "sc11jll",
+          "sc11jlm",
+          "sc11jln",
+          "sc11jlo",
+          "sc11jlp",
+          "sc11jlq",
+          "sc11jlr"
+        ],
+        "artworks": [
+          "ar3on3",
+          "ar5i23",
+          "ar5i24",
+          "ar5i28",
+          "ar5i21",
+          "ar5i22"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "New Tales",
+          "Emeteria"
+        ],
+        "publishers": [
+          "New Tales"
+        ],
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/2467880",
+        "youtubeTrailer": "002kCi92n7Q"
       },
       "inMyList": false,
       "source": "api"
@@ -15866,6 +16226,54 @@
     },
     {
       "localData": {
+        "title": "Rita",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95uq.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 302037,
+        "name": "Rita",
+        "slug": "rita",
+        "url": "https://www.igdb.com/games/rita",
+        "summary": "Rita is a cozy adventure where a little chicklet solves word-based puzzles to transform the world around her. Follow her story across generations, meet her grandchicklet, and be a part of her legacy.",
+        "firstReleaseDate": 1798675200,
+        "cover": "co95uq",
+        "genres": [
+          "Puzzle",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Linux",
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scsavv",
+          "scsavx",
+          "scsavz",
+          "scsaw1",
+          "scsaw3"
+        ],
+        "artworks": [
+          "ar2xwk"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "SporkTank"
+        ],
+        "publishers": [
+          "SporkTank"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2984850",
+        "youtubeTrailer": "D-wQiPIUwYo"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Maseylia : Echoes of the Past",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8y1g.webp",
         "dateRelease": "31-12-2026"
@@ -16200,61 +16608,6 @@
         "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/3078140/Five_Laps_at_Freddys/",
         "youtubeTrailer": "4K6CLGk4sAo"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "The Occultist",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa9j6.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 306855,
-        "name": "The Occultist",
-        "slug": "the-occultist",
-        "url": "https://www.igdb.com/games/the-occultist",
-        "summary": "The Occultist is a first-person narrative thriller. You play as Alan Rebels, a paranormal investigator who travels to an abandoned British island after his father's disappearance. Explore GodStone island, face supernatural entities, and uncover long-buried occult rituals.",
-        "firstReleaseDate": 1798675200,
-        "cover": "coa9j6",
-        "genres": [
-          "Puzzle",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "scyilb",
-          "scyilc",
-          "scyild",
-          "scyile",
-          "scyilf",
-          "scyilg",
-          "scyilh",
-          "scyili"
-        ],
-        "artworks": [
-          "ar3zvi",
-          "ar403r",
-          "ar403s",
-          "ar403t",
-          "ar403u"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "DALOAR"
-        ],
-        "publishers": [
-          "Daedalic Entertainment"
-        ],
-        "hypes": 18,
-        "steamUrl": "https://store.steampowered.com/app/2092840/The_Occultist/",
-        "youtubeTrailer": "aiuWUVGYteM"
       },
       "inMyList": false,
       "source": "api"
@@ -17396,7 +17749,7 @@
         "name": "Danchi Days",
         "slug": "danchi-days",
         "url": "https://www.igdb.com/games/danchi-days",
-        "summary": "Laugh, cry, and feel awe in this cute adventure game about inviting characters to a Japanese summer festival! Surf the internet to learn their quirks and desires, then use your senses to uncover the unseen wonders of a Y2K, GBA-inspired world.",
+        "summary": "A five-chapter adventure about a Japanese girl and her grandmother living with Alzheimer's. In this comedic-yet-bittersweet story, explore your hometown, befriend quirky neighbors young and old, and surf their Y2K-inspired homepages!\n\nSo... what’s a \"danchi\"? It's a Japanese mass housing complex, with plenty of neighbors. Of course, it's not always cheerful: the danchi is home to societal challenges, from aging seniors, to dementia, loneliness, and more.\n\nBy gingham games - that's sandy powder, mogumu, and Melos Han-Tani (of Analgesic Productions)!",
         "firstReleaseDate": 1798675200,
         "cover": "co90ll",
         "genres": [
@@ -17408,13 +17761,15 @@
           "Mac"
         ],
         "screenshots": [
-          "scudpm",
-          "scudpn",
-          "scudpo",
-          "scudpp"
+          "sc12h5b",
+          "sc12h5c",
+          "sc12h5d",
+          "sc12h5e",
+          "sc12h5f",
+          "sc12h5g"
         ],
         "artworks": [
-          "ar3f4t"
+          "ar5hyj"
         ],
         "releaseDates": [],
         "developers": [],
@@ -17780,7 +18135,7 @@
     {
       "localData": {
         "title": "Onimusha: Way of the Sword",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coad3s.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobm4k.webp",
         "dateRelease": "31-12-2026"
       },
       "igdb": {
@@ -17790,7 +18145,7 @@
         "url": "https://www.igdb.com/games/onimusha-way-of-the-sword",
         "summary": "Fight through bloodstained battlefields of intense swordplay action. Explore the historic Japanese capital of Edo-era Kyoto, twisted by malevolent clouds of Malice.\nWith every stage cloaked in mystery, danger and intrigue. Battle against monstrosities from the underworld known as Genma in a tale of dark fantasy.\nFollow the tale of a samurai who wields the Oni Gauntlet, a mystical artifact that grants its bearer the power to slay Genma.\nThrough gritty, blood-soaked brawls, he searches for his reason to fight. What fate awaits at the end of his path?",
         "firstReleaseDate": 1798675200,
-        "cover": "coad3s",
+        "cover": "cobm4k",
         "genres": [
           "Adventure"
         ],
@@ -18209,7 +18564,7 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 10,
+        "hypes": 11,
         "steamUrl": "https://store.steampowered.com/app/2738170",
         "youtubeTrailer": "Vk8JHTjxoHw"
       },
@@ -18378,7 +18733,7 @@
         "publishers": [
           "Apamate Studio"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/3325720",
         "youtubeTrailer": null
       },
@@ -18964,7 +19319,7 @@
         "publishers": [
           "Mooneye Studios"
         ],
-        "hypes": 15,
+        "hypes": 16,
         "steamUrl": "https://store.steampowered.com/app/1728620",
         "youtubeTrailer": "I7OcvgvPqsc"
       },
@@ -20265,61 +20620,6 @@
     },
     {
       "localData": {
-        "title": "Fading Echo",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa03q.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 347887,
-        "name": "Fading Echo",
-        "slug": "fading-echo",
-        "url": "https://www.igdb.com/games/fading-echo",
-        "summary": "Fading Echo is a fast-paced elemental action-adventure RPG where creativity drives combat. Manipulate water, trigger chain reactions, and shift through surreal worlds as One, a young Legend on a mission to save a dying desertscape land from the grip of the Paradox corruption.",
-        "firstReleaseDate": 1798675200,
-        "cover": "coa03q",
-        "genres": [
-          "Platform",
-          "Role-playing (RPG)",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "Xbox Series X|S",
-          "PC (Microsoft Windows)",
-          "PlayStation 5"
-        ],
-        "screenshots": [
-          "sc11jlj",
-          "sc11jlk",
-          "sc11jll",
-          "sc11jlm",
-          "sc11jln",
-          "sc11jlo",
-          "sc11jlp",
-          "sc11jlq",
-          "sc11jlr"
-        ],
-        "artworks": [
-          "ar3on3",
-          "ar5717"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "New Tales",
-          "Emeteria"
-        ],
-        "publishers": [
-          "New Tales"
-        ],
-        "hypes": 9,
-        "steamUrl": "https://store.steampowered.com/app/2467880",
-        "youtubeTrailer": "002kCi92n7Q"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
         "title": "Dead Watch",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9y31.webp",
         "dateRelease": "31-12-2026"
@@ -20551,7 +20851,7 @@
         "publishers": [
           "DON'T NOD"
         ],
-        "hypes": 47,
+        "hypes": 48,
         "steamUrl": "https://store.steampowered.com/app/1966410",
         "youtubeTrailer": "RZs_IthEb2s"
       },
@@ -20649,7 +20949,7 @@
         "publishers": [
           "Kingsglory"
         ],
-        "hypes": 30,
+        "hypes": 31,
         "steamUrl": "https://store.steampowered.com/app/4126040",
         "youtubeTrailer": "Yh5JH0Yz75E"
       },
@@ -21289,7 +21589,7 @@
         "publishers": [
           "Deep Silver"
         ],
-        "hypes": 20,
+        "hypes": 21,
         "steamUrl": "https://store.steampowered.com/app/2272360",
         "youtubeTrailer": "lAPm8fIy5mg"
       },
@@ -21299,7 +21599,7 @@
     {
       "localData": {
         "title": "Zero Parades: For Dead Spies",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coajyg.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpcd.webp",
         "dateRelease": "31-12-2026"
       },
       "igdb": {
@@ -21309,7 +21609,7 @@
         "url": "https://www.igdb.com/games/zero-parades-for-dead-spies",
         "summary": "From ZA/UM comes ZERO PARADES: For Dead Spies – a story-rich espionage RPG. You're a brilliant but tormented operant on a desperate assignment. Pick up the pieces of your broken network, untangle a bloody web of intrigue at the End of History, and prove yourself on the big stage or blow it all up – again.",
         "firstReleaseDate": 1798675200,
-        "cover": "coajyg",
+        "cover": "cobpcd",
         "genres": [
           "Role-playing (RPG)",
           "Adventure",
@@ -21341,55 +21641,6 @@
         "hypes": 34,
         "steamUrl": "https://store.steampowered.com/app/2863680",
         "youtubeTrailer": "D4JVY8rR-XQ"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Grind Survivors",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabh6.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 361967,
-        "name": "Grind Survivors",
-        "slug": "grind-survivors",
-        "url": "https://www.igdb.com/games/grind-survivors",
-        "summary": "Grind Survivors is a fast-paced action roguelike where demon hunters face endless hellspawn. Dodge, loot, and blast through brutal bullet-hell combat with dynamic builds and ever-changing weapons in a scorched, demon-ridden world.",
-        "firstReleaseDate": 1798675200,
-        "cover": "coabh6",
-        "genres": [
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scympd",
-          "scympe",
-          "scympn",
-          "scympf",
-          "scympg",
-          "scymph",
-          "scympi",
-          "scympj",
-          "scympk",
-          "scympl",
-          "scympm"
-        ],
-        "artworks": [
-          "ar41g2",
-          "ar41g3"
-        ],
-        "releaseDates": [],
-        "developers": [],
-        "publishers": [
-          "Assemble Entertainment"
-        ],
-        "hypes": 3,
-        "steamUrl": "https://store.steampowered.com/app/3816930",
-        "youtubeTrailer": "nWhyW_1H0U8"
       },
       "inMyList": false,
       "source": "api"
@@ -23211,7 +23462,7 @@
         "publishers": [
           "NIS America, Inc."
         ],
-        "hypes": 4,
+        "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/3211430",
         "youtubeTrailer": "5z0L0ba4r8k"
       },
