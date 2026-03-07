@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-03-06T19:45:49.041Z",
+  "fetchedAt": "2026-03-07T13:02:39.290Z",
   "totalGames": 451,
-  "myListCount": 51,
-  "apiOnlyCount": 400,
-  "bothCount": 29,
+  "myListCount": 52,
+  "apiOnlyCount": 399,
+  "bothCount": 30,
   "games": [
     {
       "localData": {
@@ -831,7 +831,7 @@
           "Coatsink Software",
           "Thunderful"
         ],
-        "hypes": 120,
+        "hypes": 121,
         "steamUrl": "https://store.steampowered.com/app/1663850",
         "youtubeTrailer": "cWkOcpZEk4I"
       },
@@ -917,7 +917,7 @@
         "publishers": [
           "Pearl Abyss"
         ],
-        "hypes": 246,
+        "hypes": 247,
         "steamUrl": "https://store.steampowered.com/app/3321460",
         "youtubeTrailer": "RqA5Du0v5lM"
       },
@@ -1171,7 +1171,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 195,
+        "hypes": 196,
         "steamUrl": "https://store.steampowered.com/app/3357650/PRAGMATA/",
         "youtubeTrailer": "0FTq_snLzIw"
       },
@@ -1619,7 +1619,7 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 62,
+        "hypes": 63,
         "steamUrl": "https://store.steampowered.com/app/2483190",
         "youtubeTrailer": "VXedKqX5Wa4"
       },
@@ -3032,7 +3032,7 @@
         "publishers": [
           "Konami"
         ],
-        "hypes": 35,
+        "hypes": 36,
         "steamUrl": "https://store.steampowered.com/app/4231820",
         "youtubeTrailer": "X3-SJLWzjmE"
       },
@@ -3490,12 +3490,74 @@
         "publishers": [
           "Bandai Namco Entertainment Inc."
         ],
-        "hypes": 0,
+        "hypes": 1,
         "steamUrl": "https://store.steampowered.com/app/2244210/",
         "youtubeTrailer": "U5IUKHX0cSA"
       },
       "inMyList": true,
       "source": "mylist"
+    },
+    {
+      "localData": {
+        "title": "Hozy",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9v85.webp",
+        "dateRelease": "30-03-2026"
+      },
+      "igdb": {
+        "id": 345443,
+        "name": "Hozy",
+        "slug": "hozy",
+        "url": "https://www.igdb.com/games/hozy",
+        "summary": "Transform abandoned spaces into cozy havens in Hozy!",
+        "firstReleaseDate": 1774828800,
+        "cover": "co9v85",
+        "genres": [
+          "Simulator",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scwzrb",
+          "scwzr1",
+          "scwzr2",
+          "scwzr3",
+          "scwzr4",
+          "scwzr5",
+          "scwzr6",
+          "scwzr7",
+          "scwzr8",
+          "scwzr9",
+          "scwzra"
+        ],
+        "artworks": [
+          "ar3m2t",
+          "ar3m2u"
+        ],
+        "releaseDates": [
+          {
+            "human": "Mar 30, 2026",
+            "date": 1774828800,
+            "platform": "Mac"
+          },
+          {
+            "human": "Mar 30, 2026",
+            "date": 1774828800,
+            "platform": "PC (Microsoft Windows)"
+          }
+        ],
+        "developers": [],
+        "publishers": [
+          "tinyBuild"
+        ],
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3326230",
+        "youtubeTrailer": "AbDSwdOZUwk"
+      },
+      "inMyList": true,
+      "source": "both"
     },
     {
       "localData": {
@@ -5620,57 +5682,6 @@
         "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/2646450/Who_Are_You/",
         "youtubeTrailer": "tZrkVqNH2nQ"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Hozy",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9v85.webp",
-        "dateRelease": "30-03-2026"
-      },
-      "igdb": {
-        "id": 345443,
-        "name": "Hozy",
-        "slug": "hozy",
-        "url": "https://www.igdb.com/games/hozy",
-        "summary": "Transform abandoned spaces into cozy havens in Hozy!",
-        "firstReleaseDate": 1774828800,
-        "cover": "co9v85",
-        "genres": [
-          "Simulator",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)",
-          "Mac"
-        ],
-        "screenshots": [
-          "scwzrb",
-          "scwzr1",
-          "scwzr2",
-          "scwzr3",
-          "scwzr4",
-          "scwzr5",
-          "scwzr6",
-          "scwzr7",
-          "scwzr8",
-          "scwzr9",
-          "scwzra"
-        ],
-        "artworks": [
-          "ar3m2t",
-          "ar3m2u"
-        ],
-        "releaseDates": [],
-        "developers": [],
-        "publishers": [
-          "tinyBuild"
-        ],
-        "hypes": 5,
-        "steamUrl": "https://store.steampowered.com/app/3326230",
-        "youtubeTrailer": "AbDSwdOZUwk"
       },
       "inMyList": false,
       "source": "api"
@@ -8675,7 +8686,7 @@
         "publishers": [
           "Limited Run Games"
         ],
-        "hypes": 9,
+        "hypes": 8,
         "steamUrl": "https://store.steampowered.com/app/3749580",
         "youtubeTrailer": "kNSf7uUlvKM"
       },
@@ -11569,7 +11580,7 @@
         "publishers": [
           "Blumhouse Games"
         ],
-        "hypes": 25,
+        "hypes": 26,
         "steamUrl": "https://store.steampowered.com/app/3255110/Grave_Seasons/",
         "youtubeTrailer": "b2IG-SQ7HOY"
       },
@@ -12510,7 +12521,7 @@
         "publishers": [
           "Chucklefish Games"
         ],
-        "hypes": 57,
+        "hypes": 58,
         "steamUrl": "https://store.steampowered.com/app/1846700",
         "youtubeTrailer": "ZWDGCwFZMbk"
       },

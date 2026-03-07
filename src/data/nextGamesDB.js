@@ -59,4 +59,5 @@ export const proximamenteGames = [
 	{ title: "Homura Hime" },
 	{ title: "Monster Hunter Stories 3: Twisted Reflection" },
 	{ title: "Echoes of Aincrad" },
+	{ title: "Hozy" },
 ];
