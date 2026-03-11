@@ -373,6 +373,31 @@ export const ListGames = [
         description: "Infinidad de demonios que masacrar. Personalización profunda mediante talentos, puntos de habilidad, runas y botín legendario. Mazmorras aleatorias en un dinámico mundo abierto. Sobrevive y conquista la oscuridad, o sucumbe a las sombras."
     },
     {
+        title: "DmC: Devil May Cry",
+        released: "14/01/2013",
+        companie: "Ninja Theory",
+        poster: "co1u77.webp",
+        trailer: "jccTX6Q-s28",
+        artworks: "ar5jbw.png",
+        genre: "Puzzle, Hack and slash/Beat 'em up, Adventure",
+        estado: "Jugando",
+        horasTotal: 4,
+        logros_obt: 13,
+        logros_total: 58,
+        console_pc: "Steam",
+        igdbId: 1254,
+        first_year_played: 2026,
+        dates_played: {
+            y2026: { fecha_inicio: "10/03/2026", fecha_final: "", horas: "4" },
+            y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
+        },
+        years_played: { y2026: true, y2025: false, y2024: false, y2023: false, y2022: false },
+        description: "DmC: Devil May Cry es el quinto juego de la serie de acción en tercera persona hack-and-slash y el primero que no ha sido desarrollado en su mayor parte por Capcom. Este título es una reinvención de la serie, con el mismo protagonista, Dante, pero ambientado en un universo alternativo. El Dante de este juego es muy diferente al anterior, ya que se ha eliminado su característico cabello blanco y se ha modificado tanto el personaje principal como el tono del juego, con una influencia mucho más occidental. La jugabilidad sigue siendo prácticamente idéntica, ya que Dante se enfrenta a muchos oponentes con un estilo de lucha rápido, encadenando combos y golpes en rápida sucesión."
+    },
+    {
         title: "Eiyuden Chronicle: Rising",
         released: "10/05/2022",
         companie: "Rabbit & Bear Studios",
@@ -923,6 +948,31 @@ export const ListGames = [
         description: "Embárcate en una odisea en busca del Arca Perdida en un vasto y vibrante mundo: explora nuevas tierras, busca tesoros perdidos y ponte a prueba en emocionantes combates de acción."
     },
     {
+        title: "Mafia: Definitive Edition",
+        released: "23/09/2020",
+        companie: "Hangar 13",
+        poster: "co26vl.webp",
+        trailer: "lbVLoi-WPsI",
+        artworks: "ar729.webp",
+        genre: "Shooter, Adventure",
+        estado: "Completado",
+        horasTotal: 11,
+        logros_obt: 33,
+        logros_total: 43,
+        console_pc: "Steam",
+        igdbId: 134070,
+        first_year_played: 2026,
+        dates_played: {
+            y2026: { fecha_inicio: "07/03/2026", fecha_final: "", horas: "11" },
+            y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
+        },
+        years_played: { y2026: true, y2025: false, y2024: false, y2023: false, y2022: false },
+        description: "Rehecho desde cero, asciende en las filas de la mafia durante la era de la prohibición del crimen organizado. Tras un encontronazo con la mafia, el taxista Tommy Angelo se ve empujado a un mundo subterráneo mortal. Aunque al principio se siente incómodo al unirse a la familia criminal Salieri, Tommy pronto descubre que las recompensas son demasiado grandes como para ignorarlas."
+    },
+    {
         title: "Metro 2033",
         released: "15/03/2010",
         companie: "4A Games",
@@ -963,7 +1013,7 @@ export const ListGames = [
         igdbId: 121,
         first_year_played: 2022,
         dates_played: {
-            y2026: { fecha_inicio: "03/01/2026", fecha_final: "", horas: "8" },
+            y2026: { fecha_inicio: "03/01/2026", fecha_final: "22/02/2026", horas: "8" },
             y2025: { fecha_inicio: "20/07/2025", fecha_final: "09/08/2025", horas: "20" },
             y2024: { fecha_inicio: "20/01/2025", fecha_final: "09/10/2025", horas: "100" },
             y2023: { fecha_inicio: "07/01/2025", fecha_final: "09/06/2025", horas: "100" },

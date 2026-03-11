@@ -41,10 +41,27 @@ const orderOptions = [
     { value: "title-desc", label: "Título Z-A" },
 ];
 
-// Agregar índice para ordenamiento
+// Calcular fecha de inicio más reciente para ordenamiento
+function getLatestStartDate(game: typeof ListGames[0]): string {
+    let latest = '0000-00-00';
+    if (game.dates_played) {
+        for (const yearData of Object.values(game.dates_played)) {
+            const fecha = (yearData as any).fecha_inicio;
+            if (fecha) {
+                // Formato DD/MM/YYYY → YYYY-MM-DD para comparación
+                const [d, m, y] = fecha.split('/');
+                const sortable = `${y}-${m}-${d}`;
+                if (sortable > latest) latest = sortable;
+            }
+        }
+    }
+    return latest;
+}
+
 const gamesWithIndex = ListGames.map((game, index) => ({
     ...game,
     originalIndex: index,
+    sortDate: getLatestStartDate(game),
 }));
 
 // Stats pre-calculadas para el header
@@ -213,9 +230,9 @@ const totalAchievements = ListGames.reduce((sum, g) => sum + (g.logros_obt || 0)
             visibleCards.sort((a, b) => {
                 switch (orderValue) {
                     case 'newest':
-                        return parseInt(b.dataset.index || '0') - parseInt(a.dataset.index || '0');
+                        return (b.dataset.date || '').localeCompare(a.dataset.date || '');
                     case 'oldest':
-                        return parseInt(a.dataset.index || '0') - parseInt(b.dataset.index || '0');
+                        return (a.dataset.date || '').localeCompare(b.dataset.date || '');
                     case 'title-asc':
                         return (a.dataset.title || '').localeCompare(b.dataset.title || '');
                     case 'title-desc':

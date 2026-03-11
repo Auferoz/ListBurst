@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-03-07T13:02:39.290Z",
-  "totalGames": 451,
+  "fetchedAt": "2026-03-11T20:04:58.262Z",
+  "totalGames": 477,
   "myListCount": 52,
-  "apiOnlyCount": 399,
-  "bothCount": 30,
+  "apiOnlyCount": 425,
+  "bothCount": 31,
   "games": [
     {
       "localData": {
@@ -831,7 +831,7 @@
           "Coatsink Software",
           "Thunderful"
         ],
-        "hypes": 121,
+        "hypes": 123,
         "steamUrl": "https://store.steampowered.com/app/1663850",
         "youtubeTrailer": "cWkOcpZEk4I"
       },
@@ -917,7 +917,7 @@
         "publishers": [
           "Pearl Abyss"
         ],
-        "hypes": 247,
+        "hypes": 256,
         "steamUrl": "https://store.steampowered.com/app/3321460",
         "youtubeTrailer": "RqA5Du0v5lM"
       },
@@ -1011,7 +1011,7 @@
         "publishers": [
           "PlaySide"
         ],
-        "hypes": 65,
+        "hypes": 66,
         "steamUrl": "https://store.steampowered.com/app/2416450/",
         "youtubeTrailer": "f2_0cS7jq2w"
       },
@@ -1171,7 +1171,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 196,
+        "hypes": 201,
         "steamUrl": "https://store.steampowered.com/app/3357650/PRAGMATA/",
         "youtubeTrailer": "0FTq_snLzIw"
       },
@@ -1247,7 +1247,7 @@
         "publishers": [
           "IO Interactive"
         ],
-        "hypes": 211,
+        "hypes": 214,
         "steamUrl": "https://store.steampowered.com/app/3768760/007_First_Light/",
         "youtubeTrailer": "slAhuh21ii8"
       },
@@ -1405,7 +1405,7 @@
         "publishers": [
           "Fictions"
         ],
-        "hypes": 71,
+        "hypes": 72,
         "steamUrl": "https://store.steampowered.com/app/2001760",
         "youtubeTrailer": "ysyYwLbDByU"
       },
@@ -1423,7 +1423,7 @@
         "name": "Phantom Blade 0",
         "slug": "phantom-blade-0",
         "url": "https://www.igdb.com/games/phantom-blade-0",
-        "summary": "Phantom Blade Zero is a an action RPG featuring deep and dark art style, fast paced combat, and a fictitious world blending Chinese martial arts and steampunk!\nBe the Dark Raider exiled by \"The Order\", embark on the path of vengeance, and uncover the darkest secrets of Wulin!",
+        "summary": "Framed for the death of his master and left with a ruined heart, Soul has sixty-six days to live. Alone and hunted by his former comrades, he moves through a world of shifting loyalties and silent blades — determined to unravel the conspiracy that has condemned him.\n\nRain mixes with blood, mercy entangles with vengeance. Soul's journey is one of love, hate, and the fragile search for what it means to have a heart.",
         "firstReleaseDate": 1788912000,
         "cover": "cob64v",
         "genres": [
@@ -1539,7 +1539,7 @@
           "Rockstar Games",
           "Take-Two Interactive"
         ],
-        "hypes": 805,
+        "hypes": 820,
         "steamUrl": null,
         "youtubeTrailer": "QdBZY2fkU-0"
       },
@@ -1619,7 +1619,7 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 63,
+        "hypes": 64,
         "steamUrl": "https://store.steampowered.com/app/2483190",
         "youtubeTrailer": "VXedKqX5Wa4"
       },
@@ -1814,7 +1814,7 @@
         "publishers": [
           "Sony Interactive Entertainment"
         ],
-        "hypes": 144,
+        "hypes": 145,
         "steamUrl": null,
         "youtubeTrailer": "s3pDMUWlA6I"
       },
@@ -1877,7 +1877,7 @@
           "Annapurna Interactive",
           "Konami"
         ],
-        "hypes": 49,
+        "hypes": 51,
         "steamUrl": "https://store.steampowered.com/app/1636440/SILENT_HILL_Townfall",
         "youtubeTrailer": "bpqRBsXP6M0"
       },
@@ -1944,7 +1944,7 @@
         "publishers": [
           "Xbox Game Studios"
         ],
-        "hypes": 290,
+        "hypes": 292,
         "steamUrl": "https://store.steampowered.com/app/2769570",
         "youtubeTrailer": "oVkSZXPklQ4"
       },
@@ -1954,8 +1954,8 @@
     {
       "localData": {
         "title": "Yoshi and the Mysterious Book",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coag5l.webp",
-        "dateRelease": "30-06-2026"
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqy2.webp",
+        "dateRelease": "21-05-2026"
       },
       "igdb": {
         "id": 366883,
@@ -1963,10 +1963,11 @@
         "slug": "yoshi-and-the-mysterious-book",
         "url": "https://www.igdb.com/games/yoshi-and-the-mysterious-book",
         "summary": "Join Yoshi for a new adventure in Yoshi and the Mysterious Book, launching on Nintendo Switch 2 in spring 2026.\n\nOne day, on the island where Yoshi and his friends live, a peculiar talking book named Mr. E suddenly falls from the sky. This peculiar book’s pages contain information about unusual creatures, so Yoshi decides to jump in and help investigate!\n\nAs Yoshi wanders through the book, you'll make all sorts of discoveries about the creatures you find and those discoveries will be written down. You'll find lots of unusual creatures residing within the book – a page-turning adventure awaits!",
-        "firstReleaseDate": 1782777600,
-        "cover": "coag5l",
+        "firstReleaseDate": 1779321600,
+        "cover": "cobqy2",
         "genres": [
-          "Platform"
+          "Platform",
+          "Adventure"
         ],
         "platforms": [
           "Nintendo Switch 2"
@@ -1982,12 +1983,16 @@
           "scz4ii"
         ],
         "artworks": [
-          "ar4lfh"
+          "ar4lfh",
+          "ar5j8e",
+          "ar5j8b",
+          "ar5j8c",
+          "ar5j8d"
         ],
         "releaseDates": [
           {
-            "human": "Q2 2026",
-            "date": 1782777600,
+            "human": "May 21, 2026",
+            "date": 1779321600,
             "platform": "Nintendo Switch 2"
           }
         ],
@@ -1995,7 +2000,7 @@
         "publishers": [
           "Nintendo"
         ],
-        "hypes": 15,
+        "hypes": 18,
         "steamUrl": null,
         "youtubeTrailer": "YluJneE1bMo"
       },
@@ -2287,7 +2292,7 @@
       "localData": {
         "title": "The Mound: Omen of Cthulhu",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coave2.webp",
-        "dateRelease": "30-09-2026"
+        "dateRelease": "15-07-2026"
       },
       "igdb": {
         "id": 334673,
@@ -2295,7 +2300,7 @@
         "slug": "the-mound-omen-of-cthulhu",
         "url": "https://www.igdb.com/games/the-mound-omen-of-cthulhu",
         "summary": "In up to four player co-op, form a group of explorers searching for treasure. In this cursed jungle, danger is everywhere and monstrous creatures alter reality. Stay clear-headed and tame the jungle before it devours you…",
-        "firstReleaseDate": 1790726400,
+        "firstReleaseDate": 1784073600,
         "cover": "coave2",
         "genres": [
           "Adventure"
@@ -2318,24 +2323,24 @@
         ],
         "releaseDates": [
           {
-            "human": "Q3 2026",
-            "date": 1790726400,
+            "human": "Jul 15, 2026",
+            "date": 1784073600,
+            "platform": "Linux"
+          },
+          {
+            "human": "Jul 15, 2026",
+            "date": 1784073600,
             "platform": "PC (Microsoft Windows)"
           },
           {
-            "human": "Q3 2026",
-            "date": 1790726400,
+            "human": "Jul 15, 2026",
+            "date": 1784073600,
             "platform": "PlayStation 5"
           },
           {
-            "human": "Q3 2026",
-            "date": 1790726400,
+            "human": "Jul 15, 2026",
+            "date": 1784073600,
             "platform": "Xbox Series X|S"
-          },
-          {
-            "human": "Q3 2026",
-            "date": 1790726400,
-            "platform": "Linux"
           }
         ],
         "developers": [
@@ -2732,7 +2737,7 @@
         "publishers": [
           "Remedy Entertainment"
         ],
-        "hypes": 102,
+        "hypes": 104,
         "steamUrl": "https://store.steampowered.com/app/3669870/",
         "youtubeTrailer": "e1_eZyFM5-4"
       },
@@ -2795,7 +2800,7 @@
         "publishers": [
           "ProbablyMonsters"
         ],
-        "hypes": 14,
+        "hypes": 13,
         "steamUrl": "https://store.steampowered.com/app/4317690/Crimson_Moon/",
         "youtubeTrailer": "YmqR8Ad14N8"
       },
@@ -2878,7 +2883,7 @@
         "publishers": [
           "Konami"
         ],
-        "hypes": 19,
+        "hypes": 21,
         "steamUrl": "https://store.steampowered.com/app/3859630/METAL_GEAR_SOLID_MASTER_COLLECTION_Vol2",
         "youtubeTrailer": "a3AujdsJvjI"
       },
@@ -2954,7 +2959,7 @@
         "publishers": [
           "Konami"
         ],
-        "hypes": 36,
+        "hypes": 37,
         "steamUrl": "https://store.steampowered.com/app/2989180",
         "youtubeTrailer": "TbgsjUFIBOw"
       },
@@ -3032,7 +3037,7 @@
         "publishers": [
           "Konami"
         ],
-        "hypes": 36,
+        "hypes": 35,
         "steamUrl": "https://store.steampowered.com/app/4231820",
         "youtubeTrailer": "X3-SJLWzjmE"
       },
@@ -3427,7 +3432,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 14,
+        "hypes": 15,
         "steamUrl": "https://store.steampowered.com/app/2852190",
         "youtubeTrailer": "SxR3M-FwlWU"
       },
@@ -3490,12 +3495,12 @@
         "publishers": [
           "Bandai Namco Entertainment Inc."
         ],
-        "hypes": 1,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/2244210/",
         "youtubeTrailer": "U5IUKHX0cSA"
       },
       "inMyList": true,
-      "source": "mylist"
+      "source": "both"
     },
     {
       "localData": {
@@ -4368,7 +4373,8 @@
           "scrup9"
         ],
         "artworks": [
-          "ar2w86"
+          "ar2w86",
+          "ar5imr"
         ],
         "releaseDates": [],
         "developers": [
@@ -4529,7 +4535,7 @@
         ],
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/2541530",
-        "youtubeTrailer": null
+        "youtubeTrailer": "cDAJ0yOYbns"
       },
       "inMyList": false,
       "source": "api"
@@ -4698,7 +4704,8 @@
         "artworks": [
           "ar3ln3",
           "ar5b5y",
-          "ar5b5z"
+          "ar5b5z",
+          "ar5j02"
         ],
         "releaseDates": [],
         "developers": [
@@ -4707,7 +4714,7 @@
         "publishers": [
           "indie.io"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/3057670",
         "youtubeTrailer": "vkKcqyxrq90"
       },
@@ -4755,9 +4762,148 @@
         "publishers": [
           "Devin Santi"
         ],
-        "hypes": 4,
+        "hypes": 5,
         "steamUrl": "https://store.steampowered.com/app/1657740/Mr_Sleepy_Man",
         "youtubeTrailer": "uUz5UgbRN6k"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "GreedFall: The Dying World",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobf3r.webp",
+        "dateRelease": "10-03-2026"
+      },
+      "igdb": {
+        "id": 201961,
+        "name": "GreedFall: The Dying World",
+        "slug": "greedfall-the-dying-world",
+        "url": "https://www.igdb.com/games/greedfall-the-dying-world",
+        "summary": "The story starts three years before the events of the first game and the adventures of De Sardet.\n\nThis time you play as a native of Teer Fradee, uprooted by force from your island and taken to the continent of Gacane, where the colonists are from. In this old world ravaged by war and scarred by the Malichor plague and the political scheming of the different factions, you need to regain your freedom and control of your own destiny. Using diplomacy, cunning or combat, as well as help from allies you make, it's up to you to end one man's ambitions of conquest, which could spell the end for the continent and your island.\n\nExperience the unique world of GreedFall again by exploring the old continent! Travel across new landscapes, from Olima – the city of stars of the Bridge Alliance – to the shores of Uxantis, and uncover the secrets of these ancient lands. Meet all the factions that share control over these nations and navigate the treacherous waters of their schemes and conspiracies.\n\nCreate your own character and find allies to join your team. Help them with their quests, uncover their secrets and make them your friends, rivals or even lovers. As well as equipping them the way you want, you can also take control of them in combat.\n\nImmerse yourself in an ever deeper RPG experience where every choice has an impact on your adventure and where diplomacy, manipulation, infiltration and combat are all viable paths for you to achieve your aims.",
+        "firstReleaseDate": 1773100800,
+        "cover": "cobf3r",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5"
+        ],
+        "screenshots": [
+          "sch3bg",
+          "sch3bh",
+          "sch3be",
+          "sch3bd",
+          "sch3bf"
+        ],
+        "artworks": [
+          "ar58kg",
+          "ar592l",
+          "ar592m"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Spiders"
+        ],
+        "publishers": [
+          "Nacon"
+        ],
+        "hypes": 14,
+        "steamUrl": "https://store.steampowered.com/app/1997660/",
+        "youtubeTrailer": "LGiVuJ8tGSE"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Ranger’s Path: National Park Simulator",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coafye.webp",
+        "dateRelease": "10-03-2026"
+      },
+      "igdb": {
+        "id": 366709,
+        "name": "Ranger’s Path: National Park Simulator",
+        "slug": "rangers-path-national-park-simulator",
+        "url": "https://www.igdb.com/games/rangers-path-national-park-simulator",
+        "summary": "Begin your park ranger journey in Ranger’s Path: National Park Simulator. Maintain trails, assist visitors, check permits and respond to emergencies. Explore diverse biomes and observe varied animal behaviors across a wide range of species.",
+        "firstReleaseDate": 1773100800,
+        "cover": "coafye",
+        "genres": [
+          "Simulator",
+          "Adventure"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scz2xd",
+          "scz2xe",
+          "scz2xf",
+          "scz2xg",
+          "scz2xh"
+        ],
+        "artworks": [
+          "ar49f9",
+          "ar49fa"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "To-Go Games"
+        ],
+        "publishers": [
+          "astragon Entertainment"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2502780/Rangers_Path_National_Park_Simulator/",
+        "youtubeTrailer": "yytJLrj86V4"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Mama's Sleeping Angels",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95n1.webp",
+        "dateRelease": "11-03-2026"
+      },
+      "igdb": {
+        "id": 321991,
+        "name": "Mama's Sleeping Angels",
+        "slug": "mamas-sleeping-angels",
+        "url": "https://www.igdb.com/games/mamas-sleeping-angels",
+        "summary": "Kiss and decapitate your friends in a Co-Op horror game about collecting cursed objects to feed to a deity called Mama, lest she hunger for you. Work together, and betray each other... Anything to keep Mama happy.",
+        "firstReleaseDate": 1773187200,
+        "cover": "co95n1",
+        "genres": [
+          "Adventure"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scusi9",
+          "scusi8",
+          "scusia",
+          "scusib",
+          "scusic",
+          "scusid",
+          "scusie"
+        ],
+        "artworks": [
+          "ar388t"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [
+          "Oro Interactive"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2918310/Mamas_Sleeping_Angels/",
+        "youtubeTrailer": "M9OEoKxubbE"
       },
       "inMyList": false,
       "source": "api"
@@ -4778,6 +4924,7 @@
         "cover": "co4aab",
         "genres": [
           "Racing",
+          "Role-playing (RPG)",
           "Adventure",
           "Indie"
         ],
@@ -4902,7 +5049,7 @@
         "publishers": [
           "Focus Entertainment"
         ],
-        "hypes": 35,
+        "hypes": 37,
         "steamUrl": "https://store.steampowered.com/app/2157830",
         "youtubeTrailer": "ahDfS-wDsmM"
       },
@@ -4960,6 +5107,60 @@
     },
     {
       "localData": {
+        "title": "Corner Shop: NightShift",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coax54.webp",
+        "dateRelease": "12-03-2026"
+      },
+      "igdb": {
+        "id": 356955,
+        "name": "Corner Shop: NightShift",
+        "slug": "corner-shop-nightshift",
+        "url": "https://www.igdb.com/games/corner-shop-nightshift",
+        "summary": "Take a night shift job in a place that runs on habit, not purpose. Restock shelves, take deliveries, clean the mess, and try to make it till morning. Not everything feels right and you’re never quite alone. Something waits in the dark.",
+        "firstReleaseDate": 1773273600,
+        "cover": "coax54",
+        "genres": [
+          "Simulator",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scy4ho",
+          "scy4hp",
+          "scy4hq",
+          "scy4hr",
+          "scy4hs",
+          "scy4ht",
+          "scy4hu",
+          "scy4hv",
+          "scy4hw"
+        ],
+        "artworks": [
+          "ar4rfz",
+          "ar4rg0",
+          "ar3vv6",
+          "ar3vv7"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Live Motion Games"
+        ],
+        "publishers": [
+          "Live Motion Games",
+          "PlayWay S.A."
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3306990",
+        "youtubeTrailer": "QUt4-f-Iheo"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "1348: Ex Voto",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab7x.webp",
         "dateRelease": "12-03-2026"
@@ -5000,7 +5201,7 @@
         "publishers": [
           "Dear Villagers"
         ],
-        "hypes": 27,
+        "hypes": 29,
         "steamUrl": "https://store.steampowered.com/app/1895900/1348__Ex_Voto/",
         "youtubeTrailer": "BPhjkKVFIMQ"
       },
@@ -5009,54 +5210,8 @@
     },
     {
       "localData": {
-        "title": "Dyping Escape",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9o2x.webp",
-        "dateRelease": "13-03-2026"
-      },
-      "igdb": {
-        "id": 339959,
-        "name": "Dyping Escape",
-        "slug": "dyping-escape",
-        "url": "https://www.igdb.com/games/dyping-escape",
-        "summary": "Escape from a dying-typing game where the words you type become reality and turn against you.",
-        "firstReleaseDate": 1773360000,
-        "cover": "co9o2x",
-        "genres": [
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scw9la",
-          "scw9lb",
-          "scw9lc",
-          "scw9ld",
-          "scw9le",
-          "scw9lf"
-        ],
-        "artworks": [
-          "ar3fpc"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Heaviside Creations"
-        ],
-        "publishers": [
-          "PLAYISM"
-        ],
-        "hypes": 3,
-        "steamUrl": "https://store.steampowered.com/app/3406810",
-        "youtubeTrailer": "hojv7Z41KBY"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
         "title": "Lucid Blocks",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa00o.webp",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqym.webp",
         "dateRelease": "13-03-2026"
       },
       "igdb": {
@@ -5066,7 +5221,7 @@
         "url": "https://www.igdb.com/games/lucid-blocks",
         "summary": "Explore, build, and survive in a liminal voxel expanse oozing with surreal landscapes and esoteric critters.",
         "firstReleaseDate": 1773360000,
-        "cover": "coa00o",
+        "cover": "cobqym",
         "genres": [
           "Role-playing (RPG)",
           "Simulator",
@@ -5089,15 +5244,17 @@
           "sc12cas"
         ],
         "artworks": [
-          "ar3r43",
-          "ar3r44"
+          "ar3r44",
+          "ar5j9b",
+          "ar5j9c",
+          "ar5j9d"
         ],
         "releaseDates": [],
         "developers": [
-          "Eric Alfaro"
+          "Lucy B. Locks"
         ],
         "publishers": [
-          "Eric Alfaro"
+          "Lucy B. Locks"
         ],
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/3495730",
@@ -5140,7 +5297,9 @@
         "artworks": [
           "ar3ogl",
           "ar42is",
-          "ar42it"
+          "ar42it",
+          "ar5ir4",
+          "ar5isa"
         ],
         "releaseDates": [],
         "developers": [
@@ -5152,6 +5311,57 @@
         "hypes": 14,
         "steamUrl": "https://store.steampowered.com/app/3679080",
         "youtubeTrailer": "vePDbkAqxsU"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Bonnie Bear Saves Frogtime",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co99u5.webp",
+        "dateRelease": "16-03-2026"
+      },
+      "igdb": {
+        "id": 258654,
+        "name": "Bonnie Bear Saves Frogtime",
+        "slug": "bonnie-bear-saves-frogtime",
+        "url": "https://www.igdb.com/games/bonnie-bear-saves-frogtime",
+        "summary": "Bonnie’s self-worth is at an all-time low, and there’s only one thing that can fix it - a lovely game of Frogtime! Grab your toadbag and get ready to go on a hilarious adventure full of quirky characters, explorable islands, and way too many frogs.",
+        "firstReleaseDate": 1773619200,
+        "cover": "co99u5",
+        "genres": [
+          "Puzzle",
+          "Role-playing (RPG)",
+          "Strategy",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scnkv3",
+          "scnkv1",
+          "scnkv2",
+          "scnkv4",
+          "scnkv5",
+          "scnkv6"
+        ],
+        "artworks": [
+          "ar39c8",
+          "ar39c9"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Bonte Avond"
+        ],
+        "publishers": [
+          "offbrand games"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2466130",
+        "youtubeTrailer": "0fhvvamlZ-w"
       },
       "inMyList": false,
       "source": "api"
@@ -5253,7 +5463,7 @@
         "publishers": [
           "DotEmu"
         ],
-        "hypes": 5,
+        "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/2321780",
         "youtubeTrailer": "oFb2E7IzXKg"
       },
@@ -5353,7 +5563,7 @@
         "publishers": [
           "Arc System Works"
         ],
-        "hypes": 4,
+        "hypes": 5,
         "steamUrl": "https://store.steampowered.com/app/3557460",
         "youtubeTrailer": "nNsUpyNtczY"
       },
@@ -5448,7 +5658,7 @@
         "publishers": [
           "FYRE Games"
         ],
-        "hypes": 7,
+        "hypes": 8,
         "steamUrl": "https://store.steampowered.com/app/3180410",
         "youtubeTrailer": "MqSeeic8qZw"
       },
@@ -5496,7 +5706,7 @@
         "publishers": [
           "Milestone"
         ],
-        "hypes": 32,
+        "hypes": 34,
         "steamUrl": "https://store.steampowered.com/app/2814990",
         "youtubeTrailer": "8ohDOlboyZg"
       },
@@ -5543,7 +5753,7 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 6,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/3363680",
         "youtubeTrailer": "qcrJfhYxpBI"
       },
@@ -5679,9 +5889,63 @@
           "Haunting Humans Studio"
         ],
         "publishers": [],
-        "hypes": 4,
+        "hypes": 5,
         "steamUrl": "https://store.steampowered.com/app/2646450/Who_Are_You/",
         "youtubeTrailer": "tZrkVqNH2nQ"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Mega Man Star Force: Legacy Collection",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coasdn.webp",
+        "dateRelease": "27-03-2026"
+      },
+      "igdb": {
+        "id": 366898,
+        "name": "Mega Man Star Force: Legacy Collection",
+        "slug": "mega-man-star-force-legacy-collection",
+        "url": "https://www.igdb.com/games/mega-man-star-force-legacy-collection",
+        "summary": "The Mega Man Star Force series, which expanded into an anime, is back in the Mega Man Star Force Legacy Collection! This collection includes seven games and additional features like a gallery of illustrations and music! Online play is also supported!",
+        "firstReleaseDate": 1774569600,
+        "cover": "coasdn",
+        "genres": [
+          "Role-playing (RPG)",
+          "Strategy"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PlayStation 4",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Xbox One",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sc10is3",
+          "sc10is4",
+          "sc10is5",
+          "sc10is6",
+          "sc10is7",
+          "sc10is8",
+          "sc10is9",
+          "sc10isa"
+        ],
+        "artworks": [
+          "ar4qmr",
+          "ar4qms"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Capcom"
+        ],
+        "publishers": [
+          "Capcom"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3500390",
+        "youtubeTrailer": "8KG9kEUxNOA"
       },
       "inMyList": false,
       "source": "api"
@@ -5833,54 +6097,6 @@
         "hypes": 21,
         "steamUrl": "https://store.steampowered.com/app/1661330",
         "youtubeTrailer": "5RTZnFpigyA"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Building Relationships",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8bj3.webp",
-        "dateRelease": "31-03-2026"
-      },
-      "igdb": {
-        "id": 152275,
-        "name": "Building Relationships",
-        "slug": "building-relationships",
-        "url": "https://www.igdb.com/games/building-relationships",
-        "summary": "Roll, jump, and dash around as a house on a date in this silly adventure game. Meet eccentric structures, romance eligible bachelorx pads, and uncover the meaning of life... or you could go fishing instead (though we replaced the fish with cars to make more sense).",
-        "firstReleaseDate": 1774915200,
-        "cover": "co8bj3",
-        "genres": [
-          "Role-playing (RPG)",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "Linux",
-          "PC (Microsoft Windows)",
-          "Mac"
-        ],
-        "screenshots": [
-          "scs6gw",
-          "scs6gx",
-          "scs6gy",
-          "scs6gz",
-          "scs6h0",
-          "scs6h1"
-        ],
-        "artworks": [
-          "ar2may"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "tanatb",
-          "tanatb"
-        ],
-        "publishers": [],
-        "hypes": 6,
-        "steamUrl": "https://store.steampowered.com/app/2666920",
-        "youtubeTrailer": "wezvIRC7INg"
       },
       "inMyList": false,
       "source": "api"
@@ -6187,7 +6403,7 @@
           "Gone-Shootin",
           "Infini Fun"
         ],
-        "hypes": 11,
+        "hypes": 12,
         "steamUrl": "https://store.steampowered.com/app/2300840/Subliminal",
         "youtubeTrailer": "Oe8lU18G89Q"
       },
@@ -6290,6 +6506,56 @@
     },
     {
       "localData": {
+        "title": "The Posthumous Investigation",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6pt5.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 255719,
+        "name": "The Posthumous Investigation",
+        "slug": "the-posthumous-investigation",
+        "url": "https://www.igdb.com/games/the-posthumous-investigation",
+        "summary": "Travel to a noir Rio de Janeiro in 1937 and investigate the mystery behind the murder of Bras Cubas, the famed character created by Machado de Assis. Until the truth is out, you'll be trapped in a time loop, amidst a plot full of conspiracy and treason.",
+        "firstReleaseDate": 1774915200,
+        "cover": "co6pt5",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scn8q2",
+          "scn8q4",
+          "scn8q1",
+          "scn8q3",
+          "scn8q5",
+          "scn8q6",
+          "scn8q7",
+          "scn8q9",
+          "scn8q8"
+        ],
+        "artworks": [
+          "ar2em8"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Mother Gaia Studio"
+        ],
+        "publishers": [
+          "CriticalLeap"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2466900",
+        "youtubeTrailer": "c6HmBNxV5cc"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Neo Junk City",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8usa.webp",
         "dateRelease": "31-03-2026"
@@ -6338,54 +6604,6 @@
     },
     {
       "localData": {
-        "title": "Vultures: Scavengers of Death",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8qru.webp",
-        "dateRelease": "31-03-2026"
-      },
-      "igdb": {
-        "id": 261864,
-        "name": "Vultures: Scavengers of Death",
-        "slug": "vultures-scavengers-of-death",
-        "url": "https://www.igdb.com/games/vultures-scavengers-of-death",
-        "summary": "Face zombies and fearsome monsters in this turn-based survival-horror roguelike as you seek the path to recover a valuable artifact. Unravel the history of Salento Valley and its downfall after a bioterrorist attack led by a secret cult involved with the powerful corporation Eugenesys Tech.",
-        "firstReleaseDate": 1774915200,
-        "cover": "co8qru",
-        "genres": [
-          "Role-playing (RPG)",
-          "Strategy",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scw2ur",
-          "scw2us",
-          "scw2ut",
-          "scw2uu",
-          "scw2uv",
-          "scw2uw"
-        ],
-        "artworks": [
-          "ar2gqq"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Team Vultures"
-        ],
-        "publishers": [
-          "Firesquid"
-        ],
-        "hypes": 3,
-        "steamUrl": "https://store.steampowered.com/app/2537470",
-        "youtubeTrailer": "9u3rOafyFe8"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
         "title": "Grime II",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6z3s.webp",
         "dateRelease": "31-03-2026"
@@ -6423,7 +6641,7 @@
         "publishers": [
           "Clover Bite"
         ],
-        "hypes": 6,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/2529790/GRIME_II/",
         "youtubeTrailer": "3-cnb4y44WQ"
       },
@@ -6693,9 +6911,57 @@
           "Sunnyside Games"
         ],
         "publishers": [],
-        "hypes": 6,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/2847780",
         "youtubeTrailer": "Ic0RnMKnFQo"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Mörk Borg Heresy Supreme",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8up9.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 317584,
+        "name": "Mörk Borg Heresy Supreme",
+        "slug": "mork-borg-heresy-supreme",
+        "url": "https://www.igdb.com/games/mork-borg-heresy-supreme",
+        "summary": "Mörk Borg Heresy Supreme is a doom-metal action RPG set in the world of Mörk Borg. Wretched antiheroes explore a side-scrolling, semi-procedural grimdark fantasy world, searching for a way to prevent the apocalypse or make the suffering worse.",
+        "firstReleaseDate": 1774915200,
+        "cover": "co8up9",
+        "genres": [
+          "Role-playing (RPG)",
+          "Hack and slash/Beat 'em up",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scu1x5",
+          "scu1x1",
+          "scu1x2",
+          "scu1x3",
+          "scu1x4",
+          "scu1x6"
+        ],
+        "artworks": [
+          "ar3565"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Morbidware"
+        ],
+        "publishers": [
+          "Morbidware"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3216800/MORK_BORG_Heresy_Supreme/",
+        "youtubeTrailer": "GwXgQ1buEZ4"
       },
       "inMyList": false,
       "source": "api"
@@ -6880,7 +7146,7 @@
         "publishers": [
           "Midwest Games"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/3308200",
         "youtubeTrailer": "lb2S3r60FiY"
       },
@@ -6976,6 +7242,52 @@
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/2922250/Baptiste/",
         "youtubeTrailer": "aKJ870lSUYs"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Ghost Sector",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9jkb.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 335826,
+        "name": "Ghost Sector",
+        "slug": "ghost-sector",
+        "url": "https://www.igdb.com/games/ghost-sector",
+        "summary": "Ghost Sector is a survival horror game where you play as M-07, a prototype machine trapped in a cybernetic facility during lockdown. Outwit the automated defenses, search for answers to your origin uncovering secrets, solving puzzles, and upgrade your abilities while preserving your finite energy.",
+        "firstReleaseDate": 1774915200,
+        "cover": "co9jkb",
+        "genres": [
+          "Role-playing (RPG)",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scvrrw",
+          "scvrrx",
+          "scvrry",
+          "scvrrz",
+          "scvrs0",
+          "scvrs1"
+        ],
+        "artworks": [
+          "ar3cxh"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Polygon Crypt"
+        ],
+        "publishers": [
+          "GIGATANK 3000"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3504310",
+        "youtubeTrailer": "Q0QXFl0NS8s"
       },
       "inMyList": false,
       "source": "api"
@@ -7264,7 +7576,7 @@
         "publishers": [
           "Playstack"
         ],
-        "hypes": 10,
+        "hypes": 11,
         "steamUrl": "https://store.steampowered.com/app/3784030",
         "youtubeTrailer": "Yy1FcT6sfIo"
       },
@@ -7374,6 +7686,105 @@
     },
     {
       "localData": {
+        "title": "The Mailroom",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqfv.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 365273,
+        "name": "The Mailroom",
+        "slug": "the-mailroom",
+        "url": "https://www.igdb.com/games/the-mailroom",
+        "summary": "A horror job simulator where you work in the mailroom of a small regional office of Hell located in Modesto, California.\n\nYou just started working in the mailroom of that weird building on 5th. The job was easy enough at first. Sort the mail and use their creaky old pneumatic tube system to send it to the correct departments. But then shit started getting weird. Can you figure out what's really going on in this place and find a way out?",
+        "firstReleaseDate": 1774915200,
+        "cover": "cobqfv",
+        "genres": [
+          "Puzzle",
+          "Simulator",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scyx41",
+          "scyx42",
+          "scyx43"
+        ],
+        "artworks": [
+          "ar452k",
+          "ar452j",
+          "ar5ixg"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Crowfriend Games"
+        ],
+        "publishers": [
+          "Crowfriend Games"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3965430/The_Mailroom/",
+        "youtubeTrailer": "whB8cXe5hmQ"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "The Last Keeper",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob3pf.webp",
+        "dateRelease": "31-03-2026"
+      },
+      "igdb": {
+        "id": 368905,
+        "name": "The Last Keeper",
+        "slug": "the-last-keeper",
+        "url": "https://www.igdb.com/games/the-last-keeper",
+        "summary": "In 1900, three keepers vanished. The official report lied. Now, you are the new keeper. Wind the gears. Polish the lens. In the consuming dark, let your voice be the spark. The sea is hungry. The island remembers. Based on the real Flannan Isles mystery.",
+        "firstReleaseDate": 1774915200,
+        "cover": "cob3pf",
+        "genres": [
+          "Simulator",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "sc10yxf",
+          "sc10yxg",
+          "sc10yxh",
+          "sc10yxi",
+          "sc10yxj",
+          "sc10yxk",
+          "sc10yxl",
+          "sc10yxm"
+        ],
+        "artworks": [
+          "ar494r",
+          "ar494s",
+          "ar4ynt",
+          "ar4yns"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "AstraInteractiveGames"
+        ],
+        "publishers": [
+          "AstraInteractiveGames"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3005700",
+        "youtubeTrailer": "JNkpo3lJICo"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "The Floor Above",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coammi.webp",
         "dateRelease": "31-03-2026"
@@ -7411,7 +7822,7 @@
           "SwyTapp Games"
         ],
         "publishers": [],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/3951680/The_Floor_Above/",
         "youtubeTrailer": "0l51Dcnp04w"
       },
@@ -7519,6 +7930,105 @@
         "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/1638070",
         "youtubeTrailer": "eW1FALvOg54"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "SoulQuest",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co817t.webp",
+        "dateRelease": "01-04-2026"
+      },
+      "igdb": {
+        "id": 260649,
+        "name": "SoulQuest",
+        "slug": "soulquest--1",
+        "url": "https://www.igdb.com/games/soulquest--1",
+        "summary": "Carve your path through hordes of enemies, defying the gods to seize the power of Morrigan, Goddess of Death, and retrieve the soul of your beloved! SoulQuest combines the evergreen Metroidvania gameplay with the unique Celtic mythology into one, action-packed mixture!",
+        "firstReleaseDate": 1775001600,
+        "cover": "co817t",
+        "genres": [
+          "Platform",
+          "Hack and slash/Beat 'em up",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scnu3l",
+          "scnu3m",
+          "scnu3n",
+          "scnu3o",
+          "scnu3p"
+        ],
+        "artworks": [
+          "ar2gbb",
+          "ar500n",
+          "ar500o"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [
+          "Freedom Games"
+        ],
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2512450",
+        "youtubeTrailer": "_1GqJ2e050s"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Vultures: Scavengers of Death",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqoy.webp",
+        "dateRelease": "01-04-2026"
+      },
+      "igdb": {
+        "id": 261864,
+        "name": "Vultures: Scavengers of Death",
+        "slug": "vultures-scavengers-of-death",
+        "url": "https://www.igdb.com/games/vultures-scavengers-of-death",
+        "summary": "Face zombies and fearsome monsters in this turn-based survival-horror roguelike as you seek the path to recover a valuable artifact. Unravel the history of Salento Valley and its downfall after a bioterrorist attack led by a secret cult involved with the powerful corporation Eugenesys Tech.",
+        "firstReleaseDate": 1775001600,
+        "cover": "cobqoy",
+        "genres": [
+          "Role-playing (RPG)",
+          "Strategy",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scw2ur",
+          "scw2us",
+          "scw2ut",
+          "scw2uu",
+          "scw2uv",
+          "scw2uw"
+        ],
+        "artworks": [
+          "ar2gqq",
+          "ar5iyl",
+          "ar5iyn",
+          "ar5iym"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Team Vultures"
+        ],
+        "publishers": [
+          "Firesquid"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2537470",
+        "youtubeTrailer": "9u3rOafyFe8"
       },
       "inMyList": false,
       "source": "api"
@@ -7673,6 +8183,54 @@
     },
     {
       "localData": {
+        "title": "Find Your Words",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coazo1.webp",
+        "dateRelease": "01-04-2026"
+      },
+      "igdb": {
+        "id": 380957,
+        "name": "Find Your Words",
+        "slug": "find-your-words",
+        "url": "https://www.igdb.com/games/find-your-words",
+        "summary": "Find your community at summer camp, one friendship at a time. Take a beat, enjoy a breath of fresh air - all while playing at the beach, strolling in the woods, and dancing with friends. This short cozy game was created by two dads, celebrating their kids’ journeys to find their voices.",
+        "firstReleaseDate": 1775001600,
+        "cover": "coazo1",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "sc10rjv",
+          "sc10rjx",
+          "sc10rjy",
+          "sc10rjz",
+          "sc10rk0",
+          "sc10rk2",
+          "sc10rk3",
+          "sc10rk1",
+          "sc10rjw"
+        ],
+        "artworks": [
+          "ar4u7l",
+          "ar4u7m"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Capybara Games"
+        ],
+        "publishers": [],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/2971960",
+        "youtubeTrailer": "S_JaJgIVdtY"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Modulus",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coblp7.webp",
         "dateRelease": "02-04-2026"
@@ -7724,6 +8282,63 @@
     },
     {
       "localData": {
+        "title": "A Rat's Quest: The Way Back Home",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4q6r.webp",
+        "dateRelease": "03-04-2026"
+      },
+      "igdb": {
+        "id": 122733,
+        "name": "A Rat's Quest: The Way Back Home",
+        "slug": "a-rats-quest-the-way-back-home",
+        "url": "https://www.igdb.com/games/a-rats-quest-the-way-back-home",
+        "summary": "Follow Mat, the Scavenger, on his long journey to find his way back home. Experience a world full of threats from a rat's unique perspective, while fighting and sneaking on a rodent's most dangerous adventure.",
+        "firstReleaseDate": 1775174400,
+        "cover": "co4q6r",
+        "genres": [
+          "Platform",
+          "Puzzle",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PlayStation 4",
+          "PC (Microsoft Windows)",
+          "Xbox One",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sci2u3",
+          "sci2tr",
+          "sci2tu",
+          "sci2u5",
+          "sci2ts",
+          "sci2tt",
+          "sci2tv",
+          "sci2tw",
+          "sci2ty",
+          "sci2u0",
+          "sci2u6",
+          "sci2u7",
+          "sci2u8",
+          "sci2u9"
+        ],
+        "artworks": [
+          "ar1r9z"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [
+          "HandyGames"
+        ],
+        "hypes": 6,
+        "steamUrl": "https://store.steampowered.com/app/1124420",
+        "youtubeTrailer": "B8Opp_AL5Cg"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "All Will Fall",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ayi.webp",
         "dateRelease": "03-04-2026"
@@ -7767,6 +8382,59 @@
         "hypes": 13,
         "steamUrl": "https://store.steampowered.com/app/2706020",
         "youtubeTrailer": "0RnYpIqxnkA"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "KuloNiku: Bowl Up!",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xvc.webp",
+        "dateRelease": "07-04-2026"
+      },
+      "igdb": {
+        "id": 346735,
+        "name": "KuloNiku: Bowl Up!",
+        "slug": "kuloniku-bowl-up",
+        "url": "https://www.igdb.com/games/kuloniku-bowl-up",
+        "summary": "Run a meatball restaurant in this high energy comedic cooking game. Meet quirky locals and cook their wild orders, upgrade and customize your restaurant, win thrilling cooking battles, and become the town’s top eatery!",
+        "firstReleaseDate": 1775520000,
+        "cover": "co9xvc",
+        "genres": [
+          "Simulator",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scx5cu",
+          "scx5cz",
+          "scx5d1",
+          "scx5d3",
+          "scx5d7",
+          "scx5d8",
+          "scx5d9",
+          "scx5d4",
+          "scx5d5",
+          "scx5d6",
+          "scx5da"
+        ],
+        "artworks": [
+          "ar3ou8",
+          "ar50yi"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Gambir Studio"
+        ],
+        "publishers": [
+          "Raw Fury"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3357960",
+        "youtubeTrailer": "3dQe608m4M4"
       },
       "inMyList": false,
       "source": "api"
@@ -7930,7 +8598,7 @@
         "publishers": [
           "Daedalic Entertainment"
         ],
-        "hypes": 18,
+        "hypes": 19,
         "steamUrl": "https://store.steampowered.com/app/2092840/The_Occultist/",
         "youtubeTrailer": "aiuWUVGYteM"
       },
@@ -7984,7 +8652,7 @@
         "publishers": [
           "Liquid Swords"
         ],
-        "hypes": 20,
+        "hypes": 21,
         "steamUrl": "https://store.steampowered.com/app/3634520",
         "youtubeTrailer": "OQ4z_yQE5Xo"
       },
@@ -8033,7 +8701,7 @@
         "publishers": [
           "Cyber Temple"
         ],
-        "hypes": 13,
+        "hypes": 14,
         "steamUrl": "https://store.steampowered.com/app/3132870/",
         "youtubeTrailer": "NmAdvoXnAKQ"
       },
@@ -8096,6 +8764,112 @@
     },
     {
       "localData": {
+        "title": "Regions of Ruin: Runegate",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wq1.webp",
+        "dateRelease": "14-04-2026"
+      },
+      "igdb": {
+        "id": 157865,
+        "name": "Regions of Ruin: Runegate",
+        "slug": "regions-of-ruin-runegate--1",
+        "url": "https://www.igdb.com/games/regions-of-ruin-runegate--1",
+        "summary": "Explore a rich and unique open world in this Adventure RPG. Uncover lost dwarven ruins, build a new society and re-establish dwarven kind.",
+        "firstReleaseDate": 1776124800,
+        "cover": "co9wq1",
+        "genres": [
+          "Hack and slash/Beat 'em up",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Linux",
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scblgq",
+          "scblgr",
+          "scblgs",
+          "scblgt",
+          "scblgu"
+        ],
+        "artworks": [
+          "arx4v"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Gameclaw Studio"
+        ],
+        "publishers": [
+          "Raw Fury"
+        ],
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/1375750",
+        "youtubeTrailer": "Z-VY4JdsVao"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Moses & Plato: Last Train to Clawville",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8zxv.webp",
+        "dateRelease": "14-04-2026"
+      },
+      "igdb": {
+        "id": 283084,
+        "name": "Moses & Plato: Last Train to Clawville",
+        "slug": "moses-and-plato-last-train-to-clawville",
+        "url": "https://www.igdb.com/games/moses-and-plato-last-train-to-clawville",
+        "summary": "A murder mystery where you are the main suspect! An ambassador on a peace mission has been killed on board the Clawville Express. Time progresses as you sniff out clues, eavesdrop on conversations, and interrogate passengers. Can you solve the case before the train reaches the last station? Or else.",
+        "firstReleaseDate": 1776124800,
+        "cover": "co8zxv",
+        "genres": [
+          "Point-and-click",
+          "Puzzle",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scq5pc",
+          "scq5pd",
+          "scq5pe",
+          "scq5pf",
+          "scq5pg",
+          "scq5ph",
+          "scq5pi",
+          "scq5pj",
+          "scq5tk",
+          "scq5tn",
+          "scq5tl",
+          "scq5tm",
+          "scq5to",
+          "scq5tp",
+          "scq5tq",
+          "scq5tr"
+        ],
+        "artworks": [
+          "ar2p9w"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "The Wild Gentlemen"
+        ],
+        "publishers": [
+          "Toge Productions"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2230450",
+        "youtubeTrailer": "lhhaP9XomZw"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Dosa Divas",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xj1.webp",
         "dateRelease": "14-04-2026"
@@ -8141,7 +8915,7 @@
           "Outerloop Games",
           "Outersloth"
         ],
-        "hypes": 8,
+        "hypes": 9,
         "steamUrl": "https://store.steampowered.com/app/2950710",
         "youtubeTrailer": "m3eT8O2T2Bg"
       },
@@ -8383,7 +9157,7 @@
         "publishers": [
           "Nacon"
         ],
-        "hypes": 24,
+        "hypes": 25,
         "steamUrl": "https://store.steampowered.com/app/2760560",
         "youtubeTrailer": "ThN3eSfWqUo"
       },
@@ -8534,6 +9308,48 @@
     },
     {
       "localData": {
+        "title": "Captured 2",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobm4z.webp",
+        "dateRelease": "22-04-2026"
+      },
+      "igdb": {
+        "id": 340031,
+        "name": "Captured 2",
+        "slug": "captured-2",
+        "url": "https://www.igdb.com/games/captured-2",
+        "summary": "You're trapped in an apartment with ever-changing rooms. Capture anomalies on camera, survive deadly entities and escape an endless nightmare.",
+        "firstReleaseDate": 1776816000,
+        "cover": "cobm4z",
+        "genres": [],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scwa31",
+          "scwa32",
+          "scwa33",
+          "scwa34",
+          "scwa35",
+          "scwa36",
+          "scwa37",
+          "scwa38"
+        ],
+        "artworks": [
+          "ar3fs6",
+          "ar5g3y"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3390880",
+        "youtubeTrailer": null
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Outbound",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7rfx.webp",
         "dateRelease": "23-04-2026"
@@ -8580,7 +9396,7 @@
         "publishers": [
           "Square Glade Games"
         ],
-        "hypes": 31,
+        "hypes": 32,
         "steamUrl": "https://store.steampowered.com/app/2681030/Outbound/",
         "youtubeTrailer": "_SZZosjkD5A"
       },
@@ -8633,7 +9449,7 @@
           "Hyper Games",
           "Kakehashi Games"
         ],
-        "hypes": 15,
+        "hypes": 16,
         "steamUrl": "https://store.steampowered.com/app/3256150",
         "youtubeTrailer": "N_15Rvj6NeI"
       },
@@ -8689,6 +9505,60 @@
         "hypes": 8,
         "steamUrl": "https://store.steampowered.com/app/3749580",
         "youtubeTrailer": "kNSf7uUlvKM"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Bobo Bay",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8sh4.webp",
+        "dateRelease": "29-04-2026"
+      },
+      "igdb": {
+        "id": 258663,
+        "name": "Bobo Bay",
+        "slug": "bobo-bay",
+        "url": "https://www.igdb.com/games/bobo-bay",
+        "summary": "Bobo Bay is a pet simulation game where you collect, mash(breed), accessorize, and train little creatures to compete in races and other competitions. You are able to feed your Bobo an old shoe which is kinda funny.",
+        "firstReleaseDate": 1777420800,
+        "cover": "co8sh4",
+        "genres": [
+          "Racing",
+          "Simulator",
+          "Sport",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scnkwx",
+          "scnkwy",
+          "scnkx0",
+          "scnkx2",
+          "scnkx3",
+          "scnkx5",
+          "scnkx7",
+          "scnkx8",
+          "scnkxa",
+          "scnkxc"
+        ],
+        "artworks": [
+          "ar2f8h",
+          "ar50yj",
+          "ar50yk"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "NewFutureKids"
+        ],
+        "publishers": [
+          "NewFutureKids"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/1889810",
+        "youtubeTrailer": "yjX7hTaIE98"
       },
       "inMyList": false,
       "source": "api"
@@ -8983,7 +9853,7 @@
         "publishers": [
           "Stray Fawn Publishing"
         ],
-        "hypes": 4,
+        "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/3509230/Gambonanza/",
         "youtubeTrailer": "lYQmQGDLSJU"
       },
@@ -9039,6 +9909,54 @@
     },
     {
       "localData": {
+        "title": "Thrifty Business",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coazo5.webp",
+        "dateRelease": "01-05-2026"
+      },
+      "igdb": {
+        "id": 380953,
+        "name": "Thrifty Business",
+        "slug": "thrifty-business",
+        "url": "https://www.igdb.com/games/thrifty-business",
+        "summary": "Run your very own thrift shop in this laid-back management sim! Sort through boxes to find hidden treasures and arrange nostalgic displays of clothes, antiques, toys & more. Befriend the regulars, help with their requests and expand your store into a hub for the local community!",
+        "firstReleaseDate": 1777593600,
+        "cover": "coazo5",
+        "genres": [
+          "Simulator",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "sc10rjj",
+          "sc10rjk",
+          "sc10rjl",
+          "sc10rjm",
+          "sc10rjn",
+          "sc10rjo",
+          "sc10rjp"
+        ],
+        "artworks": [
+          "ar4u7d",
+          "ar4u7e"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Spellgarden Games"
+        ],
+        "publishers": [
+          "Spellgarden Games"
+        ],
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/3693650",
+        "youtubeTrailer": "Ckw-Dk3I4qg"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Mixtape",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8bp2.webp",
         "dateRelease": "07-05-2026"
@@ -9081,9 +9999,71 @@
         "publishers": [
           "Annapurna Interactive"
         ],
-        "hypes": 59,
+        "hypes": 60,
         "steamUrl": "https://store.steampowered.com/app/2582320/Mixtape/",
         "youtubeTrailer": "cCTH8R6RD74"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Everything Is Crab",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaine.webp",
+        "dateRelease": "08-05-2026"
+      },
+      "igdb": {
+        "id": 363945,
+        "name": "Everything Is Crab",
+        "slug": "everything-is-crab",
+        "url": "https://www.igdb.com/games/everything-is-crab",
+        "summary": "The Animal Evolution roguelite. Hunt, Flee, Scavenge & Thrive in a living ecosystem. Choose from over 100 mutations to evolve your creature in countless ways with every run. Adapt to survive the natural curve in order to beat carcinisation... or get Darwin'd trying!",
+        "firstReleaseDate": 1778198400,
+        "cover": "coaine",
+        "genres": [
+          "Role-playing (RPG)",
+          "Simulator",
+          "Strategy",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scysgi",
+          "scysgj",
+          "scysgk",
+          "scysgl",
+          "scysgm",
+          "scysgn",
+          "scysgo",
+          "scysgp",
+          "scysgq",
+          "scysgr",
+          "sc117s7",
+          "sc117s8",
+          "sc117s9",
+          "sc117sa",
+          "sc117sb",
+          "sc117sc",
+          "sc117sd",
+          "sc117se",
+          "sc117sf"
+        ],
+        "artworks": [
+          "ar437x",
+          "ar437y"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Odd Dreams Digital"
+        ],
+        "publishers": [
+          "Secret Mode"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3526710",
+        "youtubeTrailer": "1C64YhDJU3s"
       },
       "inMyList": false,
       "source": "api"
@@ -9133,7 +10113,7 @@
         "publishers": [
           "Bandai Namco Entertainment"
         ],
-        "hypes": 97,
+        "hypes": 99,
         "steamUrl": "https://store.steampowered.com/app/2255370",
         "youtubeTrailer": "etXhOhzbXso"
       },
@@ -9185,7 +10165,7 @@
         "publishers": [
           "Chorus Worldwide"
         ],
-        "hypes": 15,
+        "hypes": 14,
         "steamUrl": "https://store.steampowered.com/app/3161220",
         "youtubeTrailer": "ae4dp4ZKREo"
       },
@@ -9243,7 +10223,7 @@
         "publishers": [
           "Atari"
         ],
-        "hypes": 12,
+        "hypes": 13,
         "steamUrl": "https://store.steampowered.com/app/3237970",
         "youtubeTrailer": "H4bq6P8e5gk"
       },
@@ -9393,7 +10373,7 @@
         "publishers": [
           "Hatchery Games"
         ],
-        "hypes": 3,
+        "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/2004680",
         "youtubeTrailer": "JnvM3HF7cHk"
       },
@@ -10111,54 +11091,6 @@
     },
     {
       "localData": {
-        "title": "SoulQuest",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co817t.webp",
-        "dateRelease": "30-06-2026"
-      },
-      "igdb": {
-        "id": 260649,
-        "name": "SoulQuest",
-        "slug": "soulquest--1",
-        "url": "https://www.igdb.com/games/soulquest--1",
-        "summary": "Carve your path through hordes of enemies, defying the gods to seize the power of Morrigan, Goddess of Death, and retrieve the soul of your beloved! SoulQuest combines the evergreen Metroidvania gameplay with the unique Celtic mythology into one, action-packed mixture!",
-        "firstReleaseDate": 1782777600,
-        "cover": "co817t",
-        "genres": [
-          "Platform",
-          "Hack and slash/Beat 'em up",
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)",
-          "Nintendo Switch"
-        ],
-        "screenshots": [
-          "scnu3l",
-          "scnu3m",
-          "scnu3n",
-          "scnu3o",
-          "scnu3p"
-        ],
-        "artworks": [
-          "ar2gbb",
-          "ar500n",
-          "ar500o"
-        ],
-        "releaseDates": [],
-        "developers": [],
-        "publishers": [
-          "Freedom Games"
-        ],
-        "hypes": 4,
-        "steamUrl": "https://store.steampowered.com/app/2512450",
-        "youtubeTrailer": "_1GqJ2e050s"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
         "title": "Rubinite",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9g0p.webp",
         "dateRelease": "30-06-2026"
@@ -10202,7 +11134,7 @@
         "publishers": [
           "Cup Dog Games"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/1845250",
         "youtubeTrailer": "WlKHtBKE_x0"
       },
@@ -10376,6 +11308,59 @@
     },
     {
       "localData": {
+        "title": "Terrible Lizards",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coboiu.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 296564,
+        "name": "Terrible Lizards",
+        "slug": "terrible-lizards",
+        "url": "https://www.igdb.com/games/terrible-lizards",
+        "summary": "Terrible Lizards is a horror parkour game set against the backdrop of an old Route 66 attraction… with something dark and sinister lurking below. To escape, you’ll need to move fast, navigate challenging terrain, and uncover what Dalton’s Dinos is really hiding. You’d better start running.",
+        "firstReleaseDate": 1782777600,
+        "cover": "coboiu",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "sc12fxe",
+          "sc12fxf",
+          "sc12fxg",
+          "sc12fxh",
+          "sc12fxi",
+          "sc12fxj",
+          "sc12fxk",
+          "sc12fxl"
+        ],
+        "artworks": [
+          "ar5he2",
+          "ar5he3",
+          "ar5he4",
+          "ar5he5",
+          "ar5he6",
+          "ar5i4e"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "WDR Studios"
+        ],
+        "publishers": [
+          "WDR Studios"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2920220",
+        "youtubeTrailer": "iUY6bFjivWU"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Lost in the Roots",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaabm.webp",
         "dateRelease": "30-06-2026"
@@ -10519,6 +11504,54 @@
         "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/2895680",
         "youtubeTrailer": "rvoNsFLI5Io"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Motorslice",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8b9v.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 304745,
+        "name": "Motorslice",
+        "slug": "motorslice",
+        "url": "https://www.igdb.com/games/motorslice",
+        "summary": "Parkour through the ruins of a megastructure, climb massive bosses, and hunt down every construction equipment in this slice of life action-adventure.",
+        "firstReleaseDate": 1782777600,
+        "cover": "co8b9v",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scsmuu",
+          "scsmuw",
+          "scsmuv",
+          "scsmuy",
+          "scsmuz",
+          "scsmv0",
+          "scsmv1",
+          "scsmux"
+        ],
+        "artworks": [
+          "ar2zb4"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Regular Studio"
+        ],
+        "publishers": [
+          "Top Hat Studios"
+        ],
+        "hypes": 18,
+        "steamUrl": "https://store.steampowered.com/app/2830030",
+        "youtubeTrailer": "EzRqzDQ4xEc"
       },
       "inMyList": false,
       "source": "api"
@@ -10671,9 +11704,69 @@
         "publishers": [
           "505 Games"
         ],
-        "hypes": 6,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/3077640/MIGHTREYA/",
         "youtubeTrailer": "Oc6QHyZgqIk"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Lootbound",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobeo8.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 338988,
+        "name": "Lootbound",
+        "slug": "lootbound",
+        "url": "https://www.igdb.com/games/lootbound",
+        "summary": "Lootbound is a tactical loot management roguelike where you start solo and assemble your party as you go. Choose routes, risks, rewards, equip heroes and companions, and create a build to challenge the final boss. Turn-based combat, calculated risk, equipment synergies, and honest difficulty.",
+        "firstReleaseDate": 1782777600,
+        "cover": "cobeo8",
+        "genres": [
+          "Role-playing (RPG)",
+          "Strategy",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Mac",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sc12c48",
+          "sc12c49",
+          "sc12c4a",
+          "sc12c4b",
+          "sc12c4c",
+          "sc12c4d",
+          "sc12c4e"
+        ],
+        "artworks": [
+          "ar3fuv",
+          "ar4c3z",
+          "ar4crn",
+          "ar4cro",
+          "ar4crp",
+          "ar4crq",
+          "ar57cl",
+          "ar5fus",
+          "ar5fut"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "ArtDock"
+        ],
+        "publishers": [
+          "ArtDock"
+        ],
+        "hypes": 4,
+        "steamUrl": "https://store.steampowered.com/app/3091140",
+        "youtubeTrailer": "lUeVM9UoARU"
       },
       "inMyList": false,
       "source": "api"
@@ -10911,7 +12004,7 @@
         "publishers": [
           "Alawar"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/3690030/The_Last_Gas_Station/",
         "youtubeTrailer": null
       },
@@ -11017,9 +12110,57 @@
         "publishers": [
           "Frostwood Interactive"
         ],
-        "hypes": 9,
+        "hypes": 10,
         "steamUrl": "https://store.steampowered.com/app/3798860/Shutter_Story/",
         "youtubeTrailer": "5lZ2lQvdoag"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Hollow Stories: Lockdown",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coazpu.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 364315,
+        "name": "Hollow Stories: Lockdown",
+        "slug": "hollow-stories-lockdown",
+        "url": "https://www.igdb.com/games/hollow-stories-lockdown",
+        "summary": "A neo-retro survival horror noir game where you explore, solve puzzles, and fight to survive in a city ruled by corruption and cults.",
+        "firstReleaseDate": 1782777600,
+        "cover": "coazpu",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Linux",
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "scytlz",
+          "scytm0",
+          "scytm1",
+          "scytm2",
+          "scytm3",
+          "scytm4"
+        ],
+        "artworks": [
+          "ar43l5",
+          "ar43l6"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Hollow Sense"
+        ],
+        "publishers": [
+          "Hollow Sense"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3968040",
+        "youtubeTrailer": "zWhm44xriJg"
       },
       "inMyList": false,
       "source": "api"
@@ -11185,6 +12326,49 @@
     },
     {
       "localData": {
+        "title": "Retail Hell",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coblhx.webp",
+        "dateRelease": "30-06-2026"
+      },
+      "igdb": {
+        "id": 380983,
+        "name": "Retail Hell",
+        "slug": "retail-hell",
+        "url": "https://www.igdb.com/games/retail-hell",
+        "summary": "A horror job simulator set in a convenience store in purgatory. Serve non human customers, fight collapsing inventory, survive curses, and uncover why your shift never ends.",
+        "firstReleaseDate": 1782777600,
+        "cover": "coblhx",
+        "genres": [
+          "Simulator",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "sc10rpy",
+          "sc10rpz",
+          "sc10rq0",
+          "sc10rq1",
+          "sc10rq2"
+        ],
+        "artworks": [
+          "ar4u94",
+          "ar4u95",
+          "ar5ews"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/4174310",
+        "youtubeTrailer": "DChJg-ztEak"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "TankRat",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0ej.webp",
         "dateRelease": "30-06-2026"
@@ -11225,7 +12409,7 @@
         "publishers": [
           "Kepler Interactive"
         ],
-        "hypes": 20,
+        "hypes": 21,
         "steamUrl": "https://store.steampowered.com/app/1637460",
         "youtubeTrailer": "j55UZjRqGDU"
       },
@@ -11323,7 +12507,7 @@
         "publishers": [
           "Skystone Games"
         ],
-        "hypes": 25,
+        "hypes": 26,
         "steamUrl": "https://store.steampowered.com/app/3282300",
         "youtubeTrailer": "YiMyw3qVnVE"
       },
@@ -11529,7 +12713,7 @@
         "publishers": [
           "Daedalic Entertainment"
         ],
-        "hypes": 8,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/2572040",
         "youtubeTrailer": "5PseuplMgCY"
       },
@@ -11877,6 +13061,62 @@
     },
     {
       "localData": {
+        "title": "Capy Castaway",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqpk.webp",
+        "dateRelease": "30-09-2026"
+      },
+      "igdb": {
+        "id": 325171,
+        "name": "Capy Castaway",
+        "slug": "capy-castaway",
+        "url": "https://www.igdb.com/games/capy-castaway",
+        "summary": "Embark on a whimsical adventure with a capybara pup and a clever crow as they set off to find their way home! Sniff, dig, and fly as you explore a vibrant world brimming with wonder, challenges, and heartwarming friendships at every turn.",
+        "firstReleaseDate": 1790726400,
+        "cover": "cobqpk",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "sc12je7",
+          "sc12je8",
+          "sc12je9",
+          "sc12jea",
+          "sc12jeb"
+        ],
+        "artworks": [
+          "ar5iz4",
+          "ar5iz5",
+          "ar5iz6",
+          "ar5j0m",
+          "ar5j75",
+          "ar5j76",
+          "ar5j77",
+          "ar5iz7",
+          "ar5iz9",
+          "ar5iza",
+          "ar5j78"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Kitten Cup Studio"
+        ],
+        "publishers": [
+          "Big Blue Sky Games"
+        ],
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2890240/",
+        "youtubeTrailer": "OEBuZ2YI6UQ"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Toem 2",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co94zw.webp",
         "dateRelease": "30-09-2026"
@@ -12142,7 +13382,7 @@
         "publishers": [
           "Gameplay Group International"
         ],
-        "hypes": 16,
+        "hypes": 17,
         "steamUrl": "https://store.steampowered.com/app/2424420/Avatar_Legends_The_Fighting_Game/",
         "youtubeTrailer": "CmBG-Bi7Dmc"
       },
@@ -12347,7 +13587,7 @@
         "publishers": [
           "Deep Worlds"
         ],
-        "hypes": 16,
+        "hypes": 15,
         "steamUrl": "https://store.steampowered.com/app/1313230",
         "youtubeTrailer": "lfuqPdxdQ4U"
       },
@@ -12461,7 +13701,7 @@
         "publishers": [
           "Epic Games Publishing"
         ],
-        "hypes": 35,
+        "hypes": 36,
         "steamUrl": null,
         "youtubeTrailer": "N-KHmQ_40tI"
       },
@@ -12579,7 +13819,7 @@
         "publishers": [
           "Titan Roc"
         ],
-        "hypes": 6,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/951770",
         "youtubeTrailer": "70U3ot4ZUEw"
       },
@@ -12781,7 +14021,7 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 5,
+        "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/1181550",
         "youtubeTrailer": "NAdSL5hfpB8"
       },
@@ -12837,6 +14077,58 @@
     },
     {
       "localData": {
+        "title": "Akatori",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7y72.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 140375,
+        "name": "Akatori",
+        "slug": "akatori",
+        "url": "https://www.igdb.com/games/akatori",
+        "summary": "Help young Mako to save the world, while gracefully switching between two parallel dimensions in this fascinating metroidvania/slasher platformer! Explore the worlds full of magic and secrets, find friends and allies and try not to let the ancient God awake!",
+        "firstReleaseDate": 1798675200,
+        "cover": "co7y72",
+        "genres": [
+          "Platform",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Mac",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "sc9169",
+          "sc9168",
+          "sc9167",
+          "sc9166",
+          "sc9165",
+          "sckxrl",
+          "sckxrm",
+          "sckxrn",
+          "sckxro"
+        ],
+        "artworks": [
+          "arxyt"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Contrast Games"
+        ],
+        "publishers": [
+          "Contrast Games"
+        ],
+        "hypes": 11,
+        "steamUrl": "https://store.steampowered.com/app/1442520",
+        "youtubeTrailer": "qjhzqxBwtOE"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Tukoni: Forest Keepers",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa6c9.webp",
         "dateRelease": "31-12-2026"
@@ -12878,7 +14170,7 @@
         "publishers": [
           "Dream Operator"
         ],
-        "hypes": 4,
+        "hypes": 5,
         "steamUrl": "https://store.steampowered.com/app/2933200/Tukoni_Forest_Keepers/",
         "youtubeTrailer": "9EoytHy0uyg"
       },
@@ -12983,6 +14275,54 @@
         "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/1630450/EDENschemata",
         "youtubeTrailer": "mP7_CR4JpJw"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Building Relationships",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8bj3.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 152275,
+        "name": "Building Relationships",
+        "slug": "building-relationships",
+        "url": "https://www.igdb.com/games/building-relationships",
+        "summary": "Roll, jump, and dash around as a house on a date in this silly adventure game. Meet eccentric structures, romance eligible bachelorx pads, and uncover the meaning of life... or you could go fishing instead (though we replaced the fish with cars to make more sense).",
+        "firstReleaseDate": 1798675200,
+        "cover": "co8bj3",
+        "genres": [
+          "Role-playing (RPG)",
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "Linux",
+          "PC (Microsoft Windows)",
+          "Mac"
+        ],
+        "screenshots": [
+          "scs6gw",
+          "scs6gx",
+          "scs6gy",
+          "scs6gz",
+          "scs6h0",
+          "scs6h1"
+        ],
+        "artworks": [
+          "ar2may"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "tanatb",
+          "tanatb"
+        ],
+        "publishers": [],
+        "hypes": 5,
+        "steamUrl": "https://store.steampowered.com/app/2666920",
+        "youtubeTrailer": "wezvIRC7INg"
       },
       "inMyList": false,
       "source": "api"
@@ -13124,7 +14464,7 @@
         "publishers": [
           "Parity Games"
         ],
-        "hypes": 5,
+        "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/1689340/Island_of_Winds",
         "youtubeTrailer": "2r6FSxvrl-I"
       },
@@ -13371,7 +14711,7 @@
         "publishers": [
           "Spellcast Studios"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/1154960",
         "youtubeTrailer": null
       },
@@ -13662,7 +15002,7 @@
         "publishers": [
           "505 Games"
         ],
-        "hypes": 33,
+        "hypes": 34,
         "steamUrl": "https://store.steampowered.com/app/1488490/Nivalis",
         "youtubeTrailer": "qZvlCX9wi3o"
       },
@@ -13747,7 +15087,8 @@
           "schdeb"
         ],
         "artworks": [
-          "ar1qrm"
+          "ar1qrm",
+          "ar5j0p"
         ],
         "releaseDates": [],
         "developers": [
@@ -13756,7 +15097,7 @@
         "publishers": [
           "Amanita Design"
         ],
-        "hypes": 9,
+        "hypes": 10,
         "steamUrl": "https://store.steampowered.com/app/1206070/Phonopolis",
         "youtubeTrailer": "ANJSa4RFqxg"
       },
@@ -13992,9 +15333,60 @@
           "Bonsai Collective",
           "SUPERGG.COM"
         ],
-        "hypes": 18,
+        "hypes": 19,
         "steamUrl": "https://store.steampowered.com/app/1933000/Luna_Abyss",
         "youtubeTrailer": "PeTUEase0JE"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "Lou's Lagoon",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9p05.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 214706,
+        "name": "Lou's Lagoon",
+        "slug": "lous-lagoon",
+        "url": "https://www.igdb.com/games/lous-lagoon",
+        "summary": "A cosy open world adventure about running a seaplane delivery service. Customize your character, discover new islands, harvest goods, solve a family mystery, and work to keep an adorable island community afloat.",
+        "firstReleaseDate": 1798675200,
+        "cover": "co9p05",
+        "genres": [
+          "Simulator",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scijak",
+          "scijaj",
+          "scijai",
+          "scijal",
+          "scijam"
+        ],
+        "artworks": [
+          "ar1uys",
+          "ar501f",
+          "ar501g"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Tiny Roar"
+        ],
+        "publishers": [
+          "Megabit Publishing",
+          "rokaplay"
+        ],
+        "hypes": 9,
+        "steamUrl": "https://store.steampowered.com/app/2100020/Lous_Lagoon",
+        "youtubeTrailer": "LGHzRx6vqsg"
       },
       "inMyList": false,
       "source": "api"
@@ -14047,7 +15439,7 @@
           "Saibot Studios",
           "New Blood Interactive"
         ],
-        "hypes": 17,
+        "hypes": 18,
         "steamUrl": "https://store.steampowered.com/app/2121510",
         "youtubeTrailer": "zTFdnUzMU84"
       },
@@ -14097,7 +15489,7 @@
           "Room6",
           "Yokaze"
         ],
-        "hypes": 4,
+        "hypes": 5,
         "steamUrl": "https://store.steampowered.com/app/2065580",
         "youtubeTrailer": "4l5txKpF5Ds"
       },
@@ -14240,7 +15632,7 @@
         "publishers": [
           "Team17"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/2261430/LumenTale_Memories_of_Trey",
         "youtubeTrailer": "dZvNoYaraJA"
       },
@@ -14519,7 +15911,7 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 9,
+        "hypes": 10,
         "steamUrl": "https://store.steampowered.com/app/1798230",
         "youtubeTrailer": "RENmMDE6d7o"
       },
@@ -14726,7 +16118,7 @@
         "publishers": [
           "Retroware"
         ],
-        "hypes": 6,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/2303850/Toxic_Crusaders/",
         "youtubeTrailer": "15RkgguVI6Q"
       },
@@ -15181,7 +16573,7 @@
         "publishers": [
           "Oopsie Daisies Studio"
         ],
-        "hypes": 10,
+        "hypes": 11,
         "steamUrl": "https://store.steampowered.com/app/2257440",
         "youtubeTrailer": "QRDh-t6uQnk"
       },
@@ -15230,7 +16622,7 @@
           "Galaktus",
           "Twigames"
         ],
-        "hypes": 6,
+        "hypes": 5,
         "steamUrl": "https://store.steampowered.com/app/2362070",
         "youtubeTrailer": "VaiOSZ8VeUM"
       },
@@ -15325,7 +16717,7 @@
         "publishers": [
           "xena-spectrale"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/2559740",
         "youtubeTrailer": "s51o9nx1fz0"
       },
@@ -16334,54 +17726,6 @@
     },
     {
       "localData": {
-        "title": "Motorslice",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8b9v.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 304745,
-        "name": "Motorslice",
-        "slug": "motorslice",
-        "url": "https://www.igdb.com/games/motorslice",
-        "summary": "Parkour through the ruins of a megastructure, climb massive bosses, and hunt down every construction equipment in this slice of life action-adventure.",
-        "firstReleaseDate": 1798675200,
-        "cover": "co8b9v",
-        "genres": [
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scsmuu",
-          "scsmuw",
-          "scsmuv",
-          "scsmuy",
-          "scsmuz",
-          "scsmv0",
-          "scsmv1",
-          "scsmux"
-        ],
-        "artworks": [
-          "ar2zb4"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Regular Studio"
-        ],
-        "publishers": [
-          "Top Hat Studios"
-        ],
-        "hypes": 16,
-        "steamUrl": "https://store.steampowered.com/app/2830030",
-        "youtubeTrailer": "EzRqzDQ4xEc"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
         "title": "Tears of Metal",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8bic.webp",
         "dateRelease": "31-12-2026"
@@ -16422,7 +17766,7 @@
         "publishers": [
           "Paper Cult"
         ],
-        "hypes": 19,
+        "hypes": 20,
         "steamUrl": "https://store.steampowered.com/app/1913120",
         "youtubeTrailer": "n28LrKFLe1U"
       },
@@ -16752,7 +18096,8 @@
           "sct6b9"
         ],
         "artworks": [
-          "ar31gd"
+          "ar31gd",
+          "ar5j0r"
         ],
         "releaseDates": [],
         "developers": [
@@ -16761,7 +18106,7 @@
         "publishers": [
           "MythicOwl"
         ],
-        "hypes": 15,
+        "hypes": 16,
         "steamUrl": "https://store.steampowered.com/app/3090810",
         "youtubeTrailer": "1vS4I6k5sWI"
       },
@@ -16804,6 +18149,51 @@
         "hypes": 11,
         "steamUrl": "https://store.steampowered.com/app/2542020",
         "youtubeTrailer": "Zd9jrvALRQY"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "The Enigma Cases",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8q8e.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 312794,
+        "name": "The Enigma Cases",
+        "slug": "the-enigma-cases",
+        "url": "https://www.igdb.com/games/the-enigma-cases",
+        "summary": "The Enigma Cases invites you to test your skills as a detective and solve the most complex cases. Join your friends in this immersive and mysterious world. Do you have what it takes to uncover the truth?",
+        "firstReleaseDate": 1798675200,
+        "cover": "co8q8e",
+        "genres": [
+          "Role-playing (RPG)",
+          "Simulator",
+          "Adventure"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)"
+        ],
+        "screenshots": [
+          "sctk1j",
+          "sctk1l",
+          "sctk1n",
+          "sctk1t",
+          "sctk1z",
+          "sctk23",
+          "sctk1q",
+          "sctk1w"
+        ],
+        "artworks": [
+          "ar330b"
+        ],
+        "releaseDates": [],
+        "developers": [],
+        "publishers": [],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3062170",
+        "youtubeTrailer": null
       },
       "inMyList": false,
       "source": "api"
@@ -17058,7 +18448,7 @@
         "publishers": [
           "TomorrowHead Studio"
         ],
-        "hypes": 31,
+        "hypes": 32,
         "steamUrl": "https://store.steampowered.com/app/3144860/",
         "youtubeTrailer": "Lf50DY0OJrk"
       },
@@ -17204,7 +18594,7 @@
         "publishers": [
           "MOON CATALYST"
         ],
-        "hypes": 5,
+        "hypes": 6,
         "steamUrl": "https://store.steampowered.com/app/3018390/",
         "youtubeTrailer": "wS8e0GBVJtw"
       },
@@ -17343,7 +18733,7 @@
         "publishers": [
           "Flyway Games"
         ],
-        "hypes": 5,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/2697940/Ascend_to_ZERO/",
         "youtubeTrailer": "cSZ9KgSAHnc"
       },
@@ -17392,7 +18782,7 @@
         "publishers": [
           "Kakao Games"
         ],
-        "hypes": 26,
+        "hypes": 27,
         "steamUrl": "https://store.steampowered.com/app/3218230",
         "youtubeTrailer": "YjpWdxvMi3U"
       },
@@ -17447,7 +18837,7 @@
         "publishers": [
           "Kwalee"
         ],
-        "hypes": 7,
+        "hypes": 8,
         "steamUrl": "https://store.steampowered.com/app/3058660",
         "youtubeTrailer": "zqLxIfBzies"
       },
@@ -17562,6 +18952,52 @@
     },
     {
       "localData": {
+        "title": "My Arms Are Longer Now",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9u0b.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 318887,
+        "name": "My Arms Are Longer Now",
+        "slug": "my-arms-are-longer-now",
+        "url": "https://www.igdb.com/games/my-arms-are-longer-now",
+        "summary": "You are a yucky long-armed thief. Snake through levels, retract like a vacuum cord, or put on a sock to seduce a lonely guard - whatever it takes to pull off the perfect heist!",
+        "firstReleaseDate": 1798675200,
+        "cover": "co9u0b",
+        "genres": [
+          "Adventure",
+          "Indie"
+        ],
+        "platforms": [
+          "PC (Microsoft Windows)",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scu680",
+          "scu681",
+          "scu682",
+          "scu683",
+          "scu684"
+        ],
+        "artworks": [
+          "ar35jr"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Toot Games"
+        ],
+        "publishers": [
+          "Toot Games"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/2646170",
+        "youtubeTrailer": "UXnskfaL6RE"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
         "title": "Beyond Astra",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8wys.webp",
         "dateRelease": "31-12-2026"
@@ -17651,7 +19087,7 @@
         "publishers": [
           "Fulqrum Publishing"
         ],
-        "hypes": 9,
+        "hypes": 10,
         "steamUrl": "https://store.steampowered.com/app/2461440/",
         "youtubeTrailer": "Af-MswMR5po"
       },
@@ -17660,18 +19096,18 @@
     },
     {
       "localData": {
-        "title": "Good Boy",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabh4.webp",
+        "title": "Rover's Tale",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobr1a.webp",
         "dateRelease": "31-12-2026"
       },
       "igdb": {
         "id": 320052,
-        "name": "Good Boy",
-        "slug": "good-boy--2",
-        "url": "https://www.igdb.com/games/good-boy--2",
-        "summary": "An ecosystem driven metroidvania on the mysterious planet of Terra II! Take control of Good Boy and explore the strange new world! Complete quests for other good boys and girls, capture and research exotic alien life, and forge a relationship with your new human friend!",
+        "name": "Rover's Tale",
+        "slug": "rovers-tale",
+        "url": "https://www.igdb.com/games/rovers-tale",
+        "summary": "A creature-collecting metroidvania, in a world where dogs live on forever amongst the stars as Space Rovers! Become a LAIKA Rover! Catch & research creatures, then use their abilities to explore a new frontier! Upgrade & customize, as you help your canine companions to unravel an ancient mystery!",
         "firstReleaseDate": 1798675200,
-        "cover": "coabh4",
+        "cover": "cobr1a",
         "genres": [
           "Adventure"
         ],
@@ -17837,7 +19273,7 @@
         "publishers": [
           "Gaijin Entertainment"
         ],
-        "hypes": 35,
+        "hypes": 36,
         "steamUrl": "https://store.steampowered.com/app/2887580/Active_Matter/",
         "youtubeTrailer": "Vb9Ys_Q2ypY"
       },
@@ -18185,7 +19621,7 @@
         "publishers": [
           "Capcom"
         ],
-        "hypes": 119,
+        "hypes": 121,
         "steamUrl": "https://store.steampowered.com/app/2638890",
         "youtubeTrailer": "QiLgq9b_62s"
       },
@@ -18433,7 +19869,7 @@
         "publishers": [
           "HideWorks"
         ],
-        "hypes": 15,
+        "hypes": 16,
         "steamUrl": "https://store.steampowered.com/app/3299920",
         "youtubeTrailer": "4kMLQ0LXYdk"
       },
@@ -18667,48 +20103,6 @@
     },
     {
       "localData": {
-        "title": "Appulse",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9u83.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 335232,
-        "name": "Appulse",
-        "slug": "appulse",
-        "url": "https://www.igdb.com/games/appulse",
-        "summary": "Discover pinball like never before with Appulse! The game is a roguelite shooter, where you protect a Galactic Federation ship! Upgrade your ball, your weapons and your ship to pushback waves of unwavering robots.",
-        "firstReleaseDate": 1798675200,
-        "cover": "co9u83",
-        "genres": [
-          "Shooter",
-          "Pinball",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "scz86r",
-          "scz86t",
-          "scz86u",
-          "scz86s"
-        ],
-        "artworks": [
-          "ar42d8",
-          "ar4aax"
-        ],
-        "releaseDates": [],
-        "developers": [],
-        "publishers": [],
-        "hypes": 3,
-        "steamUrl": "https://store.steampowered.com/app/3498700",
-        "youtubeTrailer": "P3CJ7D3YnTQ"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
         "title": "Animas",
         "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coafto.webp",
         "dateRelease": "31-12-2026"
@@ -18842,7 +20236,7 @@
           "Spina"
         ],
         "publishers": [],
-        "hypes": 14,
+        "hypes": 15,
         "steamUrl": "https://store.steampowered.com/app/3462190/PHASE_ZERO/",
         "youtubeTrailer": "9aRI97UqlFw"
       },
@@ -19981,7 +21375,7 @@
         "publishers": [
           "Gentle Troll Entertainment"
         ],
-        "hypes": 4,
+        "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/3500880/Tavern_Talk_Stories_Dreamwalker/",
         "youtubeTrailer": "MXuj6nAvl-o"
       },
@@ -20234,7 +21628,7 @@
         "publishers": [
           "Epic Games Publishing"
         ],
-        "hypes": 62,
+        "hypes": 63,
         "steamUrl": null,
         "youtubeTrailer": "eot8qV7CuTA"
       },
@@ -20622,7 +22016,7 @@
         "publishers": [
           "Kwalee"
         ],
-        "hypes": 11,
+        "hypes": 12,
         "steamUrl": "https://store.steampowered.com/app/2174380/Call_of_the_Elder_Gods/",
         "youtubeTrailer": "IaK8IBacaBU"
       },
@@ -20766,7 +22160,7 @@
         "publishers": [
           "Randwerk"
         ],
-        "hypes": 15,
+        "hypes": 16,
         "steamUrl": "https://store.steampowered.com/app/3624140",
         "youtubeTrailer": "61oUyv-zsus"
       },
@@ -20814,7 +22208,7 @@
         "publishers": [
           "Headup Games"
         ],
-        "hypes": 37,
+        "hypes": 38,
         "steamUrl": "https://store.steampowered.com/app/3288210/Super_Meat_Boy_3D/",
         "youtubeTrailer": "MtXRCarKd9A"
       },
@@ -20862,7 +22256,7 @@
         "publishers": [
           "DON'T NOD"
         ],
-        "hypes": 48,
+        "hypes": 49,
         "steamUrl": "https://store.steampowered.com/app/1966410",
         "youtubeTrailer": "RZs_IthEb2s"
       },
@@ -21251,7 +22645,7 @@
         "publishers": [
           "PQube"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/3840230",
         "youtubeTrailer": "es_AnXYMiA0"
       },
@@ -21649,7 +23043,7 @@
         "publishers": [
           "ZA/UM"
         ],
-        "hypes": 34,
+        "hypes": 36,
         "steamUrl": "https://store.steampowered.com/app/2863680",
         "youtubeTrailer": "D4JVY8rR-XQ"
       },
@@ -21804,6 +23198,56 @@
         "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/3079210",
         "youtubeTrailer": "JzYzYNVWZ_A"
+      },
+      "inMyList": false,
+      "source": "api"
+    },
+    {
+      "localData": {
+        "title": "BPM: Bitcrushed",
+        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab81.webp",
+        "dateRelease": "31-12-2026"
+      },
+      "igdb": {
+        "id": 362075,
+        "name": "BPM: Bitcrushed",
+        "slug": "bpm-bitcrushed",
+        "url": "https://www.igdb.com/games/bpm-bitcrushed",
+        "summary": "BPM Bitcrushed: A retro roguelite where every shot, dodge, and jump must sync to the beat. Battle through dungeons where enemies attack in time with the music. Find epic loot and even import your own songs to create a custom, rhythm-fuelled soundtrack for your destruction!",
+        "firstReleaseDate": 1798675200,
+        "cover": "coab81",
+        "genres": [
+          "Shooter",
+          "Role-playing (RPG)",
+          "Adventure"
+        ],
+        "platforms": [
+          "Xbox Series X|S",
+          "PC (Microsoft Windows)",
+          "PlayStation 5",
+          "Nintendo Switch"
+        ],
+        "screenshots": [
+          "scyn42",
+          "scyn43",
+          "scyn44",
+          "scyn40",
+          "scyn41"
+        ],
+        "artworks": [
+          "ar41l2",
+          "ar41l3"
+        ],
+        "releaseDates": [],
+        "developers": [
+          "Awe Interactive"
+        ],
+        "publishers": [
+          "Kwalee"
+        ],
+        "hypes": 3,
+        "steamUrl": "https://store.steampowered.com/app/3448070",
+        "youtubeTrailer": "vbPDzfgyxkk"
       },
       "inMyList": false,
       "source": "api"
@@ -22001,7 +23445,7 @@
           "Bonfire Studios",
           "DRIMAGE"
         ],
-        "hypes": 9,
+        "hypes": 10,
         "steamUrl": "https://store.steampowered.com/app/3333850",
         "youtubeTrailer": "2q-vxoejYf4"
       },
@@ -22213,7 +23657,7 @@
         "publishers": [
           "Devolver Digital"
         ],
-        "hypes": 6,
+        "hypes": 7,
         "steamUrl": "https://store.steampowered.com/app/3181650",
         "youtubeTrailer": "ykHaLv-vVec"
       },
@@ -22610,7 +24054,7 @@
         "publishers": [
           "Fictions"
         ],
-        "hypes": 13,
+        "hypes": 15,
         "steamUrl": "https://store.steampowered.com/app/3660710",
         "youtubeTrailer": "6q28rgDKA3o"
       },
@@ -22664,7 +24108,7 @@
         "publishers": [
           "Cococucumber"
         ],
-        "hypes": 8,
+        "hypes": 9,
         "steamUrl": "https://store.steampowered.com/app/1115990",
         "youtubeTrailer": "zmWSu69KxFU"
       },
@@ -22766,7 +24210,7 @@
         "releaseDates": [],
         "developers": [],
         "publishers": [],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/3273260/Lost_Host/",
         "youtubeTrailer": "yzPZGDb9ZSc"
       },
@@ -22916,7 +24360,7 @@
         "publishers": [
           "New Blood Interactive"
         ],
-        "hypes": 3,
+        "hypes": 4,
         "steamUrl": "https://store.steampowered.com/app/4176460",
         "youtubeTrailer": "b2hU-UemH0o"
       },
@@ -22968,102 +24412,6 @@
         "hypes": 3,
         "steamUrl": "https://store.steampowered.com/app/4114100",
         "youtubeTrailer": "WQhfNCydHOQ"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Thrifty Business",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coazo5.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 380953,
-        "name": "Thrifty Business",
-        "slug": "thrifty-business",
-        "url": "https://www.igdb.com/games/thrifty-business",
-        "summary": "Run your very own thrift shop in this laid-back management sim! Sort through boxes to find hidden treasures and arrange nostalgic displays of clothes, antiques, toys & more. Befriend the regulars, help with their requests and expand your store into a hub for the local community!",
-        "firstReleaseDate": 1798675200,
-        "cover": "coazo5",
-        "genres": [
-          "Simulator",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "sc10rjj",
-          "sc10rjk",
-          "sc10rjl",
-          "sc10rjm",
-          "sc10rjn",
-          "sc10rjo",
-          "sc10rjp"
-        ],
-        "artworks": [
-          "ar4u7d",
-          "ar4u7e"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Spellgarden Games"
-        ],
-        "publishers": [
-          "Spellgarden Games"
-        ],
-        "hypes": 5,
-        "steamUrl": "https://store.steampowered.com/app/3693650",
-        "youtubeTrailer": "Ckw-Dk3I4qg"
-      },
-      "inMyList": false,
-      "source": "api"
-    },
-    {
-      "localData": {
-        "title": "Find Your Words",
-        "poster": "https://images.igdb.com/igdb/image/upload/t_cover_big/coazo1.webp",
-        "dateRelease": "31-12-2026"
-      },
-      "igdb": {
-        "id": 380957,
-        "name": "Find Your Words",
-        "slug": "find-your-words",
-        "url": "https://www.igdb.com/games/find-your-words",
-        "summary": "Find your community at summer camp, one friendship at a time. Take a beat, enjoy a breath of fresh air - all while playing at the beach, strolling in the woods, and dancing with friends. This short cozy game was created by two dads, celebrating their kids’ journeys to find their voices.",
-        "firstReleaseDate": 1798675200,
-        "cover": "coazo1",
-        "genres": [
-          "Adventure",
-          "Indie"
-        ],
-        "platforms": [
-          "PC (Microsoft Windows)"
-        ],
-        "screenshots": [
-          "sc10rjv",
-          "sc10rjx",
-          "sc10rjy",
-          "sc10rjz",
-          "sc10rk0",
-          "sc10rk2",
-          "sc10rk3",
-          "sc10rk1",
-          "sc10rjw"
-        ],
-        "artworks": [
-          "ar4u7l",
-          "ar4u7m"
-        ],
-        "releaseDates": [],
-        "developers": [
-          "Capybara Games"
-        ],
-        "publishers": [],
-        "hypes": 4,
-        "steamUrl": "https://store.steampowered.com/app/2971960",
-        "youtubeTrailer": "S_JaJgIVdtY"
       },
       "inMyList": false,
       "source": "api"

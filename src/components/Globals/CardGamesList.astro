@@ -40,6 +40,7 @@ interface Props {
         first_year_played: number;
         years_played: Record<string, boolean>;
         description: string;
+        sortDate?: string;
     };
     index?: number;
 }
@@ -101,6 +102,7 @@ const statusColorClasses = (() => {
     data-index={index}
     data-title={title.toLowerCase()}
     data-hours={hours}
+    data-date={data.sortDate || ''}
 >
     <!-- Background Image with Mask (usando movieFanart o movieBanner) -->
     <div
