@@ -153,6 +153,7 @@ const progressColor = proximity === 'imminent'
     class:list={[
         "card-next-game group relative flex items-stretch overflow-hidden rounded-xl border shadow-lg transition-shadow",
         borderClasses[proximity],
+        isReleased && "hidden",
     ]}
     data-release-date={isoDate}
     data-is-tba={isTBA ? 'true' : 'false'}

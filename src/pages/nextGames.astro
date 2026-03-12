@@ -259,13 +259,16 @@ const nextDays = nextRelease
 
 					// Ocultar juegos ya lanzados a menos que el toggle esté activo
 					if (isReleased && !showReleased) {
-						card.style.display = 'none';
+						card.classList.add('hidden');
+						card.style.display = '';
 						return;
 					}
 
 					if (myListOnly && !isInMyList) {
+						card.classList.remove('hidden');
 						card.style.display = 'none';
 					} else {
+						card.classList.remove('hidden');
 						card.style.display = '';
 						visibleCount++;
 					}
