@@ -1,0 +1,310 @@
+---
+import IconClock from '../Icons/IconClock.astro';
+import IconTrophy from '../Icons/IconTrophy.astro';
+import IconSteam from '../Icons/IconSteam.astro';
+import IconExternalLink from '../Icons/IconExternalLink.astro';
+import IconMetacritic from '../Icons/IconMetacritic.astro';
+
+/**
+ * CardSteamList - Card grande para juegos de la biblioteca de Steam
+ */
+interface HLTBData {
+    id: number;
+    name: string;
+    main: number | null;
+    mainExtra: number | null;
+    completionist: number | null;
+}
+
+interface AchievementsData {
+    obtained: number;
+    total: number;
+}
+
+interface Props {
+    data: {
+        appid: number;
+        name: string;
+        playtime_forever: number;
+        playtime_2weeks: number;
+        rtime_last_played: number;
+        headerImage: string;
+        capsuleImage: string;
+        igdbCover: string | null;
+        iconUrl: string | null;
+        genres: string[];
+        shortDescription: string | null;
+        developers: string[];
+        publishers: string[];
+        releaseDate: string | null;
+        metacritic: number | null;
+        hltb: HLTBData | null;
+        achievements: AchievementsData | null;
+        storeUrl: string;
+    };
+    index?: number;
+}
+
+const { data, index = 0 } = Astro.props;
+
+// Formatear playtime
+const totalMinutes = data.playtime_forever || 0;
+const totalHours = totalMinutes >= 60
+    ? `${(totalMinutes / 60).toFixed(1)}h`
+    : totalMinutes > 0
+        ? `${totalMinutes}min`
+        : null;
+
+const recentMinutes = data.playtime_2weeks || 0;
+const recentHours = recentMinutes >= 60
+    ? `${(recentMinutes / 60).toFixed(1)}h`
+    : recentMinutes > 0
+        ? `${recentMinutes}min`
+        : null;
+
+// Formatear ultima vez jugado
+function formatLastPlayed(timestamp: number): string {
+    if (!timestamp || timestamp === 0) return "Nunca";
+    const date = new Date(timestamp * 1000);
+    const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+    return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+}
+
+const lastPlayed = formatLastPlayed(data.rtime_last_played);
+
+// Generos (max 3)
+const genres = data.genres?.slice(0, 3) || [];
+
+// Desarrollador
+const developer = data.developers?.[0] || null;
+
+// Determinar color del borde segun actividad
+const borderColor = recentMinutes > 0
+    ? 'border-green-600/50 shadow-green-900/20'
+    : totalMinutes > 0
+        ? 'border-teal-700/40 shadow-teal-900/15'
+        : 'border-zinc-700/40 shadow-zinc-900/15';
+
+// Determinar ano de la ultima jugada para data-attribute
+const lastPlayedYear = data.rtime_last_played
+    ? new Date(data.rtime_last_played * 1000).getFullYear()
+    : 0;
+
+// HLTB
+const hltb = data.hltb;
+
+// Logros
+const achievements = data.achievements;
+const achievementsPct = achievements && achievements.total > 0
+    ? Math.round((achievements.obtained / achievements.total) * 100)
+    : null;
+
+// Poster: preferir library_600x900 de Steam, si no existe usar IGDB cover
+// Nunca usar header.jpg como poster (tiene aspecto landscape y rompe la card)
+const posterSrc = data.igdbCover || data.capsuleImage;
+const fallbackSrc = data.igdbCover ? data.capsuleImage : null;
+---
+
+<article
+    class:list={[
+        "card-steam group relative overflow-hidden rounded-xl border shadow-lg transition-all duration-300 hover:shadow-xl",
+        borderColor,
+    ]}
+    data-appid={data.appid}
+    data-name={data.name.toLowerCase()}
+    data-playtime={totalMinutes}
+    data-last-played={data.rtime_last_played}
+    data-last-played-year={lastPlayedYear}
+    data-genres={genres.join(',').toLowerCase()}
+    data-developer={developer?.toLowerCase() || ''}
+    data-played={totalMinutes > 0 ? 'true' : 'false'}
+    data-recent={recentMinutes > 0 ? 'true' : 'false'}
+    data-hltb-main={hltb?.main || 0}
+    data-hltb-extra={hltb?.mainExtra || 0}
+    data-hltb-complete={hltb?.completionist || 0}
+    data-index={index}
+    style={`animation-delay: ${index * 30}ms`}
+>
+    <!-- Background: Header Image con mask gradient -->
+    <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 transition-opacity duration-300 group-hover:opacity-40"
+        style={`background-image: url('${data.headerImage}'); mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.1) 100%); -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.1) 100%);`}
+    ></div>
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-linear-to-r from-zinc-900/95 via-zinc-900/85 to-zinc-900/50"></div>
+
+    <!-- Contenido principal -->
+    <div class="relative z-10 flex gap-3 p-3">
+        <!-- Capsule Image (poster) - dimensiones fijas -->
+        <figure class="shrink-0 w-25 h-37.5 sm:w-27.5 sm:h-44 rounded-lg overflow-hidden shadow-md ring-1 ring-white/5 bg-zinc-800">
+            <img
+                class="w-full h-full object-cover"
+                src={posterSrc}
+                alt={`Poster de ${data.name}`}
+                loading="lazy"
+                onerror={fallbackSrc ? `this.onerror=null;this.src='${fallbackSrc}'` : `this.style.display='none'`}
+            />
+        </figure>
+
+        <!-- Info Section -->
+        <div class="flex flex-1 flex-col justify-between py-0.5 min-w-0">
+            <!-- Header: titulo + developer -->
+            <header class="min-w-0">
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 group-hover:text-teal-200 transition-colors">
+                    {data.name}
+                </h3>
+                {developer && (
+                    <p class="text-[11px] text-zinc-500 mt-0.5 truncate">
+                        {developer}
+                        {data.releaseDate && <span class="text-zinc-600"> · {data.releaseDate}</span>}
+                    </p>
+                )}
+
+                <!-- Generos -->
+                {genres.length > 0 && (
+                    <div class="flex flex-wrap gap-1 mt-1.5">
+                        {genres.map(genre => (
+                            <span class="rounded-full bg-zinc-800/70 px-2 py-0.5 text-[10px] text-zinc-400 ring-1 ring-zinc-700/50">
+                                {genre}
+                            </span>
+                        ))}
+                    </div>
+                )}
+            </header>
+
+            <!-- Stats: playtime + HLTB + last played -->
+            <div class="mt-2 space-y-1.5">
+                <!-- Playtime principal -->
+                {totalHours ? (
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-teal-400/70">
+                            <IconClock width={13} height={13} />
+                        </span>
+                        <span class="text-xs font-semibold text-teal-300 tabular-nums">
+                            {totalHours}
+                        </span>
+                        <span class="text-[10px] text-zinc-500">jugadas</span>
+                        {recentHours && (
+                            <span class="ml-1 rounded-full bg-green-900/40 px-1.5 py-0.5 text-[10px] text-green-400 ring-1 ring-green-700/30">
+                                {recentHours} recientes
+                            </span>
+                        )}
+                    </div>
+                ) : (
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-zinc-600">
+                            <IconClock width={13} height={13} />
+                        </span>
+                        <span class="text-[10px] text-zinc-600">Nunca jugado</span>
+                    </div>
+                )}
+
+                <!-- HowLongToBeat -->
+                {hltb && hltb.main && (
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="text-[10px] text-zinc-500 font-medium">HLTB</span>
+                        <span class="rounded bg-blue-900/40 px-1.5 py-0.5 text-[10px] text-blue-300 ring-1 ring-blue-700/30 tabular-nums">
+                            {hltb.main}h <span class="text-blue-400/60">main</span>
+                        </span>
+                        {hltb.mainExtra && (
+                            <span class="rounded bg-violet-900/40 px-1.5 py-0.5 text-[10px] text-violet-300 ring-1 ring-violet-700/30 tabular-nums">
+                                {hltb.mainExtra}h <span class="text-violet-400/60">extra</span>
+                            </span>
+                        )}
+                        {hltb.completionist && (
+                            <span class="rounded bg-amber-900/40 px-1.5 py-0.5 text-[10px] text-amber-300 ring-1 ring-amber-700/30 tabular-nums">
+                                {hltb.completionist}h <span class="text-amber-400/60">100%</span>
+                            </span>
+                        )}
+                    </div>
+                )}
+
+                <!-- Ultima vez jugado -->
+                {data.rtime_last_played > 0 && (
+                    <p class="text-[10px] text-zinc-500">
+                        Ultima vez: <span class="text-zinc-400">{lastPlayed}</span>
+                    </p>
+                )}
+            </div>
+
+            <!-- Footer: logros + metacritic + link steam -->
+            <footer class="flex items-center gap-2 mt-2">
+                <!-- Logros -->
+                {achievements && achievements.total > 0 && (
+                    <div class="flex items-center gap-1.5" title={`${achievements.obtained}/${achievements.total} logros (${achievementsPct}%)`}>
+                        <span class:list={[
+                            achievementsPct === 100 ? "text-amber-400" : "text-zinc-500"
+                        ]}>
+                            <IconTrophy width={13} height={13} />
+                        </span>
+                        <span class:list={[
+                            "text-[10px] tabular-nums font-medium",
+                            achievementsPct === 100 ? "text-amber-400" : "text-zinc-400"
+                        ]}>
+                            {achievements.obtained}/{achievements.total}
+                        </span>
+                        {achievementsPct !== null && achievementsPct > 0 && (
+                            <span class:list={[
+                                "text-[10px] tabular-nums",
+                                achievementsPct === 100
+                                    ? "text-amber-500"
+                                    : achievementsPct >= 50
+                                        ? "text-zinc-400"
+                                        : "text-zinc-600"
+                            ]}>
+                                ({achievementsPct}%)
+                            </span>
+                        )}
+                    </div>
+                )}
+
+                <!-- Metacritic score -->
+                {data.metacritic && (
+                    <span class:list={[
+                        "flex items-center gap-1 rounded px-1.5 py-0.5 text-[10px] font-bold tabular-nums",
+                        data.metacritic >= 75
+                            ? "bg-green-900/50 text-green-400 ring-1 ring-green-700/40"
+                            : data.metacritic >= 50
+                                ? "bg-amber-900/50 text-amber-400 ring-1 ring-amber-700/40"
+                                : "bg-red-900/50 text-red-400 ring-1 ring-red-700/40"
+                    ]}>
+                        <IconMetacritic width={13} height={13} />
+                        {data.metacritic}
+                    </span>
+                )}
+
+                <!-- Link a Steam -->
+                <a
+                    href={data.storeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="ml-auto flex items-center gap-1 rounded-full bg-zinc-800/60 px-2 py-1 text-[10px] text-zinc-400 ring-1 ring-zinc-700/40 hover:bg-zinc-700/60 hover:text-white transition-all"
+                    title="Ver en Steam"
+                    onclick="event.stopPropagation()"
+                >
+                    <IconSteam width={12} height={12} />
+                    <span class="hidden sm:inline">Steam</span>
+                    <IconExternalLink width={10} height={10} />
+                </a>
+            </footer>
+        </div>
+    </div>
+</article>
+
+<style>
+    .card-steam {
+        animation: cardFadeIn 0.4s ease-out both;
+    }
+
+    @keyframes cardFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>

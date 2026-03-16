@@ -8,6 +8,7 @@ import CardDashboard from '../../components/Globals/CardDashboard.astro';
 import IconGamepad from '../../components/Icons/IconGamepad.astro';
 import IconSearchOff from '../../components/Icons/IconSearchOff.astro';
 import StatsBar from '../../components/Globals/StatsBar.astro';
+import IconSteam from '../../components/Icons/IconSteam.astro';
 
 // Obtener años disponibles (más reciente primero)
 const availableYears = getAvailableYears().reverse();
@@ -81,8 +82,12 @@ const totalAchievements = ListGames.reduce((sum, g) => sum + (g.logros_obt || 0)
             <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
                 <div>
                     <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal-400/80 mb-1">Collection</p>
-                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white flex items-center gap-3">
                         Games
+                        <a href="/steam" class="flex items-center gap-1.5 rounded-full bg-zinc-800/60 px-2.5 py-1 ring-1 ring-zinc-700/50 hover:bg-zinc-700/60 hover:ring-teal-600/40 transition-all group/steam">
+                            <IconSteam width={14} height={14} class="text-zinc-400 group-hover/steam:text-teal-400 transition-colors" />
+                            <span class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 group-hover/steam:text-teal-300 transition-colors">Library</span>
+                        </a>
                     </h1>
                     
                     <!-- Stats -->
@@ -116,8 +121,9 @@ const totalAchievements = ListGames.reduce((sum, g) => sum + (g.logros_obt || 0)
 
 
             <!-- Linea decorativa -->
-            <div class="mt-4 h-px bg-gradient-to-r from-teal-500/40 via-zinc-700/40 to-transparent"></div>
+            <div class="mt-4 h-px bg-linear-to-r from-teal-500/40 via-zinc-700/40 to-transparent"></div>
         </header>
+
 
         <!-- Filtros -->
         <FilterBar

@@ -1,0 +1,323 @@
+---
+// src/pages/steam.astro
+import Layout from '../layouts/Layout.astro';
+import CardSteamList from '../components/Globals/CardSteamList.astro';
+import FilterBar from '../components/Globals/FilterBar.astro';
+import CardDashboard from '../components/Globals/CardDashboard.astro';
+import StatsBar from '../components/Globals/StatsBar.astro';
+import IconSteam from '../components/Icons/IconSteam.astro';
+import IconClock from '../components/Icons/IconClock.astro';
+import IconGamepad from '../components/Icons/IconGamepad.astro';
+import IconSearchOff from '../components/Icons/IconSearchOff.astro';
+
+// Leer cache de Steam
+import steamData from '../data/cache/steam.json';
+
+const games = steamData.games || [];
+
+// Estadisticas globales
+const totalGames = games.length;
+const playedGames = games.filter((g: any) => g.playtime_forever > 0);
+const neverPlayed = games.filter((g: any) => g.playtime_forever === 0);
+const recentGames = games.filter((g: any) => g.playtime_2weeks > 0);
+const totalHours = Math.round(games.reduce((sum: number, g: any) => sum + (g.playtime_forever || 0), 0) / 60);
+const recentHours = Math.round(games.reduce((sum: number, g: any) => sum + (g.playtime_2weeks || 0), 0) / 60);
+
+// Generos unicos (de todos los juegos con generos)
+const allGenres = [...new Set(
+    games.flatMap((g: any) => g.genres || []).map((genre: string) => genre.toLowerCase())
+)].sort() as string[];
+
+// Anos de ultima jugada (para filtrar por "jugado en X ano")
+const playedYears = [...new Set(
+    games
+        .filter((g: any) => g.rtime_last_played > 0)
+        .map((g: any) => new Date(g.rtime_last_played * 1000).getFullYear())
+)].sort((a: number, b: number) => b - a);
+
+// Opciones de filtro
+const genreOptions = allGenres.slice(0, 30).map(genre => ({ value: genre, label: genre }));
+const yearOptions = playedYears.map((year: number) => ({ value: String(year), label: String(year) }));
+const statusOptions = [
+    { value: "played", label: "Jugados" },
+    { value: "never", label: "Nunca jugados" },
+    { value: "recent", label: "Recientes (2 sem)" },
+];
+const orderOptions = [
+    { value: "playtime-desc", label: "Mas jugados" },
+    { value: "playtime-asc", label: "Menos jugados" },
+    { value: "recent", label: "Jugado reciente" },
+    { value: "hltb-main-asc", label: "HLTB Main ↑" },
+    { value: "hltb-main-desc", label: "HLTB Main ↓" },
+    { value: "hltb-extra-asc", label: "HLTB Extra ↑" },
+    { value: "hltb-extra-desc", label: "HLTB Extra ↓" },
+    { value: "hltb-complete-asc", label: "HLTB 100% ↑" },
+    { value: "hltb-complete-desc", label: "HLTB 100% ↓" },
+    { value: "name-asc", label: "Nombre A-Z" },
+    { value: "name-desc", label: "Nombre Z-A" },
+];
+
+// Juegos con indice para animacion escalonada
+const gamesWithIndex = games.map((game: any, index: number) => ({
+    ...game,
+    _index: index,
+}));
+---
+
+<Layout title="Steam Library" description="Biblioteca completa de juegos de Steam con horas jugadas, generos y plataformas.">
+    <main class="max-w-7xl w-full mx-auto p-4 pb-24 space-y-6">
+        <!-- Header -->
+        <header class="relative">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal-400/80 mb-1">Library</p>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white flex items-center gap-3">
+                        <span class="text-zinc-400">
+                            <IconSteam width={32} height={32} />
+                        </span>
+                        Steam
+                    </h1>
+
+                    <!-- Stats -->
+                    <div class="mt-3">
+                        <StatsBar items={[
+                            { color: "teal", value: String(totalGames), label: "juegos" },
+                            { color: "green", value: String(playedGames.length), label: "jugados" },
+                            { color: "zinc", value: String(neverPlayed.length), label: "sin jugar" },
+                            { color: "green", value: `${totalHours.toLocaleString('es')}h`, label: "totales" },
+                            { color: "emerald", value: String(recentGames.length), label: "recientes" },
+                        ]} />
+                    </div>
+                </div>
+
+                <!-- Dashboard compacto -->
+                <section class="grid grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3 w-full lg:w-auto lg:max-w-xxl">
+                    <CardDashboard text="Juegos" number={totalGames} color="teal" id="dash-total">
+                        <IconSteam width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Jugados" number={playedGames.length} color="green" id="dash-played">
+                        <IconGamepad width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Sin jugar" number={neverPlayed.length} color="zinc" id="dash-never">
+                        <IconGamepad width={20} height={20} />
+                    </CardDashboard>
+                    <CardDashboard text="Horas" number={totalHours} color="amber" id="dash-hours">
+                        <IconClock width={20} height={20} />
+                    </CardDashboard>
+                </section>
+            </div>
+
+            <!-- Linea decorativa -->
+            <div class="mt-4 h-px bg-gradient-to-r from-teal-500/40 via-zinc-700/40 to-transparent"></div>
+        </header>
+
+        <!-- Filtros -->
+        <FilterBar
+            filters={[
+                { id: "filter-status", label: "Estado", options: statusOptions },
+                { id: "filter-genre", label: "Genero", options: genreOptions, capitalize: true },
+                { id: "filter-year", label: "Jugado en", options: yearOptions },
+                { id: "filter-order", label: "Orden", options: orderOptions, defaultValue: "recent", includeAll: false },
+            ]}
+        />
+
+        <!-- Contador de resultados -->
+        <p class="text-xs text-zinc-500">
+            Mostrando <span id="steam-count" class="text-zinc-300 font-medium">{totalGames}</span> juegos
+            {recentHours > 0 && (
+                <span class="ml-2 text-green-500">· {recentHours}h en las ultimas 2 semanas</span>
+            )}
+        </p>
+
+        <!-- Grid de Steam Games -->
+        <div id="steam-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+            {gamesWithIndex.map((game: any, index: number) => (
+                <CardSteamList data={game} index={index} />
+            ))}
+        </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <div id="no-results" class="hidden flex flex-col items-center justify-center py-16 text-zinc-500">
+            <div class="mb-3 text-zinc-600">
+                <IconSearchOff width={48} height={48} />
+            </div>
+            <p class="text-lg font-medium text-zinc-400">Sin resultados</p>
+            <p class="text-sm mt-1">Prueba ajustando los filtros para encontrar juegos</p>
+        </div>
+    </main>
+</Layout>
+
+<script>
+    let steamController: AbortController | null = null;
+
+    function animateValue(el: HTMLElement, newValue: string) {
+        const oldValue = el.textContent || '';
+        if (oldValue === newValue) return;
+        el.style.opacity = '0';
+        setTimeout(() => {
+            el.textContent = newValue;
+            el.style.opacity = '1';
+        }, 150);
+    }
+
+    function updateSteamDashboard(visibleCards: HTMLElement[]) {
+        const dashTotal = document.getElementById('dash-total');
+        const dashPlayed = document.getElementById('dash-played');
+        const dashNever = document.getElementById('dash-never');
+        const dashHours = document.getElementById('dash-hours');
+
+        let total = visibleCards.length;
+        let played = 0;
+        let never = 0;
+        let totalMinutes = 0;
+
+        visibleCards.forEach(card => {
+            const playtime = parseInt(card.dataset.playtime || '0', 10);
+            if (playtime > 0) {
+                played++;
+                totalMinutes += playtime;
+            } else {
+                never++;
+            }
+        });
+
+        if (dashTotal) animateValue(dashTotal, String(total));
+        if (dashPlayed) animateValue(dashPlayed, String(played));
+        if (dashNever) animateValue(dashNever, String(never));
+        if (dashHours) animateValue(dashHours, String(Math.round(totalMinutes / 60)));
+    }
+
+    function initSteamFilters() {
+        if (steamController) steamController.abort();
+        steamController = new AbortController();
+        const { signal } = steamController;
+
+        const steamGrid = document.getElementById('steam-grid') as HTMLElement | null;
+        const noResults = document.getElementById('no-results');
+        const steamCount = document.getElementById('steam-count');
+
+        if (!steamGrid) return;
+
+        const cards = Array.from(steamGrid.querySelectorAll('.card-steam')) as HTMLElement[];
+
+        function applyFiltersAndSort(values: Record<string, string>) {
+            if (!steamGrid) return;
+            const grid = steamGrid;
+
+            const statusValue = values['filter-status'] || 'all';
+            const genreValue = values['filter-genre'] || 'all';
+            const yearValue = values['filter-year'] || 'all';
+            const orderValue = values['filter-order'] || 'playtime-desc';
+
+            const visibleCards: HTMLElement[] = [];
+
+            cards.forEach((card) => {
+                const playtime = parseInt(card.dataset.playtime || '0', 10);
+                const isRecent = card.dataset.recent === 'true';
+                const cardGenres = card.dataset.genres?.toLowerCase() || '';
+                const lastPlayedYear = card.dataset.lastPlayedYear || '0';
+
+                // Filtro por estado
+                let matchStatus = true;
+                if (statusValue === 'played') matchStatus = playtime > 0;
+                else if (statusValue === 'never') matchStatus = playtime === 0;
+                else if (statusValue === 'recent') matchStatus = isRecent;
+
+                // Filtro por genero
+                const matchGenre = genreValue === 'all' || cardGenres.includes(genreValue.toLowerCase());
+
+                // Filtro por ano de ultima jugada
+                const matchYear = yearValue === 'all' || lastPlayedYear === yearValue;
+
+                if (matchStatus && matchGenre && matchYear) {
+                    card.style.display = '';
+                    visibleCards.push(card);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Ordenar
+            visibleCards.sort((a, b) => {
+                switch (orderValue) {
+                    case 'playtime-desc':
+                        return parseInt(b.dataset.playtime || '0') - parseInt(a.dataset.playtime || '0');
+                    case 'playtime-asc':
+                        return parseInt(a.dataset.playtime || '0') - parseInt(b.dataset.playtime || '0');
+                    case 'recent':
+                        return parseInt(b.dataset.lastPlayed || '0') - parseInt(a.dataset.lastPlayed || '0');
+                    case 'hltb-main-asc':
+                    case 'hltb-main-desc':
+                    case 'hltb-extra-asc':
+                    case 'hltb-extra-desc':
+                    case 'hltb-complete-asc':
+                    case 'hltb-complete-desc': {
+                        const key = orderValue.includes('main') ? 'hltbMain'
+                            : orderValue.includes('extra') ? 'hltbExtra' : 'hltbComplete';
+                        const aH = parseInt(a.dataset[key] || '0');
+                        const bH = parseInt(b.dataset[key] || '0');
+                        if (aH === 0 && bH === 0) return 0;
+                        if (aH === 0) return 1;
+                        if (bH === 0) return 1;
+                        return orderValue.endsWith('asc') ? aH - bH : bH - aH;
+                    }
+                    case 'name-asc':
+                        return (a.dataset.name || '').localeCompare(b.dataset.name || '');
+                    case 'name-desc':
+                        return (b.dataset.name || '').localeCompare(a.dataset.name || '');
+                    default:
+                        return 0;
+                }
+            });
+
+            // Re-ordenar DOM
+            visibleCards.forEach(card => grid.appendChild(card));
+            cards.forEach(card => {
+                if (card.style.display === 'none') grid.appendChild(card);
+            });
+
+            // Actualizar animaciones
+            visibleCards.forEach((card, i) => {
+                card.style.animationDelay = `${i * 30}ms`;
+            });
+
+            // Mostrar/ocultar mensaje sin resultados
+            if (visibleCards.length === 0) {
+                noResults?.classList.remove('hidden');
+                grid.classList.add('hidden');
+            } else {
+                noResults?.classList.add('hidden');
+                grid.classList.remove('hidden');
+            }
+
+            // Actualizar contador
+            if (steamCount) {
+                steamCount.textContent = String(visibleCards.length);
+            }
+
+            // Actualizar dashboard
+            updateSteamDashboard(visibleCards);
+        }
+
+        document.addEventListener('filter-change', (e: Event) => {
+            applyFiltersAndSort((e as CustomEvent).detail);
+        }, { signal });
+
+        // Aplicar filtros iniciales
+        const initialValues: Record<string, string> = {};
+        const filtersSection = document.getElementById('filters');
+        if (filtersSection) {
+            const filterIds: string[] = JSON.parse(filtersSection.dataset.filterIds || '[]');
+            filterIds.forEach(id => {
+                const select = document.getElementById(id) as HTMLSelectElement | null;
+                if (select) initialValues[id] = select.value;
+            });
+        }
+        applyFiltersAndSort(initialValues);
+
+        // Cleanup en navegacion
+        document.addEventListener('astro:before-preparation', () => steamController?.abort(), { once: true });
+    }
+
+    document.addEventListener('astro:page-load', initSteamFilters);
+</script>

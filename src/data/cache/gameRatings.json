@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-01T21:38:56.879Z",
+  "fetchedAt": "2026-03-16T14:12:06.323Z",
   "ratings": {
     "ao-tennis-2": {
       "metacritic": 67,
@@ -132,16 +132,26 @@
     "diablo-iv": {
       "metacritic": 90,
       "metacriticUrl": "https://www.metacritic.com/game/diablo-iv/",
-      "rawgRating": 3.8,
+      "rawgRating": 3.7,
       "rawgUrl": "https://rawg.io/games/diablo-iv",
       "openCriticScore": 88,
       "openCriticRecommended": "93%",
       "openCriticTier": "Mighty",
       "openCriticUrl": "https://opencritic.com/game/14353"
     },
+    "dmc-devil-may-cry": {
+      "metacritic": 85,
+      "metacriticUrl": "https://www.metacritic.com/game/dmc/",
+      "rawgRating": 4,
+      "rawgUrl": "https://rawg.io/games/dmc",
+      "openCriticScore": 77,
+      "openCriticRecommended": "67%",
+      "openCriticTier": "Strong",
+      "openCriticUrl": "https://opencritic.com/game/7943"
+    },
     "eiyuden-chronicle-rising": {
       "metacriticUrl": "https://www.metacritic.com/game/eiyuden-chronicle-rising/",
-      "rawgRating": 3.5,
+      "rawgRating": 3.4,
       "rawgUrl": "https://rawg.io/games/eiyuden-chronicle-rising",
       "openCriticScore": 72,
       "openCriticRecommended": "48%",
@@ -227,11 +237,7 @@
     "final-fantasy-xvi-demo": {
       "metacriticUrl": "https://www.metacritic.com/game/final-fantasy-1987/",
       "rawgRating": 3.7,
-      "rawgUrl": "https://rawg.io/games/final-fantasy-1987",
-      "openCriticScore": 87,
-      "openCriticRecommended": "91%",
-      "openCriticTier": "Mighty",
-      "openCriticUrl": "https://opencritic.com/game/14516"
+      "rawgUrl": "https://rawg.io/games/final-fantasy-1987"
     },
     "granblue-fantasy-relink": {
       "metacriticUrl": "https://www.metacritic.com/game/granblue-fantasy-relink/",
@@ -262,12 +268,12 @@
     },
     "inzoi": {
       "metacriticUrl": "https://www.metacritic.com/game/inzoi/",
-      "rawgRating": 2.7,
+      "rawgRating": 2.6,
       "rawgUrl": "https://rawg.io/games/inzoi"
     },
     "inzoi-creative-studio": {
       "metacriticUrl": "https://www.metacritic.com/game/inzoi/",
-      "rawgRating": 2.7,
+      "rawgRating": 2.6,
       "rawgUrl": "https://rawg.io/games/inzoi"
     },
     "jusant": {
@@ -283,7 +289,7 @@
     "league-of-legends": {
       "metacritic": 78,
       "metacriticUrl": "https://www.metacritic.com/game/league-of-legends/",
-      "rawgRating": 3.7,
+      "rawgRating": 3.6,
       "rawgUrl": "https://rawg.io/games/league-of-legends"
     },
     "limbo": {
@@ -297,6 +303,12 @@
       "metacriticUrl": "https://www.metacritic.com/game/lost-ark/",
       "rawgRating": 3.2,
       "rawgUrl": "https://rawg.io/games/lost-ark"
+    },
+    "mafia-definitive-edition": {
+      "metacritic": 78,
+      "metacriticUrl": "https://www.metacritic.com/game/mafia/",
+      "rawgRating": 4.2,
+      "rawgUrl": "https://rawg.io/games/mafia"
     },
     "metro-2033": {
       "metacritic": 79,
@@ -391,6 +403,12 @@
       "metacriticUrl": "https://www.metacritic.com/game/world-of-goo/",
       "rawgRating": 4,
       "rawgUrl": "https://rawg.io/games/world-of-goo"
+    },
+    "cuphead": {
+      "metacritic": 87,
+      "metacriticUrl": "https://www.metacritic.com/game/cuphead/",
+      "rawgRating": 4.4,
+      "rawgUrl": "https://rawg.io/games/cuphead"
     }
   }
 }

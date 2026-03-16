@@ -1422,6 +1422,31 @@ export const ListGames = [
         years_played: { y2026: false, y2025: true, y2024: false, y2023: false, y2022: false },
         description: "World of Goo es un juego de construcción y rompecabezas basado en la física, ganador de múltiples premios, creado íntegramente por dos personas. Arrastra y suelta bolas de sustancia viscosa vivientes, retorcidas y parlantes para construir estructuras, puentes, balas de cañón, zepelines y lenguas gigantes."
     },
+    {
+        title: "Cuphead",
+        released: "28/09/2017",
+        companie: "Studio MDHR",
+        poster: "co62ao.webp",
+        trailer: "D-1n15aIgsE",
+        artworks: "ec5tsfhl7wjabwjnsshs.webp",
+        genre: "Shooter, Platform, Adventure, Indie, Arcade",
+        estado: "Jugando",
+        horasTotal: 1,
+        logros_obt: 6,
+        logros_total: 42,
+        console_pc: "Steam",
+        igdbId: 9061,
+        first_year_played: 2026,
+        dates_played: {
+            y2026: { fecha_inicio: "15/03/2026", fecha_final: "", horas: "1" },
+            y2025: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2024: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2023: { fecha_inicio: "", fecha_final: "", horas: "" },
+            y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
+        },
+        years_played: { y2026: true, y2025: false, y2024: false, y2023: false, y2022: false },
+        description: "Cuphead es un clásico juego de acción del tipo «correr y disparar» que se centra principalmente en las batallas contra jefes. Inspirado en los dibujos animados de la década de 1930, los gráficos y el audio se han creado minuciosamente con las mismas técnicas de la época, es decir, animación tradicional en cel (¡dibujada y entintada a mano!), fondos en acuarela y grabaciones originales de jazz. Juega como Cuphead o Mugman (en modo individual o cooperativo) mientras recorres mundos extraños, consigues nuevas armas, aprendes poderosos supermovimientos y descubres secretos ocultos. Cuphead es pura acción, todo el tiempo."
+    },
 ];
 
 // Helper para obtener todos los años únicos jugados
