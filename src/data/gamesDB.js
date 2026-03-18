@@ -1445,7 +1445,7 @@ export const ListGames = [
             y2022: { fecha_inicio: "", fecha_final: "", horas: "" },
         },
         years_played: { y2026: true, y2025: false, y2024: false, y2023: false, y2022: false },
-        description: "Cuphead es un clásico juego de acción del tipo «correr y disparar» que se centra principalmente en las batallas contra jefes. Inspirado en los dibujos animados de la década de 1930, los gráficos y el audio se han creado minuciosamente con las mismas técnicas de la época, es decir, animación tradicional en cel (¡dibujada y entintada a mano!), fondos en acuarela y grabaciones originales de jazz. Juega como Cuphead o Mugman (en modo individual o cooperativo) mientras recorres mundos extraños, consigues nuevas armas, aprendes poderosos supermovimientos y descubres secretos ocultos. Cuphead es pura acción, todo el tiempo."
+        description: "Cuphead es un clásico juego de acción del tipo «correr y disparar» que se centra principalmente en las batallas contra jefes. Inspirado en los dibujos animados de la década de 1930, los gráficos y el audio se han creado minuciosamente con las mismas técnicas de la época, es decir, animación tradicional en cel (¡dibujada y entintada a mano!), fondos en acuarela y grabaciones originales de jazz. Juega como Cuphead o Mugman (en modo individual o cooperativo) mientras recorres mundos extraños, consigues nuevas armas, aprendes poderosos supermovimientos y descubres secretos ocultos. Cuphead es pura acción, todo el tiempo. Sin pausas para recargar, sin regeneración de salud y sin vidas extra. Solo tú, tu ingenio y tus reflejos para superar cada desafío."
     },
 ];
 
