@@ -83,6 +83,7 @@ export const ListSeriesByYear = [
             { idTrakt: "love-death-robots", numberSeason: 4, platformViewed: "Netflix", statusViewed: "completed" },
             { idTrakt: "rick-and-morty", numberSeason: 8, platformViewed: "HBO Max", statusViewed: "completed" },
             { idTrakt: "formula-1-drive-to-survive", numberSeason: 8, platformViewed: "Netflix", statusViewed: "completed" },
+            { idTrakt: "how-to-sell-drugs-online-fast", numberSeason: 4, platformViewed: "Netflix", statusViewed: "completed" },
         ]
     },
 ];
