@@ -2,7 +2,7 @@ export const StreamingServiceAccounts = [
     {
         name: "Netflix",
         url: "https://www.netflix.com/",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Netflix_Logomark.png/640px-Netflix_Logomark.png",
+        logo: "https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico",
         password: "26802577-4As",
         email: "adesigns7@gmail.com",
         plan: "Premium",
